@@ -32,9 +32,8 @@ public class swingDex{
     public void pokedex(){
         // Completionist Title
         headerPanel.add(new JLabel("Pokedex Completionist"));
-        // HashMap Example
-        HashMap<String,String> nationalPokedex = new HashMap<>();
-        nationalPokedex.put("737","Charjabug");
+        // Pokemon Object
+        Pokemon charge = new Pokemon("Charjabug","737");
         // Caught and Seen Buttons
         JButton[] caughtSeen = {new JButton("Caught"),new JButton("Seen")};
         // Generation and DLC Selector
@@ -59,8 +58,8 @@ public class swingDex{
             mainFrame.revalidate(); // Resets mainFrame
         });
         //Image
-        JLabel pokemonImage = new JLabel("Togedemaru");
-        pokemonImage.setIcon(makeImage("777"));
+        JLabel pokemonImage = new JLabel(charge.name);
+        pokemonImage.setIcon(makeImage(charge.national));
         // Add to Panels
         middlePanel.add(generationSelector);
         middlePanel.add(dlcSelector);
