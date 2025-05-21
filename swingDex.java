@@ -35,9 +35,11 @@ public class swingDex{
         headerPanel.add(new JLabel("Pokedex Completionist"));
         JButton[] caughtSeen = {new JButton("Caught"),new JButton("Seen")};
         // Test Pokemon Object
+        HashMap<Integer,Pokemon> pokemonList = new HashMap<>();
         Pokemon testPokemon = new Pokemon("Charjabug","737");
+        pokemonList.put(737, testPokemon);
         // Generation and DLC Selector
-        JComboBox generationSelector = new JComboBox<>(new String[]{"Kanto","Johto","Hoenn","Sinnoh/Hisui","Unova","Kalos","Alola","Galar","Paldea"}),
+        JComboBox<String> generationSelector = new JComboBox<>(new String[]{"Kanto","Johto","Hoenn","Sinnoh/Hisui","Unova","Kalos","Alola","Galar","Paldea"}),
         dlcSelector = new JComboBox<>(new String[]{"Red and Blue + Remakes","Yellow","Let's Go Games"});
         // Generation Chooser Action Listener
         generationSelector.addActionListener((ActionEvent e) -> {
@@ -64,7 +66,7 @@ public class swingDex{
         middlePanel.add(idTestLabel);
         middlePanel.add(idTest);
         idTest.addActionListener((ActionEvent e) -> {pokemonImage.setIcon(makeImage(idTest.getText()));});
-        pokemonImage.setIcon(makeImage(testPokemon.national));
+        pokemonImage.setIcon(makeImage(pokemonList.get(737).national));
         // Add to Panels
         headerPanel.add(generationSelector);
         headerPanel.add(dlcSelector);
