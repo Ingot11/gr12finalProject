@@ -11,9 +11,10 @@ public class swingDex{
    // Window Variables
     private final JPanel headerPanel, middlePanel, bottomPanel;
     private final JFrame mainFrame;
+    private static swingDex dex;
     // Call Window
     public static void main(String[] args){
-        swingDex dex = new swingDex();
+        dex = new swingDex();
         dex.pokedex();
     }
     // Window Constructor
@@ -36,26 +37,25 @@ public class swingDex{
         JButton[] caughtSeen = {new JButton("Caught"),new JButton("Seen")};
         // Test Pokemon Object
         HashMap<Integer,Pokemon> pokemonList = new HashMap<>();
-        Pokemon testPokemon = new Pokemon("Charjabug","737");
+        Pokemon testPokemon = new Pokemon("Charjabug",737);
         pokemonList.put(737, testPokemon);
         // Generation and DLC Selector
         JComboBox<String> generationSelector = new JComboBox<>(new String[]{"Kanto","Johto","Hoenn","Sinnoh/Hisui","Unova","Kalos","Alola","Galar","Paldea"}),
         dlcSelector = new JComboBox<>(new String[]{"Red and Blue + Remakes","Yellow","Let's Go Games"});
         // Generation Chooser Action Listener
         generationSelector.addActionListener((ActionEvent e) -> {
-            String[] generation = {"None"};
-            switch(generationSelector.getSelectedIndex()){ // Choose Generation minus 1
-                case 0 /*Kanto*/ -> generation = new String[]{"Red and Blue + Remakes","Yellow","Let's Go Games"};
-                case 1 /*Johto*/ -> generation = new String[]{"Gold and Silver","HeartGold and SoulSilver"};
-                case 2 /*Hoenn*/ -> generation = new String[]{"Ruby and Sapphire","Emerald","Omega Ruby and Alpha Sapphire"};
-                case 3 /*Sinnoh+Hisui*/ -> generation = new String[]{"Diamond and Pearl","Platinum","Legends Arceus"};
-                case 4 /*Unova*/ -> generation = new String[]{"Black and White","Black 2 and White 2"};
-                case 5 /*Kalos*/ -> generation = new String[]{"X and Y","Legends ZA"};
-                case 6 /*Alola*/ -> generation = new String[]{"Sun and Moon","Ultra Sun and Ultra Moon"};
-                case 7 /*Galar*/ -> generation = new String[]{"Sword and Shield","Isle of Armor","Crown Tundra"};
-                case 8 /*Paldea*/ -> generation = new String[]{"Scarlet and Violet","Kitakami","Indigo Disk"};
-            }
-            dlcSelector.setModel(new DefaultComboBoxModel<>(generation));
+            // Choose Generation
+            String[][] generation = {{"Regional","Yellow","Let's Go Games"}, /*Kanto*/
+            {"Regional","HeartGold and SoulSilver"}, /*Johto*/
+            {"Regional","Emerald","Omega Ruby and Alpha Sapphire"}, /*Hoenn*/
+            {"Regional","Platinum","Legends Arceus"}, /*Sinnoh + Hisui*/
+            {"Regional","Black 2 and White 2"}, /*Unova*/
+            {"Regional","Legends ZA"}, /*Kalos*/
+            {"Regional","Ultra Sun and Ultra Moon"}, /*Alola*/
+            {"Regional","Isle of Armor","Crown Tundra"}, /*Galar*/
+            {"Regional","Kitakami","Indigo Disk"}}; /*Paldea*/
+            if(generationSelector.getSelectedIndex() > generation.length) generationSelector.setSelectedIndex(0);
+            dlcSelector.setModel(new DefaultComboBoxModel<>(generation[generationSelector.getSelectedIndex()]));
             dlcSelector.setSelectedIndex(0);
             mainFrame.revalidate(); // Resets mainFrame
         });
@@ -65,8 +65,11 @@ public class swingDex{
         idTestLabel = new JLabel("Input Pokedex Number:");
         middlePanel.add(idTestLabel);
         middlePanel.add(idTest);
-        idTest.addActionListener((ActionEvent e) -> {pokemonImage.setIcon(makeImage(idTest.getText()));});
-        pokemonImage.setIcon(makeImage(pokemonList.get(737).national));
+        idTest.addActionListener((ActionEvent e) -> {
+            try{pokemonImage.setIcon(makeImage(Integer.parseInt(idTest.getText()),"Shiny"));}
+            catch(NumberFormatException a){}
+        });
+        pokemonImage.setIcon(makeImage(pokemonList.get(737).national,"Default"));
         // Add to Panels
         headerPanel.add(generationSelector);
         headerPanel.add(dlcSelector);
@@ -79,20 +82,14 @@ public class swingDex{
         bottomPanel.setBackground(Color.WHITE);
         mainFrame.setVisible(true);
     }
-    //Get Image with Website
-    public ImageIcon makeImage(String dexNumber){
-        try{Integer.valueOf(dexNumber);}
-        catch(NumberFormatException e){dexNumber = "001";}
-        switch (dexNumber.length()) {
-            case 0 -> dexNumber = "001";
-            case 1 -> dexNumber = "00" + dexNumber;
-            case 2 -> dexNumber = "0" + dexNumber;
-            case 4 -> dexNumber = (Double.parseDouble(dexNumber) > 1025) ? "001" : dexNumber;
-        }
+    //Get image from Serebii website
+    public ImageIcon makeImage(int dexNumber, String form){
+        String dexString = (dexNumber > 1025) ? "001" : (dexNumber > 99) ? "" + dexNumber : (dexNumber > 9) ? "0" + dexNumber : (dexNumber > 0) ? "00" + dexNumber : "001",
+        linkText = form.equals("Shiny") ? "Shiny/SV/new/" : "scarletviolet/pokemon/new/";
         try {
-            BufferedImage image = ImageIO.read(new URL("https://serebii.net/scarletviolet/pokemon/new/" + dexNumber + ".png"));
+            BufferedImage image = ImageIO.read(new URI("https://serebii.net/" + linkText + dexString + ".png").toURL());
             return new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH));
-        }catch (MalformedURLException e) {}
+        }catch (URISyntaxException e) {}
         catch (IOException ex) {Logger.getLogger(swingDex.class.getName()).log(Level.SEVERE, null, ex);}
         return null;
     }
