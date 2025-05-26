@@ -20,7 +20,8 @@ public class Pokemon{
     }
     // Constructor from file
     public void inputDex(int[] dexNum){
-        this.kanto = dexNum[0];
+        if(dexNum[0] <= 151) this.kanto = dexNum[0];
+        else this.kanto = -1;
         this.johto = dexNum[1];
         this.hoenn = dexNum[2];
         this.sinnoh = dexNum[3];
