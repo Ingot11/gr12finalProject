@@ -27,9 +27,5 @@ public enum Nature{
     NAIVE{ @Override public double boost(String stat){return calc(stat, "spd", "spDef");} };
     // Calculations
     public double boost(String stat){return 1;}
-    public double calc(String stat, String buff,String nerf){
-        if(stat.equals(buff)) return 1.1;
-        if(stat.equals(nerf)) return 0.9;
-        return 1;
-    };
+    public double calc(String stat, String buff, String nerf){ return buff.equals(nerf)? 1 : stat.equals(buff) ? 1.1 : stat.equals(nerf) ? 0.9 : 1;};
 }

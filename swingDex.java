@@ -1,7 +1,6 @@
 import java.io.*;
 import java.net.*;
 import java.awt.*;
-import java.util.*;
 import javax.swing.*;
 import javax.imageio.*;
 import java.awt.event.*;
@@ -29,31 +28,42 @@ public class swingDex{
         mainFrame.add(middlePanel = new JPanel(new FlowLayout()));
         mainFrame.add(bottomPanel = new JPanel(new FlowLayout()));
     }
-
+    private static Pokemon[] lists;
     // Pokedex Window
     public void pokedex(){
+        lists = new Pokemon[1025];
+        // Get Pokemon from dex.txt
+        try(BufferedReader buffRead = new BufferedReader(new FileReader("dex.txt"))){
+            String line;
+            while ((line = buffRead.readLine()) != null) {
+                String[] lines = line.split(", ");
+                Pokemon temp = new Pokemon(lines[0], Integer.parseInt(lines[1]));
+                lists[Integer.parseInt(lines[1])-1] = temp;
+                int[] dexNumber = new int[29];
+                for(int i=1; i<dexNumber.length; i++) dexNumber[i-1] = Integer.parseInt(lines[i]);
+                temp.inputDex(dexNumber);
+            }
+            buffRead.close();
+        }catch (FileNotFoundException | NumberFormatException e) {System.out.println("File not found or Number Format");}
+        catch (IOException ex) {Logger.getLogger(swingDex.class.getName()).log(Level.SEVERE, null, ex);}
         // Completionist Title and Caught and Seen Buttons
         headerPanel.add(new JLabel("Pokedex Completionist"));
-        JButton[] caughtSeen = {new JButton("Caught"),new JButton("Seen")};
-        // Test Pokemon Object
-        HashMap<Integer,Pokemon> pokemonList = new HashMap<>();
-        Pokemon testPokemon = new Pokemon("Charjabug",737);
-        pokemonList.put(737, testPokemon);
+        JButton[] caughtSeen = {new JButton("Caught"), new JButton("Seen")};
         // Generation and DLC Selector
-        JComboBox<String> generationSelector = new JComboBox<>(new String[]{"Kanto","Johto","Hoenn","Sinnoh/Hisui","Unova","Kalos","Alola","Galar","Paldea"}),
-        dlcSelector = new JComboBox<>(new String[]{"Red and Blue + Remakes","Yellow","Let's Go Games"});
+        JComboBox<String> generationSelector = new JComboBox<>(new String[]{"Kanto", "Johto", "Hoenn", "Sinnoh/Hisui", "Unova", "Kalos", "Alola", "Galar", "Paldea"}),
+        dlcSelector = new JComboBox<>(new String[]{"Regional","Yellow","Let's Go Games"});
         // Generation Chooser Action Listener
         generationSelector.addActionListener((ActionEvent e) -> {
             // Choose Generation
-            String[][] generation = {{"Regional","Yellow","Let's Go Games"}, /*Kanto*/
-            {"Regional","HeartGold and SoulSilver"}, /*Johto*/
-            {"Regional","Emerald","Omega Ruby and Alpha Sapphire"}, /*Hoenn*/
-            {"Regional","Platinum","Legends Arceus"}, /*Sinnoh + Hisui*/
-            {"Regional","Black 2 and White 2"}, /*Unova*/
-            {"Regional","Legends ZA"}, /*Kalos*/
-            {"Regional","Ultra Sun and Ultra Moon"}, /*Alola*/
-            {"Regional","Isle of Armor","Crown Tundra"}, /*Galar*/
-            {"Regional","Kitakami","Indigo Disk"}}; /*Paldea*/
+            String[][] generation = {{"Regional", "Yellow", "Let's Go Games"}, /*Kanto*/
+            {"Regional", "HeartGold and SoulSilver"}, /*Johto*/
+            {"Regional", "Emerald","Omega Ruby and Alpha Sapphire"}, /*Hoenn*/
+            {"Regional", "Platinum","Legends Arceus"}, /*Sinnoh + Hisui*/
+            {"Regional", "Black 2 and White 2"}, /*Unova*/
+            {"Regional", "Central", "Coastal", "Mountain", "Legends ZA"}, /*Kalos*/
+            {"Regional", "Melemele", "Akala", "Ula'Ula", "Poni", "Ultra Regional", "Ultra Melemele", "Ultra Akala", "Ultra Ula'Ula","Ultra Poni"}, /*Alola*/
+            {"Regional", "Isle of Armor", "Crown Tundra"}, /*Galar*/
+            {"Regional", "Kitakami", "Indigo Disk"}}; /*Paldea*/
             if(generationSelector.getSelectedIndex() > generation.length) generationSelector.setSelectedIndex(0);
             dlcSelector.setModel(new DefaultComboBoxModel<>(generation[generationSelector.getSelectedIndex()]));
             dlcSelector.setSelectedIndex(0);
@@ -61,15 +71,19 @@ public class swingDex{
         });
         //Image
         JTextField idTest = new JTextField(3);
-        JLabel pokemonImage = new JLabel(testPokemon.name),
+        JLabel pokemonImage = new JLabel(lists[737-1].name),
         idTestLabel = new JLabel("Input Pokedex Number:");
         middlePanel.add(idTestLabel);
         middlePanel.add(idTest);
         idTest.addActionListener((ActionEvent e) -> {
-            try{pokemonImage.setIcon(makeImage(Integer.parseInt(idTest.getText()),"Shiny"));}
+            try{
+                pokemonImage.setIcon(makeImage(Integer.parseInt(idTest.getText()),"Shiny"));
+                if(Integer.parseInt(idTest.getText())<=1025) pokemonImage.setText(lists[Integer.parseInt(idTest.getText())-1].name);
+                else pokemonImage.setText(lists[0].name);
+            }
             catch(NumberFormatException a){}
         });
-        pokemonImage.setIcon(makeImage(pokemonList.get(737).national,"Default"));
+        pokemonImage.setIcon(makeImage(lists[737-1].national,"Default"));
         // Add to Panels
         headerPanel.add(generationSelector);
         headerPanel.add(dlcSelector);
@@ -77,9 +91,7 @@ public class swingDex{
         bottomPanel.add(caughtSeen[0]);
         bottomPanel.add(caughtSeen[1]);
         // Normal Operations for Mainframe
-        headerPanel.setBackground(Color.WHITE);
-        middlePanel.setBackground(Color.WHITE);
-        bottomPanel.setBackground(Color.WHITE);
+        for(Component i:mainFrame.getComponents()) i.setBackground(Color.WHITE);
         mainFrame.setVisible(true);
     }
     //Get image from Serebii website
