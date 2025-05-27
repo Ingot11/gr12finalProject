@@ -87,18 +87,21 @@ public class Pokemon{
             BufferedImage image = ImageIO.read(new URI("https://serebii.net/" + linkText + dexString + ".png").toURL());
             return new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH));
         }catch (URISyntaxException e) {}
-        catch (IOException ex) {Logger.getLogger(swingDex.class.getName()).log(Level.SEVERE, null, ex);}
+        catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}
         return null;
     }
     // Creates Dex
-    public static void dexList(){
+    public static void initializeDex(){
         pokedexList = new Pokemon[1025];
         try(BufferedReader buffRead = new BufferedReader(new FileReader("dex.txt"))){
             String line;
+            buffRead.readLine();
             while ((line = buffRead.readLine()) != null) {
+                // Initialize the Pokemon
                 String[] lines = line.split(", ");
                 Pokemon temp = new Pokemon(lines[0], Integer.parseInt(lines[1]));
                 pokedexList[Integer.parseInt(lines[1])-1] = temp;
+                // Input the dex number
                 int[] dexNumber = new int[29];
                 for(int i=2; i<dexNumber.length; i++) dexNumber[i-1] = Integer.parseInt(lines[i]);
                 temp.inputDex(dexNumber);

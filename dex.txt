@@ -1,3 +1,4 @@
+Name, National, Kanto/LetsGo, Johto, Hoenn, Sinnoh, Platinum, HGSS, Unova, b2w2, KalosCentral, KalosCoastal, KalosMountain, Oras, Alola, Melemele, Akala, Ula'Ula, Poni, Ultra Alola, Ultra Melemele, Ultra Akala, Ultra Ula'Ula, Ultra Poni, Galar, Isle of Armor, Crown Tundra, Hisui, Paldea, Kitakami, Indigo Disk
 Bulbasaur, 1, 1, 226, -1, -1, -1, 231, -1, -1, 80, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 68, -1, -1, -1, -1, 164
 Ivysaur, 2, 2, 227, -1, -1, -1, 232, -1, -1, 81, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 69, -1, -1, -1, -1, 165
 Venusaur, 3, 3, 228, -1, -1, -1, 233, -1, -1, 82, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 70, -1, -1, -1, -1, 166
