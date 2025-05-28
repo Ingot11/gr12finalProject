@@ -13,7 +13,7 @@ public class Pokemon{
     public static Pokemon[] pokedexList;
     // Regional Dex Numbers
     public int national, kanto, johto, hoenn, sinnoh, unova, kalosCentral, alola, galar, paldea,
-    yellow, hgss, oras, platinum, legendsArceus, b2w2, kalosCoastal, kalosMountain,
+    yellow, hgss, oras, platinum, legendsArceus, b2w2, kalosCoastal, kalosMountain, legendsZA,
     melemele, akala, ulaula, poni, ultra, ultraMelemele, ultraAkala, ultraUlaula, ultraPoni,
     isleOfArmor, crownTundra, kitakami, indigoDisk, letsGo,
     // Stats and Characteristics
@@ -60,6 +60,7 @@ public class Pokemon{
         this.paldea = dexNum[26];
         this.kitakami = dexNum[27];
         this.indigoDisk = dexNum[28];
+        this.legendsZA = -1;
     }
     public int statCalcualtor(int level, String stats, int iv, int ev, String nature){
         int stat = 0;
