@@ -1,19 +1,28 @@
 /* dex.txt Generated Using https://www.dragonflycave.com/resources/pokemon-list-generator
- * %[name]%, %[national_dex]%, %[gsc_dex]%, %[rse_dex]%, %[dp_dex]%, %[pt_dex]%, %[hgss_dex]%, %[bw_dex]%, %[b2w2_dex]%, %[xy_central_dex]%, %[xy_coastal_dex]%, %[xy_mountain_dex]%, %[oras_dex]%, %[sm_dex]%, %[sm_melemele_dex]%, %[sm_akala_dex]%, %[sm_ulaula_dex]%, %[sm_poni_dex]%, %[usum_dex]%, %[usum_melemele_dex]%, %[usum_akala_dex]%, %[usum_ulaula_dex]%, %[usum_poni_dex]%, %[swsh_dex]%, %[swsh_armor_dex]%, %[swsh_tundra_dex]%, %[hisui_dex]%, %[sv_dex]%, %[sv_kitakami_dex]%, %[sv_blueberry_dex]%
+ * %[name]%, %[national_dex]%, %[national_dex]%, %[gsc_dex]%, %[rse_dex]%, %[dp_dex]%, %[pt_dex]%, %[hgss_dex]%, %[bw_dex]%, %[b2w2_dex]%, %[xy_central_dex]%, %[xy_coastal_dex]%, %[xy_mountain_dex]%, %[oras_dex]%, %[sm_dex]%, %[sm_melemele_dex]%, %[sm_akala_dex]%, %[sm_ulaula_dex]%, %[sm_poni_dex]%, %[usum_dex]%, %[usum_melemele_dex]%, %[usum_akala_dex]%, %[usum_ulaula_dex]%, %[usum_poni_dex]%, %[swsh_dex]%, %[swsh_armor_dex]%, %[swsh_tundra_dex]%, %[hisui_dex]%, %[sv_dex]%, %[sv_kitakami_dex]%, %[sv_blueberry_dex]%
 */
+import java.io.*;
+import java.awt.*;
+import java.net.*;
+import javax.swing.*;
+import javax.imageio.*;
+import java.awt.image.*;
+import java.util.logging.*;
 public class Pokemon{
-    public String name;
-    // Normal Regional Dex Number
+    // Full Pokedex
+    public static Pokemon[] pokedexList;
+    // Regional Dex Numbers
     public int national, kanto, johto, hoenn, sinnoh, unova, kalosCentral, alola, galar, paldea,
-    // DLC / Remakes Dex Number
     yellow, hgss, oras, platinum, legendsArceus, b2w2, kalosCoastal, kalosMountain, legendsZA,
     melemele, akala, ulaula, poni, ultra, ultraMelemele, ultraAkala, ultraUlaula, ultraPoni,
-    isleOfArmor, crownTundra, kitakami, indigoDisk,
+    isleOfArmor, crownTundra, kitakami, indigoDisk, letsGo,
     // Stats and Characteristics
     hp, atk, def, spAtk, spDef, spd,
-    abilityOne, abilityTwo, abilityHidden, weight, height;
-    public String[] forms, moveList, dexEntries;
-    // Constructor
+    abilityOne, abilityTwo, abilityHidden,
+    weight, height, eggSteps, maleRatio;
+    public String name, category;
+    public String[] forms, dexEntries;
+    // Pokemon Constructor
     public Pokemon(String name, int national){
         this.name = name;
         this.national = national;
@@ -22,6 +31,7 @@ public class Pokemon{
     public void inputDex(int[] dexNum){
         if(dexNum[0] <= 151) this.kanto = dexNum[0];
         else this.kanto = -1;
+        this.letsGo = dexNum[0];
         this.johto = dexNum[1];
         this.hoenn = dexNum[2];
         this.sinnoh = dexNum[3];
@@ -68,5 +78,37 @@ public class Pokemon{
         double equals = ((2.0*stat) + iv + (ev/4.0)) * level / 100.0 ;
         if(stats.equals("hp")) return (int) (equals + level + 10);
         else return (int) ((equals + 5) * (boosted.boost(stats)));
+    }
+    //Get image from Serebii website
+    public ImageIcon makeImage(String form){
+        String dexString = (national<=0 || national > 1025) ? "001" : (national > 99) ? "" + national : (national > 9) ? "0" + national : (national > 0) ? "00" + national : "001",
+        linkText = form.equals("Shiny") ? "Shiny/SV/new/" : "scarletviolet/pokemon/new/";
+        try {
+            BufferedImage image = ImageIO.read(new URI("https://serebii.net/" + linkText + dexString + ".png").toURL());
+            return new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH));
+        }catch (URISyntaxException e) {}
+        catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}
+        return null;
+    }
+    // Creates Dex
+    public static void initializeDex(){
+        pokedexList = new Pokemon[1025];
+        try(BufferedReader buffRead = new BufferedReader(new FileReader("dex.txt"))){
+            String line;
+            buffRead.readLine();
+            while ((line = buffRead.readLine()) != null) {
+                // Initialize the Pokemon
+                String[] lines = line.split(", ");
+                Pokemon temp = new Pokemon(lines[0], Integer.parseInt(lines[1]));
+                pokedexList[Integer.parseInt(lines[1])-1] = temp;
+                // Input the dex number
+                int[] dexNumber = new int[29];
+                for(int i=2; i<dexNumber.length; i++) dexNumber[i-1] = Integer.parseInt(lines[i]);
+                temp.inputDex(dexNumber);
+            }
+            buffRead.close();
+        }
+        catch (FileNotFoundException | NumberFormatException e) {System.out.println("File not found or Number Format Exception");}
+        catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}
     }
 }

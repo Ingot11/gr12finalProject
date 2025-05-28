@@ -54,7 +54,6 @@
         <properties>
           <model>
             <item value="Regional"/>
-            <item value="Yellow"/>
             <item value="Let's Go"/>
           </model>
         </properties>
