@@ -78,6 +78,7 @@ public class swingDex{
             }else{
                 pokemonImage.setIcon(Pokemon.pokedexList[input-1].makeImage("Shiny"));
                 pokemonImage.setText(Pokemon.pokedexList[input-1].name);
+                Pokemon.pokedexList[input-1].getDexNumbers();
             }
         });
         // Normal Operations for Mainframe
