@@ -1,27 +1,29 @@
 /* dex.txt Generated Using https://www.dragonflycave.com/resources/pokemon-list-generator
  * %[name]%, %[national_dex]%, %[national_dex]%, %[gsc_dex]%, %[rse_dex]%, %[dp_dex]%, %[pt_dex]%, %[hgss_dex]%, %[bw_dex]%, %[b2w2_dex]%, %[xy_central_dex]%, %[xy_coastal_dex]%, %[xy_mountain_dex]%, %[oras_dex]%, %[sm_dex]%, %[sm_melemele_dex]%, %[sm_akala_dex]%, %[sm_ulaula_dex]%, %[sm_poni_dex]%, %[usum_dex]%, %[usum_melemele_dex]%, %[usum_akala_dex]%, %[usum_ulaula_dex]%, %[usum_poni_dex]%, %[swsh_dex]%, %[swsh_armor_dex]%, %[swsh_tundra_dex]%, %[hisui_dex]%, %[sv_dex]%, %[sv_kitakami_dex]%, %[sv_blueberry_dex]%
-*/
+ * Edited the second call for national dex to be the kanto region
+ */
 import java.io.*;
 import java.awt.*;
 import java.net.*;
+import java.util.*;
 import javax.swing.*;
 import javax.imageio.*;
 import java.awt.image.*;
+import java.util.ArrayList;
 import java.util.logging.*;
 public class Pokemon{
     // Full Pokedex
     public static Pokemon[] pokedexList;
     // Regional Dex Numbers
-    public int national, kanto, johto, hoenn, sinnoh, unova, kalosCentral, alola, galar, paldea,
-    yellow, hgss, oras, platinum, legendsArceus, b2w2, kalosCoastal, kalosMountain, legendsZA,
-    melemele, akala, ulaula, poni, ultra, ultraMelemele, ultraAkala, ultraUlaula, ultraPoni,
-    isleOfArmor, crownTundra, kitakami, indigoDisk, letsGo,
+    public int national, kanto, johto, hoenn, sinnoh, platinum, hgss, unova, b2w2,
+    kalosCentral, kalosCoastal, kalosMountain, oras,
+    alola, melemele, akala, ulaula, poni, ultra, ultraMelemele, ultraAkala, ultraUlaula, ultraPoni,
+    galar, isleOfArmor, crownTundra, legendsArceus,
+    paldea, kitakami, indigoDisk,
+    letsGo;
     // Stats and Characteristics
-    hp, atk, def, spAtk, spDef, spd,
-    abilityOne, abilityTwo, abilityHidden,
-    weight, height, eggSteps, maleRatio;
     public String name, category;
-    public String[] forms, dexEntries;
+    public ArrayList<Form> form;
     // Pokemon Constructor
     public Pokemon(String name, int national){
         this.name = name;
@@ -60,24 +62,6 @@ public class Pokemon{
         this.paldea = dexNum[26];
         this.kitakami = dexNum[27];
         this.indigoDisk = dexNum[28];
-        this.legendsZA = -1;
-    }
-    public int statCalcualtor(int level, String stats, int iv, int ev, String nature){
-        int stat = 0;
-        Nature boosted;
-        try {boosted = Nature.valueOf(nature.toUpperCase());}
-        catch(Exception e) {boosted = Nature.HARDY;}
-        switch(stats){
-            case "hp" -> stat = hp;
-            case "atk" -> stat = atk;
-            case "def" -> stat = def;
-            case "spAtk" -> stat = spAtk;
-            case "spDef" -> stat = spDef;
-            case "spd" -> stat = spd;
-        }
-        double equals = ((2.0*stat) + iv + (ev/4.0)) * level / 100.0 ;
-        if(stats.equals("hp")) return (int) (equals + level + 10);
-        else return (int) ((equals + 5) * (boosted.boost(stats)));
     }
     //Get image from Serebii website
     public ImageIcon makeImage(String form){
@@ -89,6 +73,11 @@ public class Pokemon{
         }catch (URISyntaxException e) {}
         catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}
         return null;
+    }
+    public void getDexNumbers(){
+        int[] dexNums = {kanto, johto, hoenn, sinnoh, platinum, hgss, unova, b2w2, kalosCentral, kalosCoastal, kalosMountain, oras, alola, melemele, akala, ulaula, poni, ultra, ultraMelemele, ultraAkala, ultraUlaula, ultraPoni, galar, isleOfArmor, crownTundra, legendsArceus, paldea,kitakami, indigoDisk,};
+        String[] dexString = {"RBY/FRLG/LetsGo","GSC", "RSE", "DP", "Platinum", "HGSS", "BW", "B2W2", "KalosCentral", "KalosCoastal", "KalosMountain", "ORAS", "Alola", "Melemele", "Akala", "Ula'Ula", "Poni", "Ultra Alola", "Ultra Melemele", "Ultra Akala", "Ultra Ula'Ula", "Ultra Poni", "Galar", "Isle of Armor", "Crown Tundra", "Hisui", "Paldea", "Kitakami", "Indigo Disk"};
+        for(int i=0;i<dexNums.length;i++) System.out.print(dexString[i]+": "+dexNums[i]+", ");
     }
     // Creates Dex
     public static void initializeDex(){
@@ -102,8 +91,8 @@ public class Pokemon{
                 Pokemon temp = new Pokemon(lines[0], Integer.parseInt(lines[1]));
                 pokedexList[Integer.parseInt(lines[1])-1] = temp;
                 // Input the dex number
-                int[] dexNumber = new int[29];
-                for(int i=2; i<dexNumber.length; i++) dexNumber[i-1] = Integer.parseInt(lines[i]);
+                int[] dexNumber = new int[31];
+                for(int i=2; i<dexNumber.length; i++) dexNumber[i-2] = Integer.parseInt(lines[i]);
                 temp.inputDex(dexNumber);
             }
             buffRead.close();
