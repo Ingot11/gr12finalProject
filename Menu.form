@@ -54,6 +54,7 @@
         <properties>
           <model>
             <item value="Regional"/>
+            <item value="Red/Blue/Yellow/FireRed/LeafGreen"/>
             <item value="Let's Go"/>
           </model>
         </properties>

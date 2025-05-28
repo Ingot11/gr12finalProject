@@ -24,9 +24,9 @@ public class Menu extends JFrame {
         setVisible(true);
 
         regionSelect.addActionListener((ActionEvent a) -> {
-            String[][] generation = {{"Regional", "Red/Blue", "Yellow", "Let's Go"}, /*Kanto*/
-                    {"Regional", "Gold/Silver", "Crystal", "HeartGold/SoulSilver"}, /*Johto*/
-                    {"Regional", "Ruby/Sapphire", "Emerald", "Omega Ruby/Alpha Sapphire"}, /*Hoenn*/
+            String[][] generation = {{"Regional", "Red/Blue/Yellow/FireRed/LeafGreen", "Let's Go"}, /*Kanto*/
+                    {"Regional", "Gold/Silver/Crystal", "HeartGold/SoulSilver"}, /*Johto*/
+                    {"Regional", "Ruby/Sapphire/Emerald", "Omega Ruby/Alpha Sapphire"}, /*Hoenn*/
                     {"Regional", "Diamond/Pearl", "Platinum", "Legends: Arceus"}, /*Sinnoh + Hisui*/
                     {"Regional", "Black/White", "Black 2/White 2"}, /*Unova*/
                     {"Regional", "X/Y", "Central", "Coastal", "Mountain"}, /*Kalos*/
@@ -37,6 +37,27 @@ public class Menu extends JFrame {
             gameSelect.setModel(new DefaultComboBoxModel<>(generation[regionSelect.getSelectedIndex()]));
             gameSelect.setSelectedIndex(0);
             revalidate(); // Resets frame
+        });
+
+        gameSelect.addActionListener((ActionEvent a) -> {
+            switch(regionSelect.getSelectedIndex()) {
+                case 0 -> {
+                    switch(gameSelect.getSelectedIndex()) {
+                        case 0 -> {
+
+                        }
+                        case 1 -> {
+
+                        }
+                        case 2 -> {
+
+                        }
+                        case 3 -> {
+
+                        }
+                    }
+                }
+            }
         });
     }
 }
