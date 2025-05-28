@@ -14,6 +14,7 @@
         </constraints>
         <properties>
           <model>
+            <item value="National"/>
             <item value="Kanto"/>
             <item value="Johto"/>
             <item value="Hoenn"/>
@@ -53,9 +54,7 @@
         </constraints>
         <properties>
           <model>
-            <item value="Regional"/>
-            <item value="Red/Blue/Yellow/FireRed/LeafGreen"/>
-            <item value="Let's Go"/>
+            <item value="National"/>
           </model>
         </properties>
       </component>
@@ -77,33 +76,7 @@
           <component id="8a00d" class="javax.swing.JList" binding="dexList">
             <constraints/>
             <properties>
-              <model>
-                <item value="Pikachu"/>
-                <item value="Eevee"/>
-                <item value="Bulbasaur"/>
-                <item value="Charmander"/>
-                <item value="Squirtle"/>
-                <item value="Pikachu"/>
-                <item value="Eevee"/>
-                <item value="Bulbasaur"/>
-                <item value="Charmander"/>
-                <item value="Squirtle"/>
-                <item value="Pikachu"/>
-                <item value="Eevee"/>
-                <item value="Bulbasaur"/>
-                <item value="Charmander"/>
-                <item value="Squirtle"/>
-                <item value="Pikachu"/>
-                <item value="Eevee"/>
-                <item value="Bulbasaur"/>
-                <item value="Charmander"/>
-                <item value="Squirtle"/>
-                <item value="Pikachu"/>
-                <item value="Eevee"/>
-                <item value="Bulbasaur"/>
-                <item value="Charmander"/>
-                <item value="Squirtle"/>
-              </model>
+              <model/>
             </properties>
           </component>
         </children>
