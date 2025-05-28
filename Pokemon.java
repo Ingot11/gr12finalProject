@@ -19,15 +19,16 @@ public class Pokemon{
     kalosCentral, kalosCoastal, kalosMountain, oras,
     alola, melemele, akala, ulaula, poni, ultra, ultraMelemele, ultraAkala, ultraUlaula, ultraPoni,
     galar, isleOfArmor, crownTundra, legendsArceus,
-    paldea, kitakami, indigoDisk,
+    paldea, tealMask, indigoDisk,
     letsGo;
     // Stats and Characteristics
-    public String name, category;
+    public String name;
     public ArrayList<Form> form;
     // Pokemon Constructor
     public Pokemon(String name, int national){
         this.name = name;
         this.national = national;
+        this.form = new ArrayList<>();
     }
     // Constructor from file
     public void inputDex(int[] dexNum){
@@ -60,12 +61,12 @@ public class Pokemon{
         this.crownTundra = dexNum[24];
         this.legendsArceus = dexNum[25];
         this.paldea = dexNum[26];
-        this.kitakami = dexNum[27];
+        this.tealMask = dexNum[27];
         this.indigoDisk = dexNum[28];
     }
     //Get image from Serebii website
     public ImageIcon makeImage(String form){
-        String dexString = (national<=0 || national > 1025) ? "001" : (national > 99) ? "" + national : (national > 9) ? "0" + national : (national > 0) ? "00" + national : "001",
+        String dexString = (national <= 0 || national > 1025) ? "001" : (national > 99) ? "" + national : (national > 9) ? "0" + national : (national > 0) ? "00" + national : "001",
         linkText = form.equals("Shiny") ? "Shiny/SV/new/" : "scarletviolet/pokemon/new/";
         try {
             BufferedImage image = ImageIO.read(new URI("https://serebii.net/" + linkText + dexString + ".png").toURL());
@@ -75,14 +76,15 @@ public class Pokemon{
         return null;
     }
     public void getDexNumbers(){
-        int[] dexNums = {kanto, johto, hoenn, sinnoh, platinum, hgss, unova, b2w2, kalosCentral, kalosCoastal, kalosMountain, oras, alola, melemele, akala, ulaula, poni, ultra, ultraMelemele, ultraAkala, ultraUlaula, ultraPoni, galar, isleOfArmor, crownTundra, legendsArceus, paldea,kitakami, indigoDisk,};
-        String[] dexString = {"RBY/FRLG/LetsGo","GSC", "RSE", "DP", "Platinum", "HGSS", "BW", "B2W2", "KalosCentral", "KalosCoastal", "KalosMountain", "ORAS", "Alola", "Melemele", "Akala", "Ula'Ula", "Poni", "Ultra Alola", "Ultra Melemele", "Ultra Akala", "Ultra Ula'Ula", "Ultra Poni", "Galar", "Isle of Armor", "Crown Tundra", "Hisui", "Paldea", "Kitakami", "Indigo Disk"};
-        for(int i=0;i<dexNums.length;i++) System.out.print(dexString[i]+": "+dexNums[i]+", ");
+        int[] dexInt = {kanto, letsGo, johto, hoenn, sinnoh, platinum, hgss, unova, b2w2, kalosCentral, kalosCoastal, kalosMountain, oras, alola, melemele, akala, ulaula, poni, ultra, ultraMelemele, ultraAkala, ultraUlaula, ultraPoni, galar, isleOfArmor, crownTundra, legendsArceus, paldea, tealMask, indigoDisk,};
+        String[] dexString = {"RBY/FRLG","Lets Go","GSC", "RSE", "DP", "Platinum", "HGSS", "BW", "B2W2", "KalosCentral", "KalosCoastal", "KalosMountain", "ORAS", "Alola", "Melemele", "Akala", "Ula'Ula", "Poni", "Ultra Alola", "Ultra Melemele", "Ultra Akala", "Ultra Ula'Ula", "Ultra Poni", "Galar", "Isle of Armor", "Crown Tundra", "Hisui", "Paldea", "Teal Mask", "Indigo Disk"};
+        for(int i=0;i<dexInt.length;i++) System.out.print(dexString[i]+": "+dexInt[i]+", ");
+        System.out.println();
     }
     // Creates Dex
     public static void initializeDex(){
         pokedexList = new Pokemon[1025];
-        try(BufferedReader buffRead = new BufferedReader(new FileReader("dex.txt"))){
+        try(BufferedReader buffRead = new BufferedReader(new FileReader("dex.csv"))){
             String line;
             buffRead.readLine();
             while ((line = buffRead.readLine()) != null) {
@@ -94,6 +96,7 @@ public class Pokemon{
                 int[] dexNumber = new int[31];
                 for(int i=2; i<dexNumber.length; i++) dexNumber[i-2] = Integer.parseInt(lines[i]);
                 temp.inputDex(dexNumber);
+                temp.form.add(new Form("test"));
             }
             buffRead.close();
         }
