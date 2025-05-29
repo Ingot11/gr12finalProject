@@ -8,10 +8,12 @@ public class swingDex extends JFrame{
     private final JButton caught, seen;
     private final JLabel headerText, image, idLabel;
     private final JComboBox<String> generationSelector, dlcSelector;
+
     // Call Window
     public static void main(String[] args){
         swingDex dex = new swingDex();
     }
+
     // Window Constructor
     public swingDex(){
         // Set Main Frame
@@ -25,18 +27,20 @@ public class swingDex extends JFrame{
         add(headerPanel = new JPanel(new FlowLayout()));
         add(middlePanel = new JPanel(new FlowLayout()));
         add(bottomPanel = new JPanel(new FlowLayout()));
+
         // Initialize Pokedex
-        Pokemon.initializeDex();
+        Pokemon.Dex();
         // Defining Variables and adding it to Panels
         headerPanel.add(headerText = new JLabel("Pokedex Completionist"));
         headerPanel.add(generationSelector = new JComboBox<>(new String[]{"National", "Kanto", "Johto", "Hoenn", "Sinnoh/Hisui", "Unova", "Kalos", "Alola", "Galar", "Paldea/Teal Mask/Blueberry Academy"}));
         headerPanel.add(dlcSelector = new JComboBox<>(new String[]{"National"}));
         middlePanel.add(idLabel = new JLabel("Input Pokedex Number:"));
         middlePanel.add(idInput = new JTextField(3));
-        bottomPanel.add(image = new JLabel(Pokemon.pokedexList[737-1].name, Pokemon.pokedexList[737-1].makeImage("Default"), 0));
+        bottomPanel.add(image = new JLabel(Pokemon.nationalDex[737-1].name, Pokemon.nationalDex[737-1].makeImage("Default"), 0));
         bottomPanel.add(caught = new JButton("Caught"));
         bottomPanel.add(seen = new JButton("Seen"));
         setVisible(true);
+
         // Action Listeners
         generationSelector.addActionListener((ActionEvent e) -> {
             // Choose Generation
@@ -55,19 +59,20 @@ public class swingDex extends JFrame{
             dlcSelector.setSelectedIndex(0);
             revalidate(); // Resets frame
         });
+        
         idInput.addActionListener((ActionEvent e) -> {
             int input;
             try{input = Integer.parseInt(idInput.getText());}
             catch(NumberFormatException a){input = 1;}
             if(input <= 0 || input > 1025){
-                image.setIcon(Pokemon.pokedexList[0].makeImage("Shiny"));
-                image.setText(Pokemon.pokedexList[0].name);
+                image.setIcon(Pokemon.nationalDex[0].makeImage("Shiny"));
+                image.setText(Pokemon.nationalDex[0].name);
             }else{
-                image.setIcon(Pokemon.pokedexList[input-1].makeImage("Shiny"));
-                image.setText(Pokemon.pokedexList[input-1].name);
+                image.setIcon(Pokemon.nationalDex[input-1].makeImage("Shiny"));
+                image.setText(Pokemon.nationalDex[input-1].name);
                 // Debug
-                Pokemon.pokedexList[input-1].getDexNumbers();
-                for(int i=0;i<Pokemon.pokedexList[input-1].form.size();i++) Pokemon.pokedexList[input-1].form.get(i).getStats();
+                Pokemon.nationalDex[input-1].getDexNumbers();
+                for(int i=0;i<Pokemon.nationalDex[input-1].form.size();i++) Pokemon.nationalDex[input-1].form.get(i).getStats();
                 System.out.print("---");
             }
         });

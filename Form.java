@@ -19,22 +19,25 @@ public class Form{
         this.egg1 = text[17];
         this.egg2 = text[18];
         this.caughtSeen = 0;
-        try{
-            this.national = Integer.parseInt(text[0]);
-            this.height = Double.parseDouble(text[9]);
-            this.weight = Double.parseDouble(text[10]);
-            this.catchRate = Integer.parseInt(text[11]);
-            this.baseFriendship = Integer.parseInt(text[12]);
-            this.baseExp = Integer.parseInt(text[13]);
-            this.maleRatio = Double.parseDouble(text[14]);
-            this.eggCycles = Integer.parseInt(text[15]);
-            this.hp = Integer.parseInt(text[19]);
-            this.atk = Integer.parseInt(text[20]);
-            this.def = Integer.parseInt(text[21]);
-            this.spAtk = Integer.parseInt(text[22]);
-            this.spDef = Integer.parseInt(text[23]);
-            this.spd = Integer.parseInt(text[24]);
-        }catch(NumberFormatException e){System.out.print("Fail of"+this.name);}
+        // Checks if number is empty or not a number
+        for(int i : new int[]{0, 9, 10, 11, 12, 13, 14, 15, 19, 20, 21, 22, 23, 24}){
+            try{Double.valueOf(text[i]);}
+            catch(NumberFormatException e){text[i] = "-1";}
+        }
+        this.national = Integer.parseInt(text[0]);
+        this.height = Double.parseDouble(text[9]);
+        this.weight = Double.parseDouble(text[10]);
+        this.catchRate = Integer.parseInt(text[11]);
+        this.baseFriendship = Integer.parseInt(text[12]);
+        this.baseExp = Integer.parseInt(text[13]);
+        this.maleRatio = Double.parseDouble(text[14]);
+        this.eggCycles = Integer.parseInt(text[15]);
+        this.hp = Integer.parseInt(text[19]);
+        this.atk = Integer.parseInt(text[20]);
+        this.def = Integer.parseInt(text[21]);
+        this.spAtk = Integer.parseInt(text[22]);
+        this.spDef = Integer.parseInt(text[23]);
+        this.spd = Integer.parseInt(text[24]);
     }
     public void getStats(){
         String[] strings = {name, formSymbol, category, type1, type2, ability1, ability2, abilityH, growthRate, egg1, egg2};
@@ -47,7 +50,7 @@ public class Form{
         for(double i : doubles) System.out.print(i + ", ");
         System.out.println();
     }
-    public int statCalcualtor(int level, String stats, int iv, int ev, String nature){
+    public int statCalcualtor(String stats, int level, int iv, int ev, String nature){
         int stat = 0;
         Nature boosted;
         try {boosted = Nature.valueOf(nature.toUpperCase());}

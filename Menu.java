@@ -11,7 +11,7 @@ public class Menu extends JFrame {
     private JList dexList;
 
     public static void main(String[] args) {
-        Pokemon.initializeDex();
+        Pokemon.Dex();
         Menu menu = new Menu();
     }
 
@@ -118,191 +118,50 @@ public class Menu extends JFrame {
         HashMap<Integer, Pokemon> tempDex = new HashMap<>();
         switch(regionDex) {
             case "national" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
+                for(Pokemon p : Pokemon.nationalDex) {
                     if(p.national < 0) continue;
                     tempDex.put(p.national, p);
                 }
             }
-            case "kanto" -> {
-                for (Pokemon p : Pokemon.pokedexList) {
-                    if (p.kanto < 0) continue;
-                    tempDex.put(p.kanto, p);
-                }
-            }
-            case "letsGo" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.letsGo < 0) continue;
-                    tempDex.put(p.letsGo, p);
-                }
-            }
-            case "johto" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.johto < 0) continue;
-                    tempDex.put(p.johto, p);
-                }
-            }
-            case "hoenn" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.hoenn < 0) continue;
-                    tempDex.put(p.hoenn, p);
-                }
-            }
-            case "sinnoh" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.sinnoh < 0) continue;
-                    tempDex.put(p.sinnoh, p);
-                }
-            }
-            case "platinum" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.platinum < 0) continue;
-                    tempDex.put(p.platinum, p);
-                }
-            }
-            case "hgss" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.hgss < 0) continue;
-                    tempDex.put(p.hgss, p);
-                }
-            }
-            case "unova" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.unova < 0) continue;
-                    tempDex.put(p.unova, p);
-                }
-            }
-            case "b2w2" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.b2w2 < 0) continue;
-                    tempDex.put(p.b2w2, p);
-                }
-            }
-            case "kalosCentral" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.kalosCentral < 0) continue;
-                    tempDex.put(p.kalosCentral, p);
-                }
-            }
-            case "kalosCoastal" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.kalosCoastal < 0) continue;
-                    tempDex.put(p.kalosCoastal, p);
-                }
-            }
-            case "kalosMountain" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.kalosMountain < 0) continue;
-                    tempDex.put(p.kalosMountain, p);
-                }
-            }
-            case "oras" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.oras < 0) continue;
-                    tempDex.put(p.oras, p);
-                }
-            }
-            case "alola" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.alola < 0) continue;
-                    tempDex.put(p.alola, p);
-                }
-            }
-            case "melemele" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.melemele < 0) continue;
-                    tempDex.put(p.melemele, p);
-                }
-            }
-            case "akala" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.akala < 0) continue;
-                    tempDex.put(p.akala, p);
-                }
-            }
-            case "ulaula" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.ulaula < 0) continue;
-                    tempDex.put(p.ulaula, p);
-                }
-            }
-            case "poni" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.poni < 0) continue;
-                    tempDex.put(p.poni, p);
-                }
-            }
-            case "ultra" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.ultra < 0) continue;
-                    tempDex.put(p.ultra, p);
-                }
-            }
-            case "ultraMelemele" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.ultraMelemele < 0) continue;
-                    tempDex.put(p.ultraMelemele, p);
-                }
-            }
-            case "ultraAkala" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.ultraAkala < 0) continue;
-                    tempDex.put(p.ultraAkala, p);
-                }
-            }
-            case "ultraUlaula" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.ultraUlaula < 0) continue;
-                    tempDex.put(p.ultraUlaula, p);
-                }
-            }
-            case "ultraPoni" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.ultraPoni < 0) continue;
-                    tempDex.put(p.ultraPoni, p);
-                }
-            }
-            case "galar" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.galar < 0) continue;
-                    tempDex.put(p.galar, p);
-                }
-            }
-            case "isleOfArmor" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.isleOfArmor < 0) continue;
-                    tempDex.put(p.isleOfArmor, p);
-                }
-            }
-            case "crownTundra" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.crownTundra < 0) continue;
-                    tempDex.put(p.crownTundra, p);
-                }
-            }
-            case "legendsArceus" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.legendsArceus < 0) continue;
-                    tempDex.put(p.legendsArceus, p);
-                }
-            }
-            case "paldea" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.paldea < 0) continue;
-                    tempDex.put(p.paldea, p);
-                }
-            }
-            case "tealMask" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.tealMask < 0) continue;
-                    tempDex.put(p.tealMask, p);
-                }
-            }
-            case "indigoDisk" -> {
-                for(Pokemon p : Pokemon.pokedexList) {
-                    if(p.indigoDisk < 0) continue;
-                    tempDex.put(p.indigoDisk, p);
-                }
-            }
+            // Kanto
+            case "kanto" -> tempDex = new HashMap<>(Pokemon.kanto);
+            case "letsGo" -> tempDex = new HashMap<>(Pokemon.letsGo);
+            // Johto
+            case "johto" -> tempDex = new HashMap<>(Pokemon.johto);
+            case "hgss" -> tempDex = new HashMap<>(Pokemon.hgss);
+            // Hoenn
+            case "hoenn" -> tempDex = new HashMap<>(Pokemon.hoenn);
+            case "oras" -> tempDex = new HashMap<>(Pokemon.oras);
+            // Sinnoh
+            case "sinnoh" -> tempDex = new HashMap<>(Pokemon.sinnoh);
+            case "platinum" -> tempDex = new HashMap<>(Pokemon.platinum);
+            case "legendsArceus" -> tempDex = new HashMap<>(Pokemon.legendsArceus);
+            // Unova
+            case "unova" -> tempDex = new HashMap<>(Pokemon.unova);
+            case "b2w2" -> tempDex = new HashMap<>(Pokemon.b2w2);
+            // Kalos
+            case "kalosCentral" -> tempDex = new HashMap<>(Pokemon.kalosCentral);
+            case "kalosCoastal" -> tempDex = new HashMap<>(Pokemon.kalosCoastal);
+            case "kalosMountain" -> tempDex = new HashMap<>(Pokemon.kalosMountain);
+            // Alola
+            case "alola" -> tempDex = new HashMap<>(Pokemon.alola);
+            case "melemele" -> tempDex = new HashMap<>(Pokemon.melemele);
+            case "akala" -> tempDex = new HashMap<>(Pokemon.akala);
+            case "ulaula" -> tempDex = new HashMap<>(Pokemon.ulaula);
+            case "poni" -> tempDex = new HashMap<>(Pokemon.poni);
+            case "ultra" -> tempDex = new HashMap<>(Pokemon.ultra);
+            case "ultraMelemele" -> tempDex = new HashMap<>(Pokemon.ultraMelemele);
+            case "ultraAkala" -> tempDex = new HashMap<>(Pokemon.ultraAkala);
+            case "ultraUlaula" -> tempDex = new HashMap<>(Pokemon.ultraUlaula);
+            case "ultraPoni" -> tempDex = new HashMap<>(Pokemon.ultraPoni);
+            // Galar
+            case "galar" -> tempDex = new HashMap<>(Pokemon.galar);
+            case "isleOfArmor" -> tempDex = new HashMap<>(Pokemon.isleOfArmor);
+            case "crownTundra" -> tempDex = new HashMap<>(Pokemon.crownTundra);
+            // Paldea
+            case "paldea" -> tempDex = new HashMap<>(Pokemon.paldea);
+            case "tealMask" -> tempDex = new HashMap<>(Pokemon.tealMask);
+            case "indigoDisk" -> tempDex = new HashMap<>(Pokemon.indigoDisk);
             default ->{
                 System.out.println("Error: invalid region.");
                 dexList.setModel(tempModel);

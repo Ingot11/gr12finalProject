@@ -9,61 +9,45 @@ import java.util.*;
 import javax.swing.*;
 import javax.imageio.*;
 import java.awt.image.*;
-import java.util.ArrayList;
 import java.util.logging.*;
 public class Pokemon{
-    // Full Pokedex
-    public static Pokemon[] pokedexList;
+    // Full Pokédex
+    public static Pokemon[] nationalDex;
+    public static HashMap<Integer,Pokemon>[] dexOfDex;
     // Regional Dex Numbers
-    public int national, kanto, johto, hoenn, sinnoh, platinum, hgss, unova, b2w2,
+    public int national;
+    public static HashMap<Integer,Pokemon> kanto, letsGo, johto, hoenn, sinnoh, platinum, hgss, unova, b2w2,
     kalosCentral, kalosCoastal, kalosMountain, oras,
     alola, melemele, akala, ulaula, poni, ultra, ultraMelemele, ultraAkala, ultraUlaula, ultraPoni,
     galar, isleOfArmor, crownTundra, legendsArceus,
-    paldea, tealMask, indigoDisk,
-    letsGo;
+    paldea, tealMask, indigoDisk;
     // Stats and Characteristics
     public String name;
     public ArrayList<Form> form;
+
     // Pokemon Constructor
     public Pokemon(String name, int national){
         this.name = name;
         this.national = national;
         this.form = new ArrayList<>();
     }
+
     // Constructor from file
-    public void inputDex(int[] dexNum){
-        if(dexNum[0] <= 151) this.kanto = dexNum[0];
-        else this.kanto = -1;
-        this.letsGo = dexNum[0];
-        this.johto = dexNum[1];
-        this.hoenn = dexNum[2];
-        this.sinnoh = dexNum[3];
-        this.platinum = dexNum[4];
-        this.hgss = dexNum[5];
-        this.unova = dexNum[6];
-        this.b2w2 = dexNum[7];
-        this.kalosCentral = dexNum[8];
-        this.kalosCoastal = dexNum[9];
-        this.kalosMountain = dexNum[10];
-        this.oras = dexNum[11];
-        this.alola = dexNum[12];
-        this.melemele = dexNum[13];
-        this.akala = dexNum[14];
-        this.ulaula = dexNum[15];
-        this.poni = dexNum[16];
-        this.ultra = dexNum[17];
-        this.ultraMelemele = dexNum[18];
-        this.ultraAkala = dexNum[19];
-        this.ultraUlaula = dexNum[20];
-        this.ultraPoni = dexNum[21];
-        this.galar = dexNum[22];
-        this.isleOfArmor = dexNum[23];
-        this.crownTundra = dexNum[24];
-        this.legendsArceus = dexNum[25];
-        this.paldea = dexNum[26];
-        this.tealMask = dexNum[27];
-        this.indigoDisk = dexNum[28];
+    public void inputDex(int[] dexNumber){
+        if(dexNumber[0] <= 151) kanto.put(dexNumber[0],this);
+        for(int i=1; i<dexOfDex.length;i++) dexOfDex[i].put(dexNumber[i-1],this);
     }
+    public void getDexNumbers(){
+        String[] dexString = {"RBY/FRLG","Lets Go","GSC", "RSE", "DP", "Platinum", "HGSS", "BW", "B2W2", "KalosCentral", "KalosCoastal", "KalosMountain", "ORAS", "Alola", "Melemele", "Akala", "Ula'Ula", "Poni", "Ultra Alola", "Ultra Melemele", "Ultra Akala", "Ultra Ula'Ula", "Ultra Poni", "Galar", "Isle of Armor", "Crown Tundra", "Hisui", "Paldea", "Teal Mask", "Indigo Disk"};
+        for(int i=0;i<dexOfDex.length;i++) for(int j: dexOfDex[i].keySet()) {
+            if(dexOfDex[i].get(j).equals(this)){
+                System.out.print(dexString[i] + ": " + j + ", ");
+                break;
+            }
+        }
+        System.out.println();
+    }
+
     //Get image from Serebii website
     public ImageIcon makeImage(String form){
         String dexString = (national <= 0 || national > 1025) ? "001" : (national > 99) ? "" + national : (national > 9) ? "0" + national : (national > 0) ? "00" + national : "001",
@@ -75,15 +59,27 @@ public class Pokemon{
         catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}
         return null;
     }
-    public void getDexNumbers(){
-        int[] dexInt = {kanto, letsGo, johto, hoenn, sinnoh, platinum, hgss, unova, b2w2, kalosCentral, kalosCoastal, kalosMountain, oras, alola, melemele, akala, ulaula, poni, ultra, ultraMelemele, ultraAkala, ultraUlaula, ultraPoni, galar, isleOfArmor, crownTundra, legendsArceus, paldea, tealMask, indigoDisk,};
-        String[] dexString = {"RBY/FRLG","Lets Go","GSC", "RSE", "DP", "Platinum", "HGSS", "BW", "B2W2", "KalosCentral", "KalosCoastal", "KalosMountain", "ORAS", "Alola", "Melemele", "Akala", "Ula'Ula", "Poni", "Ultra Alola", "Ultra Melemele", "Ultra Akala", "Ultra Ula'Ula", "Ultra Poni", "Galar", "Isle of Armor", "Crown Tundra", "Hisui", "Paldea", "Teal Mask", "Indigo Disk"};
-        for(int i=0;i<dexInt.length;i++) System.out.print(dexString[i]+": "+dexInt[i]+", ");
-        System.out.println();
+
+    // Initialize the dexs
+    public static void initialize(){
+        dexOfDex = new HashMap[]{kanto = new HashMap<>(), letsGo = new HashMap<>(),
+            johto = new HashMap<>(), hgss = new HashMap<>(),
+            hoenn = new HashMap<>(), oras = new HashMap<>(),
+            sinnoh = new HashMap<>(), platinum = new HashMap<>(), legendsArceus = new HashMap<>(),
+            unova = new HashMap<>(), b2w2 = new HashMap<>(),
+            kalosCentral = new HashMap<>(), kalosCoastal = new HashMap<>(), kalosMountain = new HashMap<>(),
+            alola = new HashMap<>(), melemele = new HashMap<>(), akala = new HashMap<>(), ulaula = new HashMap<>(), poni = new HashMap<>(), ultra = new HashMap<>(), ultraMelemele = new HashMap<>(), ultraAkala = new HashMap<>(), ultraUlaula = new HashMap<>(), ultraPoni = new HashMap<>(),
+            galar = new HashMap<>(), isleOfArmor = new HashMap<>(), crownTundra = new HashMap<>(),
+            paldea = new HashMap<>(), tealMask = new HashMap<>(), indigoDisk = new HashMap<>()};
     }
+    
     // Creates Dex
-    public static void initializeDex(){
-        pokedexList = new Pokemon[1025];
+    public static void Dex(){
+        // Initialize Dexs
+        nationalDex = new Pokemon[1025];
+        Pokemon.initialize();
+        if(kanto==null) System.out.println("didnt work");
+        // Read from file
         try(BufferedReader buffReadDex = new BufferedReader(new FileReader("dex.csv")); BufferedReader buffReadStats = new BufferedReader(new FileReader("stats.csv"))){
             String line;
             buffReadDex.readLine();
@@ -91,16 +87,17 @@ public class Pokemon{
                 // Initialize the Pokemon
                 String[] lines = line.split(", ");
                 Pokemon temp = new Pokemon(lines[0], Integer.parseInt(lines[1]));
-                pokedexList[Integer.parseInt(lines[1])-1] = temp;
+                nationalDex[Integer.parseInt(lines[1])-1] = temp;
                 // Input the dex number
                 int[] dexNumber = new int[31];
                 for(int i=2; i<dexNumber.length; i++) dexNumber[i-2] = Integer.parseInt(lines[i]);
                 temp.inputDex(dexNumber);
             }
+            for(HashMap<Integer, Pokemon> i : dexOfDex) i.remove(-1);
             buffReadStats.readLine();
             while ((line = buffReadStats.readLine()) != null) {
                 String[] lines = line.split(", ");
-                pokedexList[Integer.parseInt(lines[0])-1].form.add(new Form(lines));
+                nationalDex[Integer.parseInt(lines[0])-1].form.add(new Form(lines));
             }
             buffReadDex.close();
             buffReadStats.close();
