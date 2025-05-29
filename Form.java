@@ -34,7 +34,7 @@ public class Form{
             this.spAtk = Integer.parseInt(text[22]);
             this.spDef = Integer.parseInt(text[23]);
             this.spd = Integer.parseInt(text[24]);
-        }catch(NumberFormatException e){}
+        }catch(NumberFormatException e){System.out.print("Fail of"+this.name);}
     }
     public void getStats(){
         String[] strings = {name, formSymbol, category, type1, type2, ability1, ability2, abilityH, growthRate, egg1, egg2};
