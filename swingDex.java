@@ -65,7 +65,10 @@ public class swingDex extends JFrame{
             }else{
                 image.setIcon(Pokemon.pokedexList[input-1].makeImage("Shiny"));
                 image.setText(Pokemon.pokedexList[input-1].name);
+                // Debug
                 Pokemon.pokedexList[input-1].getDexNumbers();
+                for(int i=0;i<Pokemon.pokedexList[input-1].form.size();i++) Pokemon.pokedexList[input-1].form.get(i).getStats();
+                System.out.print("---");
             }
         });
     }

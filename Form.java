@@ -2,39 +2,50 @@ public class Form{
     public String name, formSymbol, category, type1, type2, 
     ability1, ability2, abilityH, growthRate, egg1, egg2;
     public int national, catchRate, baseFriendship, baseExp, eggCycles,
-    hp, atk, def, spAtk, spDef, spd, caughtSeenStatus;
+    hp, atk, def, spAtk, spDef, spd, caughtSeen;
     public double height, weight, maleRatio;
     // Constructor for each form
-    public Form(String text){
-        String[] info = text.split(", ");
-        if(info.length != 25) return;
-        this.name = info[1];
-        this.formSymbol = info[2];
-        this.category = info[3];
-        this.type1 = info[4];
-        this.type2 = info[5];
-        this.ability1 = info[6];
-        this.ability2 = info[7];
-        this.abilityH = info[8];
-        this.growthRate = info[16];
-        this.egg1 = info[17];
-        this.egg2 = info[18];
+    public Form(String[] text){
+        if(text.length != 25) return;
+        this.name = text[1];
+        this.formSymbol = text[2];
+        this.category = text[3];
+        this.type1 = text[4];
+        this.type2 = text[5];
+        this.ability1 = text[6];
+        this.ability2 = text[7];
+        this.abilityH = text[8];
+        this.growthRate = text[16];
+        this.egg1 = text[17];
+        this.egg2 = text[18];
+        this.caughtSeen = 0;
         try{
-            this.national = Integer.parseInt(info[0]);
-            this.height = Double.parseDouble(info[9]);
-            this.weight = Double.parseDouble(info[10]);
-            this.catchRate = Integer.parseInt(info[11]);
-            this.baseFriendship = Integer.parseInt(info[12]);
-            this.baseExp = Integer.parseInt(info[13]);
-            this.maleRatio = Double.parseDouble(info[14]);
-            this.eggCycles = Integer.parseInt(info[15]);
-            this.hp = Integer.parseInt(info[19]);
-            this.atk = Integer.parseInt(info[20]);
-            this.def = Integer.parseInt(info[21]);
-            this.spAtk = Integer.parseInt(info[22]);
-            this.spDef = Integer.parseInt(info[23]);
-            this.spd = Integer.parseInt(info[24]);
+            this.national = Integer.parseInt(text[0]);
+            this.height = Double.parseDouble(text[9]);
+            this.weight = Double.parseDouble(text[10]);
+            this.catchRate = Integer.parseInt(text[11]);
+            this.baseFriendship = Integer.parseInt(text[12]);
+            this.baseExp = Integer.parseInt(text[13]);
+            this.maleRatio = Double.parseDouble(text[14]);
+            this.eggCycles = Integer.parseInt(text[15]);
+            this.hp = Integer.parseInt(text[19]);
+            this.atk = Integer.parseInt(text[20]);
+            this.def = Integer.parseInt(text[21]);
+            this.spAtk = Integer.parseInt(text[22]);
+            this.spDef = Integer.parseInt(text[23]);
+            this.spd = Integer.parseInt(text[24]);
         }catch(NumberFormatException e){}
+    }
+    public void getStats(){
+        String[] strings = {name, formSymbol, category, type1, type2, ability1, ability2, abilityH, growthRate, egg1, egg2};
+        int[] integers = {national, catchRate, baseFriendship, baseExp, eggCycles, hp, atk, def, spAtk, spDef, spd, caughtSeen};
+        double[] doubles = {height, weight, maleRatio};
+        for(String i : strings) System.out.print(i + ", ");
+        System.out.println();
+        for(int i : integers) System.out.print(i + ", ");
+        System.out.println();
+        for(double i : doubles) System.out.print(i + ", ");
+        System.out.println();
     }
     public int statCalcualtor(int level, String stats, int iv, int ev, String nature){
         int stat = 0;

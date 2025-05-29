@@ -84,10 +84,10 @@ public class Pokemon{
     // Creates Dex
     public static void initializeDex(){
         pokedexList = new Pokemon[1025];
-        try(BufferedReader buffRead = new BufferedReader(new FileReader("dex.csv"))){
+        try(BufferedReader buffReadDex = new BufferedReader(new FileReader("dex.csv")); BufferedReader buffReadStats = new BufferedReader(new FileReader("stats.csv"))){
             String line;
-            buffRead.readLine();
-            while ((line = buffRead.readLine()) != null) {
+            buffReadDex.readLine();
+            while ((line = buffReadDex.readLine()) != null) {
                 // Initialize the Pokemon
                 String[] lines = line.split(", ");
                 Pokemon temp = new Pokemon(lines[0], Integer.parseInt(lines[1]));
@@ -96,9 +96,14 @@ public class Pokemon{
                 int[] dexNumber = new int[31];
                 for(int i=2; i<dexNumber.length; i++) dexNumber[i-2] = Integer.parseInt(lines[i]);
                 temp.inputDex(dexNumber);
-                temp.form.add(new Form("test"));
             }
-            buffRead.close();
+            buffReadStats.readLine();
+            while ((line = buffReadStats.readLine()) != null) {
+                String[] lines = line.split(", ");
+                pokedexList[Integer.parseInt(lines[0])-1].form.add(new Form(lines));
+            }
+            buffReadDex.close();
+            buffReadStats.close();
         }
         catch (FileNotFoundException | NumberFormatException e) {System.out.println("File not found or Number Format Exception");}
         catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}
