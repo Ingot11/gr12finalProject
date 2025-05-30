@@ -62,14 +62,10 @@ public class Pokemon{
 
     // Initialize the dexs
     public static void initialize(){
-        dexOfDex = new HashMap[]{kanto = new HashMap<>(), letsGo = new HashMap<>(),
-            johto = new HashMap<>(), hgss = new HashMap<>(),
-            hoenn = new HashMap<>(), oras = new HashMap<>(),
-            sinnoh = new HashMap<>(), platinum = new HashMap<>(), legendsArceus = new HashMap<>(),
-            unova = new HashMap<>(), b2w2 = new HashMap<>(),
-            kalosCentral = new HashMap<>(), kalosCoastal = new HashMap<>(), kalosMountain = new HashMap<>(),
+        dexOfDex = new HashMap[]{kanto = new HashMap<>(), letsGo = new HashMap<>(), johto = new HashMap<>(), hoenn = new HashMap<>(), sinnoh = new HashMap<>(), platinum = new HashMap<>(), hgss = new HashMap<>(), unova = new HashMap<>(), b2w2 = new HashMap<>(),
+            kalosCentral = new HashMap<>(), kalosCoastal = new HashMap<>(), kalosMountain = new HashMap<>(), oras = new HashMap<>(),
             alola = new HashMap<>(), melemele = new HashMap<>(), akala = new HashMap<>(), ulaula = new HashMap<>(), poni = new HashMap<>(), ultra = new HashMap<>(), ultraMelemele = new HashMap<>(), ultraAkala = new HashMap<>(), ultraUlaula = new HashMap<>(), ultraPoni = new HashMap<>(),
-            galar = new HashMap<>(), isleOfArmor = new HashMap<>(), crownTundra = new HashMap<>(),
+            galar = new HashMap<>(), isleOfArmor = new HashMap<>(), crownTundra = new HashMap<>(), legendsArceus = new HashMap<>(),
             paldea = new HashMap<>(), tealMask = new HashMap<>(), indigoDisk = new HashMap<>()};
     }
     
