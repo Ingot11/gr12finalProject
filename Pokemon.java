@@ -39,9 +39,10 @@ public class Pokemon{
     }
     public void getDexNumbers(){
         String[] dexString = {"RBY/FRLG","Lets Go","GSC", "RSE", "DP", "Platinum", "HGSS", "BW", "B2W2", "KalosCentral", "KalosCoastal", "KalosMountain", "ORAS", "Alola", "Melemele", "Akala", "Ula'Ula", "Poni", "Ultra Alola", "Ultra Melemele", "Ultra Akala", "Ultra Ula'Ula", "Ultra Poni", "Galar", "Isle of Armor", "Crown Tundra", "Hisui", "Paldea", "Teal Mask", "Indigo Disk"};
+        System.out.print("National" + ": " + national);
         for(int i=0;i<dexOfDex.length;i++) for(int j: dexOfDex[i].keySet()) {
             if(dexOfDex[i].get(j).equals(this)){
-                System.out.print(dexString[i] + ": " + j + ", ");
+                System.out.print(", "+dexString[i] + ": " + j);
                 break;
             }
         }

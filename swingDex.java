@@ -32,7 +32,7 @@ public class swingDex extends JFrame{
         Pokemon.Dex();
         // Defining Variables and adding it to Panels
         headerPanel.add(headerText = new JLabel("Pokedex Completionist"));
-        headerPanel.add(generationSelector = new JComboBox<>(new String[]{"National", "Kanto", "Johto", "Hoenn", "Sinnoh/Hisui", "Unova", "Kalos", "Alola", "Galar", "Paldea/Teal Mask/Blueberry Academy"}));
+        headerPanel.add(generationSelector = new JComboBox<>(new String[]{"National", "Kanto", "Johto", "Hoenn", "Sinnoh/Hisui", "Unova", "Kalos", "Alola", "Galar", "Paldea"}));
         headerPanel.add(dlcSelector = new JComboBox<>(new String[]{"National"}));
         middlePanel.add(idLabel = new JLabel("Input Pokedex Number:"));
         middlePanel.add(idInput = new JTextField(3));
@@ -73,7 +73,7 @@ public class swingDex extends JFrame{
                 // Debug
                 Pokemon.nationalDex[input-1].getDexNumbers();
                 for(int i=0;i<Pokemon.nationalDex[input-1].form.size();i++) Pokemon.nationalDex[input-1].form.get(i).getStats();
-                System.out.print("---");
+                System.out.println("---");
             }
         });
     }
