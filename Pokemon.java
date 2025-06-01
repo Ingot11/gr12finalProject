@@ -223,7 +223,7 @@ public class Pokemon{
                 tempDex.put(p.national - start + 1, p);
             }
         }
-        else for (int i : tempDex.keySet()) tempModel.addElement(i + ". " + tempDex.get(i).name);
+        for (int i : tempDex.keySet()) tempModel.addElement(i + ". " + tempDex.get(i).name);
         return tempModel;
     }
 }
