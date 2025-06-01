@@ -19,7 +19,7 @@ public class swingDex extends JFrame{
     // Window Constructor
     public swingDex(){
         // Set Main Frame
-        setTitle("Pokedex List");
+        setTitle("Pokédex");
         setSize(600,600);
         setLayout(new GridBagLayout());
         setMinimumSize(new Dimension(450,450));
@@ -27,7 +27,6 @@ public class swingDex extends JFrame{
         for(Component i:getComponents()) i.setBackground(Color.WHITE);
         // Initialize Pokedex
         Pokemon.Dex();
-        pokeList = new JList(new String[]{"Choose a region to begin!"});
 
         // Id Inputter
         add(idPanel = new JPanel(new FlowLayout()), constraint(0,0,false));
@@ -38,15 +37,15 @@ public class swingDex extends JFrame{
         add(selectorPanel = new JPanel(new FlowLayout()), constraint(1,0,false));
         selectorPanel.add(generationSelector = new JComboBox<>(new String[]{"National", "Kanto", "Johto", "Hoenn", "Sinnoh/Hisui", "Unova", "Kalos", "Alola", "Galar", "Paldea"}));
         selectorPanel.add(dlcSelector = new JComboBox<>(new String[]{"National"}));
-        // Pokemon Image / Caught and Seen
 
+        // Pokemon Image / Caught and Seen
         add(image = new JLabel(Pokemon.nationalDex[737-1].name, Pokemon.nationalDex[737-1].makeImage("Default", false), 0), constraint(0,1,false));
         add(infoPanel = new JPanel(new FlowLayout()), constraint(0,2,false));
         infoPanel.add(caught = new JButton("Caught"));
         infoPanel.add(seen = new JButton("Seen"));
 
         // Scroll Dex
-        add(pokeScroll = new JScrollPane(pokeList), constraint(1,1,true));
+        add(pokeScroll = new JScrollPane(pokeList = new JList(new String[]{"Choose a region to begin!"})), constraint(1,1,true));
         setVisible(true);
 
         // Action Listeners
@@ -84,7 +83,10 @@ public class swingDex extends JFrame{
                 System.out.println("---");
             }
         });
-    }public static GridBagConstraints constraint(int x, int y, boolean isList){
+    }
+    
+    // Set Constraints
+    public static GridBagConstraints constraint(int x, int y, boolean isList){
         GridBagConstraints constraints = new GridBagConstraints();
         constraints.weightx = 0.5; constraints.weighty = 0.5;
         constraints.gridx = x; constraints.gridy = y;
