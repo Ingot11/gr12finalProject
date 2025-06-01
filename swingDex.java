@@ -3,12 +3,12 @@ import javax.swing.*;
 import java.awt.event.*;
 public class swingDex extends JFrame{
     // Window Variables
-    private final JPanel headerPanel, middlePanel, bottomPanel;
-    private final JTextField idInput;
-    private final JButton caught, seen;
-    private final JLabel headerText, image, idLabel;
     private final JComboBox<String> generationSelector, dlcSelector;
+    private final JPanel selectorPanel, idPanel, infoPanel;
     private final JScrollPane pokeScroll;
+    private final JLabel image, idLabel;
+    private final JButton caught, seen;
+    private final JTextField idInput;
     private final JList pokeList;
 
     // Call Window
@@ -21,27 +21,32 @@ public class swingDex extends JFrame{
         // Set Main Frame
         setTitle("Pokedex List");
         setSize(600,600);
-        setLayout(new GridLayout(3, 1));
+        setLayout(new GridBagLayout());
         setMinimumSize(new Dimension(450,450));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         for(Component i:getComponents()) i.setBackground(Color.WHITE);
-        // Add to Frame
-        add(headerPanel = new JPanel(new FlowLayout()));
-        add(middlePanel = new JPanel(new FlowLayout()));
-        add(bottomPanel = new JPanel(new FlowLayout()));
         // Initialize Pokedex
         Pokemon.Dex();
         pokeList = new JList(new String[]{"Choose a region to begin!"});
-        // Defining Variables and adding it to Panels
-        headerPanel.add(headerText = new JLabel("Pokedex Completionist"));
-        headerPanel.add(generationSelector = new JComboBox<>(new String[]{"National", "Kanto", "Johto", "Hoenn", "Sinnoh/Hisui", "Unova", "Kalos", "Alola", "Galar", "Paldea"}));
-        headerPanel.add(dlcSelector = new JComboBox<>(new String[]{"National"}));
-        middlePanel.add(idLabel = new JLabel("Input Pokedex Number:"));
-        middlePanel.add(idInput = new JTextField(3));
-        middlePanel.add(pokeScroll = new JScrollPane(pokeList));
-        bottomPanel.add(image = new JLabel(Pokemon.nationalDex[737-1].name, Pokemon.nationalDex[737-1].makeImage("Default", false), 0));
-        bottomPanel.add(caught = new JButton("Caught"));
-        bottomPanel.add(seen = new JButton("Seen"));
+
+        // Id Inputter
+        add(idPanel = new JPanel(new FlowLayout()), constraint(0,0,false));
+        idPanel.add(idLabel = new JLabel("Dex Number:"));
+        idPanel.add(idInput = new JTextField(3));
+
+        // Selectors
+        add(selectorPanel = new JPanel(new FlowLayout()), constraint(1,0,false));
+        selectorPanel.add(generationSelector = new JComboBox<>(new String[]{"National", "Kanto", "Johto", "Hoenn", "Sinnoh/Hisui", "Unova", "Kalos", "Alola", "Galar", "Paldea"}));
+        selectorPanel.add(dlcSelector = new JComboBox<>(new String[]{"National"}));
+        // Pokemon Image / Caught and Seen
+
+        add(image = new JLabel(Pokemon.nationalDex[737-1].name, Pokemon.nationalDex[737-1].makeImage("Default", false), 0), constraint(0,1,false));
+        add(infoPanel = new JPanel(new FlowLayout()), constraint(0,2,false));
+        infoPanel.add(caught = new JButton("Caught"));
+        infoPanel.add(seen = new JButton("Seen"));
+
+        // Scroll Dex
+        add(pokeScroll = new JScrollPane(pokeList), constraint(1,1,true));
         setVisible(true);
 
         // Action Listeners
@@ -50,10 +55,10 @@ public class swingDex extends JFrame{
             String[][] generation = {{"National"}, /*National*/
             {"Regional", "Red/Blue/Yellow/FireRed/LeafGreen", "Let's Go"}, /*Kanto*/
             {"Regional", "Gold/Silver/Crystal", "HeartGold/SoulSilver"}, /*Johto*/
-            {"Regional", "Ruby/Sapphire/Emerald", "Omega Ruby/Alpha Sapphire"}, /*Hoenn*/
+            {"Regional", "Ruby/Sapphire/Emerald", "OmegaRuby/AlphaSapphire"}, /*Hoenn*/
             {"Regional", "Diamond/Pearl", "Platinum", "Legends: Arceus"}, /*Sinnoh + Hisui*/
             {"Regional", "Black/White", "Black 2/White 2"}, /*Unova*/
-            {"Regional", "X/Y", "Central", "Coastal", "Mountain"}, /*Kalos*/
+            {"Regional", "KalosCentral", "KalosCoastal", "KalosMountain"}, /*Kalos*/
             {"Regional", "Sun/Moon", "Melemele", "Akala", "Ula'Ula", "Poni", "Ultra Sun/Ultra Moon", "Ultra Melemele", "Ultra Akala", "Ultra Ula'Ula", "Ultra Poni"}, /*Alola*/
             {"Regional", "Sword/Shield", "Isle of Armor", "Crown Tundra"}, /*Galar*/
             {"Regional", "Scarlet/Violet", "Teal Mask", "Indigo Disk"}}; /*Paldea*/
@@ -79,5 +84,15 @@ public class swingDex extends JFrame{
                 System.out.println("---");
             }
         });
+    }public static GridBagConstraints constraint(int x, int y, boolean isList){
+        GridBagConstraints constraints = new GridBagConstraints();
+        constraints.weightx = 0.5; constraints.weighty = 0.5;
+        constraints.gridx = x; constraints.gridy = y;
+        if(isList){
+            constraints.gridheight = 2;
+            constraints.fill = GridBagConstraints.BOTH;
+            constraints.insets = new Insets(20,20,20,20);
+        }
+        return constraints;
     }
 }
