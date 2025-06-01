@@ -8,6 +8,8 @@ public class swingDex extends JFrame{
     private final JButton caught, seen;
     private final JLabel headerText, image, idLabel;
     private final JComboBox<String> generationSelector, dlcSelector;
+    private final JScrollPane pokeScroll;
+    private final JList pokeList;
 
     // Call Window
     public static void main(String[] args){
@@ -27,16 +29,17 @@ public class swingDex extends JFrame{
         add(headerPanel = new JPanel(new FlowLayout()));
         add(middlePanel = new JPanel(new FlowLayout()));
         add(bottomPanel = new JPanel(new FlowLayout()));
-
         // Initialize Pokedex
         Pokemon.Dex();
+        pokeList = new JList(new String[]{"Choose a region to begin!"});
         // Defining Variables and adding it to Panels
         headerPanel.add(headerText = new JLabel("Pokedex Completionist"));
         headerPanel.add(generationSelector = new JComboBox<>(new String[]{"National", "Kanto", "Johto", "Hoenn", "Sinnoh/Hisui", "Unova", "Kalos", "Alola", "Galar", "Paldea"}));
         headerPanel.add(dlcSelector = new JComboBox<>(new String[]{"National"}));
         middlePanel.add(idLabel = new JLabel("Input Pokedex Number:"));
         middlePanel.add(idInput = new JTextField(3));
-        bottomPanel.add(image = new JLabel(Pokemon.nationalDex[737-1].name, Pokemon.nationalDex[737-1].makeImage("Default"), 0));
+        middlePanel.add(pokeScroll = new JScrollPane(pokeList));
+        bottomPanel.add(image = new JLabel(Pokemon.nationalDex[737-1].name, Pokemon.nationalDex[737-1].makeImage("Default", false), 0));
         bottomPanel.add(caught = new JButton("Caught"));
         bottomPanel.add(seen = new JButton("Seen"));
         setVisible(true);
@@ -59,16 +62,16 @@ public class swingDex extends JFrame{
             dlcSelector.setSelectedIndex(0);
             revalidate(); // Resets frame
         });
-        
+        dlcSelector.addActionListener((ActionEvent e) -> {pokeList.setModel(Pokemon.getDex(generationSelector.getSelectedIndex(), dlcSelector.getSelectedIndex()));});
         idInput.addActionListener((ActionEvent e) -> {
             int input;
             try{input = Integer.parseInt(idInput.getText());}
             catch(NumberFormatException a){input = 1;}
             if(input <= 0 || input > 1025){
-                image.setIcon(Pokemon.nationalDex[0].makeImage("Shiny"));
+                image.setIcon(Pokemon.nationalDex[0].makeImage("", true));
                 image.setText(Pokemon.nationalDex[0].name);
             }else{
-                image.setIcon(Pokemon.nationalDex[input-1].makeImage("Shiny"));
+                image.setIcon(Pokemon.nationalDex[input-1].makeImage("", true));
                 image.setText(Pokemon.nationalDex[input-1].name);
                 // Debug
                 Pokemon.nationalDex[input-1].getDexNumbers();

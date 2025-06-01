@@ -73,7 +73,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="8a00d" class="javax.swing.JList" binding="dexList">
+          <component id="8a00d" class="javax.swing.JList" binding="nationalDex">
             <constraints/>
             <properties>
               <model/>
