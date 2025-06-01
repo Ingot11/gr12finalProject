@@ -60,7 +60,101 @@ public class Pokemon{
         catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}
         return null;
     }
-    
+    public static Pokemon getPokemon(int region, int dlc, int selected){
+        Pokemon temp = nationalDex[0];
+        int x = 0;
+        if(dlc!=0) selected++;
+        switch(region){
+            case 0 -> x = 0;
+            case 1 -> { // Kanto
+                switch(dlc){
+                    case 0 -> x = 0;
+                    case 1 -> temp = kanto.get(selected);
+                    case 2 -> temp = letsGo.get(selected);
+                }
+            }
+            case 2 -> { // Johto
+                switch(dlc){
+                    case 0 -> x = 151;
+                    case 1 -> temp = johto.get(selected);
+                    case 2 -> temp = hgss.get(selected);
+                }
+            }
+            case 3 -> { // Hoenn
+                switch(dlc){
+                    case 0 -> x = 251;
+                    case 1 -> temp = hoenn.get(selected);
+                    case 2 -> temp = oras.get(selected);
+                }
+            }
+            case 4 -> {
+                switch(dlc){ // Sinnoh
+                    case 0 -> x = 386;
+                    case 1 -> temp = sinnoh.get(selected);
+                    case 2 -> temp = platinum.get(selected);
+                    case 3 -> temp = legendsArceus.get(selected);
+                }
+            }
+            case 5 -> { // Unova
+                switch(dlc){
+                    case 0 -> x = 493;
+                    case 1 -> temp = unova.get(selected-1);
+                    case 2 -> temp = b2w2.get(selected-1);
+                }
+            }
+            case 6 -> { // Kalos
+                switch(dlc){
+                    case 0 -> x = 649;
+                    case 1 -> temp = kalosCentral.get(selected);
+                    case 2 -> temp = kalosCoastal.get(selected);
+                    case 3 -> temp = kalosMountain.get(selected);
+                }
+            }
+            case 7 -> { // Alola
+                switch(dlc){
+                    case 0 -> x = 721;
+                    case 1 -> temp = alola.get(selected);
+                    case 2 -> temp = melemele.get(selected);
+                    case 3 -> temp = akala.get(selected);
+                    case 4 -> temp = ulaula.get(selected);
+                    case 5 -> temp = poni.get(selected);
+                    case 6 -> temp = ultra.get(selected);
+                    case 7 -> temp = ultraMelemele.get(selected);
+                    case 8 -> temp = ultraAkala.get(selected);
+                    case 9 -> temp = ultraUlaula.get(selected);
+                    case 10 -> temp = ultraPoni.get(selected);
+                }
+            }
+            case 8 -> { // Galar
+                switch(dlc){
+                    case 0 -> x = 809;
+                    case 1 -> temp = galar.get(selected);
+                    case 2 -> temp = isleOfArmor.get(selected);
+                    case 3 -> temp = crownTundra.get(selected);
+                }
+            }
+            case 9 -> { // Paldea
+                switch(dlc){
+                    case 0 -> x = 905;
+                    case 1 -> temp = paldea.get(selected);
+                    case 2 -> temp = tealMask.get(selected);
+                    case 3 -> temp = indigoDisk.get(selected);
+                }                
+            }
+        }
+        try{if(dlc == 0) temp = nationalDex[selected+x];}
+        catch(ArrayIndexOutOfBoundsException e){temp = nationalDex[0];}
+        if(temp == null) temp = nationalDex[0];
+        return temp;
+    }
+
+    // Set Name and Icon for Pokemon
+    public static String makeName(int region, int dlc, int selected){
+        return getPokemon(region, dlc, selected).name;
+    }
+    public static ImageIcon makeImage(int region, int dlc, int selected, String formSymbol, boolean shiny){
+        return getPokemon(region, dlc, selected).makeImage("", shiny);
+    }
     // Creates Dex
     public static void Dex(){
         // Initialize Dexs

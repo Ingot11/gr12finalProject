@@ -24,9 +24,7 @@ public class swingDex extends JFrame{
         setLayout(new GridBagLayout());
         setMinimumSize(new Dimension(450,450));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        for(Component i:getComponents()) i.setBackground(Color.WHITE);
-        // Initialize Pokedex
-        Pokemon.Dex();
+        Pokemon.Dex(); // Initialize Pokedex
 
         // Id Inputter
         add(idPanel = new JPanel(new FlowLayout()), constraint(0,0,false));
@@ -46,6 +44,7 @@ public class swingDex extends JFrame{
 
         // Scroll Dex
         add(pokeScroll = new JScrollPane(pokeList = new JList(new String[]{"Choose a region to begin!"})), constraint(1,1,true));
+        for(Component i:getComponents()) i.setBackground(Color.WHITE);
         setVisible(true);
 
         // Action Listeners
@@ -66,7 +65,14 @@ public class swingDex extends JFrame{
             dlcSelector.setSelectedIndex(0);
             revalidate(); // Resets frame
         });
-        dlcSelector.addActionListener((ActionEvent e) -> {pokeList.setModel(Pokemon.getDex(generationSelector.getSelectedIndex(), dlcSelector.getSelectedIndex()));});
+        dlcSelector.addActionListener((ActionEvent e) -> {
+            pokeList.setModel(Pokemon.getDex(generationSelector.getSelectedIndex(), dlcSelector.getSelectedIndex()));
+            pokeList.setSelectedIndex(0);
+        });
+        pokeList.addListSelectionListener(((listSelectionEvent) -> {
+            image.setText(Pokemon.makeName(generationSelector.getSelectedIndex(), dlcSelector.getSelectedIndex(), pokeList.getSelectedIndex()));
+            image.setIcon(Pokemon.makeImage(generationSelector.getSelectedIndex(), dlcSelector.getSelectedIndex(), pokeList.getSelectedIndex(), "", true));
+        }));
         idInput.addActionListener((ActionEvent e) -> {
             int input;
             try{input = Integer.parseInt(idInput.getText());}
