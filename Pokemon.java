@@ -35,14 +35,14 @@ public class Pokemon{
     // Constructor from file
     public void inputDex(int[] dexNumber){
         if(dexNumber[0] <= 151) kanto.put(dexNumber[0], this);
-        for(int i=1; i<dexOfDex.length;i++) dexOfDex[i].put(dexNumber[i-1],this);
+        for(int i=1; i<dexOfDex.length; i++) dexOfDex[i].put(dexNumber[i-1], this);
     }
     public void getDexNumbers(){
         String[] dexString = {"RBY/FRLG","Lets Go","GSC", "RSE", "DP", "Platinum", "HGSS", "BW", "B2W2", "KalosCentral", "KalosCoastal", "KalosMountain", "ORAS", "Alola", "Melemele", "Akala", "Ula'Ula", "Poni", "Ultra Alola", "Ultra Melemele", "Ultra Akala", "Ultra Ula'Ula", "Ultra Poni", "Galar", "Isle of Armor", "Crown Tundra", "Hisui", "Paldea", "Teal Mask", "Indigo Disk"};
         System.out.print("National" + ": " + national);
-        for(int i=0;i<dexOfDex.length;i++) for(int j: dexOfDex[i].keySet()) {
+        for(int i=0; i<dexOfDex.length; i++) for(int j : dexOfDex[i].keySet()) {
             if(dexOfDex[i].get(j).equals(this)){
-                System.out.print(", "+dexString[i] + ": " + j);
+                System.out.print(", " + dexString[i] + ": " + j);
                 break;
             }
         }
@@ -55,15 +55,14 @@ public class Pokemon{
         linkText = shiny ? "Shiny/SV/new/" : "scarletviolet/pokemon/new/";
         try {
             BufferedImage image = ImageIO.read(new URI("https://serebii.net/" + linkText + dexString + ".png").toURL());
-            return new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH));
+            return new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
         }catch (URISyntaxException e) {}
         catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}
         return null;
     }
     public static Pokemon getPokemon(int region, int dlc, int selected){
         Pokemon temp = nationalDex[0];
-        int x = 0;
-        if(dlc!=0) selected++;
+        int x = 0; selected++;
         switch(region){
             case 0 -> x = 0;
             case 1 -> { // Kanto
@@ -88,7 +87,7 @@ public class Pokemon{
                 }
             }
             case 4 -> {
-                switch(dlc){ // Sinnoh
+                switch(dlc){ // Sinnoh + Hisui
                     case 0 -> x = 386;
                     case 1 -> temp = sinnoh.get(selected);
                     case 2 -> temp = platinum.get(selected);
@@ -142,7 +141,7 @@ public class Pokemon{
                 }                
             }
         }
-        try{if(dlc == 0) temp = nationalDex[selected+x];}
+        try{if(dlc == 0) temp = nationalDex[selected + x - 1];}
         catch(ArrayIndexOutOfBoundsException e){temp = nationalDex[0];}
         if(temp == null) temp = nationalDex[0];
         return temp;
