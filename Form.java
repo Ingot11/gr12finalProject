@@ -1,5 +1,6 @@
 public class Form{
-    public String name, formSymbol, category, type1, type2, 
+    public String[] formSymbol;
+    public String name, category, type1, type2, 
     ability1, ability2, abilityH, growthRate, egg1, egg2;
     public int national, catchRate, baseFriendship, baseExp, eggCycles,
     hp, atk, def, spAtk, spDef, spd, caughtSeen;
@@ -8,7 +9,7 @@ public class Form{
     public Form(String[] text){
         if(text.length != 25) return;
         this.name = text[1];
-        this.formSymbol = text[2];
+        this.formSymbol = text[2].split("# ");
         this.category = text[3];
         this.type1 = text[4];
         this.type2 = text[5];
@@ -40,7 +41,7 @@ public class Form{
         this.spd = Integer.parseInt(text[24]);
     }
     public void getStats(){
-        String[] strings = {name, formSymbol, category, type1, type2, ability1, ability2, abilityH, growthRate, egg1, egg2};
+        String[] strings = {name, formSymbol[0], category, type1, type2, ability1, ability2, abilityH, growthRate, egg1, egg2};
         int[] integers = {national, catchRate, baseFriendship, baseExp, eggCycles, hp, atk, def, spAtk, spDef, spd, caughtSeen};
         double[] doubles = {height, weight, maleRatio};
         for(String i : strings) System.out.print(i + ", ");
@@ -50,7 +51,7 @@ public class Form{
         for(double i : doubles) System.out.print(i + ", ");
         System.out.println();
     }
-    public String getBaseStats(){return "Atk: " + atk + ", Def: " + def + ", Sp.Atk: " + spAtk + ", Sp.Def: " + spDef + ", Spd: " + spd;}
+    public String getBaseStats(){return "HP: " + hp + ", Atk: " + atk + ", Def: " + def + ", Sp.Atk: " + spAtk + ", Sp.Def: " + spDef + ", Spd: " + spd;}
     public String getAbilities(){
         String temp = ability1;
         if(!ability2.equals("")) temp += ", " + ability2;

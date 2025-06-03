@@ -53,8 +53,9 @@ public class Pokemon{
     public ImageIcon makeImage(String formSymbol, boolean shiny){
         String dexString = (national <= 0 || national > 1025) ? "001" : (national > 99) ? "" + national : (national > 9) ? "0" + national : (national > 0) ? "00" + national : "001",
         linkText = shiny ? "Shiny/SV/new/" : "scarletviolet/pokemon/new/";
+        if(!formSymbol.equals("")) formSymbol = "-" + formSymbol;
         try {
-            BufferedImage image = ImageIO.read(new URI("https://serebii.net/" + linkText + dexString + ".png").toURL());
+            BufferedImage image = ImageIO.read(new URI("https://serebii.net/" + linkText + dexString + formSymbol + ".png").toURL());
             return new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
         }catch (URISyntaxException e) {}
         catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}

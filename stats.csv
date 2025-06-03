@@ -2,43 +2,44 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 1, Bulbasaur, , Seed, Grass, Poison, Overgrow, , Chlorophyll, 0.7, 6.9, 45, 70, 64, 87.5, 20, Medium Slow, Grass, Monster, 45, 49, 49, 65, 65, 45
 2, Ivysaur, , Seed, Grass, Poison, Overgrow, , Chlorophyll, 1, 13, 45, 70, 142, 87.5, 20, Medium Slow, Grass, Monster, 60, 62, 63, 80, 80, 60
 3, Venusaur, , Seed, Grass, Poison, Overgrow, , Chlorophyll, 2, 100, 45, 70, 236, 87.5, 20, Medium Slow, Grass, Monster, 80, 82, 83, 100, 100, 80
-3, Mega Venusaur, , Seed, Grass, Poison, Thick Fat, , , 2.4, 155.5, 45, 70, 281, 87.5, 20, Medium Slow, Grass, Monster, 80, 100, 123, 122, 120, 80
+3, Mega Venusaur, m, Seed, Grass, Poison, Thick Fat, , , 2.4, 155.5, 45, 70, 281, 87.5, 20, Medium Slow, Grass, Monster, 80, 100, 123, 122, 120, 80
 4, Charmander, , Lizard, Fire, , Blaze, , Solar Power, 0.6, 8.5, 45, 70, 62, 87.5, 20, Medium Slow, Dragon, Monster, 39, 52, 43, 60, 50, 65
 5, Charmeleon, , Flame, Fire, , Blaze, , Solar Power, 1.1, 19, 45, 70, 142, 87.5, 20, Medium Slow, Dragon, Monster, 58, 64, 58, 80, 65, 80
 6, Charizard, , Flame, Fire, Flying, Blaze, , Solar Power, 1.7, 90.5, 45, 70, 240, 87.5, 20, Medium Slow, Dragon, Monster, 78, 84, 78, 109, 85, 100
-6, Mega Charizard X, , Flame, Fire, Dragon, Tough Claws, , , 1.7, 110.5, 45, 70, 285, 87.5, 20, Medium Slow, Dragon, Monster, 78, 130, 111, 130, 85, 100
-6, Mega Charizard Y, , Flame, Fire, Flying, Drought, , , 1.7, 100.5, 45, 70, 285, 87.5, 20, Medium Slow, Dragon, Monster, 78, 104, 78, 159, 115, 100
+6, Mega Charizard X, mx, Flame, Fire, Dragon, Tough Claws, , , 1.7, 110.5, 45, 70, 285, 87.5, 20, Medium Slow, Dragon, Monster, 78, 130, 111, 130, 85, 100
+6, Mega Charizard Y, my, Flame, Fire, Flying, Drought, , , 1.7, 100.5, 45, 70, 285, 87.5, 20, Medium Slow, Dragon, Monster, 78, 104, 78, 159, 115, 100
 7, Squirtle, , Tiny Turtle, Water, , Torrent, , Rain Dish, 0.5, 9, 45, 70, 63, 87.5, 20, Medium Slow, Monster, Water 1, 44, 48, 65, 50, 64, 43
 8, Wartortle, , Turtle, Water, , Torrent, , Rain Dish, 1, 22.5, 45, 70, 142, 87.5, 20, Medium Slow, Monster, Water 1, 59, 63, 80, 65, 80, 58
 9, Blastoise, , Shellfish, Water, , Torrent, , Rain Dish, 1.6, 85.5, 45, 70, 239, 87.5, 20, Medium Slow, Monster, Water 1, 79, 83, 100, 85, 105, 78
-9, Mega Blastoise, , Shellfish, Water, , Mega Launcher, , , 1.6, 101.1, 45, 70, 284, 87.5, 20, Medium Slow, Monster, Water 1, 79, 103, 120, 135, 115, 78
+9, Mega Blastoise, m, Shellfish, Water, , Mega Launcher, , , 1.6, 101.1, 45, 70, 284, 87.5, 20, Medium Slow, Monster, Water 1, 79, 103, 120, 135, 115, 78
 10, Caterpie, , Worm, Bug, , Shield Dust, , Run Away, 0.3, 2.9, 255, 70, 39, 50, 15, Medium Fast, Bug, , 45, 30, 35, 20, 20, 45
 11, Metapod, , Cocoon, Bug, , Shed Skin, , , 0.7, 9.9, 120, 70, 72, 50, 15, Medium Fast, Bug, , 50, 20, 55, 25, 25, 30
 12, Butterfree, , Butterfly, Bug, Flying, Compound Eyes, , Tinted Lens, 1.1, 32, 45, 70, 178, 50, 15, Medium Fast, Bug, , 60, 45, 50, 90, 80, 70
 13, Weedle, , Hairy Bug, Bug, Poison, Shield Dust, , Run Away, 0.3, 3.2, 255, 70, 39, 50, 15, Medium Fast, Bug, , 40, 35, 30, 20, 20, 50
 14, Kakuna, , Cocoon, Bug, Poison, Shed Skin, , , 0.6, 10, 120, 70, 72, 50, 15, Medium Fast, Bug, , 45, 25, 50, 25, 25, 35
 15, Beedrill, , Poison Bee, Bug, Poison, Swarm, , Sniper, 1, 29.5, 45, 70, 178, 50, 15, Medium Fast, Bug, , 65, 90, 40, 45, 80, 75
-15, Mega Beedrill, , Poison Bee, Bug, Poison, Adaptability, , , 1.4, 40.5, 45, 70, 223, 50, 15, Medium Fast, Bug, , 65, 150, 40, 15, 80, 145
+15, Mega Beedrill, m, Poison Bee, Bug, Poison, Adaptability, , , 1.4, 40.5, 45, 70, 223, 50, 15, Medium Fast, Bug, , 65, 150, 40, 15, 80, 145
 16, Pidgey, , Tiny Bird, Normal, Flying, Keen Eye, Tangled Feet, Big Pecks, 0.3, 1.8, 255, 70, 50, 50, 15, Medium Slow, Flying, , 40, 45, 40, 35, 35, 56
 17, Pidgeotto, , Bird, Normal, Flying, Keen Eye, Tangled Feet, Big Pecks, 1.1, 30, 120, 70, 122, 50, 15, Medium Slow, Flying, , 63, 60, 55, 50, 50, 71
 18, Pidgeot, , Bird, Normal, Flying, Keen Eye, Tangled Feet, Big Pecks, 1.5, 39.5, 45, 70, 216, 50, 15, Medium Slow, Flying, , 83, 80, 75, 70, 70, 101
-18, Mega Pidgeot, , Bird, Normal, Flying, No Guard, , , 2.2, 50.5, 45, 70, 261, 50, 15, Medium Slow, Flying, , 83, 80, 80, 135, 80, 121
+18, Mega Pidgeot, m, Bird, Normal, Flying, No Guard, , , 2.2, 50.5, 45, 70, 261, 50, 15, Medium Slow, Flying, , 83, 80, 80, 135, 80, 121
 19, Rattata, , Mouse, Normal, , Run Away, Guts, Hustle, 0.3, 3.5, 255, 70, 51, 50, 15, Medium Fast, Field, , 30, 56, 35, 25, 35, 72
-19, Alolan Rattata, , Mouse, Dark, Normal, Gluttony, Hustle, Thick Fat, 0.3, 3.8, 255, 70, 51, 50, 15, Medium Fast, Field, , 30, 56, 35, 25, 35, 72
+19, Alolan Rattata, a, Mouse, Dark, Normal, Gluttony, Hustle, Thick Fat, 0.3, 3.8, 255, 70, 51, 50, 15, Medium Fast, Field, , 30, 56, 35, 25, 35, 72
 20, Raticate, , Mouse, Normal, , Run Away, Guts, Hustle, 0.7, 18.5, 127, 70, 145, 50, 15, Medium Fast, Field, , 55, 81, 60, 50, 70, 97
-20, Alolan Raticate, , Mouse, Dark, Normal, Gluttony, Hustle, Thick Fat, 0.7, 25.5, 127, 70, 145, 50, 15, Medium Fast, Field, , 75, 71, 70, 40, 80, 77
+20, Alolan Raticate, a, Mouse, Dark, Normal, Gluttony, Hustle, Thick Fat, 0.7, 25.5, 127, 70, 145, 50, 15, Medium Fast, Field, , 75, 71, 70, 40, 80, 77
 21, Spearow, , Tiny Bird, Normal, Flying, Keen Eye, , Sniper, 0.3, 2, 255, 70, 52, 50, 15, Medium Fast, Flying, , 40, 60, 30, 31, 31, 70
 22, Fearow, , Beak, Normal, Flying, Keen Eye, , Sniper, 1.2, 38, 90, 70, 155, 50, 15, Medium Fast, Flying, , 65, 90, 65, 61, 61, 100
 23, Ekans, , Snake, Poison, , Intimidate, Shed Skin, Unnerve, 2, 6.9, 255, 70, 58, 50, 20, Medium Fast, Dragon, Field, 35, 60, 44, 40, 54, 55
 24, Arbok, , Cobra, Poison, , Intimidate, Shed Skin, Unnerve, 3.5, 65, 90, 70, 157, 50, 20, Medium Fast, Dragon, Field, 60, 95, 69, 65, 79, 80
 25, Pikachu, , Mouse, Electric, , Static, , Lightning Rod, 0.4, 6, 190, 70, 112, 50, 10, Medium Fast, Fairy, Field, 35, 55, 40, 50, 50, 90
-25, Partner Pikachu, , Mouse, Electric, , , , Lightning Rod, 0.4, 6, 190, 70, 112, 50, 10, Medium Fast, Fairy, Field, 45, 80, 50, 75, 60, 120
+25, Cap Pikachu, o# h# s# u# k# a# p# w, Mouse, Electric, , Static, , Lightning Rod, 0.4, 6, 190, 70, 112, 50, 10, Medium Fast, Fairy, Field, 35, 55, 40, 50, 50, 90
+25, Partner Pikachu, , Mouse, Electric, , Static, , Lightning Rod, 0.4, 6, 190, 70, 112, 50, 10, Medium Fast, Fairy, Field, 45, 80, 50, 75, 60, 120
 26, Raichu, , Mouse, Electric, , Static, , Lightning Rod, 0.8, 30, 75, 70, 218, 50, 10, Medium Fast, Fairy, Field, 60, 90, 55, 90, 80, 110
-26, Alolan Raichu, , Mouse, Electric, Psychic, Surge Surfer, , , 0.7, 21, 75, 70, 218, 50, 10, Medium Fast, Fairy, Field, 60, 85, 50, 95, 85, 110
+26, Alolan Raichu, a, Mouse, Electric, Psychic, Surge Surfer, , , 0.7, 21, 75, 70, 218, 50, 10, Medium Fast, Fairy, Field, 60, 85, 50, 95, 85, 110
 27, Sandshrew, , Mouse, Ground, , Sand Veil, , Sand Rush, 0.6, 12, 255, 70, 60, 50, 20, Medium Fast, Field, , 50, 75, 85, 20, 30, 40
-27, Alolan Sandshrew, , Mouse, Ice, Steel, Snow Cloak, , Slush Rush, 0.7, 40, 255, 70, 60, 50, 20, Medium Fast, Field, , 50, 75, 90, 10, 35, 40
+27, Alolan Sandshrew, a, Mouse, Ice, Steel, Snow Cloak, , Slush Rush, 0.7, 40, 255, 70, 60, 50, 20, Medium Fast, Field, , 50, 75, 90, 10, 35, 40
 28, Sandslash, , Mouse, Ground, , Sand Veil, , Sand Rush, 1, 29.5, 90, 70, 158, 50, 20, Medium Fast, Field, , 75, 100, 110, 45, 55, 65
-28, Alolan Sandslash, , Mouse, Ice, Steel, Snow Cloak, , Slush Rush, 1.2, 55, 90, 70, 158, 50, 20, Medium Fast, Field, , 75, 100, 120, 25, 65, 65
+28, Alolan Sandslash, a, Mouse, Ice, Steel, Snow Cloak, , Slush Rush, 1.2, 55, 90, 70, 158, 50, 20, Medium Fast, Field, , 75, 100, 120, 25, 65, 65
 29, Nidoran♀, , Poison Pin, Poison, , Poison Point, Rivalry, Hustle, 0.4, 7, 235, 70, 55, 0, 20, Medium Slow, Field, Monster, 55, 47, 52, 40, 40, 41
 30, Nidorina, , Poison Pin, Poison, , Poison Point, Rivalry, Hustle, 0.8, 20, 120, 70, 128, 0, 20, Medium Slow, Undiscovered, , 70, 62, 67, 55, 55, 56
 31, Nidoqueen, , Drill, Poison, Ground, Poison Point, Rivalry, Sheer Force, 1.3, 60, 45, 70, 227, 0, 20, Medium Slow, Undiscovered, , 90, 92, 87, 75, 85, 76
@@ -48,9 +49,9 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 35, Clefairy, , Fairy, Fairy, , Cute Charm, Magic Guard, Friend Guard, 0.6, 7.5, 150, 140, 113, 25, 10, Fast, Fairy, , 70, 45, 48, 60, 65, 35
 36, Clefable, , Fairy, Fairy, , Cute Charm, Magic Guard, Unaware, 1.3, 40, 25, 140, 217, 25, 10, Fast, Fairy, , 95, 70, 73, 95, 90, 60
 37, Vulpix, , Fox, Fire, , Flash Fire, , Drought, 0.6, 9.9, 190, 70, 60, 25, 20, Medium Fast, Field, , 38, 41, 40, 50, 65, 65
-37, Alolan Vulpix, , Fox, Ice, , Snow Cloak, , Snow Warning, 0.6, 9.9, 190, 70, 60, 25, 20, Medium Fast, Field, , 38, 41, 40, 50, 65, 65
+37, Alolan Vulpix, a, Fox, Ice, , Snow Cloak, , Snow Warning, 0.6, 9.9, 190, 70, 60, 25, 20, Medium Fast, Field, , 38, 41, 40, 50, 65, 65
 38, Ninetales, , Fox, Fire, , Flash Fire, , Drought, 1.1, 19.9, 75, 70, 177, 25, 20, Medium Fast, Field, , 73, 76, 75, 81, 100, 100
-38, Alolan Ninetales, , Fox, Ice, Fairy, Snow Cloak, , Snow Warning, 1.1, 19.9, 75, 70, 177, 25, 20, Medium Fast, Field, , 73, 67, 75, 81, 100, 109
+38, Alolan Ninetales, a, Fox, Ice, Fairy, Snow Cloak, , Snow Warning, 1.1, 19.9, 75, 70, 177, 25, 20, Medium Fast, Field, , 73, 67, 75, 81, 100, 109
 39, Jigglypuff, , Balloon, Normal, Fairy, Cute Charm, Competitive, Friend Guard, 0.5, 5.5, 170, 70, 95, 25, 10, Fast, Fairy, , 115, 45, 20, 45, 25, 20
 40, Wigglytuff, , Balloon, Normal, Fairy, Cute Charm, Competitive, Frisk, 1, 12, 50, 70, 196, 25, 10, Fast, Fairy, , 140, 70, 45, 85, 50, 45
 41, Zubat, , Bat, Poison, Flying, Inner Focus, , Infiltrator, 0.8, 7.5, 255, 70, 49, 50, 15, Medium Fast, Flying, , 40, 45, 35, 30, 40, 55
@@ -63,27 +64,29 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 48, Venonat, , Insect, Bug, Poison, Compound Eyes, Tinted Lens, Run Away, 1, 30, 190, 70, 61, 50, 20, Medium Fast, Bug, , 60, 55, 50, 40, 55, 45
 49, Venomoth, , Poison Moth, Bug, Poison, Shield Dust, Tinted Lens, Wonder Skin, 1.5, 12.5, 75, 70, 158, 50, 20, Medium Fast, Bug, , 70, 65, 60, 90, 75, 90
 50, Diglett, , Mole, Ground, , Sand Veil, Arena Trap, Sand Force, 0.2, 0.8, 255, 70, 53, 50, 20, Medium Fast, Field, , 10, 55, 25, 35, 45, 95
-50, Alolan Diglett, , Mole, Ground, Steel, Sand Veil, Tangling Hair, Sand Force, 0.2, 1, 255, 70, 53, 50, 20, Medium Fast, Field, , 10, 55, 30, 35, 45, 90
+50, Alolan Diglett, a, Mole, Ground, Steel, Sand Veil, Tangling Hair, Sand Force, 0.2, 1, 255, 70, 53, 50, 20, Medium Fast, Field, , 10, 55, 30, 35, 45, 90
 51, Dugtrio, , Mole, Ground, , Sand Veil, Arena Trap, Sand Force, 0.7, 33.3, 50, 70, 149, 50, 20, Medium Fast, Field, , 35, 100, 50, 50, 70, 120
-51, Alolan Dugtrio, , Mole, Ground, Steel, Sand Veil, Tangling Hair, Sand Force, 0.7, 66.6, 50, 70, 149, 50, 20, Medium Fast, Field, , 35, 100, 60, 50, 70, 110
+51, Alolan Dugtrio, a, Mole, Ground, Steel, Sand Veil, Tangling Hair, Sand Force, 0.7, 66.6, 50, 70, 149, 50, 20, Medium Fast, Field, , 35, 100, 60, 50, 70, 110
 52, Meowth, , Scratch Cat, Normal, , Pickup, Technician, Unnerve, 0.4, 4.2, 255, 70, 58, 50, 20, Medium Fast, Field, , 40, 45, 35, 40, 40, 90
-52, Alolan Meowth, , Scratch Cat, Dark, , Pickup, Technician, Rattled, 0.4, 4.2, 255, 70, 58, 50, 20, Medium Fast, Field, , 40, 35, 35, 50, 40, 90
-52, Galarian Meowth, , Scratch Cat, Steel, , Pickup, Tough Claws, Unnerve, 0.4, 7.5, 255, 70, 58, 50, 20, Medium Fast, Field, , 50, 65, 55, 40, 40, 40
+52, Alolan Meowth, a, Scratch Cat, Dark, , Pickup, Technician, Rattled, 0.4, 4.2, 255, 70, 58, 50, 20, Medium Fast, Field, , 40, 35, 35, 50, 40, 90
+52, Galarian Meowth, g, Scratch Cat, Steel, , Pickup, Tough Claws, Unnerve, 0.4, 7.5, 255, 70, 58, 50, 20, Medium Fast, Field, , 50, 65, 55, 40, 40, 40
 53, Persian, , Classy Cat, Normal, , Limber, Technician, Unnerve, 1, 32, 90, 70, 154, 50, 20, Medium Fast, Field, , 65, 70, 60, 65, 65, 115
-53, Alolan Persian, , Classy Cat, Dark, , Fur Coat, Technician, Rattled, 1.1, 33, 90, 70, 154, 50, 20, Medium Fast, Field, , 65, 60, 60, 75, 65, 115
+53, Alolan Persian, a, Classy Cat, Dark, , Fur Coat, Technician, Rattled, 1.1, 33, 90, 70, 154, 50, 20, Medium Fast, Field, , 65, 60, 60, 75, 65, 115
 54, Psyduck, , Duck, Water, , Damp, Cloud Nine, Swift Swim, 0.8, 19.6, 190, 70, 64, 50, 20, Medium Fast, Field, Water 1, 50, 52, 48, 65, 50, 55
 55, Golduck, , Duck, Water, , Damp, Cloud Nine, Swift Swim, 1.7, 76.6, 75, 70, 175, 50, 20, Medium Fast, Field, Water 1, 80, 82, 78, 95, 80, 85
 56, Mankey, , Pig Monkey, Fighting, , Vital Spirit, Anger Point, Defiant, 0.5, 28, 190, 70, 61, 50, 20, Medium Fast, Field, , 40, 80, 35, 35, 45, 70
 57, Primeape, , Pig Monkey, Fighting, , Vital Spirit, Anger Point, Defiant, 1, 32, 75, 70, 159, 50, 20, Medium Fast, Field, , 65, 105, 60, 60, 70, 95
 58, Growlithe, , Puppy, Fire, , Intimidate, Flash Fire, Justified, 0.7, 19, 190, 70, 70, 75, 20, Slow, Field, , 55, 70, 45, 70, 50, 60
+58, Hisuian Growlithe, h, Scout, Fire, Rock, Intimidate, Flash Fire, Rock Head, 0.8, 22.7, 190, 70, 70, 75, 20, Slow, Field, , 60, 75, 45, 65, 50, 55
 59, Arcanine, , Legendary, Fire, , Intimidate, Flash Fire, Justified, 1.9, 155, 75, 70, 194, 75, 20, Slow, Field, , 90, 110, 80, 100, 80, 95
+59, Hisuian Arcanine, h, Legendary, Fire, Rock, Intimidate, Flash Fire, Rock Head, 2, 168, 75, 70, 194, 75, 20, Slow, Field, , 95, 115, 80, 95, 80, 90
 60, Poliwag, , Tadpole, Water, , Water Absorb, Damp, Swift Swim, 0.6, 12.4, 255, 70, 60, 50, 20, Medium Slow, Water 1, , 40, 50, 40, 40, 40, 90
 61, Poliwhirl, , Tadpole, Water, , Water Absorb, Damp, Swift Swim, 1, 20, 120, 70, 135, 50, 20, Medium Slow, Water 1, , 65, 65, 65, 50, 50, 90
 62, Poliwrath, , Tadpole, Water, Fighting, Water Absorb, Damp, Swift Swim, 1.3, 54, 45, 70, 230, 50, 20, Medium Slow, Water 1, , 90, 95, 95, 70, 90, 70
 63, Abra, , Psi, Psychic, , Synchronize, Inner Focus, Magic Guard, 0.9, 19.5, 200, 70, 62, 75, 20, Medium Slow, Human-Like, , 25, 20, 15, 105, 55, 90
 64, Kadabra, , Psi, Psychic, , Synchronize, Inner Focus, Magic Guard, 1.3, 56.5, 100, 70, 140, 75, 20, Medium Slow, Human-Like, , 40, 35, 30, 120, 70, 105
 65, Alakazam, , Psi, Psychic, , Synchronize, Inner Focus, Magic Guard, 1.5, 48, 50, 70, 225, 75, 20, Medium Slow, Human-Like, , 55, 50, 45, 135, 95, 120
-65, Mega Alakazam, , Psi, Psychic, , Trace, , , 1.2, 48, 50, 70, 270, 75, 20, Medium Slow, Human-Like, , 55, 50, 65, 175, 105, 150
+65, Mega Alakazam, m, Psi, Psychic, , Trace, , , 1.2, 48, 50, 70, 270, 75, 20, Medium Slow, Human-Like, , 55, 50, 65, 175, 105, 150
 66, Machop, , Superpower, Fighting, , Guts, No Guard, Steadfast, 0.8, 19.5, 180, 70, 61, 75, 20, Medium Slow, Human-Like, , 70, 80, 50, 35, 35, 35
 67, Machoke, , Superpower, Fighting, , Guts, No Guard, Steadfast, 1.5, 70.5, 90, 70, 142, 75, 20, Medium Slow, Human-Like, , 80, 100, 70, 50, 60, 45
 68, Machamp, , Superpower, Fighting, , Guts, No Guard, Steadfast, 1.6, 130, 45, 70, 227, 75, 20, Medium Slow, Human-Like, , 90, 130, 80, 65, 85, 55
@@ -93,63 +96,65 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 72, Tentacool, , Jellyfish, Water, Poison, Clear Body, Liquid Ooze, Rain Dish, 0.9, 45.5, 190, 70, 67, 50, 20, Slow, Water 3, , 40, 40, 35, 50, 100, 70
 73, Tentacruel, , Jellyfish, Water, Poison, Clear Body, Liquid Ooze, Rain Dish, 1.6, 55, 60, 70, 180, 50, 20, Slow, Water 3, , 80, 70, 65, 80, 120, 100
 74, Geodude, , Rock, Rock, Ground, Rock Head, Sturdy, Sand Veil, 0.4, 20, 255, 70, 60, 50, 15, Medium Slow, Mineral, , 40, 80, 100, 30, 30, 20
-74, Alolan Geodude, , Rock, Rock, Electric, Magnet Pull, Sturdy, Galvanize, 0.4, 20.3, 255, 70, 60, 50, 15, Medium Slow, Mineral, , 40, 80, 100, 30, 30, 20
+74, Alolan Geodude, a, Rock, Rock, Electric, Magnet Pull, Sturdy, Galvanize, 0.4, 20.3, 255, 70, 60, 50, 15, Medium Slow, Mineral, , 40, 80, 100, 30, 30, 20
 75, Graveler, , Rock, Rock, Ground, Rock Head, Sturdy, Sand Veil, 1, 105, 120, 70, 137, 50, 15, Medium Slow, Mineral, , 55, 95, 115, 45, 45, 35
-75, Alolan Graveler, , Rock, Rock, Electric, Magnet Pull, Sturdy, Galvanize, 1, 110, 120, 70, 137, 50, 15, Medium Slow, Mineral, , 55, 95, 115, 45, 45, 35
+75, Alolan Graveler, a, Rock, Rock, Electric, Magnet Pull, Sturdy, Galvanize, 1, 110, 120, 70, 137, 50, 15, Medium Slow, Mineral, , 55, 95, 115, 45, 45, 35
 76, Golem, , Megaton, Rock, Ground, Rock Head, Sturdy, Sand Veil, 1.4, 300, 45, 70, 223, 50, 15, Medium Slow, Mineral, , 80, 120, 130, 55, 65, 45
-76, Alolan Golem, , Megaton, Rock, Electric, Magnet Pull, Sturdy, Galvanize, 1.7, 316, 45, 70, 223, 50, 15, Medium Slow, Mineral, , 80, 120, 130, 55, 65, 45
+76, Alolan Golem, a, Megaton, Rock, Electric, Magnet Pull, Sturdy, Galvanize, 1.7, 316, 45, 70, 223, 50, 15, Medium Slow, Mineral, , 80, 120, 130, 55, 65, 45
 77, Ponyta, , Fire Horse, Fire, , Run Away, Flash Fire, Flame Body, 1, 30, 190, 70, 82, 50, 20, Medium Fast, Field, , 50, 85, 55, 65, 65, 90
-77, Galarian Ponyta, , Unique Horn, Psychic, , Run Away, Pastel Veil, Anticipation, 0.8, 24, 190, 70, 82, , 20, Medium Fast, Field, , 50, 85, 55, 65, 65, 90
+77, Galarian Ponyta, g, Unique Horn, Psychic, , Run Away, Pastel Veil, Anticipation, 0.8, 24, 190, 70, 82, , 20, Medium Fast, Field, , 50, 85, 55, 65, 65, 90
 78, Rapidash, , Fire Horse, Fire, , Run Away, Flash Fire, Flame Body, 1.7, 95, 60, 70, 175, 50, 20, Medium Fast, Field, , 65, 100, 70, 80, 80, 105
-78, Galarian Rapidash, , Unique Horn, Psychic, Fairy, Run Away, Pastel Veil, Anticipation, 1.7, 80, 60, 70, 175, , 20, Medium Fast, Field, , 65, 100, 70, 80, 80, 105
+78, Galarian Rapidash, g, Unique Horn, Psychic, Fairy, Run Away, Pastel Veil, Anticipation, 1.7, 80, 60, 70, 175, , 20, Medium Fast, Field, , 65, 100, 70, 80, 80, 105
 79, Slowpoke, , Dopey, Water, Psychic, Oblivious, Own Tempo, Regenerator, 1.2, 36, 190, 70, 63, 50, 20, Medium Fast, Monster, Water 1, 90, 65, 65, 40, 40, 15
-79, Galarian Slowpoke, , Dopey, Psychic, , Gluttony, Own Tempo, Regenerator, 1.2, 36, 190, 70, 63, 50, 20, Medium Fast, Monster, Water 1, 90, 65, 65, 40, 40, 15
+79, Galarian Slowpoke, g, Dopey, Psychic, , Gluttony, Own Tempo, Regenerator, 1.2, 36, 190, 70, 63, 50, 20, Medium Fast, Monster, Water 1, 90, 65, 65, 40, 40, 15
 80, Slowbro, , Hermit Crab, Water, Psychic, Oblivious, Own Tempo, Regenerator, 1.6, 78.5, 75, 70, 172, 50, 20, Medium Fast, Monster, Water 1, 95, 75, 110, 100, 80, 30
-80, Mega Slowbro, , Hermit Crab, Water, Psychic, Shell Armor, , , 2, 120, 75, 70, 207, 50, 20, Medium Fast, Monster, Water 1, 95, 75, 180, 130, 80, 30
-80, Galarian Slowbro, , Hermit Crab, Poison, Psychic, Quick Draw, Own Tempo, Regenerator, 1.6, 70.5, 75, 70, , 50, 20, Medium Fast, Monster, Water 1, 95, 100, 95, 100, 70, 30
+80, Galarian Slowbro, g, Hermit Crab, Poison, Psychic, Quick Draw, Own Tempo, Regenerator, 1.6, 70.5, 75, 70, , 50, 20, Medium Fast, Monster, Water 1, 95, 100, 95, 100, 70, 30
+80, Mega Slowbro, m, Hermit Crab, Water, Psychic, Shell Armor, , , 2, 120, 75, 70, 207, 50, 20, Medium Fast, Monster, Water 1, 95, 75, 180, 130, 80, 30
 81, Magnemite, , Magnet, Electric, Steel, Magnet Pull, Sturdy, Analytic, 0.3, 6, 190, 70, 65, , 20, Medium Fast, Mineral, , 25, 35, 70, 95, 55, 45
 82, Magneton, , Magnet, Electric, Steel, Magnet Pull, Sturdy, Analytic, 1, 60, 60, 70, 163, , 20, Medium Fast, Mineral, , 50, 60, 95, 120, 70, 70
 83, Farfetch'd, , Wild Duck, Normal, Flying, Keen Eye, Inner Focus, Defiant, 0.8, 15, 45, 70, 132, 50, 20, Medium Fast, Field, Flying, 52, 90, 55, 58, 62, 60
-83, Galarian Farfetch'd, , Wild Duck, Fighting, , Steadfast, , Scrappy, 0.8, 42, 45, 70, 132, , 20, Medium Fast, Field, Flying, 52, 95, 55, 58, 62, 55
+83, Galarian Farfetch'd, g, Wild Duck, Fighting, , Steadfast, , Scrappy, 0.8, 42, 45, 70, 132, , 20, Medium Fast, Field, Flying, 52, 95, 55, 58, 62, 55
 84, Doduo, , Twin Bird, Normal, Flying, Run Away, Early Bird, Tangled Feet, 1.4, 39.2, 190, 70, 62, 50, 20, Medium Fast, Flying, , 35, 85, 45, 35, 35, 75
 85, Dodrio, , Triple Bird, Normal, Flying, Run Away, Early Bird, Tangled Feet, 1.8, 85.2, 45, 70, 165, 50, 20, Medium Fast, Flying, , 60, 110, 70, 60, 60, 110
 86, Seel, , Sea Lion, Water, , Thick Fat, Hydration, Ice Body, 1.1, 90, 190, 70, 65, 50, 20, Medium Fast, Field, Water 1, 65, 45, 55, 45, 70, 45
 87, Dewgong, , Sea Lion, Water, Ice, Thick Fat, Hydration, Ice Body, 1.7, 120, 75, 70, 166, 50, 20, Medium Fast, Field, Water 1, 90, 70, 80, 70, 95, 70
 88, Grimer, , Sludge, Poison, , Stench, Sticky Hold, Poison Touch, 0.9, 30, 190, 70, 65, 50, 20, Medium Fast, Amorphous, , 80, 80, 50, 40, 50, 25
-88, Alolan Grimer, , Sludge, Poison, Dark, Poison Touch, Gluttony, Power of Alchemy, 0.7, 42, 190, 70, 65, 50, 20, Medium Fast, Amorphous, , 80, 80, 50, 40, 50, 25
+88, Alolan Grimer, a, Sludge, Poison, Dark, Poison Touch, Gluttony, Power of Alchemy, 0.7, 42, 190, 70, 65, 50, 20, Medium Fast, Amorphous, , 80, 80, 50, 40, 50, 25
 89, Muk, , Sludge, Poison, , Stench, Sticky Hold, Poison Touch, 1.2, 30, 75, 70, 175, 50, 20, Medium Fast, Amorphous, , 105, 105, 75, 65, 100, 50
-89, Alolan Muk, , Sludge, Poison, Dark, Poison Touch, Gluttony, Power of Alchemy, 1, 52, 75, 70, 175, 50, 20, Medium Fast, Amorphous, , 105, 105, 75, 65, 100, 50
+89, Alolan Muk, a, Sludge, Poison, Dark, Poison Touch, Gluttony, Power of Alchemy, 1, 52, 75, 70, 175, 50, 20, Medium Fast, Amorphous, , 105, 105, 75, 65, 100, 50
 90, Shellder, , Bivalve, Water, , Shell Armor, Skill Link, Overcoat, 0.3, 4, 190, 70, 61, 50, 20, Slow, Water 3, , 30, 65, 100, 45, 25, 40
 91, Cloyster, , Bivalve, Water, Ice, Shell Armor, Skill Link, Overcoat, 1.5, 132.5, 60, 70, 184, 50, 20, Slow, Water 3, , 50, 95, 180, 85, 45, 70
 92, Gastly, , Gas, Ghost, Poison, Levitate, , , 1.3, 0.1, 190, 70, 62, 50, 20, Medium Slow, Amorphous, , 30, 35, 30, 100, 35, 80
 93, Haunter, , Gas, Ghost, Poison, Levitate, , , 1.6, 0.1, 90, 70, 142, 50, 20, Medium Slow, Amorphous, , 45, 50, 45, 115, 55, 95
 94, Gengar, , Shadow, Ghost, Poison, Cursed Body, , , 1.5, 40.5, 45, 70, 225, 50, 20, Medium Slow, Amorphous, , 60, 65, 60, 130, 75, 110
-94, Mega Gengar, , Shadow, Ghost, Poison, Shadow Tag, , , 1.4, 40.5, 45, 70, 270, 50, 20, Medium Slow, Amorphous, , 60, 65, 80, 170, 95, 130
+94, Mega Gengar, m, Shadow, Ghost, Poison, Shadow Tag, , , 1.4, 40.5, 45, 70, 270, 50, 20, Medium Slow, Amorphous, , 60, 65, 80, 170, 95, 130
 95, Onix, , Rock Snake, Rock, Ground, Rock Head, Sturdy, Weak Armor, 8.8, 210, 45, 70, 77, 50, 25, Medium Fast, Mineral, , 35, 45, 160, 30, 45, 70
 96, Drowzee, , Hypnosis, Psychic, , Insomnia, Forewarn, Inner Focus, 1, 32.4, 190, 70, 66, 50, 20, Medium Fast, Human-Like, , 60, 48, 45, 43, 90, 42
 97, Hypno, , Hypnosis, Psychic, , Insomnia, Forewarn, Inner Focus, 1.6, 75.6, 75, 70, 169, 50, 20, Medium Fast, Human-Like, , 85, 73, 70, 73, 115, 67
 98, Krabby, , River Crab, Water, , Hyper Cutter, Shell Armor, Sheer Force, 0.4, 6.5, 225, 70, 65, 50, 20, Medium Fast, Water 3, , 30, 105, 90, 25, 25, 50
 99, Kingler, , Pincer, Water, , Hyper Cutter, Shell Armor, Sheer Force, 1.3, 60, 60, 70, 166, 50, 20, Medium Fast, Water 3, , 55, 130, 115, 50, 50, 75
 100, Voltorb, , Ball, Electric, , Soundproof, Static, Aftermath, 0.5, 10.4, 190, 70, 66, , 20, Medium Fast, Mineral, , 40, 30, 50, 55, 55, 100
+100, Hisuian Voltorb, h, Ball, Electric, Grass, Soundproof, Static, Aftermath, 0.5, 13, 190, 70, 66, , 20, Medium Fast, Mineral, , 40, 30, 50, 55, 55, 100
 101, Electrode, , Ball, Electric, , Soundproof, Static, Aftermath, 1.2, 66.6, 60, 70, 172, , 20, Medium Fast, Mineral, , 60, 50, 70, 80, 80, 150
+101, Hisuian Electrode, h, Ball, Electric, Grass, Soundproof, Static, Aftermath, 1.2, 71, 60, 70, 172, , 20, Medium Fast, Mineral, , 60, 50, 70, 80, 80, 150
 102, Exeggcute, , Egg, Grass, Psychic, Chlorophyll, , Harvest, 0.4, 2.5, 90, 70, 65, 50, 20, Slow, Grass, , 60, 40, 80, 60, 45, 40
 103, Exeggutor, , Coconut, Grass, Psychic, Chlorophyll, , Harvest, 2, 120, 45, 70, 186, 50, 20, Slow, Grass, , 95, 95, 85, 125, 75, 55
-103, Alolan Exeggutor, , Coconut, Grass, Dragon, Frisk, , Harvest, 10.9, 415.6, 45, 70, 186, 50, 20, Slow, Grass, , 95, 105, 85, 125, 75, 45
+103, Alolan Exeggutor, a, Coconut, Grass, Dragon, Frisk, , Harvest, 10.9, 415.6, 45, 70, 186, 50, 20, Slow, Grass, , 95, 105, 85, 125, 75, 45
 104, Cubone, , Lonely, Ground, , Rock Head, Lightning Rod, Battle Armor, 0.4, 6.5, 190, 70, 64, 50, 20, Medium Fast, Monster, , 50, 50, 95, 40, 50, 35
 105, Marowak, , Bone Keeper, Ground, , Rock Head, Lightning Rod, Battle Armor, 1, 45, 75, 70, 149, 50, 20, Medium Fast, Monster, , 60, 80, 110, 50, 80, 45
-105, Alolan Marowak, , Bone Keeper, Fire, Ghost, Cursed Body, Lightning Rod, Rock Head, 1, 34, 75, 70, 149, 50, 20, Medium Fast, Monster, , 60, 80, 110, 50, 80, 45
+105, Alolan Marowak, a, Bone Keeper, Fire, Ghost, Cursed Body, Lightning Rod, Rock Head, 1, 34, 75, 70, 149, 50, 20, Medium Fast, Monster, , 60, 80, 110, 50, 80, 45
 106, Hitmonlee, , Kicking, Fighting, , Limber, Reckless, Unburden, 1.5, 49.8, 45, 70, 159, 100, 25, Medium Fast, Human-Like, , 50, 120, 53, 35, 110, 87
 107, Hitmonchan, , Punching, Fighting, , Keen Eye, Iron Fist, Inner Focus, 1.4, 50.2, 45, 70, 159, 100, 25, Medium Fast, Human-Like, , 50, 105, 79, 35, 110, 76
 108, Lickitung, , Licking, Normal, , Own Tempo, Oblivious, Cloud Nine, 1.2, 65.5, 45, 70, 77, 50, 20, Medium Fast, Monster, , 90, 55, 75, 60, 75, 30
 109, Koffing, , Poison Gas, Poison, , Levitate, Neutralizing Gas, Stench, 0.6, 1, 190, 70, 68, 50, 20, Medium Fast, Amorphous, , 40, 65, 95, 60, 45, 35
 110, Weezing, , Poison Gas, Poison, , Levitate, Neutralizing Gas, Stench, 1.2, 9.5, 60, 70, 172, 50, 20, Medium Fast, Amorphous, , 65, 90, 120, 85, 70, 60
-110, Galarian Weezing, , Poison Gas, Poison, Fairy, Levitate, Neutralizing Gas, Misty Surge, 3, 16, 60, 70, 172, , 20, Medium Fast, Amorphous, , 65, 90, 120, 85, 70, 60
+110, Galarian Weezing, g, Poison Gas, Poison, Fairy, Levitate, Neutralizing Gas, Misty Surge, 3, 16, 60, 70, 172, , 20, Medium Fast, Amorphous, , 65, 90, 120, 85, 70, 60
 111, Rhyhorn, , Spikes, Ground, Rock, Lightning Rod, Rock Head, Reckless, 1, 115, 120, 70, 69, 50, 20, Slow, Field, Monster, 80, 85, 95, 30, 30, 25
 112, Rhydon, , Drill, Ground, Rock, Lightning Rod, Rock Head, Reckless, 1.9, 120, 60, 70, 170, 50, 20, Slow, Field, Monster, 105, 130, 120, 45, 45, 40
 113, Chansey, , Egg, Normal, , Natural Cure, Serene Grace, Healer, 1.1, 34.6, 30, 140, 395, 0, 40, Fast, Fairy, , 250, 5, 5, 35, 105, 50
 114, Tangela, , Vine, Grass, , Chlorophyll, Leaf Guard, Regenerator, 1, 35, 45, 70, 87, 50, 20, Medium Fast, Grass, , 65, 55, 115, 100, 40, 60
 115, Kangaskhan, , Parent, Normal, , Early Bird, Scrappy, Inner Focus, 2.2, 80, 45, 70, 172, 0, 20, Medium Fast, Monster, , 105, 95, 80, 40, 80, 90
-115, Mega Kangaskhan, , Parent, Normal, , Parental Bond, , , 2.2, 100, 45, 70, 207, 0, 20, Medium Fast, Monster, , 105, 125, 100, 60, 100, 100
+115, Mega Kangaskhan, m, Parent, Normal, , Parental Bond, , , 2.2, 100, 45, 70, 207, 0, 20, Medium Fast, Monster, , 105, 125, 100, 60, 100, 100
 116, Horsea, , Dragon, Water, , Swift Swim, Sniper, Damp, 0.4, 8, 225, 70, 59, 50, 20, Medium Fast, Dragon, Water 1, 30, 40, 70, 70, 25, 60
 117, Seadra, , Dragon, Water, , Poison Point, Sniper, Damp, 1.2, 25, 75, 70, 154, 50, 20, Medium Fast, Dragon, Water 1, 55, 65, 95, 95, 45, 85
 118, Goldeen, , Goldfish, Water, , Swift Swim, Water Veil, Lightning Rod, 0.6, 15, 225, 70, 64, 50, 20, Medium Fast, Water 2, , 45, 67, 60, 35, 50, 63
@@ -157,17 +162,20 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 120, Staryu, , Star Shape, Water, , Illuminate, Natural Cure, Analytic, 0.8, 34.5, 225, 70, 68, , 20, Slow, Water 3, , 30, 45, 55, 70, 55, 85
 121, Starmie, , Mysterious, Water, Psychic, Illuminate, Natural Cure, Analytic, 1.1, 80, 60, 70, 182, , 20, Slow, Water 3, , 60, 75, 85, 100, 85, 115
 122, Mr. Mime, , Barrier, Psychic, Fairy, Soundproof, Filter, Technician, 1.3, 54.5, 45, 70, 161, 50, 25, Medium Fast, Human-Like, , 40, 45, 65, 100, 120, 90
-122, Galarian Mr. Mime, , Dancing, Psychic, Ice, Vital Spirit, Screen Cleaner, Ice Body, 1.4, 56.8, 45, 70, 161, 50, 25, Medium Fast, Human-Like, , 50, 65, 65, 90, 90, 100
+122, Galarian Mr. Mime, g, Dancing, Psychic, Ice, Vital Spirit, Screen Cleaner, Ice Body, 1.4, 56.8, 45, 70, 161, 50, 25, Medium Fast, Human-Like, , 50, 65, 65, 90, 90, 100
 123, Scyther, , Mantis, Bug, Flying, Swarm, Technician, Steadfast, 1.5, 56, 45, 70, 100, 50, 25, Medium Fast, Bug, , 70, 110, 80, 55, 80, 105
 124, Jynx, , Human Shape, Ice, Psychic, Oblivious, Forewarn, Dry Skin, 1.4, 40.6, 45, 70, 159, 0, 25, Medium Fast, Human-Like, , 65, 50, 35, 115, 95, 95
 125, Electabuzz, , Electric, Electric, , Static, , Vital Spirit, 1.1, 30, 45, 70, 172, 75, 25, Medium Fast, Human-Like, , 65, 83, 57, 95, 85, 105
 126, Magmar, , Spitfire, Fire, , Flame Body, , Vital Spirit, 1.3, 44.5, 45, 70, 173, 75, 25, Medium Fast, Human-Like, , 65, 95, 57, 100, 85, 93
 127, Pinsir, , Stag Beetle, Bug, , Hyper Cutter, Mold Breaker, Moxie, 1.5, 55, 45, 70, 175, 50, 25, Slow, Bug, , 65, 125, 100, 55, 70, 85
-127, Mega Pinsir, , Stag Beetle, Bug, Flying, Aerilate, , , 1.7, 59, 45, 70, 210, 50, 25, Slow, Bug, , 65, 155, 120, 65, 90, 105
+127, Mega Pinsir, m, Stag Beetle, Bug, Flying, Aerilate, , , 1.7, 59, 45, 70, 210, 50, 25, Slow, Bug, , 65, 155, 120, 65, 90, 105
 128, Tauros, , Wild Bull, Normal, , Intimidate, Anger Point, Sheer Force, 1.4, 88.4, 45, 70, 172, 100, 20, Slow, Field, , 75, 100, 95, 40, 70, 110
+128, Paldean Tauros, p, Wild Bull, Fighting, , Intimidate, Anger Point, Cud Chew, 1.4, 115, 45, 70, 172, 100, 20, Slow, Field, , 75, 110, 105, 30, 70, 100
+128, Paldean Tauros Aqua Breed, a, Wild Bull, Fighting, Water, Intimidate, Anger Point, Cud Chew, 1.4, 110, 45, 70, 172, 100, 20, Slow, Field, , 75, 110, 105, 30, 70, 100
+128, Paldean Tauros Blaze Breed, b, Wild Bull, Fighting, Fire, Intimidate, Anger Point, Cud Chew, 1.4, 85, 45, 70, 172, 100, 20, Slow, Field, , 75, 110, 105, 30, 70, 100
 129, Magikarp, , Fish, Water, , Swift Swim, , Rattled, 0.9, 10, 255, 70, 40, 50, 5, Slow, Dragon, Water 2, 20, 10, 55, 15, 20, 80
 130, Gyarados, , Atrocious, Water, Flying, Intimidate, , Moxie, 6.5, 235, 45, 70, 189, 50, 5, Slow, Dragon, Water 2, 95, 125, 79, 60, 100, 81
-130, Mega Gyarados, , Atrocious, Water, Dark, Mold Breaker, , , 6.5, 305, 45, 70, 224, 50, 5, Slow, Dragon, Water 2, 95, 155, 109, 70, 130, 81
+130, Mega Gyarados, m, Atrocious, Water, Dark, Mold Breaker, , , 6.5, 305, 45, 70, 224, 50, 5, Slow, Dragon, Water 2, 95, 155, 109, 70, 130, 81
 131, Lapras, , Transport, Water, Ice, Water Absorb, Shell Armor, Hydration, 2.5, 220, 45, 70, 187, 50, 40, Slow, Monster, Water 1, 130, 85, 80, 85, 95, 60
 132, Ditto, , Transform, Normal, , Limber, , Imposter, 0.3, 4, 35, 70, 101, , 20, Medium Fast, Ditto, , 48, 48, 48, 48, 48, 48
 133, Eevee, , Evolution, Normal, , Run Away, Adaptability, Anticipation, 0.3, 6.5, 45, 70, 65, 87.5, 35, Medium Fast, Field, , 55, 55, 50, 45, 65, 55
@@ -181,20 +189,20 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 140, Kabuto, , Shellfish, Rock, Water, Swift Swim, Battle Armor, Weak Armor, 0.5, 11.5, 45, 70, 71, 87.5, 30, Medium Fast, Water 1, Water 3, 30, 80, 90, 55, 45, 55
 141, Kabutops, , Shellfish, Rock, Water, Swift Swim, Battle Armor, Weak Armor, 1.3, 40.5, 45, 70, 173, 87.5, 30, Medium Fast, Water 1, Water 3, 60, 115, 105, 65, 70, 80
 142, Aerodactyl, , Fossil, Rock, Flying, Rock Head, Pressure, Unnerve, 1.8, 59, 45, 70, 180, 87.5, 35, Slow, Flying, , 80, 105, 65, 60, 75, 130
-142, Mega Aerodactyl, , Fossil, Rock, Flying, Tough Claws, , , 2.1, 79, 45, 70, 215, 87.5, 35, Slow, Flying, , 80, 135, 85, 70, 95, 150
+142, Mega Aerodactyl, m, Fossil, Rock, Flying, Tough Claws, , , 2.1, 79, 45, 70, 215, 87.5, 35, Slow, Flying, , 80, 135, 85, 70, 95, 150
 143, Snorlax, , Sleeping, Normal, , Immunity, Thick Fat, Gluttony, 2.1, 460, 25, 70, 189, 87.5, 40, Slow, Monster, , 160, 110, 65, 65, 110, 30
 144, Articuno, , Freeze, Ice, Flying, Pressure, , Snow Cloak, 1.7, 55.4, 3, 35, 261, , 80, Slow, Undiscovered, , 90, 85, 100, 95, 125, 85
-144, Galarian Articuno, , Cruel, Psychic, Flying, Competitive, , , 1.7, 50.9, 3, 35, 261, , 120, Slow, Undiscovered, , 90, 85, 85, 125, 100, 95
+144, Galarian Articuno, g, Cruel, Psychic, Flying, Competitive, , , 1.7, 50.9, 3, 35, 261, , 120, Slow, Undiscovered, , 90, 85, 85, 125, 100, 95
 145, Zapdos, , Electric, Electric, Flying, Pressure, , Static, 1.6, 52.6, 3, 35, 261, , 80, Slow, Undiscovered, , 90, 90, 85, 125, 90, 100
-145, Galarian Zapdos, , Strong Legs, Fighting, Flying, Defiant, , , 1.6, 58.2, 3, 35, 261, , 120, Slow, Undiscovered, , 90, 125, 90, 85, 90, 100
+145, Galarian Zapdos, g, Strong Legs, Fighting, Flying, Defiant, , , 1.6, 58.2, 3, 35, 261, , 120, Slow, Undiscovered, , 90, 125, 90, 85, 90, 100
 146, Moltres, , Flame, Fire, Flying, Pressure, , Flame Body, 2, 60, 3, 35, 261, , 80, Slow, Undiscovered, , 90, 100, 90, 125, 85, 90
-146, Galarian Moltres, , Malevolent, Dark, Flying, Berserk, , , 2, 66, 3, 35, 261, , 120, Slow, Undiscovered, , 90, 85, 90, 100, 125, 90
+146, Galarian Moltres, g, Malevolent, Dark, Flying, Berserk, , , 2, 66, 3, 35, 261, , 120, Slow, Undiscovered, , 90, 85, 90, 100, 125, 90
 147, Dratini, , Dragon, Dragon, , Shed Skin, , Marvel Scale, 1.8, 3.3, 45, 35, 60, 50, 40, Slow, Dragon, Water 1, 41, 64, 45, 50, 50, 50
 148, Dragonair, , Dragon, Dragon, , Shed Skin, , Marvel Scale, 4, 16.5, 45, 35, 147, 50, 40, Slow, Dragon, Water 1, 61, 84, 65, 70, 70, 70
 149, Dragonite, , Dragon, Dragon, Flying, Inner Focus, , Multiscale, 2.2, 210, 45, 35, 270, 50, 40, Slow, Dragon, Water 1, 91, 134, 95, 100, 100, 80
 150, Mewtwo, , Genetic, Psychic, , Pressure, , Unnerve, 2, 122, 3, 0, 306, , 120, Slow, Undiscovered, , 106, 110, 90, 154, 90, 130
-150, Mega Mewtwo X, , Genetic, Psychic, Fighting, Steadfast, , , 2.3, 127, 3, 0, 351, , 120, Slow, Undiscovered, , 106, 190, 100, 154, 100, 130
-150, Mega Mewtwo Y, , Genetic, Psychic, , Insomnia, , , 1.5, 33, 3, 0, 351, , 120, Slow, Undiscovered, , 106, 150, 70, 194, 120, 140
+150, Mega Mewtwo X, mx, Genetic, Psychic, Fighting, Steadfast, , , 2.3, 127, 3, 0, 351, , 120, Slow, Undiscovered, , 106, 190, 100, 154, 100, 130
+150, Mega Mewtwo Y, my, Genetic, Psychic, , Insomnia, , , 1.5, 33, 3, 0, 351, , 120, Slow, Undiscovered, , 106, 150, 70, 194, 120, 140
 151, Mew, , New Species, Psychic, , Synchronize, , , 0.4, 4, 45, 100, 270, , 120, Medium Slow, Undiscovered, , 100, 100, 100, 100, 100, 100
 152, Chikorita, , Leaf, Grass, , Overgrow, , Leaf Guard, 0.9, 6.4, 45, 70, 64, 87.5, 20, Medium Slow, Grass, Monster, 45, 49, 65, 49, 65, 45
 153, Bayleef, , Leaf, Grass, , Overgrow, , Leaf Guard, 1.2, 15.8, 45, 70, 142, 87.5, 20, Medium Slow, Grass, Monster, 60, 62, 80, 63, 80, 60
@@ -202,6 +210,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 155, Cyndaquil, , Fire Mouse, Fire, , Blaze, , Flash Fire, 0.5, 7.9, 45, 70, 62, 87.5, 20, Medium Slow, Field, , 39, 52, 43, 60, 50, 65
 156, Quilava, , Volcano, Fire, , Blaze, , Flash Fire, 0.9, 19, 45, 70, 142, 87.5, 20, Medium Slow, Field, , 58, 64, 58, 80, 65, 80
 157, Typhlosion, , Volcano, Fire, , Blaze, , Flash Fire, 1.7, 79.5, 45, 70, 240, 87.5, 20, Medium Slow, Field, , 78, 84, 78, 109, 85, 100
+157, Hisuian Typhlosion, h, Ghost Flame, Fire, Ghost, Blaze, , Frisk, 1.6, 69.8, 45, 70, 240, 87.5, 20, Medium Slow, Field, , 73, 84, 78, 119, 85, 95
 158, Totodile, , Big Jaw, Water, , Torrent, , Sheer Force, 0.6, 9.5, 45, 70, 63, 87.5, 20, Medium Slow, Monster, Water 1, 50, 65, 64, 44, 48, 43
 159, Croconaw, , Big Jaw, Water, , Torrent, , Sheer Force, 1.1, 25, 45, 70, 142, 87.5, 20, Medium Slow, Monster, Water 1, 65, 80, 80, 59, 63, 58
 160, Feraligatr, , Big Jaw, Water, , Torrent, , Sheer Force, 2.3, 88.8, 45, 70, 239, 87.5, 20, Medium Slow, Monster, Water 1, 85, 105, 100, 79, 83, 78
@@ -226,7 +235,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 179, Mareep, , Wool, Electric, , Static, , Plus, 0.6, 7.8, 235, 70, 56, 50, 20, Medium Slow, Field, Monster, 55, 40, 40, 65, 45, 35
 180, Flaaffy, , Wool, Electric, , Static, , Plus, 0.8, 13.3, 120, 70, 128, 50, 20, Medium Slow, Field, Monster, 70, 55, 55, 80, 60, 45
 181, Ampharos, , Light, Electric, , Static, , Plus, 1.4, 61.5, 45, 70, 230, 50, 20, Medium Slow, Field, Monster, 90, 75, 85, 115, 90, 55
-181, Mega Ampharos, , Light, Electric, Dragon, Mold Breaker, , , 1.4, 61.5, 45, 70, 275, 50, 20, Medium Slow, Field, Monster, 90, 95, 105, 165, 110, 45
+181, Mega Ampharos, m, Light, Electric, Dragon, Mold Breaker, , , 1.4, 61.5, 45, 70, 275, 50, 20, Medium Slow, Field, Monster, 90, 95, 105, 165, 110, 45
 182, Bellossom, , Flower, Grass, , Chlorophyll, , Healer, 0.4, 5.8, 45, 70, 221, 50, 20, Medium Slow, Grass, , 75, 80, 95, 90, 100, 50
 183, Marill, , Aqua Mouse, Water, Fairy, Thick Fat, Huge Power, Sap Sipper, 0.4, 8.5, 190, 70, 88, 50, 10, Fast, Fairy, Water 1, 70, 20, 50, 20, 50, 40
 184, Azumarill, , Aqua Rabbit, Water, Fairy, Thick Fat, Huge Power, Sap Sipper, 0.8, 28.5, 75, 70, 189, 50, 10, Fast, Fairy, Water 1, 100, 50, 80, 60, 80, 50
@@ -240,12 +249,13 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 192, Sunflora, , Sun, Grass, , Chlorophyll, Solar Power, Early Bird, 0.8, 8.5, 120, 70, 149, 50, 20, Medium Slow, Grass, , 75, 75, 55, 105, 85, 30
 193, Yanma, , Clear Wing, Bug, Flying, Speed Boost, Compound Eyes, Frisk, 1.2, 38, 75, 70, 78, 50, 20, Medium Fast, Bug, , 65, 65, 45, 75, 45, 95
 194, Wooper, , Water Fish, Water, Ground, Damp, Water Absorb, Unaware, 0.4, 8.5, 255, 70, 42, 50, 20, Medium Fast, Field, Water 1, 55, 45, 45, 25, 25, 15
+194, Paldean Wooper, p, Water Fish, Poison, Ground, Poison Point, Water Absorb, Unaware, 0.4, 8.5, 255, 70, 42, 50, 20, Medium Fast, Field, Water 1, 55, 45, 45, 25, 25, 15
 195, Quagsire, , Water Fish, Water, Ground, Damp, Water Absorb, Unaware, 1.4, 75, 90, 70, 151, 50, 20, Medium Fast, Field, Water 1, 95, 85, 85, 65, 65, 35
 196, Espeon, , Sun, Psychic, , Synchronize, , Magic Bounce, 0.9, 26.5, 45, 70, 184, 87.5, 35, Medium Fast, Field, , 65, 65, 60, 130, 95, 110
 197, Umbreon, , Moonlight, Dark, , Synchronize, , Inner Focus, 1, 27, 45, 35, 184, 87.5, 35, Medium Fast, Field, , 95, 65, 110, 60, 130, 65
 198, Murkrow, , Darkness, Dark, Flying, Insomnia, Super Luck, Prankster, 0.5, 2.1, 30, 35, 81, 50, 20, Medium Slow, Flying, , 60, 85, 42, 85, 42, 91
 199, Slowking, , Royal, Water, Psychic, Oblivious, Own Tempo, Regenerator, 2, 79.5, 70, 70, 172, 50, 20, Medium Fast, Monster, Water 1, 95, 75, 80, 100, 110, 30
-199, Galarian Slowking, , Hexpert, Poison, Psychic, Curious Medicine, Own Tempo, Regenerator, 1.8, 79.5, 70, 70, 172, 50, 20, Medium Fast, Monster, Water 1, 95, 65, 80, 110, 110, 30
+199, Galarian Slowking, g, Hexpert, Poison, Psychic, Curious Medicine, Own Tempo, Regenerator, 1.8, 79.5, 70, 70, 172, 50, 20, Medium Fast, Monster, Water 1, 95, 65, 80, 110, 110, 30
 200, Misdreavus, , Screech, Ghost, , Levitate, , , 0.7, 1, 45, 35, 87, 50, 25, Fast, Amorphous, , 60, 60, 60, 85, 85, 85
 201, Unown, , Symbol, Psychic, , Levitate, , , 0.5, 5, 225, 70, 118, , 40, Medium Fast, Undiscovered, , 48, 72, 48, 72, 48, 48
 202, Wobbuffet, , Patient, Psychic, , Shadow Tag, , Telepathy, 1.3, 28.5, 45, 70, 142, 50, 20, Medium Fast, Amorphous, , 190, 33, 58, 33, 58, 33
@@ -255,16 +265,18 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 206, Dunsparce, , Land Snake, Normal, , Serene Grace, Run Away, Rattled, 1.5, 14, 190, 70, 145, 50, 20, Medium Fast, Field, , 100, 70, 70, 65, 65, 45
 207, Gligar, , FlyScorpion, Ground, Flying, Hyper Cutter, Sand Veil, Immunity, 1.1, 64.8, 60, 70, 86, 50, 20, Medium Slow, Bug, , 65, 75, 105, 35, 65, 85
 208, Steelix, , Iron Snake, Steel, Ground, Rock Head, Sturdy, Sheer Force, 9.2, 400, 25, 70, 179, 50, 25, Medium Fast, Mineral, , 75, 85, 200, 55, 65, 30
-208, Mega Steelix, , Iron Snake, Steel, Ground, Sand Force, , , 10.5, 740, 25, 70, 214, 50, 25, Medium Fast, Mineral, , 75, 125, 230, 55, 95, 30
+208, Mega Steelix, m, Iron Snake, Steel, Ground, Sand Force, , , 10.5, 740, 25, 70, 214, 50, 25, Medium Fast, Mineral, , 75, 125, 230, 55, 95, 30
 209, Snubbull, , Fairy, Fairy, , Intimidate, Run Away, Rattled, 0.6, 7.8, 190, 70, 60, 25, 20, Fast, Fairy, Field, 60, 80, 50, 40, 40, 30
 210, Granbull, , Fairy, Fairy, , Intimidate, Quick Feet, Rattled, 1.4, 48.7, 75, 70, 158, 25, 20, Fast, Fairy, Field, 90, 120, 75, 60, 60, 45
 211, Qwilfish, , Balloon, Water, Poison, Poison Point, Swift Swim, Intimidate, 0.5, 3.9, 45, 70, 88, 50, 20, Medium Fast, Water 2, , 65, 95, 85, 55, 55, 85
+211, Hisuian Qwilfish, h, Balloon, Dark, Poison, Poison Point, Swift Swim, Intimidate, 0.5, 3.9, 45, 70, 88, 50, 20, Medium Fast, Water 2, , 65, 95, 85, 55, 55, 85
 212, Scizor, , Pincer, Bug, Steel, Swarm, Technician, Light Metal, 1.8, 118, 25, 70, 175, 50, 25, Medium Fast, Bug, , 70, 130, 100, 55, 80, 65
-212, Mega Scizor, , Pincer, Bug, Steel, Technician, , , 2, 125, 25, 70, 210, 50, 25, Medium Fast, Bug, , 70, 150, 140, 65, 100, 75
+212, Mega Scizor, m, Pincer, Bug, Steel, Technician, , , 2, 125, 25, 70, 210, 50, 25, Medium Fast, Bug, , 70, 150, 140, 65, 100, 75
 213, Shuckle, , Mold, Bug, Rock, Sturdy, Gluttony, Contrary, 0.6, 20.5, 190, 70, 177, 50, 20, Medium Slow, Bug, , 20, 10, 230, 10, 230, 5
 214, Heracross, , Single Horn, Bug, Fighting, Swarm, Guts, Moxie, 1.5, 54, 45, 70, 175, 50, 25, Slow, Bug, , 80, 125, 75, 40, 95, 85
-214, Mega Heracross, , Single Horn, Bug, Fighting, Skill Link, , , 1.7, 62.5, 45, 70, 210, 50, 25, Slow, Bug, , 80, 185, 115, 40, 105, 75
+214, Mega Heracross, m, Single Horn, Bug, Fighting, Skill Link, , , 1.7, 62.5, 45, 70, 210, 50, 25, Slow, Bug, , 80, 185, 115, 40, 105, 75
 215, Sneasel, , Sharp Claw, Dark, Ice, Inner Focus, Keen Eye, Pickpocket, 0.9, 28, 60, 35, 86, 50, 20, Medium Slow, Field, , 55, 95, 55, 35, 75, 115
+215, Hisuian Sneasel, h, Sharp Claw, Fighting, Poison, Inner Focus, Keen Eye, Pickpocket, 0.9, 27, 60, 35, 86, 50, 20, Medium Slow, Field, , 55, 95, 55, 35, 75, 115
 216, Teddiursa, , Little Bear, Normal, , Pickup, Quick Feet, Honey Gather, 0.6, 8.8, 120, 70, 66, 50, 20, Medium Fast, Field, , 60, 80, 50, 50, 50, 40
 217, Ursaring, , Hibernator, Normal, , Guts, Quick Feet, Unnerve, 1.8, 125.8, 60, 70, 175, 50, 20, Medium Fast, Field, , 90, 130, 75, 75, 75, 55
 218, Slugma, , Lava, Fire, , Magma Armor, Flame Body, Weak Armor, 0.7, 35, 190, 70, 50, 50, 20, Medium Fast, Amorphous, , 40, 40, 40, 70, 40, 20
@@ -272,7 +284,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 220, Swinub, , Pig, Ice, Ground, Oblivious, Snow Cloak, Thick Fat, 0.4, 6.5, 225, 70, 50, 50, 20, Slow, Field, , 50, 50, 40, 30, 30, 50
 221, Piloswine, , Swine, Ice, Ground, Oblivious, Snow Cloak, Thick Fat, 1.1, 55.8, 75, 70, 158, 50, 20, Slow, Field, , 100, 100, 80, 60, 60, 50
 222, Corsola, , Coral, Water, Rock, Hustle, Natural Cure, Regenerator, 0.6, 5, 60, 70, 144, 25, 20, Fast, Water 1, Water 3, 65, 55, 95, 65, 95, 35
-222, Galarian Corsola, , Coral, Ghost, , Weak Armor, , Cursed Body, 0.6, 0.5, 60, 70, 144, , 20, Fast, Water 1, Water 3, 60, 55, 100, 65, 100, 30
+222, Galarian Corsola, g, Coral, Ghost, , Weak Armor, , Cursed Body, 0.6, 0.5, 60, 70, 144, , 20, Fast, Water 1, Water 3, 60, 55, 100, 65, 100, 30
 223, Remoraid, , Jet, Water, , Hustle, Sniper, Moody, 0.6, 12, 190, 70, 60, 50, 20, Medium Fast, Water 1, Water 2, 35, 65, 35, 65, 35, 65
 224, Octillery, , Jet, Water, , Suction Cups, Sniper, Moody, 0.9, 28.5, 75, 70, 168, 50, 20, Medium Fast, Water 1, Water 2, 75, 105, 75, 105, 75, 45
 225, Delibird, , Delivery, Ice, Flying, Vital Spirit, Hustle, Insomnia, 0.9, 16, 45, 70, 116, 50, 20, Fast, Field, Water 1, 45, 55, 45, 65, 45, 75
@@ -280,7 +292,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 227, Skarmory, , Armor Bird, Steel, Flying, Keen Eye, Sturdy, Weak Armor, 1.7, 50.5, 25, 70, 163, 50, 25, Slow, Flying, , 65, 80, 140, 40, 70, 70
 228, Houndour, , Dark, Dark, Fire, Early Bird, Flash Fire, Unnerve, 0.6, 10.8, 120, 35, 66, 50, 20, Slow, Field, , 45, 60, 30, 80, 50, 65
 229, Houndoom, , Dark, Dark, Fire, Early Bird, Flash Fire, Unnerve, 1.4, 35, 45, 35, 175, 50, 20, Slow, Field, , 75, 90, 50, 110, 80, 95
-229, Mega Houndoom, , Dark, Dark, Fire, Solar Power, , , 1.9, 49.5, 45, 35, 210, 50, 20, Slow, Field, , 75, 90, 90, 140, 90, 115
+229, Mega Houndoom, m, Dark, Dark, Fire, Solar Power, , , 1.9, 49.5, 45, 35, 210, 50, 20, Slow, Field, , 75, 90, 90, 140, 90, 115
 230, Kingdra, , Dragon, Water, Dragon, Swift Swim, Sniper, Damp, 1.8, 152, 45, 70, 243, 50, 20, Medium Fast, Dragon, Water 1, 75, 95, 95, 95, 95, 85
 231, Phanpy, , Long Nose, Ground, , Pickup, , Sand Veil, 0.5, 33.5, 120, 70, 66, 50, 20, Medium Fast, Field, , 90, 60, 60, 40, 40, 40
 232, Donphan, , Armor, Ground, , Sturdy, , Sand Veil, 1.1, 120, 60, 70, 175, 50, 20, Medium Fast, Field, , 90, 120, 120, 60, 60, 50
@@ -300,28 +312,28 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 246, Larvitar, , Rock Skin, Rock, Ground, Guts, , Sand Veil, 0.6, 72, 45, 35, 60, 50, 40, Slow, Monster, , 50, 64, 50, 45, 50, 41
 247, Pupitar, , Hard Shell, Rock, Ground, Shed Skin, , , 1.2, 152, 45, 35, 144, 50, 40, Slow, Monster, , 70, 84, 70, 65, 70, 51
 248, Tyranitar, , Armor, Rock, Dark, Sand Stream, , Unnerve, 2, 202, 45, 35, 270, 50, 40, Slow, Monster, , 100, 134, 110, 95, 100, 61
-248, Mega Tyranitar, , Armor, Rock, Dark, Sand Stream, , , 2.5, 255, 45, 35, 315, 50, 40, Slow, Monster, , 100, 164, 150, 95, 120, 71
+248, Mega Tyranitar, m, Armor, Rock, Dark, Sand Stream, , , 2.5, 255, 45, 35, 315, 50, 40, Slow, Monster, , 100, 164, 150, 95, 120, 71
 249, Lugia, , Diving, Psychic, Flying, Pressure, , Multiscale, 5.2, 216, 3, 0, 306, , 120, Slow, Undiscovered, , 106, 90, 130, 90, 154, 110
 250, Ho-oh, , Rainbow, Fire, Flying, Pressure, , Regenerator, 3.8, 199, 3, 0, 306, , 120, Slow, Undiscovered, , 106, 130, 90, 110, 154, 90
 251, Celebi, , Time Travel, Psychic, Grass, Natural Cure, , , 0.6, 5, 45, 100, 270, , 120, Medium Slow, Undiscovered, , 100, 100, 100, 100, 100, 100
 252, Treecko, , Wood Gecko, Grass, , Overgrow, , Unburden, 0.5, 5, 45, 70, 62, 87.5, 20, Medium Slow, Dragon, Monster, 40, 45, 35, 65, 55, 70
 253, Grovyle, , Wood Gecko, Grass, , Overgrow, , Unburden, 0.9, 21.6, 45, 70, 142, 87.5, 20, Medium Slow, Dragon, Monster, 50, 65, 45, 85, 65, 95
 254, Sceptile, , Forest, Grass, , Overgrow, , Unburden, 1.7, 52.2, 45, 70, 239, 87.5, 20, Medium Slow, Dragon, Monster, 70, 85, 65, 105, 85, 120
-254, Mega Sceptile, , Forest, Grass, Dragon, Lightning Rod, , , 1.9, 55.2, 45, 70, 284, 87.5, 20, Medium Slow, Dragon, Monster, 70, 110, 75, 145, 85, 145
+254, Mega Sceptile, m, Forest, Grass, Dragon, Lightning Rod, , , 1.9, 55.2, 45, 70, 284, 87.5, 20, Medium Slow, Dragon, Monster, 70, 110, 75, 145, 85, 145
 255, Torchic, , Chick, Fire, , Blaze, , Speed Boost, 0.4, 2.5, 45, 70, 62, 87.5, 20, Medium Slow, Field, , 45, 60, 40, 70, 50, 45
 256, Combusken, , Young Fowl, Fire, Fighting, Blaze, , Speed Boost, 0.9, 19.5, 45, 70, 142, 87.5, 20, Medium Slow, Field, , 60, 85, 60, 85, 60, 55
 257, Blaziken, , Blaze, Fire, Fighting, Blaze, , Speed Boost, 1.9, 52, 45, 70, 239, 87.5, 20, Medium Slow, Field, , 80, 120, 70, 110, 70, 80
-257, Mega Blaziken, , Blaze, Fire, Fighting, Speed Boost, , , 1.9, 52, 45, 70, 284, 87.5, 20, Medium Slow, Field, , 80, 160, 80, 130, 80, 100
+257, Mega Blaziken, m, Blaze, Fire, Fighting, Speed Boost, , , 1.9, 52, 45, 70, 284, 87.5, 20, Medium Slow, Field, , 80, 160, 80, 130, 80, 100
 258, Mudkip, , Mud Fish, Water, , Torrent, , Damp, 0.4, 7.6, 45, 70, 62, 87.5, 20, Medium Slow, Monster, Water 1, 50, 70, 50, 50, 50, 40
 259, Marshtomp, , Mud Fish, Water, Ground, Torrent, , Damp, 0.7, 28, 45, 70, 142, 87.5, 20, Medium Slow, Monster, Water 1, 70, 85, 70, 60, 70, 50
 260, Swampert, , Mud Fish, Water, Ground, Torrent, , Damp, 1.5, 81.9, 45, 70, 241, 87.5, 20, Medium Slow, Monster, Water 1, 100, 110, 90, 85, 90, 60
-260, Mega Swampert, , Mud Fish, Water, Ground, Swift Swim, , , 1.9, 102, 45, 70, 286, 87.5, 20, Medium Slow, Monster, Water 1, 100, 150, 110, 95, 110, 70
+260, Mega Swampert, m, Mud Fish, Water, Ground, Swift Swim, , , 1.9, 102, 45, 70, 286, 87.5, 20, Medium Slow, Monster, Water 1, 100, 150, 110, 95, 110, 70
 261, Poochyena, , Bite, Dark, , Run Away, Quick Feet, Rattled, 0.5, 13.6, 255, 70, 56, 50, 15, Medium Fast, Field, , 35, 55, 35, 30, 30, 35
 262, Mightyena, , Bite, Dark, , Intimidate, Quick Feet, Moxie, 1, 37, 127, 70, 147, 50, 15, Medium Fast, Field, , 70, 90, 70, 60, 60, 70
 263, Zigzagoon, , TinyRaccoon, Normal, , Pickup, Gluttony, Quick Feet, 0.4, 17.5, 255, 70, 56, 50, 15, Medium Fast, Field, , 38, 30, 41, 30, 41, 60
-263, Galarian Zigzagoon, , Tiny Raccoon, Dark, Normal, Pickup, Gluttony, Quick Feet, 0.4, 17.5, , , , , 15, Medium Fast, Field, , 38, 30, 41, 30, 41, 60
+263, Galarian Zigzagoon, g, Tiny Raccoon, Dark, Normal, Pickup, Gluttony, Quick Feet, 0.4, 17.5, , , , , 15, Medium Fast, Field, , 38, 30, 41, 30, 41, 60
 264, Linoone, , Rushing, Normal, , Pickup, Gluttony, Quick Feet, 0.5, 32.5, 90, 70, 147, 50, 15, Medium Fast, Field, , 78, 70, 61, 50, 61, 100
-264, Galarian Linoone, , Rushing, Dark, Normal, Pickup, Gluttony, Quick Feet, 0.5, 32.5, , , , , 15, Medium Fast, Field, , 78, 70, 61, 50, 61, 100
+264, Galarian Linoone, g, Rushing, Dark, Normal, Pickup, Gluttony, Quick Feet, 0.5, 32.5, , , , , 15, Medium Fast, Field, , 78, 70, 61, 50, 61, 100
 265, Wurmple, , Worm, Bug, , Shield Dust, , Run Away, 0.3, 3.6, 255, 70, 56, 50, 15, Medium Fast, Bug, , 45, 45, 35, 20, 30, 20
 266, Silcoon, , Cocoon, Bug, , Shed Skin, , , 0.6, 10, 120, 70, 72, 50, 15, Medium Fast, Bug, , 50, 35, 55, 25, 25, 15
 267, Beautifly, , Butterfly, Bug, Flying, Swarm, , Rivalry, 1, 28.4, 45, 70, 178, 50, 15, Medium Fast, Bug, , 60, 70, 50, 100, 50, 65
@@ -340,7 +352,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 280, Ralts, , Feeling, Psychic, Fairy, Synchronize, Trace, Telepathy, 0.4, 6.6, 235, 35, 40, 50, 20, Slow, Amorphous, Human-Like, 28, 25, 25, 45, 35, 40
 281, Kirlia, , Emotion, Psychic, Fairy, Synchronize, Trace, Telepathy, 0.8, 20.2, 120, 35, 97, 50, 20, Slow, Amorphous, Human-Like, 38, 35, 35, 65, 55, 50
 282, Gardevoir, , Embrace, Psychic, Fairy, Synchronize, Trace, Telepathy, 1.6, 48.4, 45, 35, 233, 50, 20, Slow, Amorphous, Human-Like, 68, 65, 65, 125, 115, 80
-282, Mega Gardevoir, , Embrace, Psychic, Fairy, Pixilate, , , 1.6, 48.4, 45, 35, 278, 50, 20, Slow, Amorphous, , 68, 85, 65, 165, 135, 100
+282, Mega Gardevoir, m, Embrace, Psychic, Fairy, Pixilate, , , 1.6, 48.4, 45, 35, 278, 50, 20, Slow, Amorphous, , 68, 85, 65, 165, 135, 100
 283, Surskit, , Pond Skater, Bug, Water, Swift Swim, , Rain Dish, 0.5, 1.7, 200, 70, 54, 50, 15, Medium Fast, Bug, Water 1, 40, 30, 32, 50, 52, 65
 284, Masquerain, , Eyeball, Bug, Flying, Intimidate, , Unnerve, 0.8, 3.6, 75, 70, 159, 50, 15, Medium Fast, Bug, Water 1, 70, 60, 62, 100, 82, 80
 285, Shroomish, , Mushroom, Grass, , Effect Spore, Poison Heal, Quick Feet, 0.4, 4.5, 255, 70, 59, 50, 15, Fluctuating, Fairy, Grass, 60, 40, 60, 40, 60, 35
@@ -361,19 +373,19 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 300, Skitty, , Kitten, Normal, , Cute Charm, Normalize, Wonder Skin, 0.6, 11, 255, 70, 52, 25, 15, Fast, Fairy, Field, 50, 45, 45, 35, 35, 50
 301, Delcatty, , Prim, Normal, , Cute Charm, Normalize, Wonder Skin, 1.1, 32.6, 60, 70, 140, 25, 15, Fast, Fairy, Field, 70, 65, 65, 55, 55, 90
 302, Sableye, , Darkness, Dark, Ghost, Keen Eye, Stall, Prankster, 0.5, 11, 45, 35, 133, 50, 25, Medium Slow, Human-Like, , 50, 75, 75, 65, 65, 50
-302, Mega Sableye, , Darkness, Dark, Ghost, Magic Bounce, , , 0.5, 161, 45, 35, 168, 50, 25, Medium Slow, Human-Like, , 50, 85, 125, 85, 115, 20
+302, Mega Sableye, m, Darkness, Dark, Ghost, Magic Bounce, , , 0.5, 161, 45, 35, 168, 50, 25, Medium Slow, Human-Like, , 50, 85, 125, 85, 115, 20
 303, Mawile, , Deceiver, Steel, Fairy, Hyper Cutter, Intimidate, Sheer Force, 0.6, 11.5, 45, 70, 133, 50, 20, Fast, Fairy, Field, 50, 85, 85, 55, 55, 50
-303, Mega Mawile, , Deceiver, Steel, Fairy, Huge Power, , , 1, 23.5, 45, 70, 168, 50, 20, Fast, Fairy, Field, 50, 105, 125, 55, 95, 50
+303, Mega Mawile, m, Deceiver, Steel, Fairy, Huge Power, , , 1, 23.5, 45, 70, 168, 50, 20, Fast, Fairy, Field, 50, 105, 125, 55, 95, 50
 304, Aron, , Iron Armor, Steel, Rock, Sturdy, Rock Head, Heavy Metal, 0.4, 60, 180, 35, 66, 50, 35, Slow, Monster, , 50, 70, 100, 40, 40, 30
 305, Lairon, , Iron Armor, Steel, Rock, Sturdy, Rock Head, Heavy Metal, 0.9, 120, 90, 35, 151, 50, 35, Slow, Monster, , 60, 90, 140, 50, 50, 40
 306, Aggron, , Iron Armor, Steel, Rock, Sturdy, Rock Head, Heavy Metal, 2.1, 360, 45, 35, 239, 50, 35, Slow, Monster, , 70, 110, 180, 60, 60, 50
-306, Mega Aggron, , Iron Armor, Steel, , Filter, , , 2.2, 395, 45, 35, 284, 50, 35, Slow, Monster, , 70, 140, 230, 60, 80, 50
+306, Mega Aggron, m, Iron Armor, Steel, , Filter, , , 2.2, 395, 45, 35, 284, 50, 35, Slow, Monster, , 70, 140, 230, 60, 80, 50
 307, Meditite, , Meditate, Fighting, Psychic, Pure Power, , Telepathy, 0.6, 11.2, 180, 70, 56, 50, 20, Medium Fast, Human-Like, , 30, 40, 55, 40, 55, 60
 308, Medicham, , Meditate, Fighting, Psychic, Pure Power, , Telepathy, 1.3, 31.5, 90, 70, 144, 50, 20, Medium Fast, Human-Like, , 60, 60, 75, 60, 75, 80
-308, Mega Medicham, , Meditate, Fighting, Psychic, Pure Power, , , 1.3, 31.5, 90, 70, 179, 50, 20, Medium Fast, Human-Like, , 60, 100, 85, 80, 85, 100
+308, Mega Medicham, m, Meditate, Fighting, Psychic, Pure Power, , , 1.3, 31.5, 90, 70, 179, 50, 20, Medium Fast, Human-Like, , 60, 100, 85, 80, 85, 100
 309, Electrike, , Lightning, Electric, , Static, Lightning Rod, Minus, 0.6, 15.2, 120, 70, 59, 50, 20, Slow, Field, , 40, 45, 40, 65, 40, 65
 310, Manectric, , Discharge, Electric, , Static, Lightning Rod, Minus, 1.5, 40.2, 45, 70, 166, 50, 20, Slow, Field, , 70, 75, 60, 105, 60, 105
-310, Mega Manectric, , Discharge, Electric, , Intimidate, , , 1.8, 44, 45, 70, 201, 50, 20, Slow, Field, , 70, 75, 80, 135, 80, 135
+310, Mega Manectric, m, Discharge, Electric, , Intimidate, , , 1.8, 44, 45, 70, 201, 50, 20, Slow, Field, , 70, 75, 80, 135, 80, 135
 311, Plusle, , Cheering, Electric, , Plus, , Lightning Rod, 0.4, 4.2, 200, 70, 142, 50, 20, Medium Fast, Fairy, , 60, 50, 40, 85, 75, 95
 312, Minun, , Cheering, Electric, , Minus, , Volt Absorb, 0.4, 4.2, 200, 70, 142, 50, 20, Medium Fast, Fairy, , 60, 40, 50, 75, 85, 95
 313, Volbeat, , Firefly, Bug, , Illuminate, Swarm, Prankster, 0.7, 17.7, 150, 70, 151, 100, 15, Erratic, Bug, Human-Like, 65, 73, 75, 47, 85, 85
@@ -383,12 +395,12 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 317, Swalot, , Poison Bag, Poison, , Liquid Ooze, Sticky Hold, Gluttony, 1.7, 80, 75, 70, 163, 50, 20, Fluctuating, Amorphous, , 100, 73, 83, 73, 83, 55
 318, Carvanha, , Savage, Water, Dark, Rough Skin, , Speed Boost, 0.8, 20.8, 225, 35, 61, 50, 20, Slow, Water 2, , 45, 90, 20, 65, 20, 65
 319, Sharpedo, , Brutal, Water, Dark, Rough Skin, , Speed Boost, 1.8, 88.8, 60, 35, 161, 50, 20, Slow, Water 2, , 70, 120, 40, 95, 40, 95
-319, Mega Sharpedo, , Brutal, Water, Dark, Strong Jaw, , , 2.5, 130.3, 60, 35, 196, 50, 20, Slow, Water 2, , 70, 140, 70, 110, 65, 105
+319, Mega Sharpedo, m, Brutal, Water, Dark, Strong Jaw, , , 2.5, 130.3, 60, 35, 196, 50, 20, Slow, Water 2, , 70, 140, 70, 110, 65, 105
 320, Wailmer, , Ball Whale, Water, , Water Veil, Oblivious, Pressure, 2, 130, 125, 70, 80, 50, 40, Fluctuating, Field, Water 2, 130, 70, 35, 70, 35, 60
 321, Wailord, , Float Whale, Water, , Water Veil, Oblivious, Pressure, 14.5, 398, 60, 70, 175, 50, 40, Fluctuating, Field, Water 2, 170, 90, 45, 90, 45, 60
 322, Numel, , Numb, Fire, Ground, Oblivious, Simple, Own Tempo, 0.7, 24, 255, 70, 61, 50, 20, Medium Fast, Field, , 60, 60, 40, 65, 45, 35
 323, Camerupt, , Eruption, Fire, Ground, Magma Armor, Solid Rock, Anger Point, 1.9, 220, 150, 70, 161, 50, 20, Medium Fast, Field, , 70, 100, 70, 105, 75, 40
-323, Mega Camerupt, , Eruption, Fire, Ground, Sheer Force, , , 2.5, 320.5, 150, 70, 196, 50, 20, Medium Fast, Field, , 70, 120, 100, 145, 105, 20
+323, Mega Camerupt, m, Eruption, Fire, Ground, Sheer Force, , , 2.5, 320.5, 150, 70, 196, 50, 20, Medium Fast, Field, , 70, 120, 100, 145, 105, 20
 324, Torkoal, , Coal, Fire, , White Smoke, Drought, Shell Armor, 0.5, 80.4, 90, 70, 165, 50, 20, Medium Fast, Field, , 70, 85, 140, 85, 70, 20
 325, Spoink, , Bounce, Psychic, , Thick Fat, Own Tempo, Gluttony, 0.7, 30.6, 255, 70, 66, 50, 20, Fast, Field, , 60, 25, 35, 70, 80, 60
 326, Grumpig, , Manipulate, Psychic, , Thick Fat, Own Tempo, Gluttony, 0.9, 71.5, 60, 70, 165, 50, 20, Fast, Field, , 80, 45, 65, 90, 110, 80
@@ -400,7 +412,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 332, Cacturne, , Scarecrow, Grass, Dark, Sand Veil, , Water Absorb, 1.3, 77.4, 60, 35, 166, 50, 20, Medium Slow, Grass, Human-Like, 70, 115, 60, 115, 60, 55
 333, Swablu, , Cotton Bird, Normal, Flying, Natural Cure, , Cloud Nine, 0.4, 1.2, 255, 70, 62, 50, 20, Erratic, Dragon, Flying, 45, 40, 60, 40, 75, 50
 334, Altaria, , Humming, Dragon, Flying, Natural Cure, , Cloud Nine, 1.1, 20.6, 45, 70, 172, 50, 20, Erratic, Dragon, Flying, 75, 70, 90, 70, 105, 80
-334, Mega Altaria, , Humming, Dragon, Fairy, Pixilate, , , 1.5, 20.6, 45, 70, 207, 50, 20, Erratic, Dragon, Flying, 75, 110, 110, 110, 105, 80
+334, Mega Altaria, m, Humming, Dragon, Fairy, Pixilate, , , 1.5, 20.6, 45, 70, 207, 50, 20, Erratic, Dragon, Flying, 75, 110, 110, 110, 105, 80
 335, Zangoose, , Cat Ferret, Normal, , Immunity, , Toxic Boost, 1.3, 40.3, 90, 70, 160, 50, 20, Erratic, Field, , 73, 115, 60, 60, 60, 90
 336, Seviper, , Fang Snake, Poison, , Shed Skin, , Infiltrator, 2.7, 52.5, 90, 70, 160, 50, 20, Fluctuating, Dragon, Field, 73, 100, 60, 100, 60, 65
 337, Lunatone, , Meteorite, Rock, Psychic, Levitate, , , 1, 168, 45, 70, 161, , 25, Fast, Mineral, , 90, 55, 65, 95, 85, 70
@@ -418,23 +430,23 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 349, Feebas, , Fish, Water, , Swift Swim, Oblivious, Adaptability, 0.6, 7.4, 255, 70, 40, 50, 20, Erratic, Dragon, Water 1, 20, 15, 20, 10, 55, 80
 350, Milotic, , Tender, Water, , Marvel Scale, Competitive, Cute Charm, 6.2, 162, 60, 70, 189, 50, 20, Erratic, Dragon, Water 1, 95, 60, 79, 100, 125, 81
 351, Castform, , Weather, Normal, , Forecast, , , 0.3, 0.8, 45, 70, 147, 50, 25, Medium Fast, Amorphous, Fairy, 70, 70, 70, 70, 70, 70
-351, Castform Sunny Form, , Weather, Fire, , Forecast, , , 0.3, 0.8, 45, 70, 147, 50, 25, Medium Fast, Amorphous, Fairy, 70, 70, 70, 70, 70, 70
-351, Castform Rainy Form, , Weather, Water, , Forecast, , , 0.3, 0.8, 45, 70, 147, 50, 25, Medium Fast, Amorphous, Fairy, 70, 70, 70, 70, 70, 70
-351, Castform Snowy Form, , Weather, Ice, , Forecast, , , 0.3, 0.8, 45, 70, 147, 50, 25, Medium Fast, Amorphous, Fairy, 70, 70, 70, 70, 70, 70
+351, Castform Sunny Form, s, Weather, Fire, , Forecast, , , 0.3, 0.8, 45, 70, 147, 50, 25, Medium Fast, Amorphous, Fairy, 70, 70, 70, 70, 70, 70
+351, Castform Rainy Form, r, Weather, Water, , Forecast, , , 0.3, 0.8, 45, 70, 147, 50, 25, Medium Fast, Amorphous, Fairy, 70, 70, 70, 70, 70, 70
+351, Castform Snowy Form, i, Weather, Ice, , Forecast, , , 0.3, 0.8, 45, 70, 147, 50, 25, Medium Fast, Amorphous, Fairy, 70, 70, 70, 70, 70, 70
 352, Kecleon, , Color Swap, Normal, , Color Change, , Protean, 1, 22, 200, 70, 154, 50, 20, Medium Slow, Field, , 60, 90, 70, 60, 120, 40
 353, Shuppet, , Puppet, Ghost, , Insomnia, Frisk, Cursed Body, 0.6, 2.3, 225, 35, 59, 50, 25, Fast, Amorphous, , 44, 75, 35, 63, 33, 45
 354, Banette, , Marionette, Ghost, , Insomnia, Frisk, Cursed Body, 1.1, 12.5, 45, 35, 159, 50, 25, Fast, Amorphous, , 64, 115, 65, 83, 63, 65
-354, Mega Banette, , Marionette, Ghost, , Prankster, , , 1.2, 13, 45, 35, 194, 50, 25, Fast, Amorphous, , 64, 165, 75, 93, 83, 75
+354, Mega Banette, m, Marionette, Ghost, , Prankster, , , 1.2, 13, 45, 35, 194, 50, 25, Fast, Amorphous, , 64, 165, 75, 93, 83, 75
 355, Duskull, , Requiem, Ghost, , Levitate, , Frisk, 0.8, 15, 190, 35, 59, 50, 25, Fast, Amorphous, , 20, 40, 90, 30, 90, 25
 356, Dusclops, , Beckon, Ghost, , Pressure, , Frisk, 1.6, 30.6, 90, 35, 159, 50, 25, Fast, Amorphous, , 40, 70, 130, 60, 130, 25
 357, Tropius, , Fruit, Grass, Flying, Chlorophyll, Solar Power, Harvest, 2, 100, 200, 70, 161, 50, 25, Slow, Grass, Monster, 99, 68, 83, 72, 87, 51
 358, Chimecho, , Wind Chime, Psychic, , Levitate, , , 0.6, 1, 45, 70, 159, 50, 25, Fast, Amorphous, , 75, 50, 80, 95, 90, 65
 359, Absol, , Disaster, Dark, , Pressure, Super Luck, Justified, 1.2, 47, 30, 35, 163, 50, 25, Medium Slow, Field, , 65, 130, 60, 75, 60, 75
-359, Mega Absol, , Disaster, Dark, , Magic Bounce, , , 1.2, 49, 30, 35, 198, 50, 25, Medium Slow, Field, , 65, 150, 60, 115, 60, 115
+359, Mega Absol, m, Disaster, Dark, , Magic Bounce, , , 1.2, 49, 30, 35, 198, 50, 25, Medium Slow, Field, , 65, 150, 60, 115, 60, 115
 360, Wynaut, , Bright, Psychic, , Shadow Tag, , Telepathy, 0.6, 14, 125, 70, 52, 50, 20, Medium Fast, Undiscovered, , 95, 23, 48, 23, 48, 23
 361, Snorunt, , Snow Hat, Ice, , Inner Focus, Ice Body, Moody, 0.7, 16.8, 190, 70, 60, 50, 20, Medium Fast, Fairy, Mineral, 50, 50, 50, 50, 50, 50
 362, Glalie, , Face, Ice, , Inner Focus, Ice Body, Moody, 1.5, 256.5, 75, 70, 168, 50, 20, Medium Fast, Fairy, Mineral, 80, 80, 80, 80, 80, 80
-362, Mega Glalie, , Face, Ice, , Refrigerate, , , 2.1, 350.2, 75, 70, 203, 50, 20, Medium Fast, Fairy, Mineral, 80, 120, 80, 120, 80, 100
+362, Mega Glalie, m, Face, Ice, , Refrigerate, , , 2.1, 350.2, 75, 70, 203, 50, 20, Medium Fast, Fairy, Mineral, 80, 120, 80, 120, 80, 100
 363, Spheal, , Clap, Ice, Water, Thick Fat, Ice Body, Oblivious, 0.8, 39.5, 255, 70, 58, 50, 20, Medium Slow, Field, Water 1, 70, 40, 50, 55, 50, 25
 364, Sealeo, , Ball Roll, Ice, Water, Thick Fat, Ice Body, Oblivious, 1.1, 87.6, 120, 70, 144, 50, 20, Medium Slow, Field, Water 1, 90, 60, 70, 75, 70, 45
 365, Walrein, , Ice Break, Ice, Water, Thick Fat, Ice Body, Oblivious, 1.4, 150.6, 45, 70, 239, 50, 20, Medium Slow, Field, Water 1, 110, 80, 90, 95, 90, 65
@@ -446,29 +458,29 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 371, Bagon, , Rock Head, Dragon, , Rock Head, , Sheer Force, 0.6, 42.1, 45, 35, 60, 50, 40, Slow, Dragon, , 45, 75, 60, 40, 30, 50
 372, Shelgon, , Endurance, Dragon, , Rock Head, , Overcoat, 1.1, 110.5, 45, 35, 147, 50, 40, Slow, Dragon, , 65, 95, 100, 60, 50, 50
 373, Salamence, , Dragon, Dragon, Flying, Intimidate, , Moxie, 1.5, 102.6, 45, 35, 270, 50, 40, Slow, Dragon, , 95, 135, 80, 110, 80, 100
-373, Mega Salamence, , Dragon, Dragon, Flying, Aerilate, , , 1.8, 112.6, 45, 35, 315, 50, 40, Slow, Dragon, , 95, 145, 130, 120, 90, 120
+373, Mega Salamence, m, Dragon, Dragon, Flying, Aerilate, , , 1.8, 112.6, 45, 35, 315, 50, 40, Slow, Dragon, , 95, 145, 130, 120, 90, 120
 374, Beldum, , Iron Ball, Steel, Psychic, Clear Body, , Light Metal, 0.6, 95.2, 3, 35, 60, , 40, Slow, Mineral, , 40, 55, 80, 35, 60, 30
 375, Metang, , Iron Claw, Steel, Psychic, Clear Body, , Light Metal, 1.2, 202.5, 3, 35, 147, , 40, Slow, Mineral, , 60, 75, 100, 55, 80, 50
 376, Metagross, , Iron Leg, Steel, Psychic, Clear Body, , Light Metal, 1.6, 550, 3, 35, 270, , 40, Slow, Mineral, , 80, 135, 130, 95, 90, 70
-376, Mega Metagross, , Iron Leg, Steel, Psychic, Tough Claws, , , 2.5, 942.9, 3, 35, 315, , 40, Slow, Mineral, , 80, 145, 150, 105, 110, 110
+376, Mega Metagross, m, Iron Leg, Steel, Psychic, Tough Claws, , , 2.5, 942.9, 3, 35, 315, , 40, Slow, Mineral, , 80, 145, 150, 105, 110, 110
 377, Regirock, , Rock Peak, Rock, , Clear Body, , Sturdy, 1.7, 230, 3, 35, 261, , 80, Slow, Undiscovered, , 80, 100, 200, 50, 100, 50
 378, Regice, , Iceberg, Ice, , Clear Body, , Ice Body, 1.8, 175, 3, 35, 261, , 80, Slow, Undiscovered, , 80, 50, 100, 100, 200, 50
 379, Registeel, , Iron, Steel, , Clear Body, , Light Metal, 1.9, 205, 3, 35, 261, , 80, Slow, Undiscovered, , 80, 75, 150, 75, 150, 50
 380, Latias, , Eon, Dragon, Psychic, Levitate, , , 1.4, 40, 3, 90, 270, 0, 120, Slow, Undiscovered, , 80, 80, 90, 110, 130, 110
-380, Mega Latias, , Eon, Dragon, Psychic, Levitate, , , 1.8, 52, 3, 90, 315, 0, 120, Slow, Undiscovered, , 80, 100, 120, 140, 150, 110
+380, Mega Latias, m, Eon, Dragon, Psychic, Levitate, , , 1.8, 52, 3, 90, 315, 0, 120, Slow, Undiscovered, , 80, 100, 120, 140, 150, 110
 381, Latios, , Eon, Dragon, Psychic, Levitate, , , 2, 60, 3, 90, 270, 100, 120, Slow, Undiscovered, , 80, 90, 80, 130, 110, 110
-381, Mega Latios, , Eon, Dragon, Psychic, Levitate, , , 2.3, 70, 3, 90, 315, 100, 120, Slow, Undiscovered, , 80, 130, 100, 160, 120, 110
+381, Mega Latios, m, Eon, Dragon, Psychic, Levitate, , , 2.3, 70, 3, 90, 315, 100, 120, Slow, Undiscovered, , 80, 130, 100, 160, 120, 110
 382, Kyogre, , Sea Basin, Water, , Drizzle, , , 4.5, 352, 3, 0, 302, , 120, Slow, Undiscovered, , 100, 100, 90, 150, 140, 90
-382, Primal Kyogre, , Sea Basin, Water, , Primordial Sea, , , 9.8, 430, 5, 0, 347, , 120, Slow, Undiscovered, , 100, 150, 90, 180, 160, 90
+382, Primal Kyogre, m, Sea Basin, Water, , Primordial Sea, , , 9.8, 430, 5, 0, 347, , 120, Slow, Undiscovered, , 100, 150, 90, 180, 160, 90
 383, Groudon, , Continent, Ground, , Drought, , , 3.5, 950, 3, 0, 302, , 120, Slow, Undiscovered, , 100, 150, 140, 100, 90, 90
-383, Primal Groudon, , Continent, Ground, Fire, Desolate Land, , , 5, 999.7, 5, 0, 347, , 120, Slow, Undiscovered, , 100, 180, 160, 150, 90, 90
+383, Primal Groudon, m, Continent, Ground, Fire, Desolate Land, , , 5, 999.7, 5, 0, 347, , 120, Slow, Undiscovered, , 100, 180, 160, 150, 90, 90
 384, Rayquaza, , Sky High, Dragon, Flying, Air Lock, , , 7, 206.5, 45, 0, 306, , 120, Slow, Undiscovered, , 105, 150, 90, 150, 90, 95
-384, Mega Rayquaza, , Sky High, Dragon, Flying, Delta Stream, , , 10.8, 392, 3, 0, 351, , 120, Slow, Undiscovered, , 105, 180, 100, 180, 100, 115
+384, Mega Rayquaza, m, Sky High, Dragon, Flying, Delta Stream, , , 10.8, 392, 3, 0, 351, , 120, Slow, Undiscovered, , 105, 180, 100, 180, 100, 115
 385, Jirachi, , Wish, Steel, Psychic, Serene Grace, , , 0.3, 1.1, 3, 100, 270, , 120, Slow, Undiscovered, , 100, 100, 100, 100, 100, 100
 386, Deoxys Normal Forme, , DNA, Psychic, , Pressure, , , 1.7, 60.8, 3, 0, 270, , 120, Slow, Undiscovered, , 50, 150, 50, 150, 50, 150
-386, Deoxys Attack Forme, , DNA, Psychic, , Pressure, , , 1.7, 60.8, 3, 0, 270, , 120, Slow, Undiscovered, , 50, 180, 20, 180, 20, 150
-386, Deoxys Defense Forme, , DNA, Psychic, , Pressure, , , 1.7, 60.8, 3, 0, 270, , 120, Slow, Undiscovered, , 50, 70, 160, 70, 160, 90
-386, Deoxys Speed Forme, , DNA, Psychic, , Pressure, , , 1.7, 60.8, 3, 0, 270, , 120, Slow, Undiscovered, , 50, 95, 90, 95, 90, 180
+386, Deoxys Attack Forme, a, DNA, Psychic, -a, Pressure, , , 1.7, 60.8, 3, 0, 270, , 120, Slow, Undiscovered, , 50, 180, 20, 180, 20, 150
+386, Deoxys Defense Forme, d, DNA, Psychic, -d, Pressure, , , 1.7, 60.8, 3, 0, 270, , 120, Slow, Undiscovered, , 50, 70, 160, 70, 160, 90
+386, Deoxys Speed Forme, s, DNA, Psychic, -s, Pressure, , , 1.7, 60.8, 3, 0, 270, , 120, Slow, Undiscovered, , 50, 95, 90, 95, 90, 180
 387, Turtwig, , Tiny Leaf, Grass, , Overgrow, , Shell Armor, 0.4, 10.2, 45, 70, 64, 87.5, 20, Medium Slow, Grass, Monster, 55, 68, 64, 45, 55, 31
 388, Grotle, , Grove, Grass, , Overgrow, , Shell Armor, 1.1, 97, 45, 70, 142, 87.5, 20, Medium Slow, Grass, Monster, 75, 89, 85, 55, 65, 36
 389, Torterra, , Continent, Grass, Ground, Overgrow, , Shell Armor, 2.2, 310, 45, 70, 236, 87.5, 20, Medium Slow, Grass, Monster, 95, 109, 105, 75, 85, 56
@@ -496,8 +508,8 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 411, Bastiodon, , Shield, Rock, Steel, Sturdy, , Soundproof, 1.3, 149.5, 45, 70, 173, 87.5, 30, Erratic, Monster, , 60, 52, 168, 47, 138, 30
 412, Burmy, , Bagworm, Bug, , Shed Skin, , Overcoat, 0.2, 3.4, 120, 70, 45, 50, 15, Medium Fast, Bug, , 40, 29, 45, 29, 45, 36
 413, Wormadam Plant Cloak, , Bagworm, Bug, Grass, Anticipation, , Overcoat, 0.5, 6.5, 45, 70, 148, 0, 15, Medium Fast, Bug, , 60, 59, 85, 79, 105, 36
-413, Wormadam Sandy Cloak, , Bagworm, Bug, Ground, Anticipation, , Overcoat, 0.5, 6.5, 45, 70, 148, 0, 15, Medium Fast, Bug, , 60, 79, 105, 59, 85, 36
-413, Wormadam Trash Cloak, , Bagworm, Bug, Steel, Anticipation, , Overcoat, 0.5, 6.5, 45, 70, 148, 0, 15, Medium Fast, Bug, , 60, 69, 95, 69, 95, 36
+413, Wormadam Sandy Cloak, c, Bagworm, Bug, Ground, Anticipation, , Overcoat, 0.5, 6.5, 45, 70, 148, 0, 15, Medium Fast, Bug, , 60, 79, 105, 59, 85, 36
+413, Wormadam Trash Cloak, s, Bagworm, Bug, Steel, Anticipation, , Overcoat, 0.5, 6.5, 45, 70, 148, 0, 15, Medium Fast, Bug, , 60, 69, 95, 69, 95, 36
 414, Mothim, , Moth, Bug, Flying, Swarm, , Tinted Lens, 0.9, 23.3, 45, 70, 148, 100, 15, Medium Fast, Bug, , 70, 94, 50, 94, 50, 66
 415, Combee, , Tiny Bee, Bug, Flying, Honey Gather, , Hustle, 0.3, 5.5, 120, 70, 49, 87.5, 15, Medium Slow, Bug, , 30, 30, 42, 30, 42, 70
 416, Vespiquen, , Beehive, Bug, Flying, Pressure, , Unnerve, 1.2, 38.5, 45, 70, 166, 0, 15, Medium Slow, Bug, , 70, 80, 102, 80, 102, 40
@@ -513,7 +525,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 426, Drifblim, , Blimp, Ghost, Flying, Aftermath, Unburden, Flare Boost, 1.2, 15, 60, 70, 174, 50, 30, Fluctuating, Amorphous, , 150, 80, 44, 90, 54, 80
 427, Buneary, , Rabbit, Normal, , Run Away, Klutz, Limber, 0.4, 5.5, 190, 0, 70, 50, 20, Medium Fast, Field, Human-Like, 55, 66, 44, 44, 56, 85
 428, Lopunny, , Rabbit, Normal, , Cute Charm, Klutz, Limber, 1.2, 33.3, 60, 140, 168, 50, 20, Medium Fast, Field, Human-Like, 65, 76, 84, 54, 96, 105
-428, Mega Lopunny, , Rabbit, Normal, Fighting, Scrappy, , , 1.3, 28.3, 60, 140, 203, 50, 20, Medium Fast, Field, Human-Like, 65, 136, 94, 54, 96, 135
+428, Mega Lopunny, m, Rabbit, Normal, Fighting, Scrappy, , , 1.3, 28.3, 60, 140, 203, 50, 20, Medium Fast, Field, Human-Like, 65, 136, 94, 54, 96, 135
 429, Mismagius, , Magical, Ghost, , Levitate, , , 0.9, 4.4, 45, 35, 173, 50, 25, Fast, Amorphous, , 60, 60, 60, 105, 105, 105
 430, Honchkrow, , Big Boss, Dark, Flying, Insomnia, Super Luck, Moxie, 0.9, 27.3, 30, 35, 177, 50, 20, Medium Slow, Flying, , 100, 125, 52, 105, 52, 71
 431, Glameow, , Catty, Normal, , Limber, Own Tempo, Keen Eye, 0.5, 3.9, 190, 70, 62, 25, 20, Fast, Field, , 49, 55, 42, 42, 37, 85
@@ -531,11 +543,11 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 443, Gible, , Land Shark, Dragon, Ground, Sand Veil, , Rough Skin, 0.7, 20.5, 45, 70, 60, 50, 40, Slow, Dragon, Monster, 58, 70, 45, 40, 45, 42
 444, Gabite, , Cave, Dragon, Ground, Sand Veil, , Rough Skin, 1.4, 56, 45, 70, 144, 50, 40, Slow, Dragon, Monster, 68, 90, 65, 50, 55, 82
 445, Garchomp, , Mach, Dragon, Ground, Sand Veil, , Rough Skin, 1.9, 95, 45, 70, 270, 50, 40, Slow, Dragon, Monster, 108, 130, 95, 80, 85, 102
-445, Mega Garchomp, , Mach, Dragon, Ground, Sand Force, , , 1.9, 95, 45, 70, 315, 50, 40, Slow, Dragon, Monster, 108, 170, 115, 120, 95, 92
+445, Mega Garchomp, m, Mach, Dragon, Ground, Sand Force, , , 1.9, 95, 45, 70, 315, 50, 40, Slow, Dragon, Monster, 108, 170, 115, 120, 95, 92
 446, Munchlax, , Big Eater, Normal, , Pickup, Thick Fat, Gluttony, 0.6, 105, 50, 70, 78, 87.5, 40, Slow, Undiscovered, , 135, 85, 40, 40, 85, 5
 447, Riolu, , Emanation, Fighting, , Steadfast, Inner Focus, Prankster, 0.7, 20.2, 75, 70, 57, 87.5, 25, Medium Slow, Undiscovered, , 40, 70, 40, 35, 40, 60
 448, Lucario, , Aura, Fighting, Steel, Steadfast, Inner Focus, Justified, 1.2, 54, 45, 70, 184, 87.5, 25, Medium Slow, Field, Human-Like, 70, 110, 70, 115, 70, 90
-448, Mega Lucario, , Aura, Fighting, Steel, Adaptability, , , 1.3, 57.5, 45, 70, 219, 87.5, 25, Medium Slow, Field, Human-Like, 70, 145, 88, 140, 70, 112
+448, Mega Lucario, m, Aura, Fighting, Steel, Adaptability, , , 1.3, 57.5, 45, 70, 219, 87.5, 25, Medium Slow, Field, Human-Like, 70, 145, 88, 140, 70, 112
 449, Hippopotas, , Hippo, Ground, , Sand Stream, , Sand Force, 0.8, 49.5, 140, 70, 66, 50, 30, Slow, Field, , 68, 72, 78, 38, 42, 32
 450, Hippowdon, , Heavyweight, Ground, , Sand Stream, , Sand Force, 2, 300, 60, 70, 184, 50, 30, Slow, Field, , 108, 112, 118, 68, 72, 47
 451, Skorupi, , Scorpion, Poison, Bug, Battle Armor, Sniper, Keen Eye, 0.8, 12, 120, 70, 66, 50, 20, Slow, Bug, Water 3, 40, 50, 90, 30, 55, 65
@@ -548,7 +560,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 458, Mantyke, , Kite, Water, Flying, Swift Swim, Water Absorb, Water Veil, 1, 65, 25, 70, 69, 50, 25, Slow, Undiscovered, , 45, 20, 50, 60, 120, 50
 459, Snover, , Frost Tree, Grass, Ice, Snow Warning, , Soundproof, 1, 50.5, 120, 70, 67, 50, 20, Slow, Grass, Monster, 60, 62, 50, 62, 60, 40
 460, Abomasnow, , Frost Tree, Grass, Ice, Snow Warning, , Soundproof, 2.2, 135.5, 60, 70, 173, 50, 20, Slow, Grass, Monster, 90, 92, 75, 92, 85, 60
-460, Mega Abomasnow, , Frost Tree, Grass, Ice, Snow Warning, , , 2.7, 185, 60, 70, 208, 50, 20, Slow, Grass, Monster, 90, 132, 105, 132, 105, 30
+460, Mega Abomasnow, m, Frost Tree, Grass, Ice, Snow Warning, , , 2.7, 185, 60, 70, 208, 50, 20, Slow, Grass, Monster, 90, 132, 105, 132, 105, 30
 461, Weavile, , Sharp Claw, Dark, Ice, Pressure, , Pickpocket, 1.1, 34, 45, 35, 179, 50, 20, Medium Slow, Field, , 70, 120, 65, 45, 85, 125
 462, Magnezone, , Magnet Area, Electric, Steel, Magnet Pull, Sturdy, Analytic, 1.2, 180, 30, 70, 241, , 20, Medium Fast, Mineral, , 70, 70, 115, 130, 90, 60
 463, Lickilicky, , Licking, Normal, , Own Tempo, Oblivious, Cloud Nine, 1.7, 140, 30, 70, 180, 50, 20, Medium Fast, Monster, , 110, 85, 95, 80, 95, 50
@@ -557,23 +569,23 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 466, Electivire, , Thunderbolt, Electric, , Motor Drive, , Vital Spirit, 1.8, 138.6, 30, 70, 243, 75, 25, Medium Fast, Human-Like, , 75, 123, 67, 95, 85, 95
 467, Magmortar, , Blast, Fire, , Flame Body, , Vital Spirit, 1.6, 68, 30, 70, 243, 75, 25, Medium Fast, Human-Like, , 75, 95, 67, 125, 95, 83
 468, Togekiss, , Jubilee, Fairy, Flying, Hustle, Serene Grace, Super Luck, 1.5, 38, 30, 70, 245, 87.5, 10, Fast, Fairy, Flying, 85, 50, 95, 120, 115, 80
-469, Yanmega, , Ogre Darner, Bug, Flying, Speed Boost, Tinted Lens, Frisk, 1.9, 51.5, 30, 70, 180, 50, 20, Medium Fast, Bug, , 86, 76, 86, 116, 56, 95
+469, Yanmega, m, Ogre Darner, Bug, Flying, Speed Boost, Tinted Lens, Frisk, 1.9, 51.5, 30, 70, 180, 50, 20, Medium Fast, Bug, , 86, 76, 86, 116, 56, 95
 470, Leafeon, , Verdant, Grass, , Leaf Guard, , Chlorophyll, 1, 25.5, 45, 35, 184, 87.5, 35, Medium Fast, Field, , 65, 110, 130, 60, 65, 95
 471, Glaceon, , Fresh Snow, Ice, , Snow Cloak, , Ice Body, 0.8, 25.9, 45, 35, 184, 87.5, 35, Medium Fast, Field, , 65, 60, 110, 130, 95, 65
 472, Gliscor, , Fang Scorp, Ground, Flying, Hyper Cutter, Sand Veil, Poison Heal, 2, 42.5, 30, 70, 179, 50, 20, Medium Slow, Bug, , 75, 95, 125, 45, 75, 95
 473, Mamoswine, , Twin Tusk, Ice, Ground, Oblivious, Snow Cloak, Thick Fat, 2.5, 291, 50, 70, 239, 50, 20, Slow, Field, , 110, 130, 80, 70, 60, 80
 474, Porygon-Z, , Virtual, Normal, , Adaptability, Download, Analytic, 0.9, 34, 30, 70, 241, , 20, Medium Fast, Mineral, , 85, 80, 70, 135, 75, 90
 475, Gallade, , Blade, Psychic, Fighting, Steadfast, , Justified, 1.6, 52, 45, 35, 233, 100, 20, Slow, Amorphous, Human-Like, 68, 125, 65, 65, 115, 80
-475, Mega Gallade, , Blade, Psychic, Fighting, Inner Focus, , , 1.6, 56.4, 45, 35, 278, 100, 20, Slow, Amorphous, , 68, 165, 95, 65, 115, 110
+475, Mega Gallade, m, Blade, Psychic, Fighting, Inner Focus, , , 1.6, 56.4, 45, 35, 278, 100, 20, Slow, Amorphous, , 68, 165, 95, 65, 115, 110
 476, Probopass, , Compass, Rock, Steel, Sturdy, Magnet Pull, Sand Force, 1.4, 340, 60, 70, 184, 50, 20, Medium Fast, Mineral, , 60, 55, 145, 75, 150, 40
 477, Dusknoir, , Gripper, Ghost, , Pressure, , Frisk, 2.2, 106.6, 45, 35, 236, 50, 25, Fast, Amorphous, , 45, 100, 135, 65, 135, 45
 478, Froslass, , Snow Land, Ice, Ghost, Snow Cloak, , Cursed Body, 1.3, 26.6, 75, 70, 168, 0, 20, Medium Fast, Fairy, Mineral, 70, 80, 70, 80, 70, 110
 479, Rotom, , Plasma, Electric, Ghost, Levitate, , , 0.3, 0.3, 45, 70, 154, , 20, Medium Fast, Amorphous, , 50, 50, 77, 95, 77, 91
-479, Heat Rotom, , Plasma, Electric, Fire, Levitate, , , 0.3, 0.3, 45, 70, 182, , 20, Medium Fast, Amorphous, , 50, 65, 107, 105, 107, 86
-479, Wash Rotom, , Plasma, Electric, Water, Levitate, , , 0.3, 0.3, 45, 70, 182, , 20, Medium Fast, Amorphous, , 50, 65, 107, 105, 107, 86
-479, Frost Rotom, , Plasma, Electric, Ice, Levitate, , , 0.3, 0.3, 45, 70, 182, , 20, Medium Fast, Amorphous, , 50, 65, 107, 105, 107, 86
-479, Fan Rotom, , Plasma, Electric, Flying, Levitate, , , 0.3, 0.3, 45, 70, 182, , 20, Medium Fast, Amorphous, , 50, 65, 107, 105, 107, 86
-479, Mow Rotom, , Plasma, Electric, Grass, Levitate, , , 0.3, 0.3, 45, 70, 182, , 20, Medium Fast, Amorphous, , 50, 65, 107, 105, 107, 86
+479, Heat Rotom, h, Plasma, Electric, Fire, Levitate, , , 0.3, 0.3, 45, 70, 182, , 20, Medium Fast, Amorphous, , 50, 65, 107, 105, 107, 86
+479, Wash Rotom, w, Plasma, Electric, Water, Levitate, , , 0.3, 0.3, 45, 70, 182, , 20, Medium Fast, Amorphous, , 50, 65, 107, 105, 107, 86
+479, Frost Rotom, f, Plasma, Electric, Ice, Levitate, , , 0.3, 0.3, 45, 70, 182, , 20, Medium Fast, Amorphous, , 50, 65, 107, 105, 107, 86
+479, Fan Rotom, s, Plasma, Electric, Flying, Levitate, , , 0.3, 0.3, 45, 70, 182, , 20, Medium Fast, Amorphous, , 50, 65, 107, 105, 107, 86
+479, Mow Rotom, m, Plasma, Electric, Grass, Levitate, , , 0.3, 0.3, 45, 70, 182, , 20, Medium Fast, Amorphous, , 50, 65, 107, 105, 107, 86
 480, Uxie, , Knowledge, Psychic, , Levitate, , , 0.3, 0.3, 3, 140, 261, , 80, Slow, Undiscovered, , 75, 75, 130, 75, 130, 95
 481, Mesprit, , Emotion, Psychic, , Levitate, , , 0.3, 0.3, 3, 140, 261, , 80, Slow, Undiscovered, , 80, 105, 105, 105, 105, 80
 482, Azelf, , Willpower, Psychic, , Levitate, , , 0.3, 0.3, 3, 140, 261, , 80, Slow, Undiscovered, , 75, 125, 70, 125, 70, 115
@@ -581,14 +593,14 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 484, Palkia, , Spatial, Water, Dragon, Pressure, , Telepathy, 4.2, 336, 3, 0, 306, , 120, Slow, Undiscovered, , 90, 120, 100, 150, 120, 100
 485, Heatran, , Lava Dome, Fire, Steel, Flash Fire, , Flame Body, 1.7, 430, 3, 100, 270, 50, 10, Slow, Undiscovered, , 91, 90, 106, 130, 106, 77
 486, Regigigas, , Colossal, Normal, , Slow Start, , , 3.7, 420, 3, 0, 302, , 120, Slow, Undiscovered, , 110, 160, 110, 80, 110, 100
-487, Giratina Altered Forme, , Renegade, Ghost, Dragon, Pressure, , Telepathy, 4.5, 750, 3, 0, 306, , 120, Slow, Undiscovered, , 150, 100, 120, 100, 120, 90
-487, Giratina Origin Forme, , Renegade, Ghost, Dragon, Levitate, , , 6.9, 650, 3, 0, 306, , 120, Slow, Undiscovered, , 150, 120, 100, 120, 100, 90
+487, Giratina, , Renegade, Ghost, Dragon, Pressure, , Telepathy, 4.5, 750, 3, 0, 306, , 120, Slow, Undiscovered, , 150, 100, 120, 100, 120, 90
+487, Giratina Origin Forme, o, Renegade, Ghost, Dragon, Levitate, , , 6.9, 650, 3, 0, 306, , 120, Slow, Undiscovered, , 150, 120, 100, 120, 100, 90
 488, Cresselia, , Lunar, Psychic, , Levitate, , , 1.5, 85.6, 3, 100, 270, 0, 120, Slow, Undiscovered, , 120, 70, 120, 75, 130, 85
 489, Phione, , Sea Drifter, Water, , Hydration, , , 0.4, 3.1, 30, 70, 216, , 40, Slow, Fairy, Water 1, 80, 80, 80, 80, 80, 80
 490, Manaphy, , Seafaring, Water, , Hydration, , , 0.3, 1.4, 3, 70, 270, , 10, Slow, Fairy, Water 1, 100, 100, 100, 100, 100, 100
 491, Darkrai, , Pitch-Black, Dark, , Bad Dreams, , , 1.5, 50.5, 3, 0, 270, , 120, Slow, Undiscovered, , 70, 90, 90, 135, 90, 125
-492, Shaymin Land Forme, , Gratitude, Grass, , Natural Cure, , , 0.2, 2.1, 45, 100, 270, , 120, Medium Slow, Undiscovered, , 100, 100, 100, 100, 100, 100
-492, Shaymin Sky Forme, , Gratitude, Grass, Flying, Serene Grace, , , 0.4, 5.2, 45, 100, 270, , 120, Medium Slow, Undiscovered, , 100, 103, 75, 120, 75, 127
+492, Shaymin, , Gratitude, Grass, , Natural Cure, , , 0.2, 2.1, 45, 100, 270, , 120, Medium Slow, Undiscovered, , 100, 100, 100, 100, 100, 100
+492, Shaymin Sky Forme, s, Gratitude, Grass, Flying, Serene Grace, , , 0.4, 5.2, 45, 100, 270, , 120, Medium Slow, Undiscovered, , 100, 103, 75, 120, 75, 127
 493, Arceus, , Alpha, Normal, , Multitype, , , 3.2, 320, 3, 0, 324, , 120, Slow, Undiscovered, , 120, 120, 120, 120, 120, 120
 494, Victini, , Victory, Psychic, Fire, Victory Star, , , 0.4, 4, 3, 100, 270, , 120, Slow, Undiscovered, , 100, 100, 100, 100, 100, 100
 495, Snivy, , Grass Snake, Grass, , Overgrow, , Contrary, 0.6, 8.1, 45, 70, 62, 87.5, 20, Medium Slow, Field, Grass, 45, 45, 55, 45, 55, 63
@@ -600,6 +612,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 501, Oshawott, , Sea Otter, Water, , Torrent, , Shell Armor, 0.5, 5.9, 45, 70, 62, 87.5, 20, Medium Slow, Field, , 55, 55, 45, 63, 45, 45
 502, Dewott, , Discipline, Water, , Torrent, , Shell Armor, 0.8, 24.5, 45, 70, 145, 87.5, 20, Medium Slow, Field, , 75, 75, 60, 83, 60, 60
 503, Samurott, , Formidable, Water, , Torrent, , Shell Armor, 1.5, 94.6, 45, 70, 238, 87.5, 20, Medium Slow, Field, , 95, 100, 85, 108, 70, 70
+503, Hisuian Samurott, h, Formidable, Water, Dark, Torrent, , Sharpness, 1.5, 58.2, 45, 70, 238, 87.5, 20, Medium Slow, Field, , 90, 108, 80, 100, 70, 85
 504, Patrat, , Scout, Normal, , Run Away, Keen Eye, Analytic, 0.5, 11.6, 255, 70, 51, 50, 15, Medium Fast, Field, , 45, 55, 39, 35, 39, 42
 505, Watchog, , Lookout, Normal, , Illuminate, Keen Eye, Analytic, 1.1, 27, 255, 70, 147, 50, 20, Medium Fast, Field, , 60, 85, 69, 60, 69, 77
 506, Lillipup, , Puppy, Normal, , Vital Spirit, Pickup, Run Away, 0.4, 4.1, 255, 70, 55, 50, 15, Medium Slow, Field, , 45, 60, 45, 25, 45, 55
@@ -628,7 +641,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 529, Drilbur, , Mole, Ground, , Sand Rush, Sand Force, Mold Breaker, 0.3, 8.5, 120, 70, 66, 50, 20, Medium Fast, Field, , 60, 85, 40, 30, 45, 68
 530, Excadrill, , Subterrene, Ground, Steel, Sand Rush, Sand Force, Mold Breaker, 0.7, 40.4, 60, 70, 178, 50, 20, Medium Fast, Field, , 110, 135, 60, 50, 65, 88
 531, Audino, , Hearing, Normal, , Healer, Regenerator, Klutz, 1.1, 31, 255, 70, 390, 50, 20, Fast, Fairy, , 103, 60, 86, 60, 86, 50
-531, Mega Audino, , Hearing, Normal, Fairy, Healer, , , 1.5, 32, 255, 70, 425, 50, 20, Fast, Fairy, , 103, 60, 126, 80, 126, 50
+531, Mega Audino, m, Hearing, Normal, Fairy, Healer, , , 1.5, 32, 255, 70, 425, 50, 20, Fast, Fairy, , 103, 60, 126, 80, 126, 50
 532, Timburr, , Muscular, Fighting, , Guts, Sheer Force, Iron Fist, 0.6, 12.5, 180, 70, 61, 75, 20, Medium Slow, Human-Like, , 75, 80, 55, 25, 35, 35
 533, Gurdurr, , Muscular, Fighting, , Guts, Sheer Force, Iron Fist, 1.2, 40, 90, 70, 142, 75, 20, Medium Slow, Human-Like, , 85, 105, 85, 40, 50, 40
 534, Conkeldurr, , Muscular, Fighting, , Guts, Sheer Force, Iron Fist, 1.4, 87, 45, 70, 227, 75, 20, Medium Slow, Human-Like, , 105, 140, 95, 55, 65, 45
@@ -647,17 +660,19 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 547, Whimsicott, , Windveiled, Grass, Fairy, Prankster, Infiltrator, Chlorophyll, 0.7, 6.6, 75, 70, 168, 50, 20, Medium Fast, Fairy, Grass, 60, 67, 85, 77, 75, 116
 548, Petilil, , Bulb, Grass, , Chlorophyll, Own Tempo, Leaf Guard, 0.5, 6.6, 190, 70, 56, 0, 20, Medium Fast, Grass, , 45, 35, 50, 70, 50, 30
 549, Lilligant, , Flowering, Grass, , Chlorophyll, Own Tempo, Leaf Guard, 1.1, 16.3, 75, 70, 168, 0, 20, Medium Fast, Grass, , 70, 60, 75, 110, 75, 90
-550, Basculin Red-Striped Form, , Hostile, Water, , Reckless, Adaptability, Mold Breaker, 1, 18, 25, 70, 161, 50, 40, Medium Fast, Water 2, , 70, 92, 65, 80, 55, 98
-550, Basculin Blue-Striped Form, , Hostile, Water, , Rock Head, Adaptability, Mold Breaker, 1, 18, 25, 70, 161, 50, 40, Medium Fast, Water 2, , 70, 92, 65, 80, 55, 98
+549, Hisuian Lilligant, h, Flowering, Grass, Fighting, Chlorophyll, Hustle, Leaf Guard, 1.2, 19.2, 75, 70, 168, 0, 20, Medium Fast, Grass, , 70, 105, 75, 50, 75, 105
+550, Basculin Red-Striped, , Hostile, Water, , Reckless, Adaptability, Mold Breaker, 1, 18, 25, 70, 161, 50, 40, Medium Fast, Water 2, , 70, 92, 65, 80, 55, 98
+550, Basculin Blue-Striped, b, Hostile, Water, , Rock Head, Adaptability, Mold Breaker, 1, 18, 25, 70, 161, 50, 40, Medium Fast, Water 2, , 70, 92, 65, 80, 55, 98
+550, Basculin White-Striped, w, Hostile, Water, , Rattled, Adaptability, Mold Breaker, 1, 18, 25, 70, 161, 50, 40, Medium Fast, Water 2, , 70, 92, 65, 80, 55, 98
 551, Sandile, , Desert Croc, Ground, Dark, Intimidate, Moxie, Anger Point, 0.7, 15.2, 180, 70, 58, 50, 20, Medium Slow, Field, , 50, 72, 35, 35, 35, 65
 552, Krokorok, , Desert Croc, Ground, Dark, Intimidate, Moxie, Anger Point, 1, 33.4, 90, 70, 123, 50, 20, Medium Slow, Field, , 60, 82, 45, 45, 45, 74
 553, Krookodile, , Intimidation, Ground, Dark, Intimidate, Moxie, Anger Point, 1.5, 96.3, 45, 70, 234, 50, 20, Medium Slow, Field, , 95, 117, 80, 65, 70, 92
 554, Darumaka, , Zen Charm, Fire, , Hustle, , Inner Focus, 0.6, 37.5, 120, 70, 63, 50, 20, Medium Slow, Field, , 70, 90, 45, 15, 45, 50
-554, Galarian Darumaka, , Zen Charm, Ice, , Hustle, , Inner Focus, 0.7, 40, 120, 70, 63, , 20, Medium Slow, Field, , 70, 90, 45, 15, 45, 50
-555, Darmanitan Standard Mode, , Blazing, Fire, , Sheer Force, , Zen Mode, 1.3, 92.9, 60, 70, 168, 50, 20, Medium Slow, Field, , 105, 140, 55, 30, 55, 95
-555, Darmanitan Zen Mode, , Blazing, Fire, Psychic, Sheer Force, , Zen Mode, 1.3, 92.9, 60, 70, 189, 50, 20, Medium Slow, Field, , 105, 30, 105, 140, 105, 55
-555, Galarian Darmanitan Standard Mode, , Zen Charm, Ice, , Gorilla Tactics, , Zen Mode, 1.7, 120, 60, 70, 189, 50, 20, Medium Slow, Field, , 105, 140, 55, 30, 55, 95
-555, Galarian Darmanitan Zen Mode, , Zen Charm, Ice, Fire, Gorilla Tactics, , Zen Mode, 1.7, 120, 60, 70, 189, 50, 20, Medium Slow, Field, , 105, 160, 55, 30, 55, 135
+554, Galarian Darumaka, g, Zen Charm, Ice, , Hustle, , Inner Focus, 0.7, 40, 120, 70, 63, , 20, Medium Slow, Field, , 70, 90, 45, 15, 45, 50
+555, Darmanitan, , Blazing, Fire, , Sheer Force, , Zen Mode, 1.3, 92.9, 60, 70, 168, 50, 20, Medium Slow, Field, , 105, 140, 55, 30, 55, 95
+555, Darmanitan Zen Mode, z, Blazing, Fire, Psychic, Sheer Force, , Zen Mode, 1.3, 92.9, 60, 70, 189, 50, 20, Medium Slow, Field, , 105, 30, 105, 140, 105, 55
+555, Galarian Darmanitan, g, Zen Charm, Ice, , Gorilla Tactics, , Zen Mode, 1.7, 120, 60, 70, 189, 50, 20, Medium Slow, Field, , 105, 140, 55, 30, 55, 95
+555, Galarian Darmanitan Zen Mode, gz, Zen Charm, Ice, Fire, Gorilla Tactics, , Zen Mode, 1.7, 120, 60, 70, 189, 50, 20, Medium Slow, Field, , 105, 160, 55, 30, 55, 135
 556, Maractus, , Cactus, Grass, , Water Absorb, Chlorophyll, Storm Drain, 1, 28, 255, 70, 161, 50, 20, Medium Fast, Grass, , 75, 86, 67, 106, 67, 60
 557, Dwebble, , Rock Inn, Bug, Rock, Sturdy, Shell Armor, Weak Armor, 0.3, 14.5, 190, 70, 65, 50, 20, Medium Fast, Bug, Mineral, 50, 65, 85, 35, 35, 55
 558, Crustle, , Stone Home, Bug, Rock, Sturdy, Shell Armor, Weak Armor, 1.4, 200, 75, 70, 170, 50, 20, Medium Fast, Bug, Mineral, 70, 105, 125, 65, 75, 45
@@ -665,7 +680,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 560, Scrafty, , Hoodlum, Dark, Fighting, Shed Skin, Moxie, Intimidate, 1.1, 30, 90, 70, 171, 50, 15, Medium Fast, Dragon, Field, 65, 90, 115, 45, 115, 58
 561, Sigilyph, , Avianoid, Psychic, Flying, Wonder Skin, Magic Guard, Tinted Lens, 1.4, 14, 45, 70, 172, 50, 20, Medium Fast, Flying, , 72, 58, 80, 103, 80, 97
 562, Yamask, , Spirit, Ghost, , Mummy, , , 0.5, 1.5, 190, 70, 61, 50, 25, Medium Fast, Amorphous, Mineral, 38, 30, 85, 55, 65, 30
-562, Galarian Yamask, , Spirit, Ground, Ghost, Wandering Spirit, , , 0.5, 1.5, 190, 70, 61, , 25, Medium Fast, Amorphous, Mineral, 38, 55, 85, 30, 65, 30
+562, Galarian Yamask, g, Spirit, Ground, Ghost, Wandering Spirit, , , 0.5, 1.5, 190, 70, 61, , 25, Medium Fast, Amorphous, Mineral, 38, 55, 85, 30, 65, 30
 563, Cofagrigus, , Coffin, Ghost, , Mummy, , , 1.7, 76.5, 90, 70, 169, 50, 25, Medium Fast, Amorphous, Mineral, 58, 50, 145, 95, 105, 30
 564, Tirtouga, , Prototurtle, Water, Rock, Solid Rock, Sturdy, Swift Swim, 0.7, 16.5, 45, 70, 71, 87.5, 30, Medium Fast, Water 1, Water 3, 54, 78, 103, 53, 45, 22
 565, Carracosta, , Prototurtle, Water, Rock, Solid Rock, Sturdy, Swift Swim, 1.2, 81, 45, 70, 173, 87.5, 30, Medium Fast, Water 1, Water 3, 74, 108, 133, 83, 65, 32
@@ -674,7 +689,9 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 568, Trubbish, , Trash Bag, Poison, , Stench, Sticky Hold, Aftermath, 0.6, 31, 190, 70, 66, 50, 20, Medium Fast, Mineral, , 50, 50, 62, 40, 62, 65
 569, Garbodor, , Trash Heap, Poison, , Stench, Weak Armor, Aftermath, 1.9, 107.3, 60, 70, 166, 50, 20, Medium Fast, Mineral, , 80, 95, 82, 60, 82, 75
 570, Zorua, , Tricky Fox, Dark, , Illusion, , , 0.7, 12.5, 75, 70, 66, 87.5, 25, Medium Slow, Field, , 40, 65, 40, 80, 40, 65
+570, Hisuian Zorua, h, Tricky Fox, Normal, Ghost, Illusion, , , 0.7, 12.5, 75, 70, 66, 87.5, 25, Medium Slow, Field, , 35, 60, 40, 85, 40, 70
 571, Zoroark, , Illusion Fox, Dark, , Illusion, , , 1.6, 81.1, 45, 70, 179, 87.5, 20, Medium Slow, Field, , 60, 105, 60, 120, 60, 105
+571, Hisuian Zoroark, h, Illusion Fox, Normal, Ghost, Illusion, , , 1.6, 73, 45, 70, 179, 87.5, 20, Medium Slow, Field, , 55, 100, 60, 125, 60, 110
 572, Minccino, , Chinchilla, Normal, , Cute Charm, Technician, Skill Link, 0.4, 5.8, 255, 70, 60, 25, 15, Fast, Field, , 55, 50, 40, 40, 40, 75
 573, Cinccino, , Scarf, Normal, , Cute Charm, Technician, Skill Link, 0.5, 7.5, 60, 70, 165, 25, 15, Fast, Field, , 75, 95, 60, 65, 60, 115
 574, Gothita, , Fixation, Psychic, , Frisk, Competitive, Shadow Tag, 0.4, 5.8, 200, 70, 58, 25, 20, Medium Slow, Human-Like, , 45, 30, 50, 55, 65, 45
@@ -722,7 +739,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 616, Shelmet, , Snail, Bug, , Hydration, Shell Armor, Overcoat, 0.4, 7.7, 200, 70, 61, 50, 15, Medium Fast, Bug, , 50, 40, 85, 40, 65, 25
 617, Accelgor, , Shell Out, Bug, , Hydration, Sticky Hold, Unburden, 0.8, 25.3, 75, 70, 173, 50, 15, Medium Fast, Bug, , 80, 70, 40, 100, 60, 145
 618, Stunfisk, , Trap, Ground, Electric, Static, Limber, Sand Veil, 0.7, 11, 75, 70, 165, 50, 20, Medium Fast, Amorphous, Water 1, 109, 66, 84, 81, 99, 32
-618, Galarian Stunfisk, , Trap, Ground, Steel, Mimicry, , , 0.7, 20.5, 75, 70, 165, , 20, Medium Fast, Amorphous, Water 1, 109, 81, 99, 66, 84, 32
+618, Galarian Stunfisk, g, Trap, Ground, Steel, Mimicry, , , 0.7, 20.5, 75, 70, 165, , 20, Medium Fast, Amorphous, Water 1, 109, 81, 99, 66, 84, 32
 619, Mienfoo, , Martial Arts, Fighting, , Inner Focus, Regenerator, Reckless, 0.9, 20, 180, 70, 70, 50, 25, Medium Slow, Field, Human-Like, 45, 85, 50, 55, 50, 65
 620, Mienshao, , Martial Arts, Fighting, , Inner Focus, Regenerator, Reckless, 1.4, 35.5, 45, 70, 179, 50, 25, Medium Slow, Field, Human-Like, 65, 125, 60, 95, 60, 105
 621, Druddigon, , Cave, Dragon, , Rough Skin, Sheer Force, Mold Breaker, 1.6, 139, 45, 70, 170, 50, 30, Medium Fast, Dragon, Monster, 77, 120, 90, 60, 90, 48
@@ -733,6 +750,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 626, Bouffalant, , Bash Buffalo, Normal, , Reckless, Sap Sipper, Soundproof, 1.6, 94.6, 45, 70, 172, 50, 20, Medium Fast, Field, , 95, 110, 95, 40, 95, 55
 627, Rufflet, , Eaglet, Normal, Flying, Keen Eye, Sheer Force, Hustle, 0.5, 10.5, 190, 70, 70, 100, 20, Slow, Flying, , 70, 83, 50, 37, 50, 60
 628, Braviary, , Valiant, Normal, Flying, Keen Eye, Sheer Force, Defiant, 1.5, 41, 60, 70, 179, 100, 20, Slow, Flying, , 100, 123, 75, 57, 75, 80
+628, Hisuian Braviary, h, Battle Cry, Psychic, Flying, Keen Eye, Sheer Force, Tinted Lens, 1.7, 43.4, 60, 70, 179, 100, 20, Slow, Flying, , 110, 83, 70, 112, 70, 65
 629, Vullaby, , Diapered, Dark, Flying, Big Pecks, Overcoat, Weak Armor, 0.5, 9, 190, 35, 74, 0, 20, Slow, Flying, , 70, 55, 75, 45, 65, 60
 630, Mandibuzz, , Bone Vulture, Dark, Flying, Big Pecks, Overcoat, Weak Armor, 1.2, 39.5, 60, 35, 179, 0, 20, Slow, Flying, , 110, 65, 105, 55, 95, 80
 631, Heatmor, , Anteater, Fire, , Gluttony, Flash Fire, White Smoke, 1.4, 58, 90, 70, 169, 50, 20, Medium Fast, Field, , 85, 97, 66, 105, 66, 65
@@ -746,21 +764,21 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 639, Terrakion, , Cavern, Rock, Fighting, Justified, , , 1.9, 260, 3, 35, 261, , 80, Slow, Undiscovered, , 91, 129, 90, 72, 90, 108
 640, Virizion, , Grassland, Grass, Fighting, Justified, , , 2, 200, 3, 35, 261, , 80, Slow, Undiscovered, , 91, 90, 72, 90, 129, 108
 641, Tornadus Incarnate Forme, , Cyclone, Flying, , Prankster, , Defiant, 1.5, 63, 3, 90, 261, 100, 120, Slow, Undiscovered, , 79, 115, 70, 125, 80, 111
-641, Tornadus Therian Forme, , Cyclone, Flying, , Regenerator, , , 1.4, 63, 3, 90, 261, 100, 120, Slow, Undiscovered, , 79, 100, 80, 110, 90, 121
+641, Tornadus Therian Forme, t, Cyclone, Flying, , Regenerator, , , 1.4, 63, 3, 90, 261, 100, 120, Slow, Undiscovered, , 79, 100, 80, 110, 90, 121
 642, Thundurus Incarnate Forme, , Bolt Strike, Electric, Flying, Prankster, , Defiant, 1.5, 61, 3, 90, 261, 100, 120, Slow, Undiscovered, , 79, 115, 70, 125, 80, 111
-642, Thundurus Therian Forme, , Bolt Strike, Electric, Flying, Volt Absorb, , , 3, 61, 3, 90, 261, 100, 120, Slow, Undiscovered, , 79, 105, 70, 145, 80, 101
+642, Thundurus Therian Forme, t, Bolt Strike, Electric, Flying, Volt Absorb, , , 3, 61, 3, 90, 261, 100, 120, Slow, Undiscovered, , 79, 105, 70, 145, 80, 101
 643, Reshiram, , Vast White, Dragon, Fire, Turboblaze, , , 3.2, 330, 3, 0, 306, , 120, Slow, Undiscovered, , 100, 120, 100, 150, 120, 90
 644, Zekrom, , Deep Black, Dragon, Electric, Teravolt, , , 2.9, 345, 3, 0, 306, , 120, Slow, Undiscovered, , 100, 150, 120, 120, 100, 90
 645, Landorus Incarnate Forme, , Abundance, Ground, Flying, Sand Force, , Sheer Force, 1.5, 68, 3, 90, 270, 100, 120, Slow, Undiscovered, , 89, 125, 90, 115, 80, 101
-645, Landorus Therian Forme, , Abundance, Ground, Flying, Intimidate, , , 1.3, 68, 3, 90, 270, 100, 120, Slow, Undiscovered, , 89, 145, 90, 105, 80, 91
+645, Landorus Therian Forme, t, Abundance, Ground, Flying, Intimidate, , , 1.3, 68, 3, 90, 270, 100, 120, Slow, Undiscovered, , 89, 145, 90, 105, 80, 91
 646, Kyurem, , Boundary, Dragon, Ice, Pressure, , , 3, 325, 3, 0, 297, , 120, Slow, Undiscovered, , 125, 130, 90, 130, 90, 95
-646, Black Kyurem, , Boundary, Dragon, Ice, Teravolt, , , 3.3, 325, 3, 0, 315, , 120, Slow, Undiscovered, , 125, 170, 100, 120, 90, 95
-646, White Kyurem, , Boundary, Dragon, Ice, Turboblaze, , , 3.6, 325, 3, 0, 315, , 120, Slow, Undiscovered, , 125, 120, 90, 170, 100, 95
+646, Black Kyurem, b, Boundary, Dragon, Ice, Teravolt, , , 3.3, 325, 3, 0, 315, , 120, Slow, Undiscovered, , 125, 170, 100, 120, 90, 95
+646, White Kyurem, w, Boundary, Dragon, Ice, Turboblaze, , , 3.6, 325, 3, 0, 315, , 120, Slow, Undiscovered, , 125, 120, 90, 170, 100, 95
 647, Keldeo Ordinary Forme, , Colt, Water, Fighting, Justified, , , 1.4, 48.5, 3, 35, 261, , 80, Slow, Undiscovered, , 91, 72, 90, 129, 90, 108
-647, Keldeo Resolute Forme, , Colt, Water, Fighting, Justified, , , 1.4, 48.5, 3, 35, 261, , 80, Slow, Undiscovered, , 91, 72, 90, 129, 90, 108
+647, Keldeo Resolute Forme, r, Colt, Water, Fighting, Justified, , , 1.4, 48.5, 3, 35, 261, , 80, Slow, Undiscovered, , 91, 72, 90, 129, 90, 108
 648, Meloetta Aria Forme, , Melody, Normal, Psychic, Serene Grace, , , 0.6, 6.5, 3, 100, 270, , 120, Slow, Undiscovered, , 100, 77, 77, 128, 128, 90
-648, Meloetta Pirouette Forme, , Melody, Normal, Fighting, Serene Grace, , , 0.6, 6.5, 3, 100, 270, , 120, Slow, Undiscovered, , 100, 128, 90, 77, 77, 128
-649, Genesect, , Paleozoic, Bug, Steel, Download, , , 1.5, 82.5, 3, 0, 270, , 120, Slow, Undiscovered, , 71, 120, 95, 120, 95, 99
+648, Meloetta Pirouette Forme, p, Melody, Normal, Fighting, Serene Grace, , , 0.6, 6.5, 3, 100, 270, , 120, Slow, Undiscovered, , 100, 128, 90, 77, 77, 128
+649, Genesect, # f# i# w# e, Paleozoic, Bug, Steel, Download, , , 1.5, 82.5, 3, 0, 270, , 120, Slow, Undiscovered, , 71, 120, 95, 120, 95, 99
 650, Chespin, , Spiny Nut, Grass, , Overgrow, , Bulletproof, 0.4, 9, 45, 70, 63, 87.5, 20, Medium Slow, Field, , 56, 61, 65, 48, 45, 38
 651, Quilladin, , Spiny Armor, Grass, , Overgrow, , Bulletproof, 0.7, 29, 45, 70, 142, 87.5, 20, Medium Slow, Field, , 61, 78, 95, 56, 58, 57
 652, Chesnaught, , Spiny Armor, Grass, Fighting, Overgrow, , Bulletproof, 1.6, 90, 45, 70, 239, 87.5, 20, Medium Slow, Field, , 88, 107, 122, 74, 75, 64
@@ -770,7 +788,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 656, Froakie, , Bubble Frog, Water, , Torrent, , Protean, 0.3, 7, 45, 70, 63, 87.5, 20, Medium Slow, Water 1, , 41, 56, 40, 62, 44, 71
 657, Frogadier, , Bubble Frog, Water, , Torrent, , Protean, 0.6, 10.9, 45, 70, 142, 87.5, 20, Medium Slow, Water 1, , 54, 63, 52, 83, 56, 97
 658, Greninja, , Ninja, Water, Dark, Torrent, , Protean, 1.5, 40, 45, 70, 239, 87.5, 20, Medium Slow, Water 1, , 72, 95, 67, 103, 71, 122
-658, Ash-Greninja, , Ninja, Water, Dark, Battle Bond, , , 1.5, 40, 45, 70, 288, 100, 20, Medium Slow, Undiscovered, , 72, 145, 67, 153, 71, 132
+658, Ash-Greninja, a, Ninja, Water, Dark, Battle Bond, , , 1.5, 40, 45, 70, 288, 100, 20, Medium Slow, Undiscovered, , 72, 145, 67, 153, 71, 132
 659, Bunnelby, , Digging, Normal, , Pickup, Cheek Pouch, Huge Power, 0.4, 5, 255, 70, 47, 50, 15, Medium Fast, Field, , 38, 36, 38, 32, 36, 57
 660, Diggersby, , Digging, Normal, Ground, Pickup, Cheek Pouch, Huge Power, 1, 42.4, 127, 70, 148, 50, 15, Medium Fast, Field, , 85, 56, 77, 50, 77, 78
 661, Fletchling, , Tiny Robin, Normal, Flying, Big Pecks, , Gale Wings, 0.3, 1.7, 255, 70, 56, 50, 15, Medium Slow, Flying, , 45, 50, 43, 40, 38, 62
@@ -788,14 +806,14 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 673, Gogoat, , Mount, Grass, , Sap Sipper, , Grass Pelt, 1.7, 91, 45, 70, 186, 50, 20, Medium Fast, Field, , 123, 100, 62, 97, 81, 68
 674, Pancham, , Playful, Fighting, , Iron Fist, Mold Breaker, Scrappy, 0.6, 8, 220, 70, 70, 50, 25, Medium Fast, Field, Human-Like, 67, 82, 62, 46, 48, 43
 675, Pangoro, , Daunting, Fighting, Dark, Iron Fist, Mold Breaker, Scrappy, 2.1, 136, 65, 70, 173, 50, 25, Medium Fast, Field, Human-Like, 95, 124, 78, 69, 71, 58
-676, Furfrou, , Poodle, Normal, , Fur Coat, , , 1.2, 28, 160, 70, 165, 50, 20, Medium Fast, Field, , 75, 80, 60, 65, 90, 102
+676, Furfrou, # h# s# d# de# m# da# l# k# p, Poodle, Normal, , Fur Coat, , , 1.2, 28, 160, 70, 165, 50, 20, Medium Fast, Field, , 75, 80, 60, 65, 90, 102
 677, Espurr, , Restraint, Psychic, , Keen Eye, Infiltrator, Own Tempo, 0.3, 3.5, 190, 70, 71, 50, 20, Medium Fast, Field, , 62, 48, 54, 63, 60, 68
 678, Meowstic Male, , Constraint, Psychic, , Keen Eye, Infiltrator, Prankster, 0.6, 8.5, 75, 70, 163, 50, 20, Medium Fast, Field, , 74, 48, 76, 83, 81, 104
-678, Meowstic Female, , Constraint, Psychic, , Keen Eye, Infiltrator, Competitive, 0.6, 8.5, 75, 70, 163, 50, 20, Medium Fast, Field, , 74, 48, 76, 83, 81, 104
+678, Meowstic Female, f, Constraint, Psychic, , Keen Eye, Infiltrator, Competitive, 0.6, 8.5, 75, 70, 163, 50, 20, Medium Fast, Field, , 74, 48, 76, 83, 81, 104
 679, Honedge, , Sword, Steel, Ghost, No Guard, , , 0.8, 2, 180, 70, 65, 50, 20, Medium Fast, Mineral, , 45, 80, 100, 35, 37, 28
 680, Doublade, , Sword, Steel, Ghost, No Guard, , , 0.8, 4.5, 90, 70, 157, 50, 20, Medium Fast, Mineral, , 59, 110, 150, 45, 49, 35
-681, Aegislash Blade Forme, , Royal Sword, Steel, Ghost, Stance Change, , , 1.7, 53, 45, 70, 234, 50, 20, Medium Fast, Mineral, , 60, 150, 50, 150, 50, 60
 681, Aegislash Shield Forme, , Royal Sword, Steel, Ghost, Stance Change, , , 1.7, 53, 45, 70, 234, 50, 20, Medium Fast, Mineral, , 60, 50, 150, 50, 150, 60
+681, Aegislash Blade Forme, b, Royal Sword, Steel, Ghost, Stance Change, , , 1.7, 53, 45, 70, 234, 50, 20, Medium Fast, Mineral, , 60, 150, 50, 150, 50, 60
 682, Spritzee, , Perfume, Fairy, , Healer, , Aroma Veil, 0.2, 0.5, 200, 70, 68, 50, 20, Medium Fast, Fairy, , 78, 52, 60, 63, 65, 23
 683, Aromatisse, , Fragrance, Fairy, , Healer, , Aroma Veil, 0.8, 15.5, 140, 70, 162, 50, 20, Medium Fast, Fairy, , 101, 72, 72, 99, 89, 29
 684, Swirlix, , Cotton Candy, Fairy, , Sweet Veil, , Unburden, 0.4, 3.5, 200, 70, 68, 50, 20, Medium Fast, Fairy, , 62, 48, 66, 59, 57, 49
@@ -820,35 +838,38 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 703, Carbink, , Jewel, Rock, Fairy, Clear Body, , Sturdy, 0.3, 5.7, 60, 70, 100, , 25, Slow, Fairy, Mineral, 50, 50, 150, 50, 150, 50
 704, Goomy, , Soft Tissue, Dragon, , Sap Sipper, Hydration, Gooey, 0.3, 2.8, 45, 35, 60, 50, 40, Slow, Dragon, , 45, 50, 35, 55, 75, 40
 705, Sliggoo, , Soft Tissue, Dragon, , Sap Sipper, Hydration, Gooey, 0.8, 17.5, 45, 35, 158, 50, 40, Slow, Dragon, , 68, 75, 53, 83, 113, 60
+705, Hisuian Sliggoo, h, Snail, Steel, Dragon, Sap Sipper, Shell Armor, Gooey, 0.7, 68.5, 45, 35, 158, 50, 40, Slow, Dragon, , 58, 75, 83, 83, 113, 40
 706, Goodra, , Dragon, Dragon, , Sap Sipper, Hydration, Gooey, 2, 150.5, 45, 35, 270, 50, 40, Slow, Dragon, , 90, 100, 70, 110, 150, 80
+706, Hisuian Goodra, h, Shell Bunker, Steel, Dragon, Sap Sipper, Shell Armor, Gooey, 1.7, 334.1, 45, 35, 270, 50, 40, Slow, Dragon, , 80, 100, 100, 110, 150, 60
 707, Klefki, , Key Ring, Steel, Fairy, Prankster, , Magician, 0.2, 3, 75, 70, 165, 50, 20, Fast, Mineral, , 57, 80, 91, 80, 87, 75
 708, Phantump, , Stump, Ghost, Grass, Natural Cure, Frisk, Harvest, 0.4, 7, 120, 70, 62, 50, 20, Medium Fast, Amorphous, Grass, 43, 70, 48, 50, 60, 38
 709, Trevenant, , Elder Tree, Ghost, Grass, Natural Cure, Frisk, Harvest, 1.5, 71, 60, 70, 166, 50, 20, Medium Fast, Amorphous, Grass, 85, 110, 76, 65, 82, 56
 710, Pumpkaboo Average Size, , Pumpkin, Ghost, Grass, Pickup, Frisk, Insomnia, 0.4, 5, 120, 70, 67, 50, 20, Medium Fast, Amorphous, , 49, 66, 70, 44, 55, 51
-710, Pumpkaboo Small Size, , Pumpkin, Ghost, Grass, Pickup, Frisk, Insomnia, 0.3, 3.5, 120, 70, 67, 50, 20, Medium Fast, Amorphous, , 44, 66, 70, 44, 55, 56
-710, Pumpkaboo Large Size, , Pumpkin, Ghost, Grass, Pickup, Frisk, Insomnia, 0.5, 7.5, 120, 70, 67, 50, 20, Medium Fast, Amorphous, , 54, 66, 70, 44, 55, 46
-710, Pumpkaboo Super Size, , Pumpkin, Ghost, Grass, Pickup, Frisk, Insomnia, 0.8, 15, 120, 70, 67, 50, 20, Medium Fast, Amorphous, , 59, 66, 70, 44, 55, 41
+710, Pumpkaboo Small Size, s, Pumpkin, Ghost, Grass, Pickup, Frisk, Insomnia, 0.3, 3.5, 120, 70, 67, 50, 20, Medium Fast, Amorphous, , 44, 66, 70, 44, 55, 56
+710, Pumpkaboo Large Size, l, Pumpkin, Ghost, Grass, Pickup, Frisk, Insomnia, 0.5, 7.5, 120, 70, 67, 50, 20, Medium Fast, Amorphous, , 54, 66, 70, 44, 55, 46
+710, Pumpkaboo Super Size, h, Pumpkin, Ghost, Grass, Pickup, Frisk, Insomnia, 0.8, 15, 120, 70, 67, 50, 20, Medium Fast, Amorphous, , 59, 66, 70, 44, 55, 41
 711, Gourgeist Average Size, , Pumpkin, Ghost, Grass, Pickup, Frisk, Insomnia, 0.9, 12.5, 60, 70, 173, 50, 20, Medium Fast, Amorphous, , 65, 90, 122, 58, 75, 84
-711, Gourgeist Small Size, , Pumpkin, Ghost, Grass, Pickup, Frisk, Insomnia, 0.7, 9.5, 60, 70, 173, 50, 20, Medium Fast, Amorphous, , 55, 85, 122, 58, 75, 99
-711, Gourgeist Large Size, , Pumpkin, Ghost, Grass, Pickup, Frisk, Insomnia, 1.1, 14, 60, 70, 173, 50, 20, Medium Fast, Amorphous, , 75, 95, 122, 58, 75, 69
-711, Gourgeist Super Size, , Pumpkin, Ghost, Grass, Pickup, Frisk, Insomnia, 1.7, 39, 60, 70, 173, 50, 20, Medium Fast, Amorphous, , 85, 100, 122, 58, 75, 54
+711, Gourgeist Small Size, s, Pumpkin, Ghost, Grass, Pickup, Frisk, Insomnia, 0.7, 9.5, 60, 70, 173, 50, 20, Medium Fast, Amorphous, , 55, 85, 122, 58, 75, 99
+711, Gourgeist Large Size, l, Pumpkin, Ghost, Grass, Pickup, Frisk, Insomnia, 1.1, 14, 60, 70, 173, 50, 20, Medium Fast, Amorphous, , 75, 95, 122, 58, 75, 69
+711, Gourgeist Super Size, h, Pumpkin, Ghost, Grass, Pickup, Frisk, Insomnia, 1.7, 39, 60, 70, 173, 50, 20, Medium Fast, Amorphous, , 85, 100, 122, 58, 75, 54
 712, Bergmite, , Ice Chunk, Ice, , Own Tempo, Ice Body, Sturdy, 1, 99.5, 190, 70, 61, 50, 20, Medium Fast, Mineral, Monster, 55, 69, 85, 32, 35, 28
 713, Avalugg, , Iceberg, Ice, , Own Tempo, Ice Body, Sturdy, 2, 505, 55, 70, 180, 50, 20, Medium Fast, Mineral, Monster, 95, 117, 184, 44, 46, 28
 714, Noibat, , Sound Wave, Flying, Dragon, Frisk, Infiltrator, Telepathy, 0.5, 8, 190, 70, 49, 50, 20, Medium Fast, Dragon, Flying, 40, 30, 35, 45, 40, 55
 715, Noivern, , Sound Wave, Flying, Dragon, Frisk, Infiltrator, Telepathy, 1.5, 85, 45, 70, 187, 50, 20, Medium Fast, Dragon, Flying, 85, 70, 80, 97, 80, 123
 716, Xerneas, , Life, Fairy, , Fairy Aura, , , 3, 215, 45, 0, 306, , 120, Slow, Undiscovered, , 126, 131, 95, 131, 98, 99
 717, Yveltal, , Destruction, Dark, Flying, Dark Aura, , , 5.8, 203, 45, 0, 306, , 120, Slow, Undiscovered, , 126, 131, 95, 131, 98, 99
+718, Zygarde 10% Forme, 10, Order, Dragon, Ground, Aura Break, Power Construct, , 1.2, 33.5, 3, 0, 219, , 120, Slow, Undiscovered, , 54, 100, 71, 61, 85, 115
 718, Zygarde 50% Forme, , Order, Dragon, Ground, Aura Break, Power Construct, , 5, 305, 3, 0, 270, , 120, Slow, Undiscovered, , 108, 100, 121, 81, 95, 95
-718, Zygarde 10% Forme, , Order, Dragon, Ground, Aura Break, Power Construct, , 1.2, 33.5, 3, 0, 219, , 120, Slow, Undiscovered, , 54, 100, 71, 61, 85, 115
-718, Zygarde Complete Forme, , Order, Dragon, Ground, Power Construct, , , 4.5, 610, 3, 0, 319, , 120, Slow, Undiscovered, , 216, 100, 121, 91, 95, 85
+718, Zygarde Complete Forme, c, Order, Dragon, Ground, Power Construct, , , 4.5, 610, 3, 0, 319, , 120, Slow, Undiscovered, , 216, 100, 121, 91, 95, 85
 719, Diancie, , Jewel, Rock, Fairy, Clear Body, , , 0.7, 8.8, 3, 70, 270, , 25, Slow, Undiscovered, , 50, 100, 150, 100, 150, 50
-719, Mega Diancie, , Jewel, Rock, Fairy, Magic Bounce, , , 1.1, 27.8, 3, 70, 315, , 25, Slow, Undiscovered, , 50, 160, 110, 160, 110, 110
+719, Mega Diancie, m, Jewel, Rock, Fairy, Magic Bounce, , , 1.1, 27.8, 3, 70, 315, , 25, Slow, Undiscovered, , 50, 160, 110, 160, 110, 110
 720, Hoopa Hoopa Confined, , Mischief, Psychic, Ghost, Magician, , , 0.5, 9, 3, 100, 270, , 120, Slow, Undiscovered, , 80, 110, 60, 150, 130, 70
-720, Hoopa Hoopa Unbound, , Djinn, Psychic, Dark, Magician, , , 6.5, 490, 3, 100, 306, , 120, Slow, Undiscovered, , 80, 160, 60, 170, 130, 80
+720, Hoopa Hoopa Unbound, u, Djinn, Psychic, Dark, Magician, , , 6.5, 490, 3, 100, 306, , 120, Slow, Undiscovered, , 80, 160, 60, 170, 130, 80
 721, Volcanion, , Steam, Fire, Water, Water Absorb, , , 1.7, 195, 3, 100, 270, , 120, Slow, Undiscovered, , 80, 110, 120, 130, 90, 70
 722, Rowlet, , Grass Quill, Grass, Flying, Overgrow, , Long Reach, 0.3, 1.5, 45, 70, 64, 87.5, 15, Medium Slow, Flying, , 68, 55, 55, 50, 50, 42
 723, Dartrix, , Blade Quill, Grass, Flying, Overgrow, , Long Reach, 0.7, 16, 45, 70, 147, 87.5, 15, Medium Slow, Flying, , 78, 75, 75, 70, 70, 52
 724, Decidueye, , Arrow Quill, Grass, Ghost, Overgrow, , Long Reach, 1.6, 36.6, 45, 70, 239, 87.5, 15, Medium Slow, Flying, , 78, 107, 75, 100, 100, 70
+724, Hisuian Decidueye, h, Arrow Quill, Grass, Fighting, Overgrow, , Scrappy, 1.6, 37, 45, 70, 239, 87.5, 15, Medium Slow, Flying, , 88, 112, 80, 95, 95, 60
 725, Litten, , Fire Cat, Fire, , Blaze, , Intimidate, 0.4, 4.3, 45, 70, 64, 87.5, 15, Medium Slow, Field, , 45, 65, 40, 60, 40, 70
 726, Torracat, , Fire Cat, Fire, , Blaze, , Intimidate, 0.7, 25, 45, 70, 147, 87.5, 15, Medium Slow, Field, , 65, 85, 50, 80, 50, 90
 727, Incineroar, , Heel, Fire, Dark, Blaze, , Intimidate, 1.8, 83, 45, 70, 239, 87.5, 15, Medium Slow, Field, , 95, 115, 90, 80, 90, 60
@@ -866,18 +887,18 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 739, Crabrawler, , Boxing, Fighting, , Hyper Cutter, Iron Fist, Anger Point, 0.6, 7, 225, 70, 68, 50, 20, Medium Fast, Water 3, , 47, 82, 57, 42, 47, 63
 740, Crabominable, , Woolly Crab, Fighting, Ice, Hyper Cutter, Iron Fist, Anger Point, 1.7, 180, 60, 70, 167, 50, 20, Medium Fast, Water 3, , 97, 132, 77, 62, 67, 43
 741, Oricorio Baile Style, , Dancing, Fire, Flying, Dancer, , , 0.6, 3.4, 45, 70, 167, 25, 20, Medium Fast, Flying, , 75, 70, 70, 98, 70, 93
-741, Oricorio Pom-Pom Style, , Dancing, Electric, Flying, Dancer, , , 0.6, 3.4, 45, 70, 167, 25, 20, Medium Fast, Flying, , 75, 70, 70, 98, 70, 93
-741, Oricorio Pa'u Style, , Dancing, Psychic, Flying, Dancer, , , 0.6, 3.4, 45, 70, 167, 25, 20, Medium Fast, Flying, , 75, 70, 70, 98, 70, 93
-741, Oricorio Sensu Style, , Dancing, Ghost, Flying, Dancer, , , 0.6, 3.4, 45, 70, 167, 25, 20, Medium Fast, Flying, , 75, 70, 70, 98, 70, 93
+741, Oricorio Pom-Pom Style, p, Dancing, Electric, Flying, Dancer, , , 0.6, 3.4, 45, 70, 167, 25, 20, Medium Fast, Flying, , 75, 70, 70, 98, 70, 93
+741, Oricorio Pa'u Style, pau, Dancing, Psychic, Flying, Dancer, , , 0.6, 3.4, 45, 70, 167, 25, 20, Medium Fast, Flying, , 75, 70, 70, 98, 70, 93
+741, Oricorio Sensu Style, s, Dancing, Ghost, Flying, Dancer, , , 0.6, 3.4, 45, 70, 167, 25, 20, Medium Fast, Flying, , 75, 70, 70, 98, 70, 93
 742, Cutiefly, , Bee Fly, Bug, Fairy, Honey Gather, Shield Dust, Sweet Veil, 0.1, 0.2, 190, 70, 61, 50, 20, Medium Fast, Bug, Fairy, 40, 45, 40, 55, 40, 84
 743, Ribombee, , Bee Fly, Bug, Fairy, Honey Gather, Shield Dust, Sweet Veil, 0.2, 0.5, 75, 70, 162, 50, 20, Medium Fast, Bug, Fairy, 60, 55, 60, 95, 70, 124
 744, Rockruff, , Puppy, Rock, , Keen Eye, Vital Spirit, Steadfast, 0.5, 9.2, 190, 70, 56, 50, 15, Medium Fast, Field, , 45, 65, 40, 30, 40, 60
 744, Own Tempo Rockruff, , Puppy, Rock, , Own Tempo, , , 0.5, 9.2, 190, 70, 56, 50, 15, Medium Fast, Field, , 45, 65, 40, 30, 40, 60
 745, Lycanroc Midday Form, , Wolf, Rock, , Keen Eye, Sand Rush, Steadfast, 0.8, 25, 90, 70, 170, 50, 15, Medium Fast, Field, , 75, 115, 65, 55, 65, 112
-745, Lycanroc Midnight Form, , Wolf, Rock, , Keen Eye, Vital Spirit, No Guard, 1.1, 25, 90, 70, 170, 50, 15, Medium Fast, Field, , 85, 115, 75, 55, 75, 82
-745, Lycanroc Dusk Form, , Wolf, Rock, , Tough Claws, , , 0.8, 25, 90, 70, 170, 50, 15, Medium Fast, Field, , 75, 117, 65, 55, 65, 110
+745, Lycanroc Midnight Form, m, Wolf, Rock, , Keen Eye, Vital Spirit, No Guard, 1.1, 25, 90, 70, 170, 50, 15, Medium Fast, Field, , 85, 115, 75, 55, 75, 82
+745, Lycanroc Dusk Form, d, Wolf, Rock, , Tough Claws, , , 0.8, 25, 90, 70, 170, 50, 15, Medium Fast, Field, , 75, 117, 65, 55, 65, 110
 746, Wishiwashi Solo Form, , Small Fry, Water, , Schooling, , , 0.2, 0.3, 60, 70, 61, 50, 15, Fast, Water 2, , 45, 20, 20, 25, 25, 40
-746, Wishiwashi School Form, , Small Fry, Water, , Schooling, , , 8.2, 78.6, 60, 70, 217, 50, 15, Fast, Water 2, , 45, 140, 130, 140, 135, 30
+746, Wishiwashi School Form, s, Small Fry, Water, , Schooling, , , 8.2, 78.6, 60, 70, 217, 50, 15, Fast, Water 2, , 45, 140, 130, 140, 135, 30
 747, Mareanie, , Brutal Star, Poison, Water, Merciless, Limber, Regenerator, 0.4, 8, 190, 70, 61, 50, 20, Medium Fast, Water 1, , 50, 53, 62, 43, 52, 45
 748, Toxapex, , Brutal Star, Poison, Water, Merciless, Limber, Regenerator, 0.7, 14.5, 75, 70, 173, 50, 20, Medium Fast, Water 1, , 50, 63, 152, 53, 142, 35
 749, Mudbray, , Donkey, Ground, , Own Tempo, Stamina, Inner Focus, 1, 110, 190, 70, 77, 50, 20, Medium Fast, Field, , 70, 100, 70, 45, 55, 45
@@ -906,7 +927,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 772, Type: Null, , Synthetic, Normal, , Battle Armor, , , 1.9, 120.5, 3, 0, 107, , 120, Slow, Undiscovered, , 95, 95, 95, 95, 95, 59
 773, Silvally, , Synthetic, Normal, , RKS System, , , 2.3, 100.5, 3, 0, 257, , 120, Slow, Undiscovered, , 95, 95, 95, 95, 95, 95
 774, Minior Meteor Form, , Meteor, Rock, Flying, Shields Down, , , 0.3, 40, 30, 70, 154, , 25, Medium Slow, Mineral, , 60, 60, 100, 60, 100, 60
-774, Minior Core Form, , Meteor, Rock, Flying, Shields Down, , , 0.3, 0.3, 30, 70, 175, , 25, Medium Slow, Mineral, , 60, 100, 60, 100, 60, 120
+774, Minior Core Form, b# g# i# o# r# v# y, Meteor, Rock, Flying, Shields Down, , , 0.3, 0.3, 30, 70, 175, , 25, Medium Slow, Mineral, , 60, 100, 60, 100, 60, 120
 775, Komala, , Drowsing, Normal, , Comatose, , , 0.4, 19.9, 45, 70, 168, 50, 20, Slow, Field, , 65, 115, 65, 75, 95, 65
 776, Turtonator, , Blast Turtle, Fire, Dragon, Shell Armor, , , 2, 212, 70, 70, 170, 50, 20, Medium Fast, Dragon, Monster, 60, 78, 135, 91, 85, 36
 777, Togedemaru, , Roly-Poly, Electric, Steel, Iron Barbs, Lightning Rod, Sturdy, 0.3, 3.3, 180, 70, 152, 50, 10, Medium Fast, Fairy, Field, 65, 98, 63, 40, 73, 96
@@ -933,9 +954,9 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 798, Kartana, , Drawn Sword, Grass, Steel, Beast Boost, , , 0.3, 0.1, 45, 0, 257, , 120, Slow, Undiscovered, , 59, 181, 131, 59, 31, 109
 799, Guzzlord, , Junkivore, Dark, Dragon, Beast Boost, , , 5.5, 888, 45, 0, 257, , 120, Slow, Undiscovered, , 223, 101, 53, 97, 53, 43
 800, Necrozma, , Prism, Psychic, , Prism Armor, , , 2.4, 230, 255, 0, 270, , 120, Slow, Undiscovered, , 97, 107, 101, 127, 89, 79
-800, Dusk Mane Necrozma, , Prism, Psychic, Steel, Prism Armor, , , 3.8, 460, 3, 0, 306, , 120, Slow, Undiscovered, , 97, 157, 127, 113, 109, 77
-800, Dawn Wings Necrozma, , Prism, Psychic, Ghost, Prism Armor, , , 4.2, 350, 3, 0, 306, , 120, Slow, Undiscovered, , 97, 113, 109, 157, 127, 77
-800, Ultra Necrozma, , Prism, Psychic, Dragon, Neuroforce, , , 7.5, 230, 3, 0, 339, , 120, Slow, Undiscovered, , 97, 167, 97, 167, 97, 129
+800, Dusk Mane Necrozma, dm, Prism, Psychic, Steel, Prism Armor, , , 3.8, 460, 3, 0, 306, , 120, Slow, Undiscovered, , 97, 157, 127, 113, 109, 77
+800, Dawn Wings Necrozma, dw, Prism, Psychic, Ghost, Prism Armor, , , 4.2, 350, 3, 0, 306, , 120, Slow, Undiscovered, , 97, 113, 109, 157, 127, 77
+800, Ultra Necrozma, u, Prism, Psychic, Dragon, Neuroforce, , , 7.5, 230, 3, 0, 339, , 120, Slow, Undiscovered, , 97, 167, 97, 167, 97, 129
 801, Magearna, , Artificial, Steel, Fairy, Soul-Heart, , , 1, 80.5, 3, 0, 270, , 120, Slow, Undiscovered, , 80, 95, 115, 130, 115, 65
 802, Marshadow, , Gloomdweller, Fighting, Ghost, Technician, , , 0.7, 22.2, 3, 0, 270, , 120, Slow, Undiscovered, , 90, 125, 80, 90, 90, 125
 803, Poipole, , Poison Pin, Poison, , Beast Boost, , , 0.6, 1.8, 45, 0, 189, , 120, Slow, Undiscovered, , 67, 73, 67, 73, 67, 73
@@ -984,8 +1005,8 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 846, Arrokuda, , Rush, Water, , Swift Swim, , Propeller Tail, 0.5, 1, 255, 50, 56, 50, 20, Slow, Water 2, , 41, 63, 40, 40, 30, 66
 847, Barraskewda, , Skewer, Water, , Swift Swim, , Propeller Tail, 1.3, 30, 60, 50, 172, 50, 20, Slow, Water 2, , 61, 123, 60, 60, 50, 136
 848, Toxel, , Baby, Electric, Poison, Rattled, Static, Klutz, 0.4, 11, 75, 50, 48, 50, 25, Medium Slow, Undiscovered, , 40, 38, 35, 54, 35, 40
-849, Toxtricity Low Key Form, , Punk, Electric, Poison, Punk Rock, Minus, Technician, 1.6, 40, 45, 50, 176, 50, 25, Medium Slow, Human-Like, , 75, 98, 70, 114, 70, 75
 849, Toxtricity Amped Form, , Punk, Electric, Poison, Punk Rock, Plus, Technician, 1.6, 40, 45, 50, 176, 50, 25, Medium Slow, Human-Like, , 75, 98, 70, 114, 70, 75
+849, Toxtricity Low Key Form, l, Punk, Electric, Poison, Punk Rock, Minus, Technician, 1.6, 40, 45, 50, 176, 50, 25, Medium Slow, Human-Like, , 75, 98, 70, 114, 70, 75
 850, Sizzlipede, , Radiator, Fire, Bug, Flash Fire, White Smoke, Flame Body, 0.7, 1, 190, 50, 61, 50, 20, Medium Fast, Bug, , 50, 65, 45, 50, 50, 45
 851, Centiskorch, , Radiator, Fire, Bug, Flash Fire, White Smoke, Flame Body, 3, 120, 75, 50, 184, 50, 20, Medium Fast, Bug, , 100, 115, 65, 90, 90, 65
 852, Clobbopus, , Tantrum, Fighting, , Limber, , Technician, 0.6, 4, 180, 50, 62, 50, 25, Medium Slow, Human-Like, Water 1, 50, 68, 60, 50, 50, 32
@@ -1013,11 +1034,11 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 873, Frosmoth, , Frost Moth, Ice, Bug, Shield Dust, , Ice Scales, 1.3, 42, 75, 50, 166, 50, 20, Medium Fast, Bug, , 70, 65, 60, 125, 90, 65
 874, Stonjourner, , Big Rock, Rock, , Power Spot, , , 2.5, 520, 60, 50, 165, 50, 25, Slow, Mineral, , 100, 125, 135, 20, 20, 70
 875, Eiscue Ice Face, , Penguin, Ice, , Ice Face, , , 1.4, 89, 60, 50, 165, 50, 25, Slow, Field, Water 1, 75, 80, 110, 65, 90, 50
-875, Eiscue Noice Face, , Penguin, Ice, , Ice Face, , , 1.4, 89, 60, 50, 165, 50, 25, Slow, Field, Water 1, 75, 80, 70, 65, 50, 130
+875, Eiscue Noice Face, n, Penguin, Ice, , Ice Face, , , 1.4, 89, 60, 50, 165, 50, 25, Slow, Field, Water 1, 75, 80, 70, 65, 50, 130
 876, Indeedee Male, , Emotion, Psychic, Normal, Inner Focus, Synchronize, Psychic Surge, 0.9, 28, 30, 140, 166, 100, 40, Fast, Fairy, , 60, 65, 55, 105, 95, 95
-876, Indeedee Female, , Emotion, Psychic, Normal, Own Tempo, Synchronize, Psychic Surge, 0.9, 28, 30, 140, 166, 0, 40, Fast, Fairy, , 70, 55, 65, 95, 105, 85
+876, Indeedee Female, f, Emotion, Psychic, Normal, Own Tempo, Synchronize, Psychic Surge, 0.9, 28, 30, 140, 166, 0, 40, Fast, Fairy, , 70, 55, 65, 95, 105, 85
 877, Morpeko Full Belly Mode, , Two-Sided, Electric, Dark, Hunger Switch, , , 0.3, 3, 180, 50, 153, 50, 10, Medium Fast, Fairy, Field, 58, 95, 58, 70, 58, 97
-877, Morpeko Hangry Mode, , Two-Sided, Electric, Dark, Hunger Switch, , , 0.3, 3, 180, 50, 153, 50, 10, Medium Fast, Fairy, Field, 58, 95, 58, 70, 58, 97
+877, Morpeko Hangry Mode, h, Two-Sided, Electric, Dark, Hunger Switch, , , 0.3, 3, 180, 50, 153, 50, 10, Medium Fast, Fairy, Field, 58, 95, 58, 70, 58, 97
 878, Cufant, , Copperderm, Steel, , Sheer Force, , Heavy Metal, 1.2, 100, 190, 50, 66, 50, 25, Medium Fast, Field, Mineral, 72, 80, 49, 40, 49, 40
 879, Copperajah, , Copperderm, Steel, , Sheer Force, , Heavy Metal, 3, 650, 90, 50, 175, 50, 25, Medium Fast, Field, Mineral, 122, 130, 69, 80, 69, 30
 880, Dracozolt, , Fossil, Electric, Dragon, Volt Absorb, Hustle, Sand Rush, 1.8, 190, 45, 50, 177, , 35, Slow, Undiscovered, , 90, 100, 90, 80, 70, 75
@@ -1029,32 +1050,32 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 886, Drakloak, , Caretaker, Dragon, Ghost, Clear Body, Infiltrator, Cursed Body, 1.4, 11, 45, 50, 144, 50, 40, Slow, Amorphous, Dragon, 68, 80, 50, 60, 50, 102
 887, Dragapult, , Stealth, Dragon, Ghost, Clear Body, Infiltrator, Cursed Body, 3, 50, 45, 50, 300, 50, 40, Slow, Amorphous, Dragon, 88, 120, 75, 100, 75, 142
 888, Zacian Hero of Many Battles, , Warrior, Fairy, , Intrepid Sword, , , 2.8, 110, 10, 0, 350, , 120, Slow, Undiscovered, , 92, 130, 115, 80, 115, 138
-888, Zacian Crowned Sword, , Warrior, Fairy, Steel, Intrepid Sword, , , 2.8, 355, 10, 0, 350, , 120, Slow, Undiscovered, , 92, 170, 115, 80, 115, 148
+888, Zacian Crowned Sword, c, Warrior, Fairy, Steel, Intrepid Sword, , , 2.8, 355, 10, 0, 350, , 120, Slow, Undiscovered, , 92, 170, 115, 80, 115, 148
 889, Zamazenta Hero of Many Battles, , Warrior, Fighting, , Dauntless Shield, , , 2.9, 210, 10, 0, 350, , 120, Slow, Undiscovered, , 92, 130, 115, 80, 115, 138
-889, Zamazenta Crowned Shield, , Warrior, Fighting, Steel, Dauntless Shield, , , 2.9, 785, 10, 0, 350, , 120, Slow, Undiscovered, , 92, 130, 145, 80, 145, 128
+889, Zamazenta Crowned Shield, c, Warrior, Fighting, Steel, Dauntless Shield, , , 2.9, 785, 10, 0, 350, , 120, Slow, Undiscovered, , 92, 130, 145, 80, 145, 128
 890, Eternatus, , Gigantic, Poison, Dragon, Pressure, , , 20, 950, 255, 0, 563, , 120, Slow, Undiscovered, , 140, 85, 95, 145, 95, 130
-890, Eternatus Eternamax, , Gigantic, Poison, Dragon, Pressure, , , 100, 999.99, 255, 0, 563, , 120, Slow, Undiscovered, , 255, 115, 250, 125, 250, 130
+890, Eternatus Eternamax, e, Gigantic, Poison, Dragon, Pressure, , , 100, 999.99, 255, 0, 563, , 120, Slow, Undiscovered, , 255, 115, 250, 125, 250, 130
 891, Kubfu, , Wushu, Fighting, , Inner Focus, , , 0.6, 12, 3, 50, 77, 87.5, 120, Slow, Undiscovered, , 60, 90, 60, 53, 50, 72
 892, Urshifu Single Strike Style, , Wushu, Fighting, Dark, Unseen Fist, , , 1.9, 105, 3, 50, 275, 87.5, 120, Slow, Undiscovered, , 100, 130, 100, 63, 60, 97
-892, Urshifu Rapid Strike Style, , Wushu, Fighting, Water, Unseen Fist, , , 1.9, 105, 3, 50, 275, , 120, Slow, Undiscovered, , 100, 130, 100, 63, 60, 97
+892, Urshifu Rapid Strike Style, r, Wushu, Fighting, Water, Unseen Fist, , , 1.9, 105, 3, 50, 275, , 120, Slow, Undiscovered, , 100, 130, 100, 63, 60, 97
 893, Zarude, , Rogue Monkey, Dark, Grass, Leaf Guard, , , 1.8, 70, 3, 0, 300, , 120, Slow, Undiscovered, , 105, 120, 105, 70, 95, 105
 894, Regieleki, , Elektron, Electric, , Transistor, , , 1.2, 145, 3, 35, 290, , 120, Slow, Undiscovered, , 80, 100, 50, 100, 50, 200
 895, Regidrago, , Dragon Orb, Dragon, , Dragon‘s Maw, , , 2.1, 200, 3, 35, 290, , 120, Slow, Undiscovered, , 200, 100, 50, 100, 50, 80
 896, Glastrier, , Wild Horse, Ice, , Chilling Neigh, , , 2.2, 800, 3, 35, 290, , 120, Slow, Undiscovered, , 100, 145, 130, 65, 110, 30
 897, Spectrier, , Swift Horse, Ghost, , Grim Neigh, , , 2, 44.5, 3, 35, 290, , 120, Slow, Undiscovered, , 100, 65, 60, 145, 80, 130
 898, Calyrex, , King, Psychic, Grass, Unnerve, , , 1.1, 7.7, 3, 100, 340, , 120, Slow, Undiscovered, , 100, 80, 80, 80, 80, 80
-898, Calyrex Ice Rider, , High King, Psychic, Ice, As One, , , 2.4, 809.1, 3, 100, 340, , 120, Slow, Undiscovered, , 100, 165, 150, 85, 130, 50
-898, Calyrex Shadow Rider, , High King, Psychic, Ghost, As One, , , 2.4, 53.6, 3, 100, 340, , 120, Slow, Undiscovered, , 100, 85, 80, 165, 100, 150
+898, Calyrex Ice Rider, i, High King, Psychic, Ice, As One, , , 2.4, 809.1, 3, 100, 340, , 120, Slow, Undiscovered, , 100, 165, 150, 85, 130, 50
+898, Calyrex Shadow Rider, s, High King, Psychic, Ghost, As One, , , 2.4, 53.6, 3, 100, 340, , 120, Slow, Undiscovered, , 100, 85, 80, 165, 100, 150
 899, Wyrdeer, , Big Horn, Normal, Psychic, Intimidate, Frisk, Sap Sipper, 1.8, 95.1, 45, 50, 263, 50, 20, Slow, Field, , 103, 105, 72, 105, 75, 65
 900, Kleavor, , Axe, Bug, Rock, Swarm, Sheer Force, Sharpness, 1.8, 89, 15, 50, 175, 50, 20, Medium Fast, Bug, , 70, 135, 95, 45, 70, 85
 901, Ursaluna, , Peat, Ground, Normal, Guts, Bulletproof, Unnerve, 2.4, 290, 20, 50, 275, 50, 20, Medium Fast, Field, , 130, 140, 105, 45, 80, 50
-901, Ursaluna Bloodmoon, , Peat, Ground, Normal, Mind's Eye, , , 2.7, 333, 20, 50, 275, 50, 20, Medium Fast, Field, , 113, 70, 120, 135, 65, 52
+901, Ursaluna Bloodmoon, b, Peat, Ground, Normal, Mind's Eye, , , 2.7, 333, 20, 50, 275, 50, 20, Medium Fast, Field, , 113, 70, 120, 135, 65, 52
 902, Basculegion Male, , Big Fish, Water, Ghost, Swift Swim, Adaptability, Mold Breaker, 3, 110, 45, 50, 265, 50, 20, Medium Fast, Water 2, , 120, 112, 65, 80, 75, 78
-902, Basculegion Female, , Big Fish, Water, Ghost, Swift Swim, Adaptability, Mold Breaker, 3, 110, 45, 50, 265, 50, 20, Medium Fast, Water 2, , 120, 92, 65, 100, 75, 78
+902, Basculegion Female, f, Big Fish, Water, Ghost, Swift Swim, Adaptability, Mold Breaker, 3, 110, 45, 50, 265, 50, 20, Medium Fast, Water 2, , 120, 92, 65, 100, 75, 78
 903, Sneasler, , Free Climb, Fighting, Poison, Pressure, Unburden, Poison Touch, 1.3, 43, 20, 50, 102, 50, 20, Medium Slow, Field, , 80, 130, 60, 40, 80, 120
 904, Overqwil, , Pin Cluster, Dark, Poison, Poison Point, Swift Swim, Intimidate, 2.5, 60.5, 45, 50, 179, 50, 20, Medium Fast, Water 2, , 85, 115, 95, 65, 65, 85
 905, Enamorus Incarnate, , Love Hate, Fairy, Flying, Cute Charm, , Contrary, 1.6, 48, 3, 50, 116, 0, 120, Slow, Undiscovered, , 74, 115, 70, 135, 80, 106
-905, Enamorus Therian, , Love Hate, Fairy, Flying, Overcoat, , , 1.6, 48, 3, 50, 116, 0, 120, Slow, Undiscovered, , 74, 115, 110, 135, 100, 46
+905, Enamorus Therian, t, Love Hate, Fairy, Flying, Overcoat, , , 1.6, 48, 3, 50, 116, 0, 120, Slow, Undiscovered, , 74, 115, 110, 135, 100, 46
 906, Sprigatito, , Grass Cat, Grass, , Overgrow, , Protean, 0.4, 4.1, 45, 50, 62, 87.5, 20, Medium Slow, Field, Grass, 40, 61, 54, 45, 45, 65
 907, Floragato, , Grass Cat, Grass, , Overgrow, , Protean, 0.9, 12.2, 45, 50, 144, 87.5, 20, Medium Slow, Field, Grass, 61, 80, 63, 60, 63, 83
 908, Meowscarada, , Magician, Grass, Dark, Overgrow, , Protean, 1.5, 31.2, 45, 50, 265, 87.5, 20, Medium Slow, Field, Grass, 76, 110, 70, 81, 70, 123
@@ -1066,7 +1087,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 914, Quaquaval, , Dancer, Water, Fighting, Torrent, , Moxie, 1.8, 61.9, 45, 50, 265, 87.5, 20, Medium Slow, Flying, Water 1, 85, 120, 80, 85, 75, 85
 915, Lechonk, , Hog, Normal, , Aroma Veil, Gluttony, Thick Fat, 0.5, 10.2, 255, 50, 51, 50, 15, Medium Fast, Field, , 54, 45, 40, 35, 45, 35
 916, Oinkologne Male, , Hog, Normal, , Lingering Aroma, Gluttony, Thick Fat, 1, 120, 100, 50, 171, 50, 15, Medium Fast, Field, , 110, 100, 75, 59, 80, 65
-916, Oinkologne Female, , Hog, Normal, , Aroma Veil, Gluttony, Thick Fat, 1, 120, 100, 50, 171, 50, 15, Medium Fast, Field, , 115, 90, 70, 59, 90, 65
+916, Oinkologne Female, f, Hog, Normal, , Aroma Veil, Gluttony, Thick Fat, 1, 120, 100, 50, 171, 50, 15, Medium Fast, Field, , 115, 90, 70, 59, 90, 65
 917, Tarountula, , String Ball, Bug, , Insomnia, , Steakout, 0.3, 4, 255, 50, 42, 50, 15, Erratic, Bug, , 35, 41, 45, 29, 40, 20
 918, Spidops, , Trap, Bug, , Insomnia, , Steakout, 1, 16.5, 120, 50, 141, 50, 15, Erratic, Bug, , 60, 79, 92, 52, 86, 35
 919, Nymble, , Grasshopper, Bug, , Swarm, , Tinted Lens, 0.2, 1, 190, 20, 42, 50, 20, Medium Fast, Bug, , 33, 46, 40, 21, 25, 45
@@ -1075,7 +1096,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 922, Pawmo, , Mouse, Electric, Fighting, Volt Absorb, Natural Cure, Iron Fist, 0.4, 6.5, 80, 50, 123, 50, 15, Medium Fast, Field, , 60, 75, 40, 50, 40, 85
 923, Pawmot, , Hands-On, Electric, Fighting, Volt Absorb, Natural Cure, Iron Fist, 0.9, 41, 45, 50, 245, 50, 15, Medium Fast, Field, , 70, 115, 70, 70, 60, 105
 924, Tandemaus, , Couple, Normal, , Run Away, Pickup, Own Tempo, 0.3, 1.8, 150, 50, 61, , 10, Fast, Field, Fairy, 50, 50, 45, 40, 45, 75
-925, Maushold Family of Four, , Family, Normal, , Friend Guard, Cheek Pouch, Technician, 0.3, 2.8, 75, 50, 165, , 10, Fast, Field, Fairy, 74, 75, 70, 65, 75, 111
+925, Maushold Family of Four, f, Family, Normal, , Friend Guard, Cheek Pouch, Technician, 0.3, 2.8, 75, 50, 165, , 10, Fast, Field, Fairy, 74, 75, 70, 65, 75, 111
 925, Maushold Family of Three, , Family, Normal, , Friend Guard, Cheek Pouch, Technician, 0.3, 2.3, 75, 50, 165, , 10, Fast, Field, Fairy, 74, 75, 70, 65, 75, 111
 926, Fidough, , Puppy, Fairy, , Own Tempo, , Klutz, 0.3, 10.9, 190, 50, 62, 50, 20, Medium Slow, Field, Mineral, 37, 55, 70, 30, 55, 65
 927, Dachsbun, , Dog, Fairy, , Well-Baked Body, , Aroma Veil, 0.5, 14.9, 90, 50, 167, 50, 20, Medium Slow, Field, Mineral, 57, 80, 115, 50, 80, 95
@@ -1083,9 +1104,9 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 929, Dolliv, , Olive, Grass, Normal, Early Bird, , Harvest, 0.6, 11.9, 120, 50, 124, 50, 20, Medium Slow, Grass, , 52, 53, 60, 78, 78, 33
 930, Arboliva, , Olive, Grass, Normal, Seed Sower, , Harvest, 1.4, 48.2, 45, 50, 255, 50, 20, Medium Slow, Grass, , 78, 69, 90, 125, 109, 39
 931, Squawkabilly Green Plumage, , Parrot, Normal, Flying, Intimidate, Hustle, Guts, 0.6, 2.4, 190, 50, 146, 50, 15, Erratic, Flying, , 82, 96, 51, 45, 51, 92
-931, Squawkabilly Blue Plumage, , Parrot, Normal, Flying, Intimidate, Hustle, Guts, 0.6, 2.4, 190, 50, 146, 50, 15, Erratic, Flying, , 82, 96, 51, 45, 51, 92
-931, Squawkabilly Yellow Plumage, , Parrot, Normal, Flying, Intimidate, Hustle, Sheer Force, 0.6, 2.4, 190, 50, 146, 50, 15, Erratic, Flying, , 82, 96, 51, 45, 51, 92
-931, Squawkabilly White Plumage, , Parrot, Normal, Flying, Intimidate, Hustle, Sheer Force, 0.6, 2.4, 190, 50, 146, 50, 15, Erratic, Flying, , 82, 96, 51, 45, 51, 92
+931, Squawkabilly Blue Plumage, b, Parrot, Normal, Flying, Intimidate, Hustle, Guts, 0.6, 2.4, 190, 50, 146, 50, 15, Erratic, Flying, , 82, 96, 51, 45, 51, 92
+931, Squawkabilly Yellow Plumage, y, Parrot, Normal, Flying, Intimidate, Hustle, Sheer Force, 0.6, 2.4, 190, 50, 146, 50, 15, Erratic, Flying, , 82, 96, 51, 45, 51, 92
+931, Squawkabilly White Plumage, w, Parrot, Normal, Flying, Intimidate, Hustle, Sheer Force, 0.6, 2.4, 190, 50, 146, 50, 15, Erratic, Flying, , 82, 96, 51, 45, 51, 92
 932, Nacli, , Rock Salt, Rock, , Purifying Salt, Sturdy, Clear Body, 0.4, 16, 255, 50, 56, 50, 20, Medium Slow, Mineral, , 55, 55, 75, 35, 35, 25
 933, Naclstack, , Rock Salt, Rock, , Purifying Salt, Sturdy, Clear Body, 0.6, 105, 120, 50, 124, 50, 20, Medium Slow, Mineral, , 60, 60, 100, 35, 65, 35
 934, Garganacl, , Rock Salt, Rock, , Purifying Salt, Sturdy, Clear Body, 2.3, 240, 45, 50, 250, 50, 20, Medium Slow, Mineral, , 100, 100, 130, 45, 90, 35
@@ -1134,13 +1155,13 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 976, Veluza, , Jettison, Water, Psychic, Mold Breaker, , Sharpness, 2.5, 90, 100, 50, 167, 50, 20, Fast, Water 2, , 90, 102, 73, 78, 65, 70
 977, Dondozo, , Big Catfish, Water, , Unaware, Oblivious, Water Veil, 12, 220, 25, 50, 265, 50, 40, Slow, Water 2, , 150, 100, 115, 65, 65, 35
 978, Tatsugiri Curly, , Mimicry, Dragon, Water, Commander, , Storm Drain, 0.3, 8, 100, 50, 166, 50, 35, Medium Slow, Water 2, , 68, 50, 60, 120, 95, 82
-978, Tatsugiri Droopy, , Mimicry, Dragon, Water, Commander, , Storm Drain, 0.3, 8, 100, 50, 166, 50, 35, Medium Slow, Water 2, , 68, 50, 60, 120, 95, 82
-978, Tatsugiri Stretchy, , Mimicry, Dragon, Water, Commander, , Storm Drain, 0.3, 8, 100, 50, 166, 50, 35, Medium Slow, Water 2, , 68, 50, 60, 120, 95, 82
+978, Tatsugiri Droopy, d, Mimicry, Dragon, Water, Commander, , Storm Drain, 0.3, 8, 100, 50, 166, 50, 35, Medium Slow, Water 2, , 68, 50, 60, 120, 95, 82
+978, Tatsugiri Stretchy, s, Mimicry, Dragon, Water, Commander, , Storm Drain, 0.3, 8, 100, 50, 166, 50, 35, Medium Slow, Water 2, , 68, 50, 60, 120, 95, 82
 979, Annihilape, , Rage Monkey, Fighting, Ghost, Vital Spirit, Inner Focus, Defiant, 1.2, 56, 45, 50, 268, 50, 20, Medium Fast, Field, , 110, 115, 80, 50, 90, 90
 980, Clodsire, , Spiny Fish, Poison, Ground, Poison Point, Water Absorb, Unaware, 1.8, 223, 90, 50, 151, 50, 20, Medium Fast, Water 1, Field, 130, 75, 60, 45, 100, 20
 981, Farigiraf, , Long Neck, Normal, Psychic, Cud Chew, Armor Tail, Sap Sipper, 3.2, 160, 45, 50, 260, 50, 20, Medium Fast, Field, , 120, 90, 70, 110, 70, 60
 982, Dudunsparce Two Segment, , Land Snake, Normal, , Serene Grace, Run Away, Rattled, 3.6, 39.2, 45, 50, 182, 50, 20, Medium Fast, Field, , 125, 100, 80, 85, 75, 55
-982, Dudunsparce Three Segment, , Land Snake, Normal, , Serene Grace, Run Away, Rattled, 3.6, 39.2, 45, 50, 182, 50, 20, Medium Fast, Field, , 125, 100, 80, 85, 75, 55
+982, Dudunsparce Three Segment, t, Land Snake, Normal, , Serene Grace, Run Away, Rattled, 3.6, 39.2, 45, 50, 182, 50, 20, Medium Fast, Field, , 125, 100, 80, 85, 75, 55
 983, Kingambit, , Big Blade, Dark, Steel, Defiant, Supreme Overlord, Pressure, 2, 120, 25, 50, 275, 50, 20, Medium Fast, Human-Like, , 100, 135, 120, 60, 85, 50
 984, Great Tusk, , Paradox, Ground, Fighting, Protosynthesis, , , 2.2, 320, 30, 0, 285, , 50, Slow, Undiscovered, , 115, 131, 131, 53, 53, 87
 985, Scream Tail, , Paradox, Fairy, Psychic, Protosynthesis, , , 1.2, 8, 50, 0, 285, , 50, Slow, Undiscovered, , 115, 65, 99, 65, 115, 111
@@ -1158,7 +1179,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 997, Arctibax, , Ice Fin, Dragon, Ice, Thermal Exchange, , Ice Body, 0.8, 30, 25, 50, 148, 50, 40, Slow, Dragon, Mineral, 90, 95, 66, 45, 65, 62
 998, Baxcalibur, , Ice Dragon, Dragon, Ice, Thermal Exchange, , Ice Body, 2.1, 210, 10, 50, 300, 50, 40, Slow, Dragon, Mineral, 115, 145, 92, 75, 86, 87
 999, Gimmighoul Chest, , Coin Chest, Ghost, , Rattled, , , 0.3, 5, 45, 50, 60, , 50, Slow, Undiscovered, , 45, 30, 70, 75, 70, 10
-999, Gimmighoul Roaming, , Coin Hunter, Ghost, , Run Away, , , 0.1, 0.1, 45, 50, 60, , 50, Slow, Undiscovered, , 45, 30, 25, 75, 45, 80
+999, Gimmighoul Roaming, r, Coin Hunter, Ghost, , Run Away, , , 0.1, 0.1, 45, 50, 60, , 50, Slow, Undiscovered, , 45, 30, 25, 75, 45, 80
 1000, Gholdengo, , Coin Entity, Steel, Ghost, Good as Gold, , , 1.2, 30, 45, 50, 275, , 50, Slow, Undiscovered, , 87, 60, 95, 133, 91, 84
 1001, Wo Chien, , Ruinous, Dark, Grass, Tablets of Ruin, , , 1.5, 74.2, 6, 0, 285, , 50, Slow, Undiscovered, , 85, 85, 100, 95, 135, 70
 1002, Chien Pao, , Ruinous, Dark, Ice, Sword of Ruin, , , 1.9, 152.2, 6, 0, 285, , 50, Slow, Undiscovered, , 80, 120, 80, 90, 65, 135
@@ -1179,9 +1200,9 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 1015, Munkidori, , Retainer, Poison, Psychic, Toxic Chain, , Frisk, 1, 12.2, 3, 0, 0, , 120, Slow, Undiscovered, , 88, 75, 66, 130, 90, 106
 1016, Fezandipiti, , Retainer, Poison, Fairy, Toxic Chain, , Technician, 1.4, 30.1, 3, 0, 0, , 120, Slow, Undiscovered, , 88, 91, 82, 70, 125, 99
 1017, Ogerpon, , Mask, Grass, , Defiant , , Embody Aspect, 1.2, 39.8, 5, 0, 0, , 10, Slow, Undiscovered, , 80, 120, 84, 60, 96, 110
-1017, Ogerpon Wellspring, , Mask, Grass, Water, Water Absorb, , Embody Aspect, 1.2, 39.8, 5, 0, 0, , 10, Slow, Undiscovered, , 80, 120, 84, 60, 96, 110
-1017, Ogerpon Hearthflame, , Mask, Grass, Fire, Mold Breaker, , Embody Aspect, 1.2, 39.8, 5, 0, 0, , 10, Slow, Undiscovered, , 80, 120, 84, 60, 96, 110
-1017, Ogerpon Cornerstone, , Mask, Grass, Rock, Sturdy, , Embody Aspect, 1.2, 39.8, 5, 0, 0, , 10, Slow, Undiscovered, , 80, 120, 84, 60, 96, 110
+1017, Ogerpon Wellspring, w, Mask, Grass, Water, Water Absorb, , Embody Aspect, 1.2, 39.8, 5, 0, 0, , 10, Slow, Undiscovered, , 80, 120, 84, 60, 96, 110
+1017, Ogerpon Hearthflame, h, Mask, Grass, Fire, Mold Breaker, , Embody Aspect, 1.2, 39.8, 5, 0, 0, , 10, Slow, Undiscovered, , 80, 120, 84, 60, 96, 110
+1017, Ogerpon Cornerstone, c, Mask, Grass, Rock, Sturdy, , Embody Aspect, 1.2, 39.8, 5, 0, 0, , 10, Slow, Undiscovered, , 80, 120, 84, 60, 96, 110
 1018, Archaludon, , Alloy, Steel, Dragon, Stamina, Sturdy, Stalwart, 2, 60, 10, 0, 0, , 30, Medium Fast, Mineral, Dragon, 90, 105, 130, 125, 65, 85
 1019, Hydrapple, , Apple Hydra, Grass, Dragon, Supersweet Syrup, Regenerator, Sticky Hold, 1.8, 93, 10, 0, 0, , 20, Erratic, Grass, Dragon, 106, 80, 110, 120, 80, 44
 1020, Gouging Fire, , Paradox, Fire, Dragon, Protosynthesis, , , 3.5, 590, 10, 0, 0, , 50, Slow, Undiscovered, , 105, 115, 121, 65, 93, 91
@@ -1189,6 +1210,6 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 1022, Iron Boulder, , Paradox, Rock, Psychic, Quark Drive, , , 1.5, 162.5, 10, 0, 0, , 50, Slow, Undiscovered, , 90, 120, 80, 68, 108, 124
 1023, Iron Crown, , Paradox, Steel, Psychic, Quark Drive, , , 1.6, 156, 10, 0, 0, , 50, Slow, Undiscovered, , 90, 72, 100, 122, 108, 98
 1024, Terapagos, , Tera, Normal, , Tera Shift, , , 0.2, 6.5, 255, 0, 0, , 5, Slow, Undiscovered, , 90, 65, 85, 65, 85, 60
-1024, Terapagos Terastal, , Tera, Normal, , Tera Shell, , , 0.3, 16, 255, 0, 0, , 5, Slow, Undiscovered, , 95, 95, 110, 105, 110, 85
-1024, Terapagos Stellar, , Tera, Normal, , Teraform Zero, , , 1.7, 77, 255, 0, 0, , 5, Slow, Undiscovered, , 160, 105, 110, 130, 110, 85
+1024, Terapagos Terastal, t, Tera, Normal, , Tera Shell, , , 0.3, 16, 255, 0, 0, , 5, Slow, Undiscovered, , 95, 95, 110, 105, 110, 85
+1024, Terapagos Stellar, s, Tera, Normal, , Teraform Zero, , , 1.7, 77, 255, 0, 0, , 5, Slow, Undiscovered, , 160, 105, 110, 130, 110, 85
 1025, Pecharunt, , Subjugation, Poison, Ghost, Poison Puppeteer, , , 0.3, 0.3, 3, 0, 0, , 20, Slow, Undiscovered, , 88, 88, 160, 88, 88, 88

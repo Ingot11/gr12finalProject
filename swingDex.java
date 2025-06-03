@@ -4,7 +4,7 @@ import java.awt.event.*;
 import javax.swing.event.*;
 public class swingDex extends JFrame{
     // Window Variables
-    private JComboBox<String> generationSelector, dlcSelector;
+    private JComboBox<String> gen, dlc;
     private JPanel selectorPanel, idPanel, infoPanel;
     private JScrollPane pokeScroll;
     private JLabel image, idLabel;
@@ -12,7 +12,7 @@ public class swingDex extends JFrame{
     private JButton caught, seen, select;
     private JTextField idInput;
     private JList<String> pokeList;
-    private int selectedForm;
+    private int visualForm, baseForm;
     
     // Call Window
     public static void main(String[] args){
@@ -36,11 +36,11 @@ public class swingDex extends JFrame{
 
         // Selectors
         add(selectorPanel = new JPanel(new FlowLayout()), constraint(1, 0, 0));
-        selectorPanel.add(generationSelector = new JComboBox<>(new String[]{"National", "Kanto", "Johto", "Hoenn", "Sinnoh/Hisui", "Unova", "Kalos", "Alola", "Galar", "Paldea"}));
-        selectorPanel.add(dlcSelector = new JComboBox<>(new String[]{"National"}));
+        selectorPanel.add(gen = new JComboBox<>(new String[]{"National", "Kanto", "Johto", "Hoenn", "Sinnoh/Hisui", "Unova", "Kalos", "Alola", "Galar", "Paldea"}));
+        selectorPanel.add(dlc = new JComboBox<>(new String[]{"National"}));
 
         // Pokemon Image / More Info Button
-        add(image = new JLabel(Pokemon.nationalDex[737-1].name, Pokemon.nationalDex[737-1].makeImage("Default", false), 0), constraint(0, 1, 0));
+        add(image = new JLabel(Pokemon.nationalDex[0].name, Pokemon.nationalDex[0].makeImage("", false), 0), constraint(0, 1, 0));
         add(select = new JButton("More Info"), constraint(0, 2, 0));
 
         // Scroll Dex
@@ -49,7 +49,7 @@ public class swingDex extends JFrame{
         setVisible(true);
 
         // Action Listeners
-        generationSelector.addActionListener((ActionEvent e) -> {
+        gen.addActionListener((ActionEvent e) -> {
             // Choose Generation
             String[][] generation = {{"National"}, /*National*/
             {"Regional", "Red/Blue/Yellow/FireRed/LeafGreen", "Let's Go"}, /*Kanto*/
@@ -61,18 +61,18 @@ public class swingDex extends JFrame{
             {"Regional", "Sun/Moon", "Melemele", "Akala", "Ula'Ula", "Poni", "Ultra Sun/Ultra Moon", "Ultra Melemele", "Ultra Akala", "Ultra Ula'Ula", "Ultra Poni"}, /*Alola*/
             {"Regional", "Sword/Shield", "Isle of Armor", "Crown Tundra"}, /*Galar*/
             {"Regional", "Scarlet/Violet", "Teal Mask", "Indigo Disk"}}; /*Paldea*/
-            if(generationSelector.getSelectedIndex() > generation.length) generationSelector.setSelectedIndex(0);
-            dlcSelector.setModel(new DefaultComboBoxModel<>(generation[generationSelector.getSelectedIndex()]));
-            dlcSelector.setSelectedIndex(0);
+            if(gen.getSelectedIndex() > generation.length) gen.setSelectedIndex(0);
+            dlc.setModel(new DefaultComboBoxModel<>(generation[gen.getSelectedIndex()]));
+            dlc.setSelectedIndex(0);
             revalidate(); // Resets frame
         });
-        dlcSelector.addActionListener((ActionEvent e) -> {
-            pokeList.setModel(Pokemon.getDex(generationSelector.getSelectedIndex(), dlcSelector.getSelectedIndex()));
+        dlc.addActionListener((ActionEvent e) -> {
+            pokeList.setModel(Pokemon.getDex(gen.getSelectedIndex(), dlc.getSelectedIndex()));
             pokeList.setSelectedIndex(0);
         });
         pokeList.addListSelectionListener((ListSelectionEvent e) -> {
-            image.setText(Pokemon.makeName(generationSelector.getSelectedIndex(), dlcSelector.getSelectedIndex(), pokeList.getSelectedIndex()));
-            image.setIcon(Pokemon.makeImage(generationSelector.getSelectedIndex(), dlcSelector.getSelectedIndex(), pokeList.getSelectedIndex(), "", true));
+            image.setText(Pokemon.makeName(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex()));
+            image.setIcon(Pokemon.makeImage(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex(), "", true));
         });
         idInput.addActionListener((ActionEvent e) -> {
             Pokemon input;
@@ -85,7 +85,7 @@ public class swingDex extends JFrame{
             for(int i=0; i<input.form.size(); i++) input.form.get(i).getStats();
             System.out.println("---");
         });
-        select.addActionListener((ActionEvent e) -> {swingDex x = new swingDex(Pokemon.getPokemon(generationSelector.getSelectedIndex(), dlcSelector.getSelectedIndex(), pokeList.getSelectedIndex()));});
+        select.addActionListener((ActionEvent e) -> {swingDex x = new swingDex(Pokemon.getPokemon(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex()));});
     }
 
     // Window to Display Pokemon
@@ -97,9 +97,10 @@ public class swingDex extends JFrame{
         setMinimumSize(new Dimension(600, 300));
 
         // Base Information
-        selectedForm = 0;
+        visualForm = 0;
+        baseForm = 0;
         add(select = new JButton("Change Form"),constraint(0, 0, 0));
-        add(image = new JLabel(pokemon.makeImage(pokemon.form.get(0).formSymbol, false)), constraint(0, 1, 2));
+        add(image = new JLabel(pokemon.makeImage(pokemon.form.get(0).formSymbol[0], false)), constraint(0, 1, 2));
         add(idLabel = new JLabel(pokemon.form.get(0).name), constraint(1, 0, 0));
         add(info[0] = new JLabel(pokemon.form.get(0).category + " Pokémon"), constraint(1, 1, 0));
         add(info[1] = new JLabel(pokemon.form.get(0).getBaseStats()), constraint(1, 2, 0));
@@ -115,17 +116,21 @@ public class swingDex extends JFrame{
 
         // Action Listeners
         select.addActionListener((ActionEvent e) -> {
-            if(++selectedForm >= pokemon.form.size()) selectedForm = 0;
-            image.setIcon(pokemon.makeImage(pokemon.form.get(selectedForm).formSymbol, false));
-            idLabel.setText(pokemon.form.get(selectedForm).name);
-            info[0].setText(pokemon.form.get(selectedForm).category + " Pokémon");
-            info[1].setText(pokemon.form.get(selectedForm).getBaseStats());
-            info[2].setText(pokemon.form.get(selectedForm).getAbilities());
-            info[3].setText("Egg Cycles: " + pokemon.form.get(selectedForm).eggCycles);
-            info[4].setText("Growth Rate: " + pokemon.form.get(selectedForm).growthRate);
+            if(++visualForm < pokemon.form.get(baseForm).formSymbol.length){
+                image.setIcon(pokemon.makeImage(pokemon.form.get(baseForm).formSymbol[visualForm], false));
+                return;
+            }if(++baseForm >= pokemon.form.size()) baseForm = 0;
+            image.setIcon(pokemon.makeImage(pokemon.form.get(baseForm).formSymbol[0], false));
+            idLabel.setText(pokemon.form.get(baseForm).name);
+            info[0].setText(pokemon.form.get(baseForm).category + " Pokémon");
+            info[1].setText(pokemon.form.get(baseForm).getBaseStats());
+            info[2].setText(pokemon.form.get(baseForm).getAbilities());
+            info[3].setText("Egg Cycles: " + pokemon.form.get(baseForm).eggCycles);
+            info[4].setText("Growth Rate: " + pokemon.form.get(baseForm).growthRate);
+            visualForm = 0;
         });
-        seen.addActionListener((ActionEvent e) -> {pokemon.form.get(selectedForm).caughtSeen = 1;});
-        caught.addActionListener((ActionEvent e) -> {pokemon.form.get(selectedForm).caughtSeen = 2;});
+        seen.addActionListener((ActionEvent e) -> {pokemon.form.get(baseForm).caughtSeen = 1;});
+        caught.addActionListener((ActionEvent e) -> {pokemon.form.get(baseForm).caughtSeen = 2;});
     }
 
     // Set Constraints
@@ -136,7 +141,7 @@ public class swingDex extends JFrame{
         switch(type){
             case 1 -> { // Pokemon Scroll List
                 constraints.gridheight = 2;
-                constraints.fill = GridBagConstraints.BOTH;
+                constraints.fill = 1;
                 constraints.insets = new Insets(20, 20, 20, 20);
             }
             case 2 -> constraints.gridheight = 5;
