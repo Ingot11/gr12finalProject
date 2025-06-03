@@ -9,6 +9,7 @@ public class Menu extends JFrame {
     private JComboBox regionSelect, gameSelect;
     private JScrollBar scrollBar;
     private JList dexList;
+    private JLabel pkmnName;
 
     public static void main(String[] args) {
         Pokemon.Dex();
@@ -41,5 +42,9 @@ public class Menu extends JFrame {
         });
 
         gameSelect.addActionListener((ActionEvent a) -> {dexList.setModel(Pokemon.getDex(regionSelect.getSelectedIndex(), gameSelect.getSelectedIndex()));});
+        dexList.addListSelectionListener((_) -> {
+            pkmnName.setText(Pokemon.makeName(regionSelect.getSelectedIndex(), gameSelect.getSelectedIndex(), dexList.getSelectedIndex()));
+            image.setIcon(Pokemon.makeImage(regionSelect.getSelectedIndex(), gameSelect.getSelectedIndex(), dexList.getSelectedIndex(), "", false));
+        });
     }
 }
