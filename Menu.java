@@ -2,7 +2,7 @@ import java.awt.*;
 import java.util.*;
 import javax.swing.*;
 import java.awt.event.*;
-
+import javax.swing.event.*;
 public class Menu extends JFrame {
     private JPanel panel1;
     private JLabel titleLabel, regionLabel, gameLabel, image;
@@ -12,7 +12,7 @@ public class Menu extends JFrame {
     private JLabel pkmnName;
 
     public static void main(String[] args) {
-        Pokemon.Dex();
+        Pokemon.Dex(); // Initialize Pokédex
         Menu menu = new Menu();
     }
 
@@ -24,6 +24,7 @@ public class Menu extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
 
+        // Action Listeners
         regionSelect.addActionListener((ActionEvent a) -> {
             String[][] generation = {{"National"},
                 {"Regional", "Red/Blue/Yellow/FireRed/LeafGreen", "Let's Go"}, /*Kanto*/
@@ -40,9 +41,9 @@ public class Menu extends JFrame {
             gameSelect.setSelectedIndex(0);
             revalidate(); // Resets frame
         });
-
+        
         gameSelect.addActionListener((ActionEvent a) -> {dexList.setModel(Pokemon.getDex(regionSelect.getSelectedIndex(), gameSelect.getSelectedIndex()));});
-        dexList.addListSelectionListener((_) -> {
+        dexList.addListSelectionListener((ListSelectionEvent a) -> {
             pkmnName.setText(Pokemon.makeName(regionSelect.getSelectedIndex(), gameSelect.getSelectedIndex(), dexList.getSelectedIndex()));
             image.setIcon(Pokemon.makeImage(regionSelect.getSelectedIndex(), gameSelect.getSelectedIndex(), dexList.getSelectedIndex(), "", false));
         });

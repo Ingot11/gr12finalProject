@@ -50,6 +50,13 @@ public class Form{
         for(double i : doubles) System.out.print(i + ", ");
         System.out.println();
     }
+    public String getBaseStats(){return "Atk: " + atk + ", Def: " + def + ", Sp.Atk: " + spAtk + ", Sp.Def: " + spDef + ", Spd: " + spd;}
+    public String getAbilities(){
+        String temp = ability1;
+        if(!ability2.equals("")) temp += ", " + ability2;
+        if(!abilityH.equals("")) temp += ", Hidden: " + abilityH;
+        return temp;
+    }
     public int statCalcualtor(String stats, int level, int iv, int ev, String nature){
         int stat = 0;
         Nature boosted;
