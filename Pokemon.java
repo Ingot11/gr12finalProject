@@ -63,6 +63,68 @@ public class Pokemon{
         catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}
         return null;
     }
+
+    // Set Name and Icon for Pokemon
+    public static void updateLabels(JLabel label, int region, int dlc, int selected, String formSymbol, boolean shiny){
+        Pokemon temp = getPokemon(region, dlc, selected);
+        label.setText(temp.name);
+        label.setIcon(temp.makeImage("", shiny));
+    }
+
+    // Update Labels
+    public void updateLabels(JLabel[] info, int selected){
+        info[0].setText(form.get(selected).name);
+        info[1].setText(form.get(selected).category + " Pokémon");
+        info[2].setText(form.get(selected).getBaseStats());
+        info[3].setText(form.get(selected).getAbilities());
+        info[4].setText("Egg Cycles: " + form.get(selected).eggCycles);
+        info[5].setText("Growth Rate: " + form.get(selected).growthRate);
+        info[6].setText("Base Friendship: " + form.get(selected).baseFriendship);
+        info[7].setText("Base EXP: " + form.get(selected).baseExp);
+        info[8].setText("Male Percent: " + form.get(selected).maleRatio + "%");
+        info[9].setText("Height: " + form.get(selected).height + ", Weight: " + form.get(selected).weight);
+    }
+
+    // Creates Dex
+    public static void Dex(){
+        // Initialize Dexs
+        nationalDex = new Pokemon[1025];
+        dexOfDex = new HashMap[]{kanto = new HashMap<>(), letsGo = new HashMap<>(), johto = new HashMap<>(), hoenn = new HashMap<>(),
+            sinnoh = new HashMap<>(), platinum = new HashMap<>(), hgss = new HashMap<>(), unova = new HashMap<>(), b2w2 = new HashMap<>(),
+            kalosCentral = new HashMap<>(), kalosCoastal = new HashMap<>(), kalosMountain = new HashMap<>(), oras = new HashMap<>(),
+            alola = new HashMap<>(), melemele = new HashMap<>(), akala = new HashMap<>(), ulaula = new HashMap<>(), poni = new HashMap<>(),
+            ultra = new HashMap<>(), ultraMelemele = new HashMap<>(), ultraAkala = new HashMap<>(), ultraUlaula = new HashMap<>(), ultraPoni = new HashMap<>(),
+            galar = new HashMap<>(), isleOfArmor = new HashMap<>(), crownTundra = new HashMap<>(), legendsArceus = new HashMap<>(),
+            paldea = new HashMap<>(), tealMask = new HashMap<>(), indigoDisk = new HashMap<>()
+        };
+        // Read from file
+        try(BufferedReader buffReadDex = new BufferedReader(new FileReader("dex.csv")); BufferedReader buffReadStats = new BufferedReader(new FileReader("stats.csv"))){
+            String line;
+            buffReadDex.readLine();
+            while ((line = buffReadDex.readLine()) != null) {
+                // Initialize the Pokemon
+                String[] lines = line.split(", ");
+                Pokemon temp = new Pokemon(lines[0], Integer.parseInt(lines[1]));
+                nationalDex[Integer.parseInt(lines[1])-1] = temp;
+                // Input the dex number
+                int[] dexNumber = new int[31];
+                for(int i=2; i<dexNumber.length; i++) dexNumber[i-2] = Integer.parseInt(lines[i]);
+                temp.inputDex(dexNumber);
+            }
+            for(HashMap<Integer, Pokemon> i : dexOfDex) i.remove(-1);
+            buffReadStats.readLine();
+            while ((line = buffReadStats.readLine()) != null) {
+                String[] lines = line.split(", ");
+                nationalDex[Integer.parseInt(lines[0])-1].form.add(new Form(lines));
+            }
+            buffReadDex.close();
+            buffReadStats.close();
+        }
+        catch (FileNotFoundException | NumberFormatException e) {System.out.println("File not found or Number Format Exception");}
+        catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}
+    }
+
+    // Gets Pokemon from dex
     public static Pokemon getPokemon(int region, int dlc, int selected){
         Pokemon temp = nationalDex[0];
         int x = 0; selected++;
@@ -150,65 +212,7 @@ public class Pokemon{
         return temp;
     }
 
-    // Set Name and Icon for Pokemon
-    public static String makeName(int region, int dlc, int selected){
-        return getPokemon(region, dlc, selected).name;
-    }
-    public static ImageIcon makeImage(int region, int dlc, int selected, String formSymbol, boolean shiny){
-        return getPokemon(region, dlc, selected).makeImage("", shiny);
-    }
-
-    public void getInfo(int selected, JLabel[] info){
-        info[0].setText(form.get(selected).name);
-        info[1].setText(form.get(selected).category + " Pokémon");
-        info[2].setText(form.get(selected).getBaseStats());
-        info[3].setText(form.get(selected).getAbilities());
-        info[4].setText("Egg Cycles: " + form.get(selected).eggCycles);
-        info[5].setText("Growth Rate: " + form.get(selected).growthRate);
-        info[6].setText("Base Friendship: " + form.get(selected).baseFriendship);
-        info[7].setText("Base EXP: " + form.get(selected).baseExp);
-        info[8].setText("Male Percent: " + form.get(selected).maleRatio + "%");
-        info[9].setText("Height: " + form.get(selected).height + ", Weight: " + form.get(selected).weight);
-    }
-    // Creates Dex
-    public static void Dex(){
-        // Initialize Dexs
-        nationalDex = new Pokemon[1025];
-        dexOfDex = new HashMap[]{kanto = new HashMap<>(), letsGo = new HashMap<>(), johto = new HashMap<>(), hoenn = new HashMap<>(),
-            sinnoh = new HashMap<>(), platinum = new HashMap<>(), hgss = new HashMap<>(), unova = new HashMap<>(), b2w2 = new HashMap<>(),
-            kalosCentral = new HashMap<>(), kalosCoastal = new HashMap<>(), kalosMountain = new HashMap<>(), oras = new HashMap<>(),
-            alola = new HashMap<>(), melemele = new HashMap<>(), akala = new HashMap<>(), ulaula = new HashMap<>(), poni = new HashMap<>(),
-            ultra = new HashMap<>(), ultraMelemele = new HashMap<>(), ultraAkala = new HashMap<>(), ultraUlaula = new HashMap<>(), ultraPoni = new HashMap<>(),
-            galar = new HashMap<>(), isleOfArmor = new HashMap<>(), crownTundra = new HashMap<>(), legendsArceus = new HashMap<>(),
-            paldea = new HashMap<>(), tealMask = new HashMap<>(), indigoDisk = new HashMap<>()
-        };
-        // Read from file
-        try(BufferedReader buffReadDex = new BufferedReader(new FileReader("dex.csv")); BufferedReader buffReadStats = new BufferedReader(new FileReader("stats.csv"))){
-            String line;
-            buffReadDex.readLine();
-            while ((line = buffReadDex.readLine()) != null) {
-                // Initialize the Pokemon
-                String[] lines = line.split(", ");
-                Pokemon temp = new Pokemon(lines[0], Integer.parseInt(lines[1]));
-                nationalDex[Integer.parseInt(lines[1])-1] = temp;
-                // Input the dex number
-                int[] dexNumber = new int[31];
-                for(int i=2; i<dexNumber.length; i++) dexNumber[i-2] = Integer.parseInt(lines[i]);
-                temp.inputDex(dexNumber);
-            }
-            for(HashMap<Integer, Pokemon> i : dexOfDex) i.remove(-1);
-            buffReadStats.readLine();
-            while ((line = buffReadStats.readLine()) != null) {
-                String[] lines = line.split(", ");
-                nationalDex[Integer.parseInt(lines[0])-1].form.add(new Form(lines));
-            }
-            buffReadDex.close();
-            buffReadStats.close();
-        }
-        catch (FileNotFoundException | NumberFormatException e) {System.out.println("File not found or Number Format Exception");}
-        catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}
-    }
-    // Gets Pokemon from dex
+    // Gets the entire dex
     public static DefaultListModel<String> getDex(int region, int dlc) {
         int start = 1, end = 1;
         DefaultListModel<String> tempModel = new DefaultListModel<>();
