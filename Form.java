@@ -1,3 +1,4 @@
+import javax.swing.*;
 public class Form{
     public String[] formSymbol;
     public String name, category, type1, type2, 

@@ -37,16 +37,18 @@ public class Pokemon{
         if(dexNumber[0] <= 151) kanto.put(dexNumber[0], this);
         for(int i=1; i<dexOfDex.length; i++) dexOfDex[i].put(dexNumber[i-1], this);
     }
-    public void getDexNumbers(){
+    public void getDebug(){
         String[] dexString = {"RBY/FRLG","Lets Go","GSC", "RSE", "DP", "Platinum", "HGSS", "BW", "B2W2", "KalosCentral", "KalosCoastal", "KalosMountain", "ORAS", "Alola", "Melemele", "Akala", "Ula'Ula", "Poni", "Ultra Alola", "Ultra Melemele", "Ultra Akala", "Ultra Ula'Ula", "Ultra Poni", "Galar", "Isle of Armor", "Crown Tundra", "Hisui", "Paldea", "Teal Mask", "Indigo Disk"};
-        System.out.print("National" + ": " + national);
+        System.out.print("Dex Numbers\nNational: " + national);
         for(int i=0; i<dexOfDex.length; i++) for(int j : dexOfDex[i].keySet()) {
             if(dexOfDex[i].get(j).equals(this)){
                 System.out.print(", " + dexString[i] + ": " + j);
                 break;
             }
         }
-        System.out.println();
+        System.out.println("\nForms:");
+        for(int i = 0; i < form.size(); i++) form.get(i).getStats();
+        System.out.println("-----");
     }
 
     //Get image from Serebii website
@@ -154,6 +156,19 @@ public class Pokemon{
     }
     public static ImageIcon makeImage(int region, int dlc, int selected, String formSymbol, boolean shiny){
         return getPokemon(region, dlc, selected).makeImage("", shiny);
+    }
+
+    public void getInfo(int selected, JLabel[] info){
+        info[0].setText(form.get(selected).name);
+        info[1].setText(form.get(selected).category + " Pokémon");
+        info[2].setText(form.get(selected).getBaseStats());
+        info[3].setText(form.get(selected).getAbilities());
+        info[4].setText("Egg Cycles: " + form.get(selected).eggCycles);
+        info[5].setText("Growth Rate: " + form.get(selected).growthRate);
+        info[6].setText("Base Friendship: " + form.get(selected).baseFriendship);
+        info[7].setText("Base EXP: " + form.get(selected).baseExp);
+        info[8].setText("Male Percent: " + form.get(selected).maleRatio + "%");
+        info[9].setText("Height: " + form.get(selected).height + ", Weight: " + form.get(selected).weight);
     }
     // Creates Dex
     public static void Dex(){
