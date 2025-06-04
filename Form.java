@@ -41,22 +41,18 @@ public class Form{
         this.spd = Integer.parseInt(text[24]);
     }
     public void getStats(){
-        String[] strings = {name, formSymbol[0], category, type1, type2, ability1, ability2, abilityH, growthRate, egg1, egg2};
-        int[] integers = {national, catchRate, baseFriendship, baseExp, eggCycles, hp, atk, def, spAtk, spDef, spd, caughtSeen};
-        double[] doubles = {height, weight, maleRatio};
-        for(String i : strings) System.out.print(i + ", ");
+        for(String i : new String[]{name, formSymbol[0], category, type1, type2, ability1, ability2, abilityH, growthRate, egg1, egg2})
+            System.out.print(i + ", ");
         System.out.println();
-        for(int i : integers) System.out.print(i + ", ");
-        System.out.println();
-        for(double i : doubles) System.out.print(i + ", ");
+        for(double i : new double[]{national, catchRate, baseFriendship, baseExp, eggCycles, hp, atk, def, spAtk, spDef, spd, caughtSeen, height, weight, maleRatio})
+            System.out.print(i + ", ");
         System.out.println();
     }
-    public String getBaseStats(){return "HP: " + hp + ", Atk: " + atk + ", Def: " + def + ", Sp.Atk: " + spAtk + ", Sp.Def: " + spDef + ", Spd: " + spd;}
+    public String getBaseStats(){
+        return "HP: " + hp + ", Atk: " + atk + ", Def: " + def + ", Sp.Atk: " + spAtk + ", Sp.Def: " + spDef + ", Spd: " + spd;
+    }
     public String getAbilities(){
-        String temp = ability1;
-        if(!ability2.equals("")) temp += ", " + ability2;
-        if(!abilityH.equals("")) temp += ", Hidden: " + abilityH;
-        return temp;
+        return ability1 + (!ability2.equals("") ? (", " + ability2) : "") + (!abilityH.equals("") ? ", Hidden: " + abilityH : "");
     }
     public int statCalcualtor(String stats, int level, int iv, int ev, String nature){
         int stat = 0;

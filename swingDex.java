@@ -72,7 +72,7 @@ public class swingDex extends JFrame{
         });
         pokeList.addListSelectionListener((ListSelectionEvent e) -> {
             image.setText(Pokemon.makeName(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex()));
-            image.setIcon(Pokemon.makeImage(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex(), "", true));
+            image.setIcon(Pokemon.makeImage(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex(), "", false));
         });
         idInput.addActionListener((ActionEvent e) -> {
             Pokemon input;
@@ -90,7 +90,7 @@ public class swingDex extends JFrame{
 
     // Window to Display Pokemon
     public swingDex(Pokemon pokemon){
-        info = new JLabel[5];
+        info = new JLabel[10];
         setTitle(pokemon.name);
         setSize(700, 350);
         setLayout(new GridBagLayout());
@@ -107,9 +107,13 @@ public class swingDex extends JFrame{
         add(info[2] = new JLabel(pokemon.form.get(0).getAbilities()), constraint(1, 3, 0));
         add(info[3] = new JLabel("Egg Cycles: " + pokemon.form.get(0).eggCycles), constraint(1, 4, 0));
         add(info[4] = new JLabel("Growth Rate: " + pokemon.form.get(0).growthRate), constraint(1, 5, 0));
+        add(info[5] = new JLabel("Base Friendship: " + pokemon.form.get(0).baseFriendship), constraint(1, 6, 0));
+        add(info[6] = new JLabel("Base EXP: " + pokemon.form.get(0).baseExp), constraint(1, 7, 0));
+        add(info[7] = new JLabel("Male Percent: " + pokemon.form.get(0).maleRatio + "%"), constraint(1, 8, 0));
+        add(info[8] = new JLabel("Height: " + pokemon.form.get(0).height + ", Weight: " + pokemon.form.get(0).weight), constraint(1, 9, 0));
 
         // Caught and Seen Buttons
-        add(infoPanel = new JPanel(new FlowLayout()), constraint(0, 6, 0));
+        add(infoPanel = new JPanel(new FlowLayout()), constraint(0, 10, 0));
         infoPanel.add(caught = new JButton("Caught"));
         infoPanel.add(seen = new JButton("Seen"));
         setVisible(true);
@@ -127,6 +131,10 @@ public class swingDex extends JFrame{
             info[2].setText(pokemon.form.get(baseForm).getAbilities());
             info[3].setText("Egg Cycles: " + pokemon.form.get(baseForm).eggCycles);
             info[4].setText("Growth Rate: " + pokemon.form.get(baseForm).growthRate);
+            info[5].setText("Base Friendship: " + pokemon.form.get(baseForm).baseFriendship);
+            info[6].setText("Base EXP: " + pokemon.form.get(baseForm).baseExp);
+            info[7].setText("Male Percent: " + pokemon.form.get(baseForm).maleRatio + "%");
+            info[8].setText("Height: " + pokemon.form.get(baseForm).height + ", Weight: " + pokemon.form.get(baseForm).weight);
             visualForm = 0;
         });
         seen.addActionListener((ActionEvent e) -> {pokemon.form.get(baseForm).caughtSeen = 1;});
@@ -144,7 +152,7 @@ public class swingDex extends JFrame{
                 constraints.fill = 1;
                 constraints.insets = new Insets(20, 20, 20, 20);
             }
-            case 2 -> constraints.gridheight = 5;
+            case 2 -> constraints.gridheight = 9;
         }
         return constraints;
     }
