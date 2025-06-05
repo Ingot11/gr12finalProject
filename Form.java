@@ -1,3 +1,4 @@
+import javax.swing.*;
 public class Form{
     public String[] formSymbol;
     public String name, category, type1, type2, 
@@ -9,7 +10,7 @@ public class Form{
     public Form(String[] text){
         if(text.length != 25) return;
         this.name = text[1];
-        this.formSymbol = text[2].split("# ");
+        this.formSymbol = text[2].split("~");
         this.category = text[3];
         this.type1 = text[4];
         this.type2 = text[5];
@@ -40,7 +41,9 @@ public class Form{
         this.spDef = Integer.parseInt(text[23]);
         this.spd = Integer.parseInt(text[24]);
     }
-    public void getStats(){
+
+    // Debug Output
+    public void getDebug(){
         for(String i : new String[]{name, formSymbol[0], category, type1, type2, ability1, ability2, abilityH, growthRate, egg1, egg2})
             System.out.print(i + ", ");
         System.out.println();
@@ -48,11 +51,19 @@ public class Form{
             System.out.print(i + ", ");
         System.out.println();
     }
-    public String getBaseStats(){
-        return "HP: " + hp + ", Atk: " + atk + ", Def: " + def + ", Sp.Atk: " + spAtk + ", Sp.Def: " + spDef + ", Spd: " + spd;
-    }
-    public String getAbilities(){
-        return ability1 + (!ability2.equals("") ? (", " + ability2) : "") + (!abilityH.equals("") ? ", Hidden: " + abilityH : "");
+
+    // Update Labels
+    public void updateLabels(JLabel[] info){
+        info[0].setText(name);
+        info[1].setText(category + " Pokémon");
+        info[2].setText("HP: " + hp + ", Atk: " + atk + ", Def: " + def + ", Sp.Atk: " + spAtk + ", Sp.Def: " + spDef + ", Spd: " + spd);
+        info[3].setText(ability1 + (!ability2.equals("") ? (", " + ability2) : "") + (!abilityH.equals("") ? ", Hidden: " + abilityH : ""));
+        info[4].setText("Egg Cycles: " + eggCycles);
+        info[5].setText("Growth Rate: " + growthRate);
+        info[6].setText("Base Friendship: " + baseFriendship);
+        info[7].setText("Base EXP: " + baseExp);
+        info[8].setText("Male Percent: " + maleRatio + "%");
+        info[9].setText("Height: " + height + ", Weight: " + weight);
     }
     public int statCalcualtor(String stats, int level, int iv, int ev, String nature){
         int stat = 0;

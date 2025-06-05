@@ -37,15 +37,16 @@ public class swingDex extends JFrame{
         selectorPanel.add(dlc = new JComboBox<>(new String[]{"National"}));
 
         // Pokemon Image / More Info Button
-        add(image = new JLabel(Pokemon.nationalDex[0].name, Pokemon.nationalDex[0].makeImage("", false), 0), constraint(0, 1, 0));
+        add(image = new JLabel(), constraint(0, 1, 0));
         add(select = new JButton("More Info"), constraint(0, 2, 0));
+        Pokemon.updateLabels(image, 0, 0, 0, false);
 
         // Scroll Dex
         add(new JScrollPane(pokeList = new JList<>(Pokemon.getDex(0, 0))), constraint(1, 1, 1));
         setVisible(true);
 
         // Action Listeners
-        gen.addActionListener(_ -> {
+        gen.addActionListener(a -> {
             // Choose Generation
             String[][] generation = {{"National"}, /*National*/
             {"Regional", "Red/Blue/Yellow/FireRed/LeafGreen", "Let's Go"}, /*Kanto*/
@@ -54,7 +55,8 @@ public class swingDex extends JFrame{
             {"Regional", "Diamond/Pearl", "Platinum", "Legends: Arceus"}, /*Sinnoh + Hisui*/
             {"Regional", "Black/White", "Black 2/White 2"}, /*Unova*/
             {"Regional", "KalosCentral", "KalosCoastal", "KalosMountain"}, /*Kalos*/
-            {"Regional", "Sun/Moon", "Melemele", "Akala", "Ula'Ula", "Poni", "Ultra Sun/Ultra Moon", "Ultra Melemele", "Ultra Akala", "Ultra Ula'Ula", "Ultra Poni"}, /*Alola*/
+            {"Regional", "Sun/Moon", "Melemele", "Akala", "Ula'Ula", "Poni", /*Alola*/
+            "Ultra Sun/Ultra Moon", "Ultra Melemele", "Ultra Akala", "Ultra Ula'Ula", "Ultra Poni"}, /*Ultra Alola*/
             {"Regional", "Sword/Shield", "Isle of Armor", "Crown Tundra"}, /*Galar*/
             {"Regional", "Scarlet/Violet", "Teal Mask", "Indigo Disk"}}; /*Paldea*/
             if(gen.getSelectedIndex() > generation.length) gen.setSelectedIndex(0);
@@ -62,39 +64,40 @@ public class swingDex extends JFrame{
             dlc.setSelectedIndex(0);
             revalidate(); // Resets frame
         });
-        dlc.addActionListener(_ -> {
+        dlc.addActionListener(a -> {
             pokeList.setModel(Pokemon.getDex(gen.getSelectedIndex(), dlc.getSelectedIndex()));
             pokeList.setSelectedIndex(0);
         });
-        pokeList.addListSelectionListener(_ -> {
-            Pokemon.updateLabels(image, gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex(), "", false);
+        pokeList.addListSelectionListener(a -> {
+            Pokemon.updateLabels(image, gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex(), false);
         });
-        idInput.addActionListener(_ -> {
+        idInput.addActionListener(a -> {
             Pokemon input;
             try{input = Pokemon.nationalDex[Integer.parseInt(idInput.getText()) - 1];}
-            catch(NumberFormatException | ArrayIndexOutOfBoundsException a){input = Pokemon.nationalDex[0];}
+            catch(NumberFormatException | ArrayIndexOutOfBoundsException e){input = Pokemon.nationalDex[0];}
             image.setIcon(input.makeImage("", false));
             image.setText(input.name);
             input.getDebug(); // Debug
         });
-        select.addActionListener(_ -> {swingDex x = new swingDex(Pokemon.getPokemon(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex()));});
+        select.addActionListener(a -> {
+            swingDex x = new swingDex(Pokemon.getPokemon(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex()));
+        });
     }
 
     // Window to Display Pokemon
-    public swingDex(Pokemon pokemon){
+    public swingDex(Pokemon pkmn){
         info = new JLabel[10];
-        setTitle(pokemon.name);
+        setTitle(pkmn.name);
         setSize(700, 350);
         setLayout(new GridBagLayout());
         setMinimumSize(new Dimension(600, 300));
 
         // Base Information
-        visualForm = 0;
-        baseForm = 0;
+        visualForm = 0; baseForm = 0;
         add(select = new JButton("Change Form"),constraint(0, 0, 0));
-        add(image = new JLabel(pokemon.makeImage(pokemon.form.get(0).formSymbol[0], false)), constraint(0, 1, 2));
+        add(image = new JLabel(pkmn.makeImage(pkmn.form.get(0).formSymbol[0], false)), constraint(0, 1, 2));
         for(int i=0; i<info.length; i++) add(info[i] = new JLabel(), constraint(1, i, 0));
-        pokemon.updateLabels(info, 0);
+        pkmn.form.get(0).updateLabels(info);
         // Caught and Seen Buttons
         add(infoPanel = new JPanel(new FlowLayout()), constraint(0, 10, 0));
         infoPanel.add(caught = new JButton("Caught"));
@@ -102,17 +105,17 @@ public class swingDex extends JFrame{
         setVisible(true);
 
         // Action Listeners
-        select.addActionListener(_ -> {
-            if(++visualForm < pokemon.form.get(baseForm).formSymbol.length){
-                image.setIcon(pokemon.makeImage(pokemon.form.get(baseForm).formSymbol[visualForm], false));
+        select.addActionListener(a -> {
+            if(++visualForm < pkmn.form.get(baseForm).formSymbol.length){
+                image.setIcon(pkmn.makeImage(pkmn.form.get(baseForm).formSymbol[visualForm], false));
                 return;
-            }if(++baseForm >= pokemon.form.size()) baseForm = 0;
-            image.setIcon(pokemon.makeImage(pokemon.form.get(baseForm).formSymbol[0], false));
-            pokemon.updateLabels(info, baseForm);
+            }if(++baseForm >= pkmn.form.size()) baseForm = 0;
+            image.setIcon(pkmn.makeImage(pkmn.form.get(baseForm).formSymbol[0], false));
+            pkmn.form.get(baseForm).updateLabels(info);
             visualForm = 0;
         });
-        seen.addActionListener(_ -> {pokemon.form.get(baseForm).caughtSeen = 1;});
-        caught.addActionListener(_ -> {pokemon.form.get(baseForm).caughtSeen = 2;});
+        seen.addActionListener(a -> {pkmn.form.get(baseForm).caughtSeen = 1;});
+        caught.addActionListener(a -> {pkmn.form.get(baseForm).caughtSeen = 2;});
     }
 
     // Set Constraints

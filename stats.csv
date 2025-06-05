@@ -32,7 +32,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 23, Ekans, , Snake, Poison, , Intimidate, Shed Skin, Unnerve, 2, 6.9, 255, 70, 58, 50, 20, Medium Fast, Dragon, Field, 35, 60, 44, 40, 54, 55
 24, Arbok, , Cobra, Poison, , Intimidate, Shed Skin, Unnerve, 3.5, 65, 90, 70, 157, 50, 20, Medium Fast, Dragon, Field, 60, 95, 69, 65, 79, 80
 25, Pikachu, , Mouse, Electric, , Static, , Lightning Rod, 0.4, 6, 190, 70, 112, 50, 10, Medium Fast, Fairy, Field, 35, 55, 40, 50, 50, 90
-25, Cap Pikachu, o# h# s# u# k# a# p# w, Mouse, Electric, , Static, , Lightning Rod, 0.4, 6, 190, 70, 112, 50, 10, Medium Fast, Fairy, Field, 35, 55, 40, 50, 50, 90
+25, Cap Pikachu, o~h~s~u~k~a~p~w, Mouse, Electric, , Static, , Lightning Rod, 0.4, 6, 190, 70, 112, 50, 10, Medium Fast, Fairy, Field, 35, 55, 40, 50, 50, 90
 25, Partner Pikachu, , Mouse, Electric, , Static, , Lightning Rod, 0.4, 6, 190, 70, 112, 50, 10, Medium Fast, Fairy, Field, 45, 80, 50, 75, 60, 120
 26, Raichu, , Mouse, Electric, , Static, , Lightning Rod, 0.8, 30, 75, 70, 218, 50, 10, Medium Fast, Fairy, Field, 60, 90, 55, 90, 80, 110
 26, Alolan Raichu, a, Mouse, Electric, Psychic, Surge Surfer, , , 0.7, 21, 75, 70, 218, 50, 10, Medium Fast, Fairy, Field, 60, 85, 50, 95, 85, 110
@@ -778,7 +778,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 647, Keldeo Resolute Forme, r, Colt, Water, Fighting, Justified, , , 1.4, 48.5, 3, 35, 261, , 80, Slow, Undiscovered, , 91, 72, 90, 129, 90, 108
 648, Meloetta Aria Forme, , Melody, Normal, Psychic, Serene Grace, , , 0.6, 6.5, 3, 100, 270, , 120, Slow, Undiscovered, , 100, 77, 77, 128, 128, 90
 648, Meloetta Pirouette Forme, p, Melody, Normal, Fighting, Serene Grace, , , 0.6, 6.5, 3, 100, 270, , 120, Slow, Undiscovered, , 100, 128, 90, 77, 77, 128
-649, Genesect, # f# i# w# e, Paleozoic, Bug, Steel, Download, , , 1.5, 82.5, 3, 0, 270, , 120, Slow, Undiscovered, , 71, 120, 95, 120, 95, 99
+649, Genesect, ~f~i~w~e, Paleozoic, Bug, Steel, Download, , , 1.5, 82.5, 3, 0, 270, , 120, Slow, Undiscovered, , 71, 120, 95, 120, 95, 99
 650, Chespin, , Spiny Nut, Grass, , Overgrow, , Bulletproof, 0.4, 9, 45, 70, 63, 87.5, 20, Medium Slow, Field, , 56, 61, 65, 48, 45, 38
 651, Quilladin, , Spiny Armor, Grass, , Overgrow, , Bulletproof, 0.7, 29, 45, 70, 142, 87.5, 20, Medium Slow, Field, , 61, 78, 95, 56, 58, 57
 652, Chesnaught, , Spiny Armor, Grass, Fighting, Overgrow, , Bulletproof, 1.6, 90, 45, 70, 239, 87.5, 20, Medium Slow, Field, , 88, 107, 122, 74, 75, 64
@@ -806,7 +806,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 673, Gogoat, , Mount, Grass, , Sap Sipper, , Grass Pelt, 1.7, 91, 45, 70, 186, 50, 20, Medium Fast, Field, , 123, 100, 62, 97, 81, 68
 674, Pancham, , Playful, Fighting, , Iron Fist, Mold Breaker, Scrappy, 0.6, 8, 220, 70, 70, 50, 25, Medium Fast, Field, Human-Like, 67, 82, 62, 46, 48, 43
 675, Pangoro, , Daunting, Fighting, Dark, Iron Fist, Mold Breaker, Scrappy, 2.1, 136, 65, 70, 173, 50, 25, Medium Fast, Field, Human-Like, 95, 124, 78, 69, 71, 58
-676, Furfrou, # h# s# d# de# m# da# l# k# p, Poodle, Normal, , Fur Coat, , , 1.2, 28, 160, 70, 165, 50, 20, Medium Fast, Field, , 75, 80, 60, 65, 90, 102
+676, Furfrou, ~h~s~d~de~m~da~l~k~p, Poodle, Normal, , Fur Coat, , , 1.2, 28, 160, 70, 165, 50, 20, Medium Fast, Field, , 75, 80, 60, 65, 90, 102
 677, Espurr, , Restraint, Psychic, , Keen Eye, Infiltrator, Own Tempo, 0.3, 3.5, 190, 70, 71, 50, 20, Medium Fast, Field, , 62, 48, 54, 63, 60, 68
 678, Meowstic Male, , Constraint, Psychic, , Keen Eye, Infiltrator, Prankster, 0.6, 8.5, 75, 70, 163, 50, 20, Medium Fast, Field, , 74, 48, 76, 83, 81, 104
 678, Meowstic Female, f, Constraint, Psychic, , Keen Eye, Infiltrator, Competitive, 0.6, 8.5, 75, 70, 163, 50, 20, Medium Fast, Field, , 74, 48, 76, 83, 81, 104
@@ -927,7 +927,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 772, Type: Null, , Synthetic, Normal, , Battle Armor, , , 1.9, 120.5, 3, 0, 107, , 120, Slow, Undiscovered, , 95, 95, 95, 95, 95, 59
 773, Silvally, , Synthetic, Normal, , RKS System, , , 2.3, 100.5, 3, 0, 257, , 120, Slow, Undiscovered, , 95, 95, 95, 95, 95, 95
 774, Minior Meteor Form, , Meteor, Rock, Flying, Shields Down, , , 0.3, 40, 30, 70, 154, , 25, Medium Slow, Mineral, , 60, 60, 100, 60, 100, 60
-774, Minior Core Form, b# g# i# o# r# v# y, Meteor, Rock, Flying, Shields Down, , , 0.3, 0.3, 30, 70, 175, , 25, Medium Slow, Mineral, , 60, 100, 60, 100, 60, 120
+774, Minior Core Form, b~g~i~o~r~v~y, Meteor, Rock, Flying, Shields Down, , , 0.3, 0.3, 30, 70, 175, , 25, Medium Slow, Mineral, , 60, 100, 60, 100, 60, 120
 775, Komala, , Drowsing, Normal, , Comatose, , , 0.4, 19.9, 45, 70, 168, 50, 20, Slow, Field, , 65, 115, 65, 75, 95, 65
 776, Turtonator, , Blast Turtle, Fire, Dragon, Shell Armor, , , 2, 212, 70, 70, 170, 50, 20, Medium Fast, Dragon, Monster, 60, 78, 135, 91, 85, 36
 777, Togedemaru, , Roly-Poly, Electric, Steel, Iron Barbs, Lightning Rod, Sturdy, 0.3, 3.3, 180, 70, 152, 50, 10, Medium Fast, Fairy, Field, 65, 98, 63, 40, 73, 96
