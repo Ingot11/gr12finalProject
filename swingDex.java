@@ -86,7 +86,7 @@ public class swingDex extends JFrame{
 
     // Window to Display Pokémon
     public swingDex(Pokemon pkmn){
-        info = new JLabel[10];
+        info = new JLabel[11];
         setTitle(pkmn.name);
         setSize(700, 350);
         setLayout(new GridBagLayout());
