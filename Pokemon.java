@@ -33,7 +33,9 @@ public class Pokemon{
     }
     
     // Constructor from file
-    public void inputDex(int[] dexNumber){
+    public void inputDex(String[] lines){
+        int[] dexNumber = new int[31];
+        for(int i=2; i<dexNumber.length; i++) dexNumber[i-2] = Integer.parseInt(lines[i]);
         if(dexNumber[0] <= 151) kanto.put(dexNumber[0], this);
         for(int i=1; i<dexOfDex.length; i++) dexOfDex[i].put(dexNumber[i-1], this);
     }
@@ -64,7 +66,7 @@ public class Pokemon{
         return null;
     }
 
-    // Set Name and Icon for Pokemon List
+    // Set Name and Icon for Pokémon List
     public static void updateLabels(JLabel label, int region, int dlc, int selected, boolean shiny){
         Pokemon temp = getPokemon(region, dlc, selected);
         label.setText(temp.name);
@@ -89,14 +91,11 @@ public class Pokemon{
             String line;
             buffReadDex.readLine();
             while ((line = buffReadDex.readLine()) != null) {
-                // Initialize the Pokemon
+                // Initialize the Pokémon
                 String[] lines = line.split(", ");
                 Pokemon temp = new Pokemon(lines[0], Integer.parseInt(lines[1]));
                 nationalDex[Integer.parseInt(lines[1])-1] = temp;
-                // Input the dex number
-                int[] dexNumber = new int[31];
-                for(int i=2; i<dexNumber.length; i++) dexNumber[i-2] = Integer.parseInt(lines[i]);
-                temp.inputDex(dexNumber);
+                temp.inputDex(lines); // Input the dex number
             }
             for(HashMap<Integer, Pokemon> i : dexOfDex) i.remove(-1);
             buffReadStats.readLine();
@@ -111,7 +110,7 @@ public class Pokemon{
         catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}
     }
 
-    // Gets Pokemon from dex
+    // Gets Pokémon from dex
     public static Pokemon getPokemon(int region, int dlc, int selected){
         Pokemon temp = nationalDex[0];
         int x = 0; selected++;
@@ -317,7 +316,7 @@ public class Pokemon{
                 return tempModel;
             }
         }
-        if(dlc == 0){
+        if(dlc == 0){ // Gets the dex with a starting and end point
             for(Pokemon p : nationalDex) {
                 if(p.national < start || p.national > end) continue;
                 tempDex.put(p.national - start + 1, p);

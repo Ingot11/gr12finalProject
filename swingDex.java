@@ -84,7 +84,7 @@ public class swingDex extends JFrame{
         });
     }
 
-    // Window to Display Pokemon
+    // Window to Display Pokémon
     public swingDex(Pokemon pkmn){
         info = new JLabel[10];
         setTitle(pkmn.name);
@@ -114,8 +114,14 @@ public class swingDex extends JFrame{
             pkmn.form.get(baseForm).updateLabels(info);
             visualForm = 0;
         });
-        seen.addActionListener(a -> {pkmn.form.get(baseForm).caughtSeen = 1;});
-        caught.addActionListener(a -> {pkmn.form.get(baseForm).caughtSeen = 2;});
+        seen.addActionListener(a -> {
+            pkmn.form.get(baseForm).caughtSeen = 1;
+            pkmn.form.get(baseForm).updateLabels(info);
+        });
+        caught.addActionListener(a -> {
+            pkmn.form.get(baseForm).caughtSeen = 2;
+            pkmn.form.get(baseForm).updateLabels(info);
+        });
     }
 
     // Set Constraints
@@ -124,11 +130,11 @@ public class swingDex extends JFrame{
         constraints.weightx = 0.5; constraints.weighty = 0.5;
         constraints.gridx = x; constraints.gridy = y;
         switch(type){
-            case 1 -> { // Pokemon Scroll List
+            case 1 -> { // Pokémon Scroll List
                 constraints.gridheight = 2;
                 constraints.fill = 1;
                 constraints.insets = new Insets(20, 20, 20, 20);
-            }
+            } // Pokémon Image
             case 2 -> constraints.gridheight = 9;
         }
         return constraints;

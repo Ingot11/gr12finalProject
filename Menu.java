@@ -6,9 +6,9 @@ import javax.swing.event.*;
 public class Menu extends JFrame {
     private JPanel panel1;
     private JLabel titleLabel, regionLabel, gameLabel, image;
-    private JComboBox regionSelect, gameSelect;
+    private JComboBox<String> regionSelect, gameSelect;
     private JScrollBar scrollBar;
-    private JList dexList;
+    private JList<String> dexList;
     private JLabel pkmnName;
 
     public static void main(String[] args) {
@@ -25,7 +25,7 @@ public class Menu extends JFrame {
         setVisible(true);
 
         // Action Listeners
-        regionSelect.addActionListener((ActionEvent a) -> {
+        regionSelect.addActionListener(a -> {
             String[][] generation = {{"National"},
                 {"Regional", "Red/Blue/Yellow/FireRed/LeafGreen", "Let's Go"}, /*Kanto*/
                 {"Regional", "Gold/Silver/Crystal", "HeartGold/SoulSilver"}, /*Johto*/
@@ -42,8 +42,8 @@ public class Menu extends JFrame {
             revalidate(); // Resets frame
         });
         
-        gameSelect.addActionListener((ActionEvent a) -> {dexList.setModel(Pokemon.getDex(regionSelect.getSelectedIndex(), gameSelect.getSelectedIndex()));});
-        dexList.addListSelectionListener((ListSelectionEvent a) -> {
+        gameSelect.addActionListener(a -> {dexList.setModel(Pokemon.getDex(regionSelect.getSelectedIndex(), gameSelect.getSelectedIndex()));});
+        dexList.addListSelectionListener(a -> {
             //pkmnName.setText(Pokemon.makeName(regionSelect.getSelectedIndex(), gameSelect.getSelectedIndex(), dexList.getSelectedIndex()));
             //image.setIcon(Pokemon.makeImage(regionSelect.getSelectedIndex(), gameSelect.getSelectedIndex(), dexList.getSelectedIndex(), "", false));
         });
