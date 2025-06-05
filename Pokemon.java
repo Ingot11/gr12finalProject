@@ -24,18 +24,15 @@ public class Pokemon{
     // Stats and Characteristics
     public String name;
     public ArrayList<Form> form;
+    public Pokemon(){} // Pokémon Constructor
 
-    // Pokemon Constructor
-    public Pokemon(String name, int national){
-        this.name = name;
-        this.national = national;
-        this.form = new ArrayList<>();
-    }
-    
     // Constructor from file
     public void inputDex(String[] lines){
+        this.name = lines[0];
+        this.form = new ArrayList<>();
         int[] dexNumber = new int[31];
         for(int i=2; i<dexNumber.length; i++) dexNumber[i-2] = Integer.parseInt(lines[i]);
+        this.national = Integer.parseInt(lines[1]);
         if(dexNumber[0] <= 151) kanto.put(dexNumber[0], this);
         for(int i=1; i<dexOfDex.length; i++) dexOfDex[i].put(dexNumber[i-1], this);
     }
@@ -47,8 +44,7 @@ public class Pokemon{
         for(int i=0; i<dexOfDex.length; i++) for(int j : dexOfDex[i].keySet()) if(dexOfDex[i].get(j).equals(this)){
             System.out.print(", " + dexString[i] + ": " + j);
             break;
-        }
-        System.out.println("\nForms:");
+        }System.out.println("\nForms:");
         for(int i = 0; i < form.size(); i++) form.get(i).getDebug();
         System.out.println("-----");
     }
@@ -56,10 +52,9 @@ public class Pokemon{
     //Get image from Serebii website
     public ImageIcon makeImage(String formSymbol, boolean shiny){
         String dexString = (national <= 0 || national > 1025) ? "001" : (national > 99) ? "" + national : (national > 9) ? "0" + national : (national > 0) ? "00" + national : "001",
-        linkText = shiny ? "Shiny/SV/new/" : "scarletviolet/pokemon/new/";
-        if(!formSymbol.equals("")) formSymbol = "-" + formSymbol;
+        linkText = "https://serebii.net/" + (shiny ? "Shiny/SV/new/" : "scarletviolet/pokemon/new/") + dexString + (formSymbol.equals("") ? "" : "-") + formSymbol + ".png";
         try {
-            BufferedImage image = ImageIO.read(new URI("https://serebii.net/" + linkText + dexString + formSymbol + ".png").toURL());
+            BufferedImage image = ImageIO.read(new URI(linkText).toURL());
             return new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
         }catch (MalformedURLException | URISyntaxException e) {}
         catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}
@@ -78,6 +73,7 @@ public class Pokemon{
     public static void Dex(){
         // Initialize Dexs
         nationalDex = new Pokemon[1025];
+        for(int i=0; i<nationalDex.length; i++) nationalDex[i] = new Pokemon();
         dexOfDex = new HashMap[]{kanto = new HashMap<>(), letsGo = new HashMap<>(), johto = new HashMap<>(), hoenn = new HashMap<>(),
             sinnoh = new HashMap<>(), platinum = new HashMap<>(), hgss = new HashMap<>(), unova = new HashMap<>(), b2w2 = new HashMap<>(),
             kalosCentral = new HashMap<>(), kalosCoastal = new HashMap<>(), kalosMountain = new HashMap<>(), oras = new HashMap<>(),
@@ -93,236 +89,90 @@ public class Pokemon{
             while ((line = buffReadDex.readLine()) != null) {
                 // Initialize the Pokémon
                 String[] lines = line.split(", ");
-                Pokemon temp = new Pokemon(lines[0], Integer.parseInt(lines[1]));
-                nationalDex[Integer.parseInt(lines[1])-1] = temp;
-                temp.inputDex(lines); // Input the dex number
+                nationalDex[Integer.parseInt(lines[1])-1].inputDex(lines); // Input the info
             }
             for(HashMap<Integer, Pokemon> i : dexOfDex) i.remove(-1);
             buffReadStats.readLine();
             while ((line = buffReadStats.readLine()) != null) {
+                // Initialize each form of Pokémon
                 String[] lines = line.split(", ");
                 nationalDex[Integer.parseInt(lines[0])-1].form.add(new Form(lines));
             }
-            buffReadDex.close();
-            buffReadStats.close();
         }
-        catch (FileNotFoundException | NumberFormatException e) {System.out.println("File not found or Number Format Exception");}
+        catch (FileNotFoundException | NumberFormatException e) {System.out.println("File not found/Number Format Exception");}
         catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}
     }
 
     // Gets Pokémon from dex
     public static Pokemon getPokemon(int region, int dlc, int selected){
-        Pokemon temp = nationalDex[0];
-        int x = 0; selected++;
-        switch(region){
-            case 0 -> x = 0;
-            case 1 -> { // Kanto
-                switch(dlc){
-                    case 0 -> x = 0;
-                    case 1 -> temp = kanto.get(selected);
-                    case 2 -> temp = letsGo.get(selected);
-                }
-            }
-            case 2 -> { // Johto
-                switch(dlc){
-                    case 0 -> x = 151;
-                    case 1 -> temp = johto.get(selected);
-                    case 2 -> temp = hgss.get(selected);
-                }
-            }
-            case 3 -> { // Hoenn
-                switch(dlc){
-                    case 0 -> x = 251;
-                    case 1 -> temp = hoenn.get(selected);
-                    case 2 -> temp = oras.get(selected);
-                }
-            }
-            case 4 -> {
-                switch(dlc){ // Sinnoh + Hisui
-                    case 0 -> x = 386;
-                    case 1 -> temp = sinnoh.get(selected);
-                    case 2 -> temp = platinum.get(selected);
-                    case 3 -> temp = legendsArceus.get(selected);
-                }
-            }
-            case 5 -> { // Unova
-                switch(dlc){
-                    case 0 -> x = 493;
-                    case 1 -> temp = unova.get(selected-1);
-                    case 2 -> temp = b2w2.get(selected-1);
-                }
-            }
-            case 6 -> { // Kalos
-                switch(dlc){
-                    case 0 -> x = 649;
-                    case 1 -> temp = kalosCentral.get(selected);
-                    case 2 -> temp = kalosCoastal.get(selected);
-                    case 3 -> temp = kalosMountain.get(selected);
-                }
-            }
-            case 7 -> { // Alola
-                switch(dlc){
-                    case 0 -> x = 721;
-                    case 1 -> temp = alola.get(selected);
-                    case 2 -> temp = melemele.get(selected);
-                    case 3 -> temp = akala.get(selected);
-                    case 4 -> temp = ulaula.get(selected);
-                    case 5 -> temp = poni.get(selected);
-                    case 6 -> temp = ultra.get(selected);
-                    case 7 -> temp = ultraMelemele.get(selected);
-                    case 8 -> temp = ultraAkala.get(selected);
-                    case 9 -> temp = ultraUlaula.get(selected);
-                    case 10 -> temp = ultraPoni.get(selected);
-                }
-            }
-            case 8 -> { // Galar
-                switch(dlc){
-                    case 0 -> x = 809;
-                    case 1 -> temp = galar.get(selected);
-                    case 2 -> temp = isleOfArmor.get(selected);
-                    case 3 -> temp = crownTundra.get(selected);
-                }
-            }
-            case 9 -> { // Paldea
-                switch(dlc){
-                    case 0 -> x = 905;
-                    case 1 -> temp = paldea.get(selected);
-                    case 2 -> temp = tealMask.get(selected);
-                    case 3 -> temp = indigoDisk.get(selected);
-                }                
-            }
-        }
-        try{if(dlc == 0) temp = nationalDex[selected + x - 1];}
-        catch(ArrayIndexOutOfBoundsException e){temp = nationalDex[0];}
-        if(temp == null) temp = nationalDex[0];
-        return temp;
+        return (getHashMap(region, dlc).get(selected + 1) == null) ? nationalDex[0] : getHashMap(region, dlc).get(selected + 1);
     }
-
-    // Gets the entire dex
+    // Puts Dex on JList
     public static DefaultListModel<String> getDex(int region, int dlc) {
-        int start = 1, end = 1;
         DefaultListModel<String> tempModel = new DefaultListModel<>();
-        HashMap<Integer, Pokemon> tempDex = new HashMap<>();
-        switch(region) {
-            case 0 -> {
-                start = 1;
-                end = 1025;
-            }
-            case 1 -> { // Kanto
-                switch(dlc) {
-                    case 0 -> {
-                        start = 1;
-                        end = 151;
-                    }
-                    case 1 -> tempDex = new HashMap<>(kanto);
-                    case 2 -> tempDex = new HashMap<>(letsGo);
-                }
-            }
-            case 2 -> { // Johto
-                switch(dlc) {
-                    case 0 -> {
-                        start = 152;
-                        end = 251;
-                    }
-                    case 1 -> tempDex = new HashMap<>(johto);
-                    case 2 -> tempDex = new HashMap<>(hgss);
-                }
-            }
-            case 3 -> { // Hoenn
-                switch(dlc) {
-                    case 0 -> {
-                        start = 252;
-                        end = 386;
-                    }
-                    case 1 -> tempDex = new HashMap<>(hoenn);
-                    case 2 -> tempDex = new HashMap<>(oras);
-                }
-            }
-            case 4 -> { // Sinnoh + Hisui
-                switch(dlc) {
-                    case 0 -> {
-                        start = 387;
-                        end = 493;
-                    }
-                    case 1 -> tempDex = new HashMap<>(sinnoh);
-                    case 2 -> tempDex = new HashMap<>(platinum);
-                    case 3 -> tempDex = new HashMap<>(legendsArceus);
-                }
-            }
-            case 5 -> { // Unova
-                switch(dlc) {
-                    case 0 -> {
-                        start = 494;
-                        end = 649;
-                    }
-                    case 1 -> tempDex = new HashMap<>(unova);
-                    case 2 -> tempDex = new HashMap<>(b2w2);
-                }
-            }
-            case 6 -> { // Kalos
-                switch(dlc) {
-                    case 0 -> {
-                        start = 650;
-                        end = 721;
-                    }
-                    case 1 -> tempDex = new HashMap<>(kalosCentral);
-                    case 2 -> tempDex = new HashMap<>(kalosCoastal);
-                    case 3 -> tempDex = new HashMap<>(kalosMountain);
-                }
-            }
-            case 7 -> { // Alola
-                switch(dlc) {
-                    case 0 -> {
-                        start = 722;
-                        end = 809;
-                    }
-                    case 1 -> tempDex = new HashMap<>(alola);
-                    case 2 -> tempDex = new HashMap<>(melemele);
-                    case 3 -> tempDex = new HashMap<>(akala);
-                    case 4 -> tempDex = new HashMap<>(ulaula);
-                    case 5 -> tempDex = new HashMap<>(poni);
-                    case 6 -> tempDex = new HashMap<>(ultra);
-                    case 7 -> tempDex = new HashMap<>(ultraMelemele);
-                    case 8 -> tempDex = new HashMap<>(ultraAkala);
-                    case 9 -> tempDex = new HashMap<>(ultraUlaula);
-                    case 10 -> tempDex = new HashMap<>(ultraPoni);
-                }
-            }
-            case 8 -> { // Galar
-                switch(dlc) {
-                    case 0 -> {
-                        start = 810;
-                        end = 905;
-                    }
-                    case 1 -> tempDex = new HashMap<>(galar);
-                    case 2 -> tempDex = new HashMap<>(isleOfArmor);
-                    case 3 -> tempDex = new HashMap<>(crownTundra);
-                }
-            }
-            case 9 -> { // Paldea
-                switch(dlc) {
-                    case 0 -> {
-                        start = 906;
-                        end = 1025;
-                    }
-                    case 1 -> tempDex = new HashMap<>(paldea);
-                    case 2 -> tempDex = new HashMap<>(tealMask);
-                    case 3 -> tempDex = new HashMap<>(indigoDisk);
-                }
-            }
-            default ->{
-                System.out.println("Error: invalid region.");
-                tempModel.addElement("-1. MissingNo.");
-                return tempModel;
-            }
-        }
-        if(dlc == 0){ // Gets the dex with a starting and end point
-            for(Pokemon p : nationalDex) {
-                if(p.national < start || p.national > end) continue;
-                tempDex.put(p.national - start + 1, p);
-            }
-        }
+        HashMap<Integer, Pokemon> tempDex = getHashMap(region, dlc);
         for (int i : tempDex.keySet()) tempModel.addElement(i + ". " + tempDex.get(i).name);
         return tempModel;
+    }
+    // Gets the entire dex
+    public static HashMap<Integer, Pokemon> getHashMap(int region, int dlc){
+        HashMap<Integer, Pokemon> tempDex = new HashMap<>();
+        int start = 1, end = 10;
+        switch(region) {
+            case 0 -> {start = 1; end = 1025;}
+            case 1 -> { switch(dlc) { // Kanto
+                case 0 -> {start = 1; end = 151;}
+                case 1 -> tempDex = new HashMap<>(kanto);
+                case 2 -> tempDex = new HashMap<>(letsGo);
+            }} case 2 -> { switch(dlc) { // Johto
+                case 0 -> {start = 152; end = 251;}
+                case 1 -> tempDex = new HashMap<>(johto);
+                case 2 -> tempDex = new HashMap<>(hgss);
+            }} case 3 -> { switch(dlc) { // Hoenn
+                case 0 -> {start = 252; end = 386;}
+                case 1 -> tempDex = new HashMap<>(hoenn);
+                case 2 -> tempDex = new HashMap<>(oras);
+            }} case 4 -> { switch(dlc) { // Sinnoh + Hisui
+                case 0 -> {start = 387; end = 493;}
+                case 1 -> tempDex = new HashMap<>(sinnoh);
+                case 2 -> tempDex = new HashMap<>(platinum);
+                case 3 -> tempDex = new HashMap<>(legendsArceus);
+            }} case 5 -> { switch(dlc) { // Unova
+                case 0 -> {start = 494; end = 649;}
+                case 1 -> tempDex = new HashMap<>(unova);
+                case 2 -> tempDex = new HashMap<>(b2w2);
+            }} case 6 -> { switch(dlc) { // Kalos
+                case 0 -> {start = 650; end = 721;}
+                case 1 -> tempDex = new HashMap<>(kalosCentral);
+                case 2 -> tempDex = new HashMap<>(kalosCoastal);
+                case 3 -> tempDex = new HashMap<>(kalosMountain);
+            }} case 7 -> { switch(dlc) { // Alola
+                case 0 -> {start = 722; end = 809;}
+                case 1 -> tempDex = new HashMap<>(alola);
+                case 2 -> tempDex = new HashMap<>(melemele);
+                case 3 -> tempDex = new HashMap<>(akala);
+                case 4 -> tempDex = new HashMap<>(ulaula);
+                case 5 -> tempDex = new HashMap<>(poni);
+                case 6 -> tempDex = new HashMap<>(ultra);
+                case 7 -> tempDex = new HashMap<>(ultraMelemele);
+                case 8 -> tempDex = new HashMap<>(ultraAkala);
+                case 9 -> tempDex = new HashMap<>(ultraUlaula);
+                case 10 -> tempDex = new HashMap<>(ultraPoni);
+            }} case 8 -> { switch(dlc) { // Galar
+                case 0 -> {start = 810; end = 905;}
+                case 1 -> tempDex = new HashMap<>(galar);
+                case 2 -> tempDex = new HashMap<>(isleOfArmor);
+                case 3 -> tempDex = new HashMap<>(crownTundra);
+            }} case 9 -> { switch(dlc) { // Paldea
+                case 0 -> {start = 906; end = 1025;}
+                case 1 -> tempDex = new HashMap<>(paldea);
+                case 2 -> tempDex = new HashMap<>(tealMask);
+                case 3 -> tempDex = new HashMap<>(indigoDisk);
+            }} default -> System.out.println("Error: invalid region.");
+        }
+        if(dlc == 0){ for(Pokemon p : nationalDex) { // Gets the dex with a starting and end point
+            if(p.national < start || p.national > end) continue;
+            tempDex.put(p.national - start + 1, p);
+        }} return tempDex;
     }
 }

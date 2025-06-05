@@ -56,14 +56,15 @@ public class Form{
     public void updateLabels(JLabel[] info){
         info[0].setText(name);
         info[1].setText(category + " Pokémon");
-        info[2].setText("HP: " + hp + ", Atk: " + atk + ", Def: " + def + ", Sp.Atk: " + spAtk + ", Sp.Def: " + spDef + ", Spd: " + spd);
-        info[3].setText(ability1 + (!ability2.equals("") ? (", " + ability2) : "") + (!abilityH.equals("") ? ", Hidden: " + abilityH : ""));
-        info[4].setText("Egg Cycles: " + eggCycles);
-        info[5].setText("Growth Rate: " + growthRate);
-        info[6].setText("Base Friendship: " + baseFriendship);
-        info[7].setText("Base EXP: " + baseExp);
-        info[8].setText("Male Percent: " + maleRatio + "%");
-        info[9].setText("Height: " + height + ", Weight: " + weight);
+        info[2].setText(type1 + (!type2.equals("") ? (", " + type2) : ""));
+        info[3].setText("HP: " + hp + ", Atk: " + atk + ", Def: " + def + ", Sp.Atk: " + spAtk + ", Sp.Def: " + spDef + ", Spd: " + spd);
+        info[4].setText(ability1 + (!ability2.equals("") ? (", " + ability2) : "") + (!abilityH.equals("") ? (", Hidden: " + abilityH) : ""));
+        info[5].setText("Egg Cycles: " + eggCycles);
+        info[6].setText("Growth Rate: " + growthRate);
+        info[7].setText("Base Friendship: " + baseFriendship);
+        info[8].setText("Base EXP: " + baseExp);
+        info[9].setText("Male Percent: " + maleRatio + "%");
+        info[10].setText("Height: " + height + ", Weight: " + weight);
     }
     public int statCalcualtor(String stats, int level, int iv, int ev, String nature){
         int stat = 0;
