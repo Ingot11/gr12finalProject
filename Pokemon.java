@@ -33,7 +33,7 @@ public class Pokemon{
         int[] dexNumber = new int[31];
         for(int i=2; i<dexNumber.length; i++) dexNumber[i-2] = Integer.parseInt(lines[i]);
         this.national = Integer.parseInt(lines[1]);
-        if(dexNumber[0] <= 151) kanto.put(dexNumber[0], this);
+        if(dexNumber[0] <= 151) dexOfDex[0].put(dexNumber[0], this);
         for(int i=1; i<dexOfDex.length; i++) dexOfDex[i].put(dexNumber[i-1], this);
     }
 
@@ -105,8 +105,10 @@ public class Pokemon{
 
     // Gets Pokémon from dex
     public static Pokemon getPokemon(int region, int dlc, int selected){
+        if(region == 5 && dlc != 0) selected--; // Accounting for Victini in Unova Dex
         return (getHashMap(region, dlc).get(selected + 1) == null) ? nationalDex[0] : getHashMap(region, dlc).get(selected + 1);
     }
+
     // Puts Dex on JList
     public static DefaultListModel<String> getDex(int region, int dlc) {
         DefaultListModel<String> tempModel = new DefaultListModel<>();
@@ -114,6 +116,7 @@ public class Pokemon{
         for (int i : tempDex.keySet()) tempModel.addElement(i + ". " + tempDex.get(i).name);
         return tempModel;
     }
+
     // Gets the entire dex
     public static HashMap<Integer, Pokemon> getHashMap(int region, int dlc){
         HashMap<Integer, Pokemon> tempDex = new HashMap<>();
@@ -122,57 +125,57 @@ public class Pokemon{
             case 0 -> {start = 1; end = 1025;}
             case 1 -> { switch(dlc) { // Kanto
                 case 0 -> {start = 1; end = 151;}
-                case 1 -> tempDex = new HashMap<>(kanto);
-                case 2 -> tempDex = new HashMap<>(letsGo);
+                case 1 -> tempDex = kanto;
+                case 2 -> tempDex = letsGo;
             }} case 2 -> { switch(dlc) { // Johto
                 case 0 -> {start = 152; end = 251;}
-                case 1 -> tempDex = new HashMap<>(johto);
-                case 2 -> tempDex = new HashMap<>(hgss);
+                case 1 -> tempDex = johto;
+                case 2 -> tempDex = hgss;
             }} case 3 -> { switch(dlc) { // Hoenn
                 case 0 -> {start = 252; end = 386;}
-                case 1 -> tempDex = new HashMap<>(hoenn);
-                case 2 -> tempDex = new HashMap<>(oras);
+                case 1 -> tempDex = hoenn;
+                case 2 -> tempDex = oras;
             }} case 4 -> { switch(dlc) { // Sinnoh + Hisui
                 case 0 -> {start = 387; end = 493;}
-                case 1 -> tempDex = new HashMap<>(sinnoh);
-                case 2 -> tempDex = new HashMap<>(platinum);
-                case 3 -> tempDex = new HashMap<>(legendsArceus);
+                case 1 -> tempDex = sinnoh;
+                case 2 -> tempDex = platinum;
+                case 3 -> tempDex = legendsArceus;
             }} case 5 -> { switch(dlc) { // Unova
                 case 0 -> {start = 494; end = 649;}
-                case 1 -> tempDex = new HashMap<>(unova);
-                case 2 -> tempDex = new HashMap<>(b2w2);
+                case 1 -> tempDex = unova;
+                case 2 -> tempDex = b2w2;
             }} case 6 -> { switch(dlc) { // Kalos
                 case 0 -> {start = 650; end = 721;}
-                case 1 -> tempDex = new HashMap<>(kalosCentral);
-                case 2 -> tempDex = new HashMap<>(kalosCoastal);
-                case 3 -> tempDex = new HashMap<>(kalosMountain);
+                case 1 -> tempDex = kalosCentral;
+                case 2 -> tempDex = kalosCoastal;
+                case 3 -> tempDex = kalosMountain;
             }} case 7 -> { switch(dlc) { // Alola
                 case 0 -> {start = 722; end = 809;}
-                case 1 -> tempDex = new HashMap<>(alola);
-                case 2 -> tempDex = new HashMap<>(melemele);
-                case 3 -> tempDex = new HashMap<>(akala);
-                case 4 -> tempDex = new HashMap<>(ulaula);
-                case 5 -> tempDex = new HashMap<>(poni);
-                case 6 -> tempDex = new HashMap<>(ultra);
-                case 7 -> tempDex = new HashMap<>(ultraMelemele);
-                case 8 -> tempDex = new HashMap<>(ultraAkala);
-                case 9 -> tempDex = new HashMap<>(ultraUlaula);
-                case 10 -> tempDex = new HashMap<>(ultraPoni);
+                case 1 -> tempDex = alola;
+                case 2 -> tempDex = melemele;
+                case 3 -> tempDex = akala;
+                case 4 -> tempDex = ulaula;
+                case 5 -> tempDex = poni;
+                case 6 -> tempDex = ultra;
+                case 7 -> tempDex = ultraMelemele;
+                case 8 -> tempDex = ultraAkala;
+                case 9 -> tempDex = ultraUlaula;
+                case 10 -> tempDex = ultraPoni;
             }} case 8 -> { switch(dlc) { // Galar
                 case 0 -> {start = 810; end = 905;}
-                case 1 -> tempDex = new HashMap<>(galar);
-                case 2 -> tempDex = new HashMap<>(isleOfArmor);
-                case 3 -> tempDex = new HashMap<>(crownTundra);
+                case 1 -> tempDex = galar;
+                case 2 -> tempDex = isleOfArmor;
+                case 3 -> tempDex = crownTundra;
             }} case 9 -> { switch(dlc) { // Paldea
                 case 0 -> {start = 906; end = 1025;}
-                case 1 -> tempDex = new HashMap<>(paldea);
-                case 2 -> tempDex = new HashMap<>(tealMask);
-                case 3 -> tempDex = new HashMap<>(indigoDisk);
+                case 1 -> tempDex = paldea;
+                case 2 -> tempDex = tealMask;
+                case 3 -> tempDex = indigoDisk;
             }} default -> System.out.println("Error: invalid region.");
         }
         if(dlc == 0){ for(Pokemon p : nationalDex) { // Gets the dex with a starting and end point
             if(p.national < start || p.national > end) continue;
             tempDex.put(p.national - start + 1, p);
-        }} return tempDex;
+        }} return new HashMap<>(tempDex);
     }
 }
