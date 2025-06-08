@@ -62,10 +62,10 @@ public class Pokemon{
     }
 
     // Set Name and Icon for Pokémon List
-    public static void updateLabels(JLabel label, int region, int dlc, int selected, boolean shiny){
-        Pokemon temp = getPokemon(region, dlc, selected);
+    public static void labels(JLabel label, int region, int dlc, int selected){
+        Pokemon temp = get(region, dlc, selected);
         label.setText(temp.name);
-        label.setIcon(temp.makeImage("", shiny));
+        label.setIcon(temp.makeImage("", false));
     }
 
     // Creates Dex
@@ -104,7 +104,7 @@ public class Pokemon{
     }
 
     // Gets Pokémon from dex
-    public static Pokemon getPokemon(int region, int dlc, int selected){
+    public static Pokemon get(int region, int dlc, int selected){
         if(region == 5 && dlc != 0) selected--; // Accounting for Victini in Unova Dex
         return (getHashMap(region, dlc).get(selected + 1) == null) ? nationalDex[0] : getHashMap(region, dlc).get(selected + 1);
     }
@@ -173,9 +173,9 @@ public class Pokemon{
                 case 3 -> tempDex = indigoDisk;
             }} default -> System.out.println("Error: invalid region.");
         }
-        if(dlc == 0){ for(Pokemon p : nationalDex) { // Gets the dex with a starting and end point
+        if(dlc == 0) for(Pokemon p : nationalDex) { // Gets the dex with a starting and end point
             if(p.national < start || p.national > end) continue;
             tempDex.put(p.national - start + 1, p);
-        }} return new HashMap<>(tempDex);
+        } return new HashMap<>(tempDex);
     }
 }
