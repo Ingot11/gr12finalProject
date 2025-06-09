@@ -22,11 +22,11 @@ public class Pokemon{
     public ArrayList<Form> forms;
     public Pokemon(){} // Pokémon Constructor
 
-    // Initializes Dex
+    // Initialize Pokédex
     @SuppressWarnings("unchecked")
     public static void Dex(){
         // Initialize National and Regional Dexes
-        types =  new String[]{"", "bug", "dark", "dragon", "electric", "fairy", "fighting", "fire", "flying", "ghost", "grass", "ground", "ice", "poison", "psychic", "rock", "steel", "water"};
+        types = new String[]{"Normal", "Bug", "Dark", "Dragon", "Electric", "Fairy", "Fighting", "Fire", "Flying", "Ghost", "Grass", "Ground", "Ice", "Poison", "Psychic", "Rock", "Steel", "Water"};
         nationalDex = new Pokemon[1025];
         regionalDex = new HashMap[30];
         for(int i=0; i<nationalDex.length; i++) nationalDex[i] = new Pokemon();
@@ -46,11 +46,12 @@ public class Pokemon{
                 String[] lines = line.split(", ");
                 // Different Types for Arceus and Silvally
                 if(lines[2].equals("types")) for(int i=0; i<types.length; i++){
-                    lines[2] = types[i];
-                    if(i!=0) lines[4] = (types[i].charAt(0) + "").toUpperCase() + types[i].substring(1);
+                    if(i != 0){
+                        lines[2] = types[i].toLowerCase();
+                        lines[4] = types[i];
+                    }else lines[2] = "";
                     nationalDex[Integer.parseInt(lines[0]) - 1].forms.add(new Form(lines));
-                }    
-                else nationalDex[Integer.parseInt(lines[0]) - 1].forms.add(new Form(lines));
+                }else nationalDex[Integer.parseInt(lines[0]) - 1].forms.add(new Form(lines));
             }
         }
         catch (FileNotFoundException | NumberFormatException e) {System.out.println("File not found/Number Format Exception");}
