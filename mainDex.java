@@ -1,5 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
+@SuppressWarnings("unused")
 public class mainDex extends JFrame{
     // Window Variables
     private JPanel selectorPanel, idPanel, infoPanel;
@@ -14,7 +15,6 @@ public class mainDex extends JFrame{
     // Call Window
     public static void main(String[] args){
         Pokemon.Dex(); // Initialize Pokédex
-        @SuppressWarnings("unused")
         mainDex main = new mainDex();
     }
 
@@ -27,13 +27,13 @@ public class mainDex extends JFrame{
         setMinimumSize(new Dimension(650, 450));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        baseForm = 1;
         // Id Inputter
+        baseForm = 1;
         add(idPanel = new JPanel(new FlowLayout()), constraint(0, 0, 0));
-        idPanel.add(new JLabel("Dex Number:"));
+        idPanel.add(new JLabel("National Dex Number:"));
         idPanel.add(idInput = new JTextField(3));
 
-        // Selectors
+        // Region Selectors
         add(selectorPanel = new JPanel(new FlowLayout()), constraint(1, 0, 0));
         selectorPanel.add(gen = new JComboBox<>(new String[]{"National", "Kanto", "Johto", "Hoenn", "Sinnoh/Hisui", "Unova", "Kalos", "Alola", "Galar", "Paldea"}));
         selectorPanel.add(dlc = new JComboBox<>(new String[]{"National"}));
@@ -48,7 +48,7 @@ public class mainDex extends JFrame{
         setVisible(true);
 
         // Action Listeners
-        gen.addActionListener(a -> {
+        gen.addActionListener(_ -> {
             // Choose Generation
             String[][] generation = {{"National"}, /*National*/
             {"Regional", "Red/Blue/Yellow/FireRed/LeafGreen", "Let's Go"}, /*Kanto*/
@@ -62,58 +62,58 @@ public class mainDex extends JFrame{
             {"Regional", "Sword/Shield", "Isle of Armor", "Crown Tundra"}, /*Galar*/
             {"Regional", "Scarlet/Violet", "Teal Mask", "Indigo Disk"}}; /*Paldea*/
             if(gen.getSelectedIndex() > generation.length) gen.setSelectedIndex(0);
+
+            // Sets Model of Game
             dlc.setModel(new DefaultComboBoxModel<>(generation[gen.getSelectedIndex()]));
             dlc.setSelectedIndex(0);
             revalidate(); // Resets frame
         });
-        dlc.addActionListener(a -> {
+        dlc.addActionListener(_ -> { // Sets model of JList
             pokeList.setModel(Pokemon.getDex(gen.getSelectedIndex(), dlc.getSelectedIndex()));
             pokeList.setSelectedIndex(0);
         });
-        pokeList.addListSelectionListener(a -> {
+        pokeList.addListSelectionListener(_ -> {
             Pokemon.get(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex()).labels(image);
             baseForm = 0;
         });
-        idInput.addActionListener(a -> {
+        idInput.addActionListener(_ -> {
             try{
                 Pokemon.nationalDex[Integer.parseInt(idInput.getText()) - 1].labels(image);
                 Pokemon.nationalDex[Integer.parseInt(idInput.getText()) - 1].getDebug(); // Debug
                 baseForm = Integer.parseInt(idInput.getText());
             }catch(NumberFormatException | ArrayIndexOutOfBoundsException e){}
         });
-        select.addActionListener(a -> {
-            @SuppressWarnings("unused")
-            statsView x;
-            @SuppressWarnings("unused")
-            mainDex y;
+        select.addActionListener(_ -> {
+            statsView x; mainDex y;
             if(baseForm == 0) x = new statsView(Pokemon.get(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex()));
-            else y = new mainDex(Pokemon.get(0,0,baseForm - 1));
+            else y = new mainDex(Pokemon.nationalDex[baseForm - 1]);
         });
     }
 
     // Window to Display Pokémon
     public mainDex(Pokemon pkmn){
-        info = new JLabel[11];
         setTitle(pkmn.name);
         setSize(700, 350);
         setLayout(new GridBagLayout());
         setMinimumSize(new Dimension(600, 300));
 
         // Base Information
+        info = new JLabel[11];
         visualForm = 0; baseForm = 0;
         add(select = new JButton("Change Form"),constraint(0, 0, 0));
         add(image = new JLabel(), constraint(0, 1, 2));
         for(int i=0; i<info.length; i++) add(info[i] = new JLabel(), constraint(1, i, 0));
         pkmn.labels(info[0], image, 0, 0);
         pkmn.forms.getFirst().updateLabels(info);
+
         // Caught and Seen Buttons
         add(infoPanel = new JPanel(new FlowLayout()), constraint(0, 10, 0));
         infoPanel.add(caught = new JButton("Caught"));
         infoPanel.add(seen = new JButton("Seen"));
         setVisible(true);
 
-        // Action Listeners
-        select.addActionListener(a -> {
+        // Change Form Listeners
+        select.addActionListener(_ -> {
             if(++visualForm < pkmn.forms.get(baseForm).formSymbol.length){
                 pkmn.labels(info[0], image, baseForm, visualForm);
                 return;
@@ -122,11 +122,13 @@ public class mainDex extends JFrame{
             pkmn.forms.get(baseForm).updateLabels(info);
             visualForm = 0;
         });
-        seen.addActionListener(a -> {
+
+        // Caught and Seen Listeners
+        seen.addActionListener(_ -> {
             pkmn.forms.get(baseForm).caughtSeen = 1;
             pkmn.forms.get(baseForm).updateLabels(info);
         });
-        caught.addActionListener(a -> {
+        caught.addActionListener(_ -> {
             pkmn.forms.get(baseForm).caughtSeen = 2;
             pkmn.forms.get(baseForm).updateLabels(info);
         });
