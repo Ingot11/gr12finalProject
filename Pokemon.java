@@ -94,15 +94,13 @@ public class Pokemon{
     }
 
     // Set Name and Icon for Pokémon List
-    public static void labels(JLabel label, int region, int dlc, int selected){
-        Pokemon temp = get(region, dlc, selected);
-        label.setIcon(temp.image("", false));
-        label.setText(temp.name);
+    public void labels(JLabel label){
+        label.setText(name);
+        label.setIcon(image("", false));
     }
-    public static void labels(JLabel label1, JLabel label2, int region, int dlc, int selected){
-        Pokemon temp = get(region, dlc, selected);
-        label1.setIcon(temp.image("", false));
-        label2.setText(temp.name);
+    public void labels(JLabel nameLabel, JLabel imageLabel, int base, int visual){
+        nameLabel.setText(forms.get(base).name);
+        imageLabel.setIcon(image(forms.get(base).formSymbol[visual], false));
     }
 
     // Gets Pokémon from dex

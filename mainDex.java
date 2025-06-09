@@ -41,7 +41,7 @@ public class mainDex extends JFrame{
         // Pokemon Image / More Info Button
         add(image = new JLabel(), constraint(0, 1, 0));
         add(select = new JButton("More Info"), constraint(0, 2, 0));
-        Pokemon.labels(image, 0, 0, 0);
+        Pokemon.nationalDex[0].labels(image);
 
         // Scroll Dex
         add(new JScrollPane(pokeList = new JList<>(Pokemon.getDex(0, 0))), constraint(1, 1, 1));
@@ -71,21 +71,23 @@ public class mainDex extends JFrame{
             pokeList.setSelectedIndex(0);
         });
         pokeList.addListSelectionListener(a -> {
-            Pokemon.labels(image, gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex());
+            Pokemon.get(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex()).labels(image);
             baseForm = 0;
         });
         idInput.addActionListener(a -> {
             try{
-                Pokemon.labels(image, 0, 0, Pokemon.nationalDex[Integer.parseInt(idInput.getText()) - 1].national - 1);
+                Pokemon.nationalDex[Integer.parseInt(idInput.getText()) - 1].labels(image);
                 Pokemon.nationalDex[Integer.parseInt(idInput.getText()) - 1].getDebug(); // Debug
                 baseForm = Integer.parseInt(idInput.getText());
             }catch(NumberFormatException | ArrayIndexOutOfBoundsException e){}
         });
         select.addActionListener(a -> {
             @SuppressWarnings("unused")
-            PokemonStats x;
-            if(baseForm == 0) x = new PokemonStats(Pokemon.get(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex()));
-            else x = new PokemonStats(Pokemon.get(0,0,baseForm - 1));
+            statsView x;
+            @SuppressWarnings("unused")
+            mainDex y;
+            if(baseForm == 0) x = new statsView(Pokemon.get(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex()));
+            else y = new mainDex(Pokemon.get(0,0,baseForm - 1));
         });
     }
 
@@ -100,9 +102,10 @@ public class mainDex extends JFrame{
         // Base Information
         visualForm = 0; baseForm = 0;
         add(select = new JButton("Change Form"),constraint(0, 0, 0));
-        add(image = new JLabel(pkmn.image(pkmn.forms.get(0).formSymbol[0], false)), constraint(0, 1, 2));
+        add(image = new JLabel(), constraint(0, 1, 2));
         for(int i=0; i<info.length; i++) add(info[i] = new JLabel(), constraint(1, i, 0));
-        pkmn.forms.get(0).updateLabels(info);
+        pkmn.labels(info[0], image, 0, 0);
+        pkmn.forms.getFirst().updateLabels(info);
         // Caught and Seen Buttons
         add(infoPanel = new JPanel(new FlowLayout()), constraint(0, 10, 0));
         infoPanel.add(caught = new JButton("Caught"));
@@ -112,10 +115,10 @@ public class mainDex extends JFrame{
         // Action Listeners
         select.addActionListener(a -> {
             if(++visualForm < pkmn.forms.get(baseForm).formSymbol.length){
-                image.setIcon(pkmn.image(pkmn.forms.get(baseForm).formSymbol[visualForm], false));
+                pkmn.labels(info[0], image, baseForm, visualForm);
                 return;
             }if(++baseForm >= pkmn.forms.size()) baseForm = 0;
-            image.setIcon(pkmn.image(pkmn.forms.get(baseForm).formSymbol[0], false));
+            pkmn.labels(info[0], image, baseForm, 0);
             pkmn.forms.get(baseForm).updateLabels(info);
             visualForm = 0;
         });

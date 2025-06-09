@@ -54,7 +54,7 @@ public class Form{
 
     // Update Labels
     public void updateLabels(JLabel[] info){
-        info[0].setText(name);
+        if(info.length != 11) return;
         info[1].setText(category + " Pokémon");
         info[2].setText(type1 + (!type2.equals("") ? (", " + type2) : "") + " Type");
         info[3].setText("HP: " + hp + ", Atk: " + atk + ", Def: " + def + ", Sp.Atk: " + spAtk + ", Sp.Def: " + spDef + ", Spd: " + spd);

@@ -1,10 +1,8 @@
-import javax.swing.*;
-import javax.swing.table.AbstractTableModel;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumn;
 import java.awt.*;
+import javax.swing.*;
+import javax.swing.table.*;
 
-public class PokemonStats extends JFrame {
+public class statsView extends JFrame {
     private JPanel panel1;
     private JTable baseStats;
     private JLabel image;
@@ -12,14 +10,12 @@ public class PokemonStats extends JFrame {
 
     private String[][] data;
 
-    public PokemonStats(Pokemon pkmn) {
+    public statsView(Pokemon pkmn) {
         String[] columnNames = {"HP", "Atk.", "Def.", "Sp. Atk.", "Sp. Def.", "Spd."};
         data = new String[][] {
                 pkmn.forms.getFirst().getStats()
         };
-
-        image.setIcon(pkmn.image(pkmn.forms.get(0).formSymbol[0], false));
-        name.setText(pkmn.name);
+        pkmn.labels(name, image, 0, 0);
 
         DefaultTableModel tableModel = new DefaultTableModel(data, columnNames);
         baseStats.setModel(tableModel);
@@ -37,8 +33,7 @@ public class PokemonStats extends JFrame {
     }
 
     public abstract class UneditableTableModel extends AbstractTableModel {
-        public boolean isCellEditable(int row, int column){
-            return false;
-        }
+        @Override
+        public boolean isCellEditable(int row, int column){return false;}
     }
 }
