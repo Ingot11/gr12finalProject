@@ -1,5 +1,7 @@
+import java.util.*;
 import javax.swing.*;
 public class Form{
+    public static String[] types;
     public String[] formSymbol;
     public String name, category, type1, type2, 
     ability1, ability2, abilityH, growthRate, egg1, egg2;
@@ -44,12 +46,16 @@ public class Form{
 
     // Debug Output
     public void getDebug(){
+        System.out.println();
         for(String i : new String[]{name, formSymbol[0], category, type1, type2, ability1, ability2, abilityH, growthRate, egg1, egg2})
             System.out.print(i + ", ");
         System.out.println();
         for(double i : new double[]{national, catchRate, baseFriendship, baseExp, eggCycles, hp, atk, def, spAtk, spDef, spd, caughtSeen, height, weight, maleRatio})
             System.out.print(i + ", ");
-        System.out.println();
+        System.out.println("\nWeaknesses and Resistances:");
+        for(String i: typeDefensive().keySet())
+            System.out.print(i + ": " + typeDefensive().get(i) + ", ");
+        System.out.print("\n---");
     }
 
     // Update Labels
@@ -84,14 +90,160 @@ public class Form{
         else return (int) ((equals + 5) * (boosted.boost(stats)));
     }
 
+    // Each forms weaknesses and resistances
+    public HashMap<String, Double> typeDefensive(){
+        double normal = 1, bug = 1, dark = 1, dragon = 1, electric = 1, fairy = 1, fighting = 1, fire = 1, flying = 1,
+        ghost = 1, grass = 1, ground = 1, ice = 1, poison = 1, psychic = 1, rock = 1, steel = 1, water = 1;
+        for(String i : new String[]{type1,type2}) switch(i){
+            case "Normal" -> {
+                fighting*=2;
+                ghost=0;
+            }case "Bug" -> {
+                fire*=2;
+                flying*=2;
+                grass*=.5;
+                fighting*=.5;
+                ground*=.5;
+            }case "Dark" -> {
+                fighting*=2;
+                bug*=2;
+                fairy*=2;
+                ghost*=.5;
+                dark*=.5;
+                psychic=0; 
+            }case "Dragon" -> {
+                ice*=2;
+                dragon*=2;
+                fairy*=2;
+                fire*=.5;
+                water*=.5;
+                electric*=.5;
+                grass*=.5;
+            }case "Electric" -> {
+                ground*=2;
+                electric*=.5;
+                flying*=.5;
+                steel*=.5;
+            }case "Fairy" -> {
+                poison*=2;
+                steel*=2;
+                fighting*=.5;
+                bug*=.5;
+                dark*=.5;
+                dragon=0;
+            }case "Fighting" -> {
+                flying*=2;
+                psychic*=2;
+                fairy*=2;
+                bug*=.5;
+                rock*=.5;
+                dark*=.5;
+            }case "Fire" -> {
+                water*=2;
+                ground*=2;
+                rock*=2;
+                fire*=.5;
+                grass*=.5;
+                ice*=.5;
+                bug*=.5;
+                steel*=.5;
+                fairy*=.5;
+            }case "Flying" -> {
+                electric*=2;
+                ice*=2;
+                rock*=2;
+                grass*=.5;
+                fighting*=.5;
+                bug*=.5;
+                ground=0;
+            }case "Ghost" -> {
+                ghost*=2;
+                dark*=2;
+                poison*=.5;
+                bug*=.5;
+                normal=0;
+                fighting=0;
+            }case "Grass" -> {
+                fire*=2;
+                ice*=2;
+                poison*=2;
+                flying*=2;
+                bug*=2;
+                water*=.5;
+                electric*=.5;
+                grass*=.5;
+                ground*=.5;
+            }case "Ground" -> {
+                water*=2;
+                grass*=2;
+                ice*=2;
+                poison*=.5;
+                rock*=.5;
+                electric=0;
+            }case "Ice" -> {
+                fire*=2;
+                fighting*=2;
+                rock*=2;
+                steel*=2;
+                ice*=.5;
+            }case "Poison" -> {
+                ground*=2;
+                psychic*=2;
+                grass*=.5;
+                fighting*=.5;
+                poison*=.5;
+                bug*=.5;
+                fairy*=.5;
+            }case "Psychic" -> {
+                bug*=2;
+                ghost*=2;
+                dark*=2;
+                fighting*=.5;
+                psychic*=.5;
+            }case "Rock" -> {
+                water*=2;
+                grass*=2;
+                fighting*=2;
+                ground*=2;
+                steel*=2;
+                normal*=.5;
+                fire*=.5;
+                poison*=.5;
+                flying*=.5;
+            }case "Steel" -> {
+                fire*=2;
+                fighting*=2;
+                ground*=2;
+                normal*=.5;
+                grass*=.5;
+                ice*=.5;
+                flying*=.5;
+                psychic*=.5;
+                bug*=.5;
+                rock*=.5;
+                dragon*=.5;
+                steel*=.5;
+                fairy*=.5;
+                poison=0;
+            }case "Water" -> {
+                electric*=2;
+                grass*=2;
+                fire*=.5;
+                water*=.5;
+                ice*=.5;
+                steel*=.5;
+            }
+        }    
+        double[] typeArray = new double[]{normal, bug, dark, dragon, electric, fairy, fighting, fire, flying, ghost, grass, ground, ice, poison, psychic, rock, steel, water};
+        HashMap<String, Double> defensive = new HashMap<>();
+        for(int i=0; i<types.length; i++) if(typeArray[i] != 1) defensive.put(types[i], typeArray[i]);
+        return defensive;
+    }
+
     public String[] getStats() {
         String[] output = new String[6];
-        output[0] = String.valueOf(hp);
-        output[1] = String.valueOf(atk);
-        output[2] = String.valueOf(def);
-        output[3] = String.valueOf(spAtk);
-        output[4] = String.valueOf(spDef);
-        output[5] = String.valueOf(spd);
+        int[] stats = new int[]{hp, atk, def, spAtk, spDef, spd};
+        for(int i=0; i<output.length; i++) output[i] = "" + stats[i];
         return output;
     }
 }

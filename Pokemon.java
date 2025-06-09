@@ -15,7 +15,6 @@ public class Pokemon{
     // National and Regional Pokédexes
     public static Pokemon[] nationalDex;
     public static HashMap<Integer,Pokemon>[] regionalDex;
-    public static String[] types;
     // Characteristics
     public String name;
     public int national;
@@ -26,7 +25,7 @@ public class Pokemon{
     @SuppressWarnings("unchecked")
     public static void Dex(){
         // Initialize National and Regional Dexes
-        types = new String[]{"Normal", "Bug", "Dark", "Dragon", "Electric", "Fairy", "Fighting", "Fire", "Flying", "Ghost", "Grass", "Ground", "Ice", "Poison", "Psychic", "Rock", "Steel", "Water"};
+        Form.types = new String[]{"Normal", "Bug", "Dark", "Dragon", "Electric", "Fairy", "Fighting", "Fire", "Flying", "Ghost", "Grass", "Ground", "Ice", "Poison", "Psychic", "Rock", "Steel", "Water"};
         nationalDex = new Pokemon[1025];
         regionalDex = new HashMap[30];
         for(int i=0; i<nationalDex.length; i++) nationalDex[i] = new Pokemon();
@@ -45,10 +44,10 @@ public class Pokemon{
             while ((line = readStats.readLine()) != null) { // Initialize each form of Pokémon
                 String[] lines = line.split(", ");
                 // Different Types for Arceus and Silvally
-                if(lines[2].equals("types")) for(int i=0; i<types.length; i++){
+                if(lines[2].equals("types")) for(int i=0; i<Form.types.length; i++){
                     if(i != 0){
-                        lines[2] = types[i].toLowerCase();
-                        lines[4] = types[i];
+                        lines[2] = Form.types[i].toLowerCase();
+                        lines[4] = Form.types[i];
                     }else lines[2] = "";
                     nationalDex[Integer.parseInt(lines[0]) - 1].forms.add(new Form(lines));
                 }else nationalDex[Integer.parseInt(lines[0]) - 1].forms.add(new Form(lines));
@@ -76,7 +75,7 @@ public class Pokemon{
         for(int i=0; i<regionalDex.length; i++) for(int j : regionalDex[i].keySet()) if(regionalDex[i].get(j).equals(this)){
             System.out.print(", " + dexString[i] + ": " + j);
             break;
-        }System.out.println("\nForms:");
+        }System.out.print("\nForms:\n---");
         for(int i = 0; i < forms.size(); i++) forms.get(i).getDebug();
         System.out.println("-----");
     }
