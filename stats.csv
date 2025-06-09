@@ -603,7 +603,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 491, Darkrai, , Pitch-Black, Dark, , Bad Dreams, , , 1.5, 50.5, 3, 0, 270, , 120, Slow, Undiscovered, , 70, 90, 90, 135, 90, 125
 492, Shaymin, , Gratitude, Grass, , Natural Cure, , , 0.2, 2.1, 45, 100, 270, , 120, Medium Slow, Undiscovered, , 100, 100, 100, 100, 100, 100
 492, Shaymin Sky Forme, s, Gratitude, Grass, Flying, Serene Grace, , , 0.4, 5.2, 45, 100, 270, , 120, Medium Slow, Undiscovered, , 100, 103, 75, 120, 75, 127
-493, Arceus, , Alpha, Normal, , Multitype, , , 3.2, 320, 3, 0, 324, , 120, Slow, Undiscovered, , 120, 120, 120, 120, 120, 120
+493, Arceus, types, Alpha, Normal, , Multitype, , , 3.2, 320, 3, 0, 324, , 120, Slow, Undiscovered, , 120, 120, 120, 120, 120, 120
 494, Victini, , Victory, Psychic, Fire, Victory Star, , , 0.4, 4, 3, 100, 270, , 120, Slow, Undiscovered, , 100, 100, 100, 100, 100, 100
 495, Snivy, , Grass Snake, Grass, , Overgrow, , Contrary, 0.6, 8.1, 45, 70, 62, 87.5, 20, Medium Slow, Field, Grass, 45, 45, 55, 45, 55, 63
 496, Servine, , Grass Snake, Grass, , Overgrow, , Contrary, 0.8, 16, 45, 70, 145, 87.5, 20, Medium Slow, Field, Grass, 60, 60, 75, 60, 75, 83
@@ -927,7 +927,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 770, Palossand, , Sand Castle, Ghost, Ground, Water Compaction, , Sand Veil, 1.3, 250, 60, 70, 168, 50, 15, Medium Fast, Amorphous, , 85, 75, 110, 100, 75, 35
 771, Pyukumuku, , Sea Cucumber, Water, , Innards Out, , Unaware, 0.3, 1.2, 60, 70, 144, 50, 15, Fast, Water 1, , 55, 60, 130, 30, 130, 5
 772, Type: Null, , Synthetic, Normal, , Battle Armor, , , 1.9, 120.5, 3, 0, 107, , 120, Slow, Undiscovered, , 95, 95, 95, 95, 95, 59
-773, Silvally, , Synthetic, Normal, , RKS System, , , 2.3, 100.5, 3, 0, 257, , 120, Slow, Undiscovered, , 95, 95, 95, 95, 95, 95
+773, Silvally, types, Synthetic, Normal, , RKS System, , , 2.3, 100.5, 3, 0, 257, , 120, Slow, Undiscovered, , 95, 95, 95, 95, 95, 95
 774, Minior Meteor Form, , Meteor, Rock, Flying, Shields Down, , , 0.3, 40, 30, 70, 154, , 25, Medium Slow, Mineral, , 60, 60, 100, 60, 100, 60
 774, Minior Core Form, b~g~i~o~r~v~y, Meteor, Rock, Flying, Shields Down, , , 0.3, 0.3, 30, 70, 175, , 25, Medium Slow, Mineral, , 60, 100, 60, 100, 60, 120
 775, Komala, , Drowsing, Normal, , Comatose, , , 0.4, 19.9, 45, 70, 168, 50, 20, Slow, Field, , 65, 115, 65, 75, 95, 65
