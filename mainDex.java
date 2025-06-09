@@ -83,9 +83,9 @@ public class mainDex extends JFrame{
         });
         select.addActionListener(a -> {
             @SuppressWarnings("unused")
-            mainDex x;
-            if(baseForm == 0) x = new mainDex(Pokemon.get(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex()));
-            else x = new mainDex(Pokemon.get(0,0,baseForm - 1));
+            PokemonStats x;
+            if(baseForm == 0) x = new PokemonStats(Pokemon.get(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex()));
+            else x = new PokemonStats(Pokemon.get(0,0,baseForm - 1));
         });
     }
 

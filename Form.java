@@ -83,4 +83,15 @@ public class Form{
         if(stats.equals("hp")) return (int) (equals + level + 10);
         else return (int) ((equals + 5) * (boosted.boost(stats)));
     }
+
+    public String[] getStats() {
+        String[] output = new String[6];
+        output[0] = String.valueOf(hp);
+        output[1] = String.valueOf(atk);
+        output[2] = String.valueOf(def);
+        output[3] = String.valueOf(spAtk);
+        output[4] = String.valueOf(spDef);
+        output[5] = String.valueOf(spd);
+        return output;
+    }
 }
