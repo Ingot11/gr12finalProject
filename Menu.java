@@ -1,8 +1,6 @@
 import java.awt.*;
 import java.util.*;
 import javax.swing.*;
-import java.awt.event.*;
-import javax.swing.event.*;
 public class Menu extends JFrame {
     private JPanel panel1;
     private JLabel titleLabel, regionLabel, gameLabel, image;
@@ -43,9 +41,6 @@ public class Menu extends JFrame {
         });
         
         gameSelect.addActionListener(a -> {dexList.setModel(Pokemon.getDex(regionSelect.getSelectedIndex(), gameSelect.getSelectedIndex()));});
-        dexList.addListSelectionListener(a -> {
-            //pkmnName.setText(Pokemon.makeName(regionSelect.getSelectedIndex(), gameSelect.getSelectedIndex(), dexList.getSelectedIndex()));
-            //image.setIcon(Pokemon.makeImage(regionSelect.getSelectedIndex(), gameSelect.getSelectedIndex(), dexList.getSelectedIndex(), "", false));
-        });
+        dexList.addListSelectionListener(a -> {Pokemon.labels(image, pkmnName, regionSelect.getSelectedIndex(), gameSelect.getSelectedIndex(), dexList.getSelectedIndex());});
     }
 }

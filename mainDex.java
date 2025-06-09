@@ -22,9 +22,9 @@ public class mainDex extends JFrame{
     public mainDex(){
         // Set Main Frame
         setTitle("Pokédex");
-        setSize(600, 600);
+        setSize(650, 600);
         setLayout(new GridBagLayout());
-        setMinimumSize(new Dimension(450, 450));
+        setMinimumSize(new Dimension(650, 450));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         baseForm = 1;

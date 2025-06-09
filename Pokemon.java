@@ -98,10 +98,15 @@ public class Pokemon{
         label.setIcon(temp.image("", false));
         label.setText(temp.name);
     }
+    public static void labels(JLabel label1, JLabel label2, int region, int dlc, int selected){
+        Pokemon temp = get(region, dlc, selected);
+        label1.setIcon(temp.image("", false));
+        label2.setText(temp.name);
+    }
 
     // Gets Pokémon from dex
     public static Pokemon get(int region, int dlc, int selected){
-        if(region == 5 && dlc != 0) selected--; // Accounting for Victini in Unova Dex
+        if(region == 5 && dlc != 0) selected--; // Accounting for Victini in Unova Dexes
         return (getHashMap(region, dlc).get(selected + 1) == null) ? nationalDex[0] : getHashMap(region, dlc).get(selected + 1);
     }
 
@@ -116,57 +121,57 @@ public class Pokemon{
     // Gets HashMap of Dex
     public static HashMap<Integer, Pokemon> getHashMap(int region, int dlc){
         HashMap<Integer, Pokemon> tempDex = new HashMap<>();
-        int start = 1, end = 10;
+        int start = 1, end = 10; // Start and End point for regional dexes
         switch(region) {
-            case 0 -> {start = 1; end = 1025; dlc = 0;}
-            case 1 -> { switch(dlc) { // Kanto
-                case 0 -> {start = 1; end = 151;}
-                case 1 -> tempDex = regionalDex[0];
-                case 2 -> tempDex = regionalDex[1];
-            }} case 2 -> { switch(dlc) { // Johto
-                case 0 -> {start = 152; end = 251;}
-                case 1 -> tempDex = regionalDex[2];
-                case 2 -> tempDex = regionalDex[3];
-            }} case 3 -> { switch(dlc) { // Hoenn
-                case 0 -> {start = 252; end = 386;}
-                case 1 -> tempDex = regionalDex[4];
-                case 2 -> tempDex = regionalDex[5];
-            }} case 4 -> { switch(dlc) { // Sinnoh + Hisui
-                case 0 -> {start = 387; end = 493;}
-                case 1 -> tempDex = regionalDex[6];
-                case 2 -> tempDex = regionalDex[7];
-                case 3 -> tempDex = regionalDex[8];
-            }} case 5 -> { switch(dlc) { // Unova
-                case 0 -> {start = 494; end = 649;}
-                case 1 -> tempDex = regionalDex[9];
-                case 2 -> tempDex = regionalDex[10];
-            }} case 6 -> { switch(dlc) { // Kalos
-                case 0 -> {start = 650; end = 721;}
-                case 1 -> tempDex = regionalDex[11];
-                case 2 -> tempDex = regionalDex[12];
-                case 3 -> tempDex = regionalDex[13];
-            }} case 7 -> { switch(dlc) { // Alola
-                case 0 -> {start = 722; end = 809;}
-                case 1 -> tempDex = regionalDex[14];
-                case 2 -> tempDex = regionalDex[15];
-                case 3 -> tempDex = regionalDex[16];
-                case 4 -> tempDex = regionalDex[17];
-                case 5 -> tempDex = regionalDex[18];
-                case 6 -> tempDex = regionalDex[19];
-                case 7 -> tempDex = regionalDex[20];
-                case 8 -> tempDex = regionalDex[21];
-                case 9 -> tempDex = regionalDex[22];
-                case 10 -> tempDex = regionalDex[23];
-            }} case 8 -> { switch(dlc) { // Galar
-                case 0 -> {start = 810; end = 905;}
-                case 1 -> tempDex = regionalDex[24];
-                case 2 -> tempDex = regionalDex[25];
-                case 3 -> tempDex = regionalDex[26];
-            }} case 9 -> { switch(dlc) { // Paldea
-                case 0 -> {start = 906; end = 1025;}
-                case 1 -> tempDex = regionalDex[27];
-                case 2 -> tempDex = regionalDex[28];
-                case 3 -> tempDex = regionalDex[29];
+            case 0 -> {start = 1; end = 1025; dlc = 0;} // National
+            case 1 -> { switch(dlc) {
+                case 0 -> {start = 1; end = 151;} // Kanto
+                case 1 -> tempDex = regionalDex[0]; // Red, Blue, Yellow, FireRed, and LeafGreen
+                case 2 -> tempDex = regionalDex[1]; // Let's Go
+            }} case 2 -> { switch(dlc) {
+                case 0 -> {start = 152; end = 251;} // Johto
+                case 1 -> tempDex = regionalDex[2]; // Gold, Silver, and Crystal
+                case 2 -> tempDex = regionalDex[3]; // HeartGold and SoulSilver
+            }} case 3 -> { switch(dlc) {
+                case 0 -> {start = 252; end = 386;} // Hoenn
+                case 1 -> tempDex = regionalDex[4]; // Ruby, Sapphire, and Emerald
+                case 2 -> tempDex = regionalDex[5]; // OmegaRuby and AlphaSapphire
+            }} case 4 -> { switch(dlc) {
+                case 0 -> {start = 387; end = 493;} // Sinnoh + Hisui
+                case 1 -> tempDex = regionalDex[6]; // Diamond and Pearl, Brilliant Diamond, and Shining Pearl
+                case 2 -> tempDex = regionalDex[7]; // Platinum
+                case 3 -> tempDex = regionalDex[8]; // Legends Arceus
+            }} case 5 -> { switch(dlc) {
+                case 0 -> {start = 494; end = 649;} // Unova
+                case 1 -> tempDex = regionalDex[9]; // Black and White
+                case 2 -> tempDex = regionalDex[10]; // Black 2 and White 2
+            }} case 6 -> { switch(dlc) {
+                case 0 -> {start = 650; end = 721;} // Kalos
+                case 1 -> tempDex = regionalDex[11]; // Central
+                case 2 -> tempDex = regionalDex[12]; // Coastal
+                case 3 -> tempDex = regionalDex[13]; // Mountain
+            }} case 7 -> { switch(dlc) {
+                case 0 -> {start = 722; end = 809;} // Alola
+                case 1 -> tempDex = regionalDex[14]; // Sun and Moon
+                case 2 -> tempDex = regionalDex[15]; // Melemele
+                case 3 -> tempDex = regionalDex[16]; // Akala
+                case 4 -> tempDex = regionalDex[17]; // Ula'Ula
+                case 5 -> tempDex = regionalDex[18]; // Poni
+                case 6 -> tempDex = regionalDex[19]; // Ultra Sun and Ultra Moon
+                case 7 -> tempDex = regionalDex[20]; // Ultra Melemele
+                case 8 -> tempDex = regionalDex[21]; // Ultra Akala
+                case 9 -> tempDex = regionalDex[22]; // Ultra Ula'Ula
+                case 10 -> tempDex = regionalDex[23]; // Ultra Poni
+            }} case 8 -> { switch(dlc) {
+                case 0 -> {start = 810; end = 905;} // Galar
+                case 1 -> tempDex = regionalDex[24]; // Sword and Shield
+                case 2 -> tempDex = regionalDex[25]; // Isle of Armor
+                case 3 -> tempDex = regionalDex[26]; // Crown Tundra
+            }} case 9 -> { switch(dlc) {
+                case 0 -> {start = 906; end = 1025;} // Paldea
+                case 1 -> tempDex = regionalDex[27]; // Scarlet and Violet
+                case 2 -> tempDex = regionalDex[28]; // Teal Mask
+                case 3 -> tempDex = regionalDex[29]; // Indigo Disk
             }} default -> System.out.println("Error: invalid region.");
         }
         if(dlc == 0) for(Pokemon p : nationalDex) { // Gets the dex with a starting and end point
