@@ -97,6 +97,7 @@ public class Pokemon{
         nameLabel.setText(name);
         imageLabel.setIcon(image("", false));
     }
+    // For Specific Forms
     public void labels(JLabel nameLabel, JLabel imageLabel, int base, int visual){
         nameLabel.setText(forms.get(base).name);
         imageLabel.setIcon(image(forms.get(base).formSymbol[visual], false));
