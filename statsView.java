@@ -10,7 +10,7 @@ public class statsView extends JFrame {
     private JButton seenButton;
     private JButton caughtButton;
     private JButton selectButton;
-    private JList list1;
+    private JList<String> list1;
 
     private int visualForm, baseForm;
     private String[] info;
@@ -37,9 +37,7 @@ public class statsView extends JFrame {
 
         visualForm = 0; baseForm = 0;
         pkmn.labels(name, image, 0, 0);
-
-        pkmn.forms.getFirst().updateLabels(info);
-
+        list1.setModel(pkmn.forms.getFirst().updateArray());
         setVisible(true);
 
         selectButton.addActionListener(_ -> {
@@ -49,19 +47,29 @@ public class statsView extends JFrame {
                 return;
             }if(++baseForm >= pkmn.forms.size()) baseForm = 0; // Updates Base Form
             pkmn.labels(name, image, baseForm, 0);
-            pkmn.forms.get(baseForm).updateLabels(info);
-            visualForm = 0;
+            list1.setModel(pkmn.forms.get(baseForm).updateArray());
+            visualForm = 0; revalidate();
         });
 
+        selectButton.addActionListener(_ -> {
+            // Updates Visual Form
+            if(++visualForm < pkmn.forms.get(baseForm).formSymbol.length){
+                pkmn.labels(name, image, baseForm, visualForm);
+                return;
+            }if(++baseForm >= pkmn.forms.size()) baseForm = 0; // Updates Base Form
+            pkmn.labels(name, image, baseForm, 0);
+            list1.setModel(pkmn.forms.get(baseForm).updateArray());
+            visualForm = 0; revalidate();
+        });
         seenButton.addActionListener(_ -> {
             if(pkmn.forms.get(baseForm).caughtSeen == 1) pkmn.forms.get(baseForm).caughtSeen = 0;
             else pkmn.forms.get(baseForm).caughtSeen = 1;
-            pkmn.forms.get(baseForm).updateLabels(info);
+            list1.setModel(pkmn.forms.get(baseForm).updateArray()); revalidate();
         });
         caughtButton.addActionListener(_ -> {
             if(pkmn.forms.get(baseForm).caughtSeen == 2) pkmn.forms.get(baseForm).caughtSeen = 0;
             else pkmn.forms.get(baseForm).caughtSeen = 2;
-            pkmn.forms.get(baseForm).updateLabels(info);
+            list1.setModel(pkmn.forms.get(baseForm).updateArray()); revalidate();
         });
     }
 }
