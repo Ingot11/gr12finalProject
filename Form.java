@@ -74,18 +74,17 @@ public class Form{
         info[10].setText("Status: " + ((caughtSeen==1) ? "Seen" : (caughtSeen==2) ? "Caught" : "Unregistered"));
     }
     public DefaultListModel<String> updateArray(){
-        String[] info = new String[11];
+        String[] info = new String[10];
         info[0] = (category + " Pokémon");
         info[1] = (type1 + (!type2.equals("") ? (", " + type2) : "") + " Type");
-        info[2] = ("HP: " + hp + ", Atk: " + atk + ", Def: " + def + ", Sp.Atk: " + spAtk + ", Sp.Def: " + spDef + ", Spd: " + spd);
-        info[3] = (ability1 + (!ability2.equals("") ? (", " + ability2) : "") + (!abilityH.equals("") ? (", Hidden: " + abilityH) : ""));
-        info[4] = ("Egg Cycles: " + eggCycles);
-        info[5] = ("Growth Rate: " + growthRate);
-        info[6] = ("Base Friendship: " + baseFriendship);
-        info[7] = ("Base EXP: " + baseExp);
-        info[8] = ("Male Percent: " + ((maleRatio==-1) ? "Unknown" : (maleRatio==0) ? "Never" : (maleRatio==100) ? "Always" : (maleRatio + "%")));
-        info[9] = ("Height: " + height + ", Weight: " + weight);
-        info[10] = ("Status: " + ((caughtSeen==1) ? "Seen" : (caughtSeen==2) ? "Caught" : "Unregistered"));
+        info[2] = (ability1 + (!ability2.equals("") ? (", " + ability2) : "") + (!abilityH.equals("") ? (", Hidden: " + abilityH) : ""));
+        info[3] = ("Egg Cycles: " + eggCycles);
+        info[4] = ("Growth Rate: " + growthRate);
+        info[5] = ("Base Friendship: " + baseFriendship);
+        info[6] = ("Base EXP: " + baseExp);
+        info[7] = ("Male Percent: " + ((maleRatio==-1) ? "Unknown" : (maleRatio==0) ? "Never" : (maleRatio==100) ? "Always" : (maleRatio + "%")));
+        info[8] = ("Height: " + height + ", Weight: " + weight);
+        info[9] = ("Status: " + ((caughtSeen==1) ? "Seen" : (caughtSeen==2) ? "Caught" : "Unregistered"));
         DefaultListModel<String> tempModel = new DefaultListModel<>();
         for (String i : info) tempModel.addElement(i);
         return tempModel;

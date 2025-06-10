@@ -19,7 +19,7 @@ public class statsView extends JFrame {
     public statsView(Pokemon pkmn) {
         setTitle(pkmn.name);
         setContentPane(panel1);
-        setSize(500, 350);
+        setSize(504, 320);
         setMinimumSize(new Dimension(300, 200));
 
         String[] columnNames = {"HP", "Atk.", "Def.", "Sp. Atk.", "Sp. Def.", "Spd."};
