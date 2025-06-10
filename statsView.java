@@ -13,7 +13,6 @@ public class statsView extends JFrame {
     private JList<String> list1;
 
     private int visualForm, baseForm;
-    private String[] info;
     private String[][] data;
 
     public statsView(Pokemon pkmn) {
@@ -39,17 +38,6 @@ public class statsView extends JFrame {
         pkmn.labels(name, image, 0, 0);
         list1.setModel(pkmn.forms.getFirst().updateArray());
         setVisible(true);
-
-        selectButton.addActionListener(_ -> {
-            // Updates Visual Form
-            if(++visualForm < pkmn.forms.get(baseForm).formSymbol.length){
-                pkmn.labels(name, image, baseForm, visualForm);
-                return;
-            }if(++baseForm >= pkmn.forms.size()) baseForm = 0; // Updates Base Form
-            pkmn.labels(name, image, baseForm, 0);
-            list1.setModel(pkmn.forms.get(baseForm).updateArray());
-            visualForm = 0; revalidate();
-        });
 
         selectButton.addActionListener(_ -> {
             // Updates Visual Form

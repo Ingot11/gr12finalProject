@@ -123,9 +123,8 @@ public class mainDex extends JFrame{
                 pkmn.labels(name, image, baseForm, visualForm);
                 return;
             }if(++baseForm >= pkmn.forms.size()) baseForm = 0; // Updates Base Form
-            pkmn.labels(name, image, baseForm, 0);
+            pkmn.labels(name, image, baseForm, visualForm = 0);
             pkmn.forms.get(baseForm).updateLabels(info);
-            visualForm = 0;
         });
 
         // Caught and Seen Listeners
