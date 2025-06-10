@@ -1,5 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
+
 @SuppressWarnings("unused")
 public class mainDex extends JFrame{
     // Window Variables
@@ -22,7 +23,7 @@ public class mainDex extends JFrame{
     public mainDex(){
         // Set Main Frame
         setTitle("Pokédex");
-        setSize(650, 600);
+        setSize(650, 450);
         setLayout(new GridBagLayout());
         setMinimumSize(new Dimension(650, 450));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -49,8 +50,7 @@ public class mainDex extends JFrame{
         setVisible(true);
 
         // Action Listeners
-        gen.addActionListener(_ -> {
-            // Choose Generation
+        gen.addActionListener(_ -> { // Choose Generation to get DLC
             String[][] generation = {{"National"}, /*National*/
             {"Regional", "Red/Blue/Yellow/FireRed/LeafGreen", "Let's Go"}, /*Kanto*/
             {"Regional", "Gold/Silver/Crystal", "HeartGold/SoulSilver"}, /*Johto*/
@@ -64,7 +64,7 @@ public class mainDex extends JFrame{
             {"Regional", "Scarlet/Violet", "Teal Mask", "Indigo Disk"}}; /*Paldea*/
             if(gen.getSelectedIndex() > generation.length) gen.setSelectedIndex(0);
 
-            // Sets Model of Game
+            // Sets Model of DLC
             dlc.setModel(new DefaultComboBoxModel<>(generation[gen.getSelectedIndex()]));
             dlc.setSelectedIndex(0);
             revalidate(); // Resets frame
@@ -73,18 +73,18 @@ public class mainDex extends JFrame{
             pokeList.setModel(Pokemon.getDex(gen.getSelectedIndex(), dlc.getSelectedIndex()));
             pokeList.setSelectedIndex(0);
         });
-        pokeList.addListSelectionListener(_ -> {
+        pokeList.addListSelectionListener(_ -> { // Updates List with selected box
             Pokemon.get(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex()).labels(name, image);
             baseForm = 0;
         });
-        idInput.addActionListener(_ -> {
+        idInput.addActionListener(_ -> { // Takes in the national dex number and outputs it
             try{
                 Pokemon.nationalDex[Integer.parseInt(idInput.getText()) - 1].labels(name, image);
                 Pokemon.nationalDex[Integer.parseInt(idInput.getText()) - 1].getDebug(); // Debug
                 baseForm = Integer.parseInt(idInput.getText());
             }catch(NumberFormatException | ArrayIndexOutOfBoundsException e){}
         });
-        select.addActionListener(_ -> {
+        select.addActionListener(_ -> { // Opens the Pokemon Menu
             statsView x; mainDex y;
             if(baseForm == 0) x = new statsView(Pokemon.get(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex()));
             else y = new mainDex(Pokemon.nationalDex[baseForm - 1]);
@@ -104,8 +104,10 @@ public class mainDex extends JFrame{
         add(select = new JButton("Change Form"),constraint(0, 0, 0));
         add(image = new JLabel(), constraint(0, 1, 2));
         add(name = new JLabel(), constraint(1,0,0));
-        for(int i=0; i<info.length; i++) add(info[i] = new JLabel(), constraint(1, i + 1, 0));
         pkmn.labels(name, image, 0, 0);
+
+        // Adds Each Characteristic of Pokémon
+        for(int i=0; i<info.length; i++) add(info[i] = new JLabel(), constraint(1, i + 1, 0));
         pkmn.forms.getFirst().updateLabels(info);
 
         // Caught and Seen Buttons
@@ -116,10 +118,11 @@ public class mainDex extends JFrame{
 
         // Change Form Listeners
         select.addActionListener(_ -> {
+            // Updates Visual Form
             if(++visualForm < pkmn.forms.get(baseForm).formSymbol.length){
                 pkmn.labels(name, image, baseForm, visualForm);
                 return;
-            }if(++baseForm >= pkmn.forms.size()) baseForm = 0;
+            }if(++baseForm >= pkmn.forms.size()) baseForm = 0; // Updates Base Form
             pkmn.labels(name, image, baseForm, 0);
             pkmn.forms.get(baseForm).updateLabels(info);
             visualForm = 0;

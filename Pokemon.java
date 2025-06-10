@@ -57,14 +57,14 @@ public class Pokemon{
         catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}
     }
 
-    // Constructor from file
+    // Constructs Dex Numbers
     private void inputDex(String[] lines){
         this.name = lines[0];
         this.forms = new ArrayList<>();
         int[] dexNumber = new int[31];
         for(int i = 2; i < dexNumber.length; i++) dexNumber[i - 2] = Integer.parseInt(lines[i]);
         this.national = Integer.parseInt(lines[1]);
-        if(dexNumber[0] <= 151) regionalDex[0].put(dexNumber[0], this);
+        if(dexNumber[0] <= 151) regionalDex[0].put(dexNumber[0], this); // Add Dex number of Kanto
         for(int i = 1; i < regionalDex.length; i++) regionalDex[i].put(dexNumber[i - 1], this);
     }
 

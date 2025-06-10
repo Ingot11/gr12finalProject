@@ -2,7 +2,7 @@ import java.util.*;
 import javax.swing.*;
 public class Form{
     public static String[] types;
-    public String[] formSymbol;
+    public String[] formSymbol; // Array for each different visual form
     public String name, category, type1, type2, 
     ability1, ability2, abilityH, growthRate, egg1, egg2;
     public int national, catchRate, baseFriendship, baseExp, eggCycles,
