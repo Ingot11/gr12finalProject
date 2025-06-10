@@ -8,7 +8,7 @@ public class mainDex extends JFrame{
     private JComboBox<String> gen, dlc;
     private int visualForm, baseForm;
     private JList<String> pokeList;
-    private JLabel image;
+    private JLabel name, image;
     private JTextField idInput;
     private JLabel[] info;
     
@@ -40,8 +40,9 @@ public class mainDex extends JFrame{
 
         // Pokemon Image / More Info Button
         add(image = new JLabel(), constraint(0, 1, 0));
-        add(select = new JButton("More Info"), constraint(0, 2, 0));
-        Pokemon.nationalDex[0].labels(image);
+        add(name = new JLabel(), constraint(0, 2, 0));
+        add(select = new JButton("More Info"), constraint(0, 3, 0));
+        Pokemon.nationalDex[0].labels(name, image);
 
         // Scroll Dex
         add(new JScrollPane(pokeList = new JList<>(Pokemon.getDex(0, 0))), constraint(1, 1, 1));
@@ -73,12 +74,12 @@ public class mainDex extends JFrame{
             pokeList.setSelectedIndex(0);
         });
         pokeList.addListSelectionListener(_ -> {
-            Pokemon.get(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex()).labels(image);
+            Pokemon.get(gen.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex()).labels(name, image);
             baseForm = 0;
         });
         idInput.addActionListener(_ -> {
             try{
-                Pokemon.nationalDex[Integer.parseInt(idInput.getText()) - 1].labels(image);
+                Pokemon.nationalDex[Integer.parseInt(idInput.getText()) - 1].labels(name, image);
                 Pokemon.nationalDex[Integer.parseInt(idInput.getText()) - 1].getDebug(); // Debug
                 baseForm = Integer.parseInt(idInput.getText());
             }catch(NumberFormatException | ArrayIndexOutOfBoundsException e){}
@@ -102,12 +103,13 @@ public class mainDex extends JFrame{
         visualForm = 0; baseForm = 0;
         add(select = new JButton("Change Form"),constraint(0, 0, 0));
         add(image = new JLabel(), constraint(0, 1, 2));
-        for(int i=0; i<info.length; i++) add(info[i] = new JLabel(), constraint(1, i, 0));
-        pkmn.labels(info[0], image, 0, 0);
+        add(name = new JLabel(), constraint(1,0,0));
+        for(int i=0; i<info.length; i++) add(info[i] = new JLabel(), constraint(1, i + 1, 0));
+        pkmn.labels(name, image, 0, 0);
         pkmn.forms.getFirst().updateLabels(info);
 
         // Caught and Seen Buttons
-        add(infoPanel = new JPanel(new FlowLayout()), constraint(0, 10, 0));
+        add(infoPanel = new JPanel(new FlowLayout()), constraint(0, 11, 0));
         infoPanel.add(caught = new JButton("Caught"));
         infoPanel.add(seen = new JButton("Seen"));
         setVisible(true);
@@ -115,21 +117,23 @@ public class mainDex extends JFrame{
         // Change Form Listeners
         select.addActionListener(_ -> {
             if(++visualForm < pkmn.forms.get(baseForm).formSymbol.length){
-                pkmn.labels(info[0], image, baseForm, visualForm);
+                pkmn.labels(name, image, baseForm, visualForm);
                 return;
             }if(++baseForm >= pkmn.forms.size()) baseForm = 0;
-            pkmn.labels(info[0], image, baseForm, 0);
+            pkmn.labels(name, image, baseForm, 0);
             pkmn.forms.get(baseForm).updateLabels(info);
             visualForm = 0;
         });
 
         // Caught and Seen Listeners
         seen.addActionListener(_ -> {
-            pkmn.forms.get(baseForm).caughtSeen = 1;
+            if(pkmn.forms.get(baseForm).caughtSeen == 1) pkmn.forms.get(baseForm).caughtSeen = 0;
+            else pkmn.forms.get(baseForm).caughtSeen = 1;
             pkmn.forms.get(baseForm).updateLabels(info);
         });
         caught.addActionListener(_ -> {
-            pkmn.forms.get(baseForm).caughtSeen = 2;
+            if(pkmn.forms.get(baseForm).caughtSeen == 2) pkmn.forms.get(baseForm).caughtSeen = 0;
+            else pkmn.forms.get(baseForm).caughtSeen = 2;
             pkmn.forms.get(baseForm).updateLabels(info);
         });
     }
@@ -141,11 +145,11 @@ public class mainDex extends JFrame{
         constraints.gridx = x; constraints.gridy = y;
         switch(type){
             case 1 -> { // Pokémon Scroll List
-                constraints.gridheight = 2;
+                constraints.gridheight = 3;
                 constraints.fill = 1;
                 constraints.insets = new Insets(20, 20, 20, 20);
             } // Pokémon Image
-            case 2 -> constraints.gridheight = 9;
+            case 2 -> constraints.gridheight = 10;
         }
         return constraints;
     }

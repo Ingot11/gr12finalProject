@@ -61,17 +61,20 @@ public class Form{
     // Update Labels
     public void updateLabels(JLabel[] info){
         if(info.length != 11) return;
-        info[1].setText(category + " Pokémon");
-        info[2].setText(type1 + (!type2.equals("") ? (", " + type2) : "") + " Type");
-        info[3].setText("HP: " + hp + ", Atk: " + atk + ", Def: " + def + ", Sp.Atk: " + spAtk + ", Sp.Def: " + spDef + ", Spd: " + spd);
-        info[4].setText(ability1 + (!ability2.equals("") ? (", " + ability2) : "") + (!abilityH.equals("") ? (", Hidden: " + abilityH) : ""));
-        info[5].setText("Egg Cycles: " + eggCycles);
-        info[6].setText("Growth Rate: " + growthRate);
-        info[7].setText("Base Friendship: " + baseFriendship);
-        info[8].setText("Base EXP: " + baseExp);
-        info[9].setText("Male Percent: " + maleRatio + "%");
-        info[10].setText("Height: " + height + ", Weight: " + weight);
+        info[0].setText(category + " Pokémon");
+        info[1].setText(type1 + (!type2.equals("") ? (", " + type2) : "") + " Type");
+        info[2].setText("HP: " + hp + ", Atk: " + atk + ", Def: " + def + ", Sp.Atk: " + spAtk + ", Sp.Def: " + spDef + ", Spd: " + spd);
+        info[3].setText(ability1 + (!ability2.equals("") ? (", " + ability2) : "") + (!abilityH.equals("") ? (", Hidden: " + abilityH) : ""));
+        info[4].setText("Egg Cycles: " + eggCycles);
+        info[5].setText("Growth Rate: " + growthRate);
+        info[6].setText("Base Friendship: " + baseFriendship);
+        info[7].setText("Base EXP: " + baseExp);
+        info[8].setText("Male Percent: " + ((maleRatio==-1) ? "Unknown" : (maleRatio==0) ? "Never" : (maleRatio==100) ? "Always" : (maleRatio + "%")));
+        info[9].setText("Height: " + height + ", Weight: " + weight);
+        info[10].setText("Status: " + ((caughtSeen==1) ? "Seen" : (caughtSeen==2) ? "Caught" : "Unregistered"));
     }
+
+    // Calculates Stats
     public int statCalcualtor(String stats, int level, int iv, int ev, String nature){
         int stat = 0;
         Nature boosted;
@@ -88,6 +91,14 @@ public class Form{
         double equals = ((2.0*stat) + iv + (ev/4.0)) * level / 100.0 ;
         if(stats.equals("hp")) return (int) (equals + level + 10);
         else return (int) ((equals + 5) * (boosted.boost(stats)));
+    }
+
+    // Stats in String Array
+    public String[] getStats() {
+        String[] output = new String[6];
+        int[] stats = new int[]{hp, atk, def, spAtk, spDef, spd};
+        for(int i=0; i<output.length; i++) output[i] = "" + stats[i];
+        return output;
     }
 
     // Each forms weaknesses and resistances
@@ -238,12 +249,5 @@ public class Form{
         HashMap<String, Double> defensive = new HashMap<>();
         for(int i=0; i<types.length; i++) if(typeArray[i] != 1) defensive.put(types[i], typeArray[i]);
         return defensive;
-    }
-
-    public String[] getStats() {
-        String[] output = new String[6];
-        int[] stats = new int[]{hp, atk, def, spAtk, spDef, spd};
-        for(int i=0; i<output.length; i++) output[i] = "" + stats[i];
-        return output;
     }
 }

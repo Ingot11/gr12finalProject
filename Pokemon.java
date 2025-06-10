@@ -93,9 +93,9 @@ public class Pokemon{
     }
 
     // Set Name and Icon for Pokémon List
-    public void labels(JLabel label){
-        label.setText(name);
-        label.setIcon(image("", false));
+    public void labels(JLabel nameLabel, JLabel imageLabel){
+        nameLabel.setText(name);
+        imageLabel.setIcon(image("", false));
     }
     public void labels(JLabel nameLabel, JLabel imageLabel, int base, int visual){
         nameLabel.setText(forms.get(base).name);
