@@ -73,7 +73,7 @@ public class Form{
         info[9].setText("Height: " + height + ", Weight: " + weight);
         info[10].setText("Status: " + ((caughtSeen==1) ? "Seen" : (caughtSeen==2) ? "Caught" : "Unregistered"));
     }
-    public DefaultListModel<String> updateArray(){
+    public void updateList(JList<String> list){
         String[] info = new String[10];
         info[0] = (category + " Pokémon");
         info[1] = (type1 + (!type2.equals("") ? (", " + type2) : "") + " Type");
@@ -87,7 +87,7 @@ public class Form{
         info[9] = ("Status: " + ((caughtSeen==1) ? "Seen" : (caughtSeen==2) ? "Caught" : "Unregistered"));
         DefaultListModel<String> tempModel = new DefaultListModel<>();
         for (String i : info) tempModel.addElement(i);
-        return tempModel;
+        list.setModel(tempModel);
     }
 
     // Calculates Stats

@@ -4,16 +4,11 @@ import javax.swing.table.*;
 
 public class statsView extends JFrame {
     private JPanel panel1;
-    private JTable baseStats;
-    private JLabel image;
-    private JLabel name;
-    private JButton seenButton;
-    private JButton caughtButton;
-    private JButton selectButton;
-    private JList<String> list1;
-
+    private JButton caught, seen, select;
     private int visualForm, baseForm;
-    private String[][] data;
+    private JList<String> pokeList;
+    private JLabel name, image;
+    private JTable baseStats;
 
     public statsView(Pokemon pkmn) {
         setTitle(pkmn.name);
@@ -22,42 +17,36 @@ public class statsView extends JFrame {
         setMinimumSize(new Dimension(300, 200));
 
         String[] columnNames = {"HP", "Atk.", "Def.", "Sp. Atk.", "Sp. Def.", "Spd."};
-        data = new String[][] {
-                pkmn.forms.getFirst().getStats()
-        };
-
-        DefaultTableModel tableModel = new DefaultTableModel(data, columnNames){
+        baseStats.setModel(new DefaultTableModel(new String[][] {pkmn.forms.getFirst().getStats()}, columnNames){
             @Override public boolean isCellEditable(int row, int column){return false;}
-        };
-        baseStats.setModel(tableModel);
+        });
         for(int i = 0; i < 6; i++) baseStats.getColumnModel().getColumn(i).setPreferredWidth(50);
         baseStats.setRowHeight(25);
         baseStats.setDefaultEditor(Object.class, null);
 
         visualForm = 0; baseForm = 0;
-        pkmn.labels(name, image, 0, 0);
-        list1.setModel(pkmn.forms.getFirst().updateArray());
+        pkmn.labels(name, image, 0, 0, false);
+        pkmn.forms.getFirst().updateList(pokeList);
         setVisible(true);
-        if(pkmn.forms.size() < 2) selectButton.setVisible(false);
+        if(pkmn.forms.size() < 2) select.setVisible(false);
 
-        selectButton.addActionListener(_ -> {
+        select.addActionListener(_ -> {
             if(++visualForm >= pkmn.forms.get(baseForm).formSymbol.length){ // Updates Visual Form
                 if(++baseForm >= pkmn.forms.size()) baseForm = 0; // Updates Base Form
-                visualForm = 0;
+                pkmn.forms.get(baseForm).updateList(pokeList);
+                baseStats.setModel(new DefaultTableModel(new String[][] {pkmn.forms.get(baseForm).getStats()}, columnNames){
+                    @Override public boolean isCellEditable(int row, int column){return false;}
+                }); visualForm = 0;
             }
-            pkmn.labels(name, image, baseForm, visualForm);
-            pkmn.forms.get(baseForm).updateArray();
-            revalidate();
+            pkmn.labels(name, image, baseForm, visualForm, false); revalidate();
         });
-        seenButton.addActionListener(_ -> {
-            if(pkmn.forms.get(baseForm).caughtSeen == 1) pkmn.forms.get(baseForm).caughtSeen = 0;
-            else pkmn.forms.get(baseForm).caughtSeen = 1;
-            list1.setModel(pkmn.forms.get(baseForm).updateArray()); revalidate();
+        seen.addActionListener(_ -> {
+            pkmn.forms.get(baseForm).caughtSeen = (pkmn.forms.get(baseForm).caughtSeen == 1)? 0 : 1;
+            pkmn.forms.get(baseForm).updateList(pokeList); revalidate();
         });
-        caughtButton.addActionListener(_ -> {
-            if(pkmn.forms.get(baseForm).caughtSeen == 2) pkmn.forms.get(baseForm).caughtSeen = 0;
-            else pkmn.forms.get(baseForm).caughtSeen = 2;
-            list1.setModel(pkmn.forms.get(baseForm).updateArray()); revalidate();
+        caught.addActionListener(_ -> {
+            pkmn.forms.get(baseForm).caughtSeen = (pkmn.forms.get(baseForm).caughtSeen == 2)? 0 : 2;
+            pkmn.forms.get(baseForm).updateList(pokeList); revalidate();
         });
     }
 }
