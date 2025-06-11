@@ -85,7 +85,7 @@ public class mainDex extends JFrame{
                 baseForm = Integer.parseInt(idInput.getText());
             }catch(NumberFormatException | ArrayIndexOutOfBoundsException e){}
         });
-        select.addActionListener(_ -> { // Opens the Pokemon Menu
+        select.addActionListener(_ -> { // Opens the Pokémon Menu
             statsView x; mainDex y;
             if(baseForm == 0) x = new statsView(Pokemon.get(region.getSelectedIndex(), dlc.getSelectedIndex(), pokeList.getSelectedIndex()));
             else y = new mainDex(Pokemon.nationalDex[baseForm - 1]);
@@ -108,7 +108,7 @@ public class mainDex extends JFrame{
         add(name = new JLabel(), constraint(1,0,0));
         add(image = new JLabel(), constraint(0, 1, 2));
         pkmn.labels(name, image, 0, 0, false);
-        if(pkmn.forms.size() < 2) select.setVisible(false);
+        if(pkmn.forms.size() < 2 && pkmn.forms.get(0).formSymbol.length < 2) select.setVisible(false);
 
         // Adds Each Characteristic of Pokémon
         for(int i=0; i<info.length; i++) add(info[i] = new JLabel(), constraint(1, i + 1, 0));

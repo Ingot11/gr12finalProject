@@ -257,7 +257,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 199, Slowking, , Royal, Water, Psychic, Oblivious, Own Tempo, Regenerator, 2, 79.5, 70, 70, 172, 50, 20, Medium Fast, Monster, Water 1, 95, 75, 80, 100, 110, 30
 199, Galarian Slowking, g, Hexpert, Poison, Psychic, Curious Medicine, Own Tempo, Regenerator, 1.8, 79.5, 70, 70, 172, 50, 20, Medium Fast, Monster, Water 1, 95, 65, 80, 110, 110, 30
 200, Misdreavus, , Screech, Ghost, , Levitate, , , 0.7, 1, 45, 35, 87, 50, 25, Fast, Amorphous, , 60, 60, 60, 85, 85, 85
-201, Unown, , Symbol, Psychic, , Levitate, , , 0.5, 5, 225, 70, 118, , 40, Medium Fast, Undiscovered, , 48, 72, 48, 72, 48, 48
+201, Unown, ~b~c~d~e~f~g~h~i~j~k~l~m~n~o~p~q~r~s~t~u~v~w~x~y~z~!~qm, Symbol, Psychic, , Levitate, , , 0.5, 5, 225, 70, 118, , 40, Medium Fast, Undiscovered, , 48, 72, 48, 72, 48, 48
 202, Wobbuffet, , Patient, Psychic, , Shadow Tag, , Telepathy, 1.3, 28.5, 45, 70, 142, 50, 20, Medium Fast, Amorphous, , 190, 33, 58, 33, 58, 33
 203, Girafarig, , Long Neck, Normal, Psychic, Inner Focus, Early Bird, Sap Sipper, 1.5, 41.5, 60, 70, 159, 50, 20, Medium Fast, Field, , 70, 80, 65, 90, 65, 85
 204, Pineco, , Bagworm, Bug, , Sturdy, , Overcoat, 0.6, 7.2, 190, 70, 58, 50, 20, Medium Fast, Bug, , 50, 65, 90, 35, 35, 15
@@ -517,9 +517,9 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 418, Buizel, , Sea Weasel, Water, , Swift Swim, , Water Veil, 0.7, 29.5, 190, 70, 66, 50, 20, Medium Fast, Field, Water 1, 55, 65, 35, 60, 30, 85
 419, Floatzel, , Sea Weasel, Water, , Swift Swim, , Water Veil, 1.1, 33.5, 75, 70, 173, 50, 20, Medium Fast, Field, Water 1, 85, 105, 55, 85, 50, 115
 420, Cherubi, , Cherry, Grass, , Chlorophyll, , , 0.4, 3.3, 190, 70, 55, 50, 20, Medium Fast, Fairy, Grass, 45, 35, 45, 62, 53, 35
-421, Cherrim, , Blossom, Grass, , Flower Gift, , , 0.5, 9.3, 75, 70, 158, 50, 20, Medium Fast, Fairy, Grass, 70, 60, 70, 87, 78, 85
-422, Shellos, , Sea Slug, Water, , Sticky Hold, Storm Drain, Sand Force, 0.3, 6.3, 190, 70, 65, 50, 20, Medium Fast, Amorphous, Water 1, 76, 48, 48, 57, 62, 34
-423, Gastrodon, , Sea Slug, Water, Ground, Sticky Hold, Storm Drain, Sand Force, 0.9, 29.9, 75, 70, 166, 50, 20, Medium Fast, Amorphous, Water 1, 111, 83, 68, 92, 82, 39
+421, Cherrim, ~s, Blossom, Grass, , Flower Gift, , , 0.5, 9.3, 75, 70, 158, 50, 20, Medium Fast, Fairy, Grass, 70, 60, 70, 87, 78, 85
+422, Shellos, ~e, Sea Slug, Water, , Sticky Hold, Storm Drain, Sand Force, 0.3, 6.3, 190, 70, 65, 50, 20, Medium Fast, Amorphous, Water 1, 76, 48, 48, 57, 62, 34
+423, Gastrodon, ~e, Sea Slug, Water, Ground, Sticky Hold, Storm Drain, Sand Force, 0.9, 29.9, 75, 70, 166, 50, 20, Medium Fast, Amorphous, Water 1, 111, 83, 68, 92, 82, 39
 424, Ambipom, , Long Tail, Normal, , Technician, Pickup, Skill Link, 1.2, 20.3, 45, 100, 169, 50, 20, Fast, Field, , 75, 100, 66, 60, 66, 115
 425, Drifloon, , Balloon, Ghost, Flying, Aftermath, Unburden, Flare Boost, 0.4, 1.2, 125, 70, 70, 50, 30, Fluctuating, Amorphous, , 90, 50, 34, 60, 44, 70
 426, Drifblim, , Blimp, Ghost, Flying, Aftermath, Unburden, Flare Boost, 1.2, 15, 60, 70, 174, 50, 30, Fluctuating, Amorphous, , 150, 80, 44, 90, 54, 80
@@ -707,8 +707,8 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 582, Vanillite, , Fresh Snow, Ice, , Ice Body, Snow Cloak, Weak Armor, 0.4, 5.7, 255, 70, 61, 50, 20, Slow, Mineral, , 36, 50, 50, 65, 60, 44
 583, Vanillish, , Icy Snow, Ice, , Ice Body, Snow Cloak, Weak Armor, 1.1, 41, 120, 70, 138, 50, 20, Slow, Mineral, , 51, 65, 65, 80, 75, 59
 584, Vanilluxe, , Snowstorm, Ice, , Ice Body, Snow Warning, Weak Armor, 1.3, 57.5, 45, 70, 241, 50, 20, Slow, Mineral, , 71, 95, 85, 110, 95, 79
-585, Deerling, , Season, Normal, Grass, Chlorophyll, Sap Sipper, Serene Grace, 0.6, 19.5, 190, 70, 67, 50, 20, Medium Fast, Field, , 60, 60, 50, 40, 50, 75
-586, Sawsbuck, , Season, Normal, Grass, Chlorophyll, Sap Sipper, Serene Grace, 1.9, 92.5, 75, 70, 166, 50, 20, Medium Fast, Field, , 80, 100, 70, 60, 70, 95
+585, Deerling, ~s~a~w, Season, Normal, Grass, Chlorophyll, Sap Sipper, Serene Grace, 0.6, 19.5, 190, 70, 67, 50, 20, Medium Fast, Field, , 60, 60, 50, 40, 50, 75
+586, Sawsbuck, ~s~a~w, Season, Normal, Grass, Chlorophyll, Sap Sipper, Serene Grace, 1.9, 92.5, 75, 70, 166, 50, 20, Medium Fast, Field, , 80, 100, 70, 60, 70, 95
 587, Emolga, , Sky Squirrel, Electric, Flying, Static, , Motor Drive, 0.4, 5, 200, 70, 150, 50, 20, Medium Fast, Field, , 55, 75, 60, 75, 60, 103
 588, Karrablast, , Clamping, Bug, , Swarm, Shed Skin, No Guard, 0.5, 5.9, 200, 70, 63, 50, 15, Medium Fast, Bug, , 50, 75, 45, 40, 45, 60
 589, Escavalier, , Cavalry, Bug, Steel, Swarm, Shell Armor, Overcoat, 1, 33, 75, 70, 173, 50, 15, Medium Fast, Bug, , 70, 135, 105, 60, 105, 20
@@ -798,12 +798,12 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 663, Talonflame, , Scorching, Fire, Flying, Flame Body, , Gale Wings, 1.2, 24.5, 45, 70, 175, 50, 15, Medium Slow, Flying, , 78, 81, 71, 74, 69, 126
 664, Scatterbug, , Scatterdust, Bug, , Shield Dust, Compound Eyes, Friend Guard, 0.3, 2.5, 255, 70, 40, 50, 15, Medium Fast, Bug, , 38, 35, 40, 27, 25, 35
 665, Spewpa, , Scatterdust, Bug, , Shed Skin, , Friend Guard, 0.3, 8.4, 120, 70, 75, 50, 15, Medium Fast, Bug, , 45, 22, 60, 27, 30, 29
-666, Vivillon, , Scale, Bug, Flying, Shield Dust, Compound Eyes, Friend Guard, 1.2, 17, 45, 70, 185, 50, 15, Medium Fast, Bug, , 80, 52, 50, 90, 50, 89
+666, Vivillon, ~p~t~c~g~e~i~mo~ma~a~h~s~r~mon~sa~su~o~j~f~pb, Scale, Bug, Flying, Shield Dust, Compound Eyes, Friend Guard, 1.2, 17, 45, 70, 185, 50, 15, Medium Fast, Bug, , 80, 52, 50, 90, 50, 89
 667, Litleo, , Lion Cub, Fire, Normal, Rivalry, Unnerve, Moxie, 0.6, 13.5, 220, 70, 74, 25, 20, Medium Slow, Field, , 62, 50, 58, 73, 54, 72
 668, Pyroar, , Royal, Fire, Normal, Rivalry, Unnerve, Moxie, 1.5, 81.5, 65, 70, 177, 25, 20, Medium Slow, Field, , 86, 68, 72, 109, 66, 106
-669, Flabébé, , Single Bloom, Fairy, , Flower Veil, , Symbiosis, 0.1, 0.1, 225, 70, 61, 0, 20, Medium Fast, Fairy, , 44, 38, 39, 61, 79, 42
-670, Floette, , Single Bloom, Fairy, , Flower Veil, , Symbiosis, 0.2, 0.9, 120, 70, 130, 0, 20, Medium Fast, Fairy, , 54, 45, 47, 75, 98, 52
-671, Florges, , Garden, Fairy, , Flower Veil, , Symbiosis, 1.1, 10, 45, 70, 248, 0, 20, Medium Fast, Fairy, , 78, 65, 68, 112, 154, 75
+669, Flabébé, ~b~o~w~y, Single Bloom, Fairy, , Flower Veil, , Symbiosis, 0.1, 0.1, 225, 70, 61, 0, 20, Medium Fast, Fairy, , 44, 38, 39, 61, 79, 42
+670, Floette, ~b~o~w~y, Single Bloom, Fairy, , Flower Veil, , Symbiosis, 0.2, 0.9, 120, 70, 130, 0, 20, Medium Fast, Fairy, , 54, 45, 47, 75, 98, 52
+671, Florges, ~b~o~w~y, Garden, Fairy, , Flower Veil, , Symbiosis, 1.1, 10, 45, 70, 248, 0, 20, Medium Fast, Fairy, , 78, 65, 68, 112, 154, 75
 672, Skiddo, , Mount, Grass, , Sap Sipper, , Grass Pelt, 0.9, 31, 200, 70, 70, 50, 20, Medium Fast, Field, , 66, 65, 48, 62, 57, 52
 673, Gogoat, , Mount, Grass, , Sap Sipper, , Grass Pelt, 1.7, 91, 45, 70, 186, 50, 20, Medium Fast, Field, , 123, 100, 62, 97, 81, 68
 674, Pancham, , Playful, Fighting, , Iron Fist, Mold Breaker, Scrappy, 0.6, 8, 220, 70, 70, 50, 25, Medium Fast, Field, Human-Like, 67, 82, 62, 46, 48, 43
@@ -858,7 +858,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 713, Avalugg, , Iceberg, Ice, , Own Tempo, Ice Body, Sturdy, 2, 505, 55, 70, 180, 50, 20, Medium Fast, Mineral, Monster, 95, 117, 184, 44, 46, 28
 714, Noibat, , Sound Wave, Flying, Dragon, Frisk, Infiltrator, Telepathy, 0.5, 8, 190, 70, 49, 50, 20, Medium Fast, Dragon, Flying, 40, 30, 35, 45, 40, 55
 715, Noivern, , Sound Wave, Flying, Dragon, Frisk, Infiltrator, Telepathy, 1.5, 85, 45, 70, 187, 50, 20, Medium Fast, Dragon, Flying, 85, 70, 80, 97, 80, 123
-716, Xerneas, , Life, Fairy, , Fairy Aura, , , 3, 215, 45, 0, 306, , 120, Slow, Undiscovered, , 126, 131, 95, 131, 98, 99
+716, Xerneas, ~a, Life, Fairy, , Fairy Aura, , , 3, 215, 45, 0, 306, , 120, Slow, Undiscovered, , 126, 131, 95, 131, 98, 99
 717, Yveltal, , Destruction, Dark, Flying, Dark Aura, , , 5.8, 203, 45, 0, 306, , 120, Slow, Undiscovered, , 126, 131, 95, 131, 98, 99
 718, Zygarde 10% Forme, 10, Order, Dragon, Ground, Aura Break, Power Construct, , 1.2, 33.5, 3, 0, 219, , 120, Slow, Undiscovered, , 54, 100, 71, 61, 85, 115
 718, Zygarde 50% Forme, , Order, Dragon, Ground, Aura Break, Power Construct, , 5, 305, 3, 0, 270, , 120, Slow, Undiscovered, , 108, 100, 121, 81, 95, 95
@@ -933,7 +933,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 775, Komala, , Drowsing, Normal, , Comatose, , , 0.4, 19.9, 45, 70, 168, 50, 20, Slow, Field, , 65, 115, 65, 75, 95, 65
 776, Turtonator, , Blast Turtle, Fire, Dragon, Shell Armor, , , 2, 212, 70, 70, 170, 50, 20, Medium Fast, Dragon, Monster, 60, 78, 135, 91, 85, 36
 777, Togedemaru, , Roly-Poly, Electric, Steel, Iron Barbs, Lightning Rod, Sturdy, 0.3, 3.3, 180, 70, 152, 50, 10, Medium Fast, Fairy, Field, 65, 98, 63, 40, 73, 96
-778, Mimikyu, , Disguise, Ghost, Fairy, Disguise, , , 0.2, 0.7, 45, 70, 167, 50, 20, Medium Fast, Amorphous, , 55, 90, 80, 50, 105, 96
+778, Mimikyu, ~b, Disguise, Ghost, Fairy, Disguise, , , 0.2, 0.7, 45, 70, 167, 50, 20, Medium Fast, Amorphous, , 55, 90, 80, 50, 105, 96
 779, Bruxish, , Gnash Teeth, Water, Psychic, Dazzling, Strong Jaw, Wonder Skin, 0.9, 19, 80, 70, 166, 50, 15, Medium Fast, Water 2, , 68, 105, 70, 70, 70, 92
 780, Drampa, , Placid, Normal, Dragon, Berserk, Sap Sipper, Cloud Nine, 3, 185, 70, 70, 170, 50, 20, Medium Fast, Dragon, Monster, 78, 60, 85, 135, 91, 36
 781, Dhelmise, , Sea Creeper, Ghost, Grass, Steelworker, , , 3.9, 210, 25, 70, 181, , 25, Medium Fast, Mineral, , 70, 131, 100, 86, 90, 40
@@ -1003,7 +1003,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 842, Appletun, , Apple Nectar, Grass, Dragon, Ripen, Gluttony, Thick Fat, 0.4, 13, 45, 50, 170, 50, 20, Erratic, Dragon, Grass, 110, 85, 80, 100, 80, 30
 843, Silicobra, , Sand Snake, Ground, , Sand Spit, Shed Skin, Sand Veil, 2.2, 7.6, 255, 50, 63, 50, 20, Medium Fast, Dragon, Field, 52, 57, 75, 35, 50, 46
 844, Sandaconda, , Sand Snake, Ground, , Sand Spit, Shed Skin, Sand Veil, 3.8, 65.5, 120, 50, 179, 50, 20, Medium Fast, Dragon, Field, 72, 107, 125, 65, 70, 71
-845, Cramorant, , Gulp, Flying, Water, Gulp Missile, , , 0.8, 18, 45, 50, 166, 50, 20, Medium Fast, Flying, Water 1, 70, 85, 55, 85, 95, 85
+845, Cramorant, ~gu~go, Gulp, Flying, Water, Gulp Missile, , , 0.8, 18, 45, 50, 166, 50, 20, Medium Fast, Flying, Water 1, 70, 85, 55, 85, 95, 85
 846, Arrokuda, , Rush, Water, , Swift Swim, , Propeller Tail, 0.5, 1, 255, 50, 56, 50, 20, Slow, Water 2, , 41, 63, 40, 40, 30, 66
 847, Barraskewda, , Skewer, Water, , Swift Swim, , Propeller Tail, 1.3, 30, 60, 50, 172, 50, 20, Slow, Water 2, , 61, 123, 60, 60, 50, 136
 848, Toxel, , Baby, Electric, Poison, Rattled, Static, Klutz, 0.4, 11, 75, 50, 48, 50, 25, Medium Slow, Undiscovered, , 40, 38, 35, 54, 35, 40
@@ -1029,7 +1029,7 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 866, Mr. Rime, , Comedian, Psychic, Ice, Tangled Feet, Screen Cleaner, Ice Body, 1.5, 58.2, 45, 50, 182, 50, 25, Medium Fast, Human-Like, , 80, 85, 75, 110, 100, 70
 867, Runerigus, , Grudge, Ground, Ghost, Wandering Spirit, , , 1.6, 66.6, 90, 50, 169, 50, 25, Medium Fast, Amorphous, Mineral, 58, 95, 145, 50, 105, 30
 868, Milcery, , Cream, Fairy, , Sweet Veil, , Aroma Veil, 0.2, 0.3, 200, 50, 54, 0, 20, Medium Fast, Amorphous, Fairy, 45, 40, 40, 50, 61, 34
-869, Alcremie, , Cream, Fairy, , Sweet Veil, , Aroma Veil, 0.3, 0.5, 100, 50, 173, 0, 20, Medium Fast, Amorphous, Fairy, 65, 60, 75, 110, 121, 64
+869, Alcremie, berries, Cream, Fairy, , Sweet Veil, , Aroma Veil, 0.3, 0.5, 100, 50, 173, 0, 20, Medium Fast, Amorphous, Fairy, 65, 60, 75, 110, 121, 64
 870, Falinks, , Formation, Fighting, , Battle Armor, , Defiant, 3, 62, 45, 50, 165, , 25, Medium Fast, Fairy, Mineral, 65, 100, 100, 70, 60, 75
 871, Pincurchin, , Sea Urchin, Electric, , Lightning Rod, , Electric Surge, 0.3, 1, 75, 50, 152, 50, 20, Medium Fast, Amorphous, Water 1, 48, 101, 95, 91, 85, 15
 872, Snom, , Worm, Ice, Bug, Shield Dust, , Ice Scales, 0.3, 3.8, 190, 50, 37, 50, 20, Medium Fast, Bug, , 30, 25, 35, 45, 30, 20

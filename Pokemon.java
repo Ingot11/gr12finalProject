@@ -43,14 +43,26 @@ public class Pokemon{
             readStats.readLine();
             while ((line = readStats.readLine()) != null) { // Initialize each form of Pokémon
                 String[] lines = line.split(", ");
-                // Different Types for Arceus and Silvally
-                if(lines[2].equals("types")) for(int i=0; i<Form.types.length; i++){
-                    if(i != 0){
-                        lines[2] = Form.types[i].toLowerCase();
-                        lines[4] = Form.types[i];
-                    }else lines[2] = "";
-                    nationalDex[Integer.parseInt(lines[0]) - 1].forms.add(new Form(lines));
-                }else nationalDex[Integer.parseInt(lines[0]) - 1].forms.add(new Form(lines));
+                int x = Integer.parseInt(lines[0]) - 1;
+                switch (lines[2]) { // Different Types for Arceus and Silvally
+                    case "types" -> {
+                        for(int i=0; i<Form.types.length; i++){
+                            if(i != 0){
+                                lines[2] = Form.types[i].toLowerCase();
+                                lines[4] = Form.types[i];
+                            }else lines[2] = "";
+                            nationalDex[x].forms.add(new Form(lines));
+                        }
+                    }
+                    case "berries" -> { // Different Alcreamie Forms
+                        for(String j : new String[]{"", "rc", "mac", "mic", "lc", "sc", "rs", "cs", "ras"})
+                            for(String i : new String[]{"", "berry", "love", "star", "clover", "flower", "ribbon"}){
+                                lines[2] = j+i;
+                                nationalDex[x].forms.add(new Form(lines));
+                            }
+                    }
+                    default -> nationalDex[x].forms.add(new Form(lines));
+                }
             }
         }
         catch (FileNotFoundException | NumberFormatException e) {System.out.println("File not found/Number Format Exception");}
