@@ -118,13 +118,13 @@ public class mainDex extends JFrame{
 
         // Change Form Listeners
         select.addActionListener(_ -> {
-            // Updates Visual Form
-            if(++visualForm < pkmn.forms.get(baseForm).formSymbol.length){
-                pkmn.labels(name, image, baseForm, visualForm);
-                return;
-            }if(++baseForm >= pkmn.forms.size()) baseForm = 0; // Updates Base Form
-            pkmn.labels(name, image, baseForm, visualForm = 0);
+            if(++visualForm >= pkmn.forms.get(baseForm).formSymbol.length){ // Updates Visual Form
+                if(++baseForm >= pkmn.forms.size()) baseForm = 0; // Updates Base Form
+                visualForm = 0;
+            }
+            pkmn.labels(name, image, baseForm, visualForm);
             pkmn.forms.get(baseForm).updateLabels(info);
+            revalidate();
         });
 
         // Caught and Seen Listeners
@@ -132,11 +132,13 @@ public class mainDex extends JFrame{
             if(pkmn.forms.get(baseForm).caughtSeen == 1) pkmn.forms.get(baseForm).caughtSeen = 0;
             else pkmn.forms.get(baseForm).caughtSeen = 1;
             pkmn.forms.get(baseForm).updateLabels(info);
+            revalidate();
         });
         caught.addActionListener(_ -> {
             if(pkmn.forms.get(baseForm).caughtSeen == 2) pkmn.forms.get(baseForm).caughtSeen = 0;
             else pkmn.forms.get(baseForm).caughtSeen = 2;
             pkmn.forms.get(baseForm).updateLabels(info);
+            revalidate();
         });
     }
 

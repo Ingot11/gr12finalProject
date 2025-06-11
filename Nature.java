@@ -25,7 +25,7 @@ public enum Nature{
     HASTY{ @Override public double boost(String stat){return calculateBoost(stat, "spd", "def");} },
     JOLLY{ @Override public double boost(String stat){return calculateBoost(stat, "spd", "spAtk");} },
     NAIVE{ @Override public double boost(String stat){return calculateBoost(stat, "spd", "spDef");} };
-    // calculateBoostulations
+    // calculate Boosts
     public double boost(String stat){return 1;}
     public double calculateBoost(String stat, String buff, String nerf){return buff.equals(nerf) ? 1 : stat.equals(buff) ? 1.1 : stat.equals(nerf) ? 0.9 : 1;};
 }

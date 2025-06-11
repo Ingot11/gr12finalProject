@@ -54,7 +54,7 @@ public class Pokemon{
             }
         }
         catch (FileNotFoundException | NumberFormatException e) {System.out.println("File not found/Number Format Exception");}
-        catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}
+        catch (IOException ex) {Logger.getLogger(Object.class.getName()).log(Level.SEVERE, null, ex);}
     }
 
     // Constructs Dex Numbers
@@ -82,13 +82,13 @@ public class Pokemon{
 
     //Get image from Serebii website
     public ImageIcon image(String formSymbol, boolean shiny){
-        String dexString = (national <= 0 || national > 1025) ? "001" : (national > 99) ? "" + national : (national > 9) ? "0" + national : (national > 0) ? "00" + national : "001",
-        linkText = "https://serebii.net/" + (shiny ? "Shiny/SV/new/" : "scarletviolet/pokemon/new/") + dexString + (formSymbol.equals("") ? "" : "-") + formSymbol + ".png";
+        String nationalString = (national <= 0 || national > 1025) ? "001" : (national > 99) ? "" + national : (national > 9) ? "0" + national : (national > 0) ? "00" + national : "001",
+        linkText = (shiny ? "Shiny/SV/new/" : "scarletviolet/pokemon/new/") + nationalString + (formSymbol.equals("") ? "" : "-") + formSymbol;
         try {
-            BufferedImage image = ImageIO.read(new URI(linkText).toURL());
+            BufferedImage image = ImageIO.read(new URI("https://serebii.net/" +linkText + ".png").toURL());
             return new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
         }catch (MalformedURLException | URISyntaxException e) {}
-        catch (IOException ex) {Logger.getLogger(Pokemon.class.getName()).log(Level.SEVERE, null, ex);}
+        catch (IOException ex) {Logger.getLogger(Object.class.getName()).log(Level.SEVERE, null, ex);}
         return null;
     }
 

@@ -40,14 +40,13 @@ public class statsView extends JFrame {
         setVisible(true);
 
         selectButton.addActionListener(_ -> {
-            // Updates Visual Form
-            if(++visualForm < pkmn.forms.get(baseForm).formSymbol.length){
-                pkmn.labels(name, image, baseForm, visualForm);
-                return;
-            }if(++baseForm >= pkmn.forms.size()) baseForm = 0; // Updates Base Form
-            pkmn.labels(name, image, baseForm, 0);
-            list1.setModel(pkmn.forms.get(baseForm).updateArray());
-            visualForm = 0; revalidate();
+            if(++visualForm >= pkmn.forms.get(baseForm).formSymbol.length){ // Updates Visual Form
+                if(++baseForm >= pkmn.forms.size()) baseForm = 0; // Updates Base Form
+                visualForm = 0;
+            }
+            pkmn.labels(name, image, baseForm, visualForm);
+            pkmn.forms.get(baseForm).updateArray();
+            revalidate();
         });
         seenButton.addActionListener(_ -> {
             if(pkmn.forms.get(baseForm).caughtSeen == 1) pkmn.forms.get(baseForm).caughtSeen = 0;
