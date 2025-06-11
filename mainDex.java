@@ -105,6 +105,7 @@ public class mainDex extends JFrame{
         add(image = new JLabel(), constraint(0, 1, 2));
         add(name = new JLabel(), constraint(1,0,0));
         pkmn.labels(name, image, 0, 0);
+        if(pkmn.forms.size() < 2) select.setVisible(false);
 
         // Adds Each Characteristic of Pokémon
         for(int i=0; i<info.length; i++) add(info[i] = new JLabel(), constraint(1, i + 1, 0));

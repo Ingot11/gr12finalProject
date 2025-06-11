@@ -38,6 +38,7 @@ public class statsView extends JFrame {
         pkmn.labels(name, image, 0, 0);
         list1.setModel(pkmn.forms.getFirst().updateArray());
         setVisible(true);
+        if(pkmn.forms.size() < 2) selectButton.setVisible(false);
 
         selectButton.addActionListener(_ -> {
             if(++visualForm >= pkmn.forms.get(baseForm).formSymbol.length){ // Updates Visual Form
