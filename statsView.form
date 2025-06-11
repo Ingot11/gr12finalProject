@@ -39,7 +39,7 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="3f86c" class="javax.swing.JButton" binding="seenButton" default-binding="true">
+      <component id="3f86c" class="javax.swing.JButton" binding="seen" default-binding="true">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <minimum-size width="75" height="25"/>
@@ -52,7 +52,7 @@
           <verticalAlignment value="0"/>
         </properties>
       </component>
-      <component id="972e8" class="javax.swing.JButton" binding="caughtButton">
+      <component id="972e8" class="javax.swing.JButton" binding="caught">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <minimum-size width="75" height="25"/>
@@ -64,7 +64,7 @@
           <text value="Caught"/>
         </properties>
       </component>
-      <component id="54aeb" class="javax.swing.JList" binding="list1" default-binding="true">
+      <component id="54aeb" class="javax.swing.JList" binding="pokeList" default-binding="true">
         <constraints>
           <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
@@ -74,7 +74,7 @@
           <model/>
         </properties>
       </component>
-      <component id="2d9a8" class="javax.swing.JButton" binding="selectButton">
+      <component id="2d9a8" class="javax.swing.JButton" binding="select">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <minimum-size width="150" height="25"/>
