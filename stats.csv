@@ -1189,8 +1189,14 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 1004, Chi Yu, , Ruinous, Dark, Fire, Beads of Ruin, , , 0.4, 4.9, 6, 0, 285, , 50, Slow, Undiscovered, , 55, 80, 80, 135, 120, 100
 1005, Roaring Moon, , Paradox, Dragon, Dark, Protosynthesis, , , 2, 380, 10, 0, 295, , 50, Slow, Undiscovered, , 105, 139, 71, 55, 101, 119
 1006, Iron Valiant, , Paradox, Fairy, Fighting, Quark Drive, , , 1.4, 35, 10, 0, 295, , 50, Slow, Undiscovered, , 74, 130, 90, 120, 60, 116
-1007, Koraidon, , Paradox, Fighting, Dragon, Orichalcum Pulse, , , 2.5, 303, 3, 0, 335, , 50, Slow, Undiscovered, , 100, 135, 115, 85, 100, 135
+1007, Koraidon Apex Build, , Paradox, Fighting, Dragon, Orichalcum Pulse, , , 2.5, 303, 3, 0, 335, , 50, Slow, Undiscovered, , 100, 135, 115, 85, 100, 135
+1007, Koraidon Limited Build, l, Paradox, Fighting, Dragon, Orichalcum Pulse, , , 2.5, 303, 3, 0, 335, , 50, Slow, Undiscovered, , 100, 135, 115, 85, 100, 135
+1007, Koraidon Sprinting Build, s, Paradox, Fighting, Dragon, Orichalcum Pulse, , , 2.5, 303, 3, 0, 335, , 50, Slow, Undiscovered, , 100, 135, 115, 85, 100, 135
+1007, Koraidon Gliding Build, g, Paradox, Fighting, Dragon, Orichalcum Pulse, , , 2.5, 303, 3, 0, 335, , 50, Slow, Undiscovered, , 100, 135, 115, 85, 100, 135
 1008, Miraidon, , Paradox, Electric, Dragon, Hadron Engine, , , 3.5, 240, 3, 0, 335, , 50, Slow, Undiscovered, , 100, 85, 100, 135, 115, 135
+1008, Miraidon Low-Power Mode, l, Paradox, Electric, Dragon, Hadron Engine, , , 3.5, 240, 3, 0, 335, , 50, Slow, Undiscovered, , 100, 85, 100, 135, 115, 135
+1008, Miraidon Drive Mode, d, Paradox, Electric, Dragon, Hadron Engine, , , 3.5, 240, 3, 0, 335, , 50, Slow, Undiscovered, , 100, 85, 100, 135, 115, 135
+1008, Miraidon Glide Mode, g, Paradox, Electric, Dragon, Hadron Engine, , , 3.5, 240, 3, 0, 335, , 50, Slow, Undiscovered, , 100, 85, 100, 135, 115, 135
 1009, Walking Wake, , Paradox, Water, Dragon, Protosynthesis, , , 3.5, 280, 5, 0, 0, , 50, Slow, Undiscovered, , 99, 83, 91, 125, 83, 109
 1010, Iron Leaves, , Paradox, Grass, Psychic, Quark Drive, , , 1.5, 125, 5, 0, 0, , 50, Slow, Undiscovered, , 90, 130, 88, 70, 108, 104
 1011, Dipplin, , Candy Apple, Grass, Dragon, Supersweet Syrup, Gluttony, Sticky Hold, 0.4, 4.4, 45, 0, 0, , 20, Erratic, Grass, Dragon, 80, 80, 110, 95, 80, 40
