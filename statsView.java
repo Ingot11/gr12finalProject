@@ -9,12 +9,13 @@ public class statsView extends JFrame {
     private JList<String> pokeList;
     private JLabel name, image;
     private JTable baseStats;
+    private JButton shinyButton;
 
     // New Window to Display Pokémon
     public statsView(Pokemon pkmn) {
         setTitle(pkmn.name);
         setContentPane(panel1);
-        setSize(504, 320);
+        setSize(504, 350);
         setMinimumSize(new Dimension(300, 200));
 
         // Characteristics Table
