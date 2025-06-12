@@ -3,7 +3,7 @@ import javax.swing.*;
 import javax.swing.table.*;
 
 public class statsView extends JFrame {
-    private JPanel panel1;
+    private JPanel selectorPanel;
     private JButton caught, seen, select, shiny;
     private int visualForm, baseForm;
     private JList<String> pokeList;
@@ -14,7 +14,7 @@ public class statsView extends JFrame {
     // New Window to Display Pokémon
     public statsView(Pokemon pkmn) {
         setTitle(pkmn.name);
-        setContentPane(panel1);
+        setContentPane(selectorPanel);
         setSize(504, 350);
         setMinimumSize(new Dimension(300, 200));
 
