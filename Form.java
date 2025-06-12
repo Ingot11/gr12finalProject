@@ -116,6 +116,15 @@ public class Form{
         for(int i=0; i<output.length; i++) output[i] = "" + stats[i];
         return output;
     }
+    // Set as Caught or Seen
+    public JList<String> caughtStatus(JList<String> list, int choice){
+        caughtSeen = (caughtSeen == choice)? 0 : choice;
+        return list;
+    }
+    public void caughtStatus(JLabel[] list, int choice){
+        caughtSeen = (caughtSeen == choice)? 0 : choice;
+        updateLabels(list);
+    }
 
     // Each forms weaknesses and resistances
     public HashMap<String, Double> typeDefensive(){

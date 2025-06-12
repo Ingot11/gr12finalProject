@@ -48,12 +48,10 @@ public class statsView extends JFrame {
         });
         // Caught and Seen Listeners
         caught.addActionListener(_ -> {
-            pkmn.forms.get(baseForm).caughtSeen = (pkmn.forms.get(baseForm).caughtSeen == 2)? 0 : 2;
-            pkmn.forms.get(baseForm).updateList(pokeList); revalidate();
+            pkmn.forms.get(baseForm).caughtStatus(pokeList, 2); revalidate();
         });
         seen.addActionListener(_ -> {
-            pkmn.forms.get(baseForm).caughtSeen = (pkmn.forms.get(baseForm).caughtSeen == 1)? 0 : 1;
-            pkmn.forms.get(baseForm).updateList(pokeList); revalidate();
+            pkmn.forms.get(baseForm).caughtStatus(pokeList, 1); revalidate();
         });
     }
 }

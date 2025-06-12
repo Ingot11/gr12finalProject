@@ -44,8 +44,8 @@ public class Pokemon{
             while ((line = readStats.readLine()) != null) { // Initialize each form of Pokémon
                 String[] lines = line.split(", ");
                 int x = Integer.parseInt(lines[0]) - 1;
-                switch (lines[2]) { // Different Types for Arceus and Silvally
-                    case "types" -> {
+                switch (lines[2]) {
+                    case "types" -> { // Different Types for Arceus and Silvally
                         for(int i=0; i<Form.types.length; i++){
                             if(i != 0){
                                 lines[2] = Form.types[i].toLowerCase();
@@ -57,7 +57,7 @@ public class Pokemon{
                     case "berries" -> { // Different Alcreamie Forms
                         for(String j : new String[]{"", "rc", "mac", "mic", "lc", "sc", "rs", "cs", "ras"})
                             for(String i : new String[]{"", "berry", "love", "star", "clover", "flower", "ribbon"}){
-                                lines[2] = j+i;
+                                lines[2] = j + i;
                                 nationalDex[x].forms.add(new Form(lines));
                             }
                     }
@@ -97,7 +97,7 @@ public class Pokemon{
         String nationalString = (national <= 0 || national > 1025) ? "001" : (national > 99) ? "" + national : (national > 9) ? "0" + national : (national > 0) ? "00" + national : "001",
         linkText = (shiny ? "Shiny/SV/new/" : "scarletviolet/pokemon/new/") + nationalString + (formSymbol.equals("") ? "" : "-") + formSymbol;
         try {
-            BufferedImage image = ImageIO.read(new URI("https://serebii.net/" +linkText + ".png").toURL());
+            BufferedImage image = ImageIO.read(new URI("https://serebii.net/" + linkText + ".png").toURL());
             return new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
         }catch (MalformedURLException | URISyntaxException e) {}
         catch (IOException ex) {Logger.getLogger(Object.class.getName()).log(Level.SEVERE, null, ex);}

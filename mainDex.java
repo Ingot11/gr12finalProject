@@ -133,13 +133,11 @@ public class mainDex extends JFrame{
         });
 
         // Caught and Seen Listeners
-        seen.addActionListener(_ -> {
-            pkmn.forms.get(baseForm).caughtSeen = (pkmn.forms.get(baseForm).caughtSeen == 1)? 0 : 1;
-            pkmn.forms.get(baseForm).updateLabels(info); revalidate();
-        });
         caught.addActionListener(_ -> {
-            pkmn.forms.get(baseForm).caughtSeen = (pkmn.forms.get(baseForm).caughtSeen == 2)? 0 : 2;
-            pkmn.forms.get(baseForm).updateLabels(info); revalidate();
+            pkmn.forms.get(baseForm).caughtStatus(info, 2); revalidate();
+        });
+        seen.addActionListener(_ -> {
+            pkmn.forms.get(baseForm).caughtStatus(info, 1); revalidate();
         });
     }
 
