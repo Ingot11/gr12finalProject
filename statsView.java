@@ -4,12 +4,12 @@ import javax.swing.table.*;
 
 public class statsView extends JFrame {
     private JPanel panel1;
-    private JButton caught, seen, select;
+    private JButton caught, seen, select, shiny;
     private int visualForm, baseForm;
     private JList<String> pokeList;
     private JLabel name, image;
     private JTable baseStats;
-    private JButton shinyButton;
+    private boolean isShiny;
 
     // New Window to Display Pokémon
     public statsView(Pokemon pkmn) {
@@ -19,6 +19,7 @@ public class statsView extends JFrame {
         setMinimumSize(new Dimension(300, 200));
 
         // Characteristics Table
+        isShiny = false;
         String[] columnNames = {"HP", "Atk.", "Def.", "Sp. Atk.", "Sp. Def.", "Spd."};
         baseStats.setModel(new DefaultTableModel(new String[][] {pkmn.forms.getFirst().getStats()}, columnNames){
             @Override public boolean isCellEditable(int row, int column){return false;}
@@ -45,7 +46,7 @@ public class statsView extends JFrame {
                     @Override public boolean isCellEditable(int row, int column){return false;}
                 }); visualForm = 0;
             }
-            pkmn.labels(name, image, baseForm, visualForm, false); revalidate();
+            pkmn.labels(name, image, baseForm, visualForm, isShiny); revalidate();
         });
         // Caught and Seen Listeners
         caught.addActionListener(_ -> {
@@ -53,6 +54,9 @@ public class statsView extends JFrame {
         });
         seen.addActionListener(_ -> {
             pkmn.forms.get(baseForm).caughtStatus(pokeList, 1); revalidate();
+        });
+        shiny.addActionListener(_ -> {
+            pkmn.labels(name, image, baseForm, visualForm, isShiny = !isShiny); revalidate();
         });
     }
 }
