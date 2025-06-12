@@ -8,8 +8,8 @@ public class Form{
     public int national, catchRate, baseFriendship, baseExp, eggCycles,
     hp, atk, def, spAtk, spDef, spd, caughtSeen;
     public double height, weight, maleRatio;
-    // Constructor for each form
-    public Form(String[] text){
+    
+    public Form(String[] text){ // Constructor for each form
         if(text.length != 25) return;
         this.name = text[1];
         this.formSymbol = text[2].split("~");
@@ -60,31 +60,34 @@ public class Form{
 
     // Update Labels
     public void updateLabels(JLabel[] info){
-        if(info.length != 11) return;
+        if(info.length != 12) return;
         info[0].setText(category + " Pokémon");
         info[1].setText(type1 + (!type2.equals("") ? (", " + type2) : "") + " Type");
         info[2].setText("HP: " + hp + ", Atk: " + atk + ", Def: " + def + ", Sp.Atk: " + spAtk + ", Sp.Def: " + spDef + ", Spd: " + spd);
-        info[3].setText(ability1 + (!ability2.equals("") ? (", " + ability2) : "") + (!abilityH.equals("") ? (", Hidden: " + abilityH) : ""));
-        info[4].setText("Egg Cycles: " + eggCycles);
-        info[5].setText("Growth Rate: " + growthRate);
-        info[6].setText("Base Friendship: " + baseFriendship);
-        info[7].setText("Base EXP: " + baseExp);
-        info[8].setText("Male Percent: " + ((maleRatio==-1) ? "Unknown" : (maleRatio==0) ? "Never" : (maleRatio==100) ? "Always" : (maleRatio + "%")));
-        info[9].setText("Height: " + height + ", Weight: " + weight);
-        info[10].setText("Status: " + ((caughtSeen==1) ? "Seen" : (caughtSeen==2) ? "Caught" : "Unregistered"));
+        info[3].setText("Ability(s): " + ability1 + (!ability2.equals("") ? (", " + ability2) : "") + (!abilityH.equals("") ? (", Hidden: " + abilityH) : ""));
+        info[4].setText("Egg Group(s): " + egg1 + (!egg2.equals("") ? (", " + egg2) : ""));
+        info[5].setText("Egg Cycles: " + eggCycles);
+        info[6].setText("Growth Rate: " + growthRate);
+        info[7].setText("Base Friendship: " + baseFriendship);
+        info[8].setText("Base EXP: " + baseExp);
+        info[9].setText("Male Percent: " + ((maleRatio==-1) ? "Unknown" : (maleRatio==0) ? "Never" : (maleRatio==100) ? "Always" : (maleRatio + "%")));
+        info[10].setText("Height: " + height + ", Weight: " + weight);
+        info[11].setText("Status: " + ((caughtSeen==1) ? "Seen" : (caughtSeen==2) ? "Caught" : "Unregistered"));
     }
     public void updateList(JList<String> list){
-        String[] info = new String[10];
-        info[0] = (category + " Pokémon");
-        info[1] = (type1 + (!type2.equals("") ? (", " + type2) : "") + " Type");
-        info[2] = (ability1 + (!ability2.equals("") ? (", " + ability2) : "") + (!abilityH.equals("") ? (", Hidden: " + abilityH) : ""));
-        info[3] = ("Egg Cycles: " + eggCycles);
-        info[4] = ("Growth Rate: " + growthRate);
-        info[5] = ("Base Friendship: " + baseFriendship);
-        info[6] = ("Base EXP: " + baseExp);
-        info[7] = ("Male Percent: " + ((maleRatio==-1) ? "Unknown" : (maleRatio==0) ? "Never" : (maleRatio==100) ? "Always" : (maleRatio + "%")));
-        info[8] = ("Height: " + height + ", Weight: " + weight);
-        info[9] = ("Status: " + ((caughtSeen==1) ? "Seen" : (caughtSeen==2) ? "Caught" : "Unregistered"));
+        String[] info = {
+            (category + " Pokémon"),
+            (type1 + (!type2.equals("") ? (", " + type2) : "") + " Type"),
+            ("Ability(s): " + ability1 + (!ability2.equals("") ? (", " + ability2) : "") + (!abilityH.equals("") ? (", Hidden: " + abilityH) : "")),
+            ("Egg Group(s): " + egg1 + (!egg2.equals("") ? (", " + egg2) : "")),
+            ("Egg Cycles: " + eggCycles),
+            ("Growth Rate: " + growthRate),
+            ("Base Friendship: " + baseFriendship),
+            ("Base EXP: " + baseExp),
+            ("Male Percent: " + ((maleRatio==-1) ? "Unknown" : (maleRatio==0) ? "Never" : (maleRatio==100) ? "Always" : (maleRatio + "%"))),
+            ("Height: " + height + ", Weight: " + weight),
+            ("Status: " + ((caughtSeen==1) ? "Seen" : (caughtSeen==2) ? "Caught" : "Unregistered"))
+        };
         DefaultListModel<String> tempModel = new DefaultListModel<>();
         for (String i : info) tempModel.addElement(i);
         list.setModel(tempModel);

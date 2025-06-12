@@ -1,6 +1,5 @@
 import java.awt.*;
 import javax.swing.*;
-
 @SuppressWarnings("unused")
 public class mainDex extends JFrame{
     // Window Variables
@@ -13,15 +12,13 @@ public class mainDex extends JFrame{
     private JTextField idInput;
     private boolean isShiny;
     private JLabel[] info;
-    
-    // Call Window
-    public static void main(String[] args){
+
+    public static void main(String[] args){ // Call Window
         Pokemon.Dex(); // Initialize Pokédex
         mainDex main = new mainDex();
     }
 
-    // Window Constructor
-    public mainDex(){
+    public mainDex(){ // Window Constructor
         // Set Main Frame
         setTitle("Pokédex");
         setSize(650, 450);
@@ -92,15 +89,14 @@ public class mainDex extends JFrame{
         });
     }
 
-    // Window to Display Pokémon
-    public mainDex(Pokemon pkmn){
+    public mainDex(Pokemon pkmn){ // Window to Display Pokémon
         setTitle(pkmn.name);
         setSize(700, 350);
         setLayout(new GridBagLayout());
         setMinimumSize(new Dimension(600, 300));
 
         // Base Information
-        info = new JLabel[11];
+        info = new JLabel[12];
         visualForm = 0; baseForm = 0; isShiny = false;
         add(selectorPanel = new JPanel(new FlowLayout()), constraint(0, 0, 0));
         selectorPanel.add(select = new JButton("Change Form"));
@@ -115,7 +111,7 @@ public class mainDex extends JFrame{
         pkmn.forms.getFirst().updateLabels(info);
 
         // Caught and Seen Buttons
-        add(infoPanel = new JPanel(new FlowLayout()), constraint(0, 11, 0));
+        add(infoPanel = new JPanel(new FlowLayout()), constraint(0, 12, 0));
         infoPanel.add(caught = new JButton("Caught"));
         infoPanel.add(seen = new JButton("Seen"));
         setVisible(true);
@@ -141,8 +137,7 @@ public class mainDex extends JFrame{
         });
     }
 
-    // Set Constraints
-    public static GridBagConstraints constraint(int x, int y, int type){
+    public static GridBagConstraints constraint(int x, int y, int type){ // Set Constraints
         GridBagConstraints constraints = new GridBagConstraints();
         constraints.weightx = 0.5; constraints.weighty = 0.5;
         constraints.gridx = x; constraints.gridy = y;
@@ -152,7 +147,7 @@ public class mainDex extends JFrame{
                 constraints.fill = 1;
                 constraints.insets = new Insets(20, 20, 20, 20);
             } // Pokémon Image
-            case 2 -> constraints.gridheight = 10;
+            case 2 -> constraints.gridheight = 11;
         }
         return constraints;
     }

@@ -478,9 +478,9 @@ pokédex_number, name, form_symbol, species, type_1, type_2, ability_1, ability_
 384, Mega Rayquaza, m, Sky High, Dragon, Flying, Delta Stream, , , 10.8, 392, 3, 0, 351, , 120, Slow, Undiscovered, , 105, 180, 100, 180, 100, 115
 385, Jirachi, , Wish, Steel, Psychic, Serene Grace, , , 0.3, 1.1, 3, 100, 270, , 120, Slow, Undiscovered, , 100, 100, 100, 100, 100, 100
 386, Deoxys Normal Forme, , DNA, Psychic, , Pressure, , , 1.7, 60.8, 3, 0, 270, , 120, Slow, Undiscovered, , 50, 150, 50, 150, 50, 150
-386, Deoxys Attack Forme, a, DNA, Psychic, -a, Pressure, , , 1.7, 60.8, 3, 0, 270, , 120, Slow, Undiscovered, , 50, 180, 20, 180, 20, 150
-386, Deoxys Defense Forme, d, DNA, Psychic, -d, Pressure, , , 1.7, 60.8, 3, 0, 270, , 120, Slow, Undiscovered, , 50, 70, 160, 70, 160, 90
-386, Deoxys Speed Forme, s, DNA, Psychic, -s, Pressure, , , 1.7, 60.8, 3, 0, 270, , 120, Slow, Undiscovered, , 50, 95, 90, 95, 90, 180
+386, Deoxys Attack Forme, a, DNA, Psychic, , Pressure, , , 1.7, 60.8, 3, 0, 270, , 120, Slow, Undiscovered, , 50, 180, 20, 180, 20, 150
+386, Deoxys Defense Forme, d, DNA, Psychic, , Pressure, , , 1.7, 60.8, 3, 0, 270, , 120, Slow, Undiscovered, , 50, 70, 160, 70, 160, 90
+386, Deoxys Speed Forme, s, DNA, Psychic, , Pressure, , , 1.7, 60.8, 3, 0, 270, , 120, Slow, Undiscovered, , 50, 95, 90, 95, 90, 180
 387, Turtwig, , Tiny Leaf, Grass, , Overgrow, , Shell Armor, 0.4, 10.2, 45, 70, 64, 87.5, 20, Medium Slow, Grass, Monster, 55, 68, 64, 45, 55, 31
 388, Grotle, , Grove, Grass, , Overgrow, , Shell Armor, 1.1, 97, 45, 70, 142, 87.5, 20, Medium Slow, Grass, Monster, 75, 89, 85, 55, 65, 36
 389, Torterra, , Continent, Grass, Ground, Overgrow, , Shell Armor, 2.2, 310, 45, 70, 236, 87.5, 20, Medium Slow, Grass, Monster, 95, 109, 105, 75, 85, 56
