@@ -1,5 +1,9 @@
-# Grade 12 Final Project ( Pokedex )
-- Check Regional Dexes
+# Grade 12 Final Project ( Pokédex )
+# Main Menu
+- Check Each Regional Dex
+- Input Regional Dex Number
+- See Image of Pokémon
+- Select Pokemon to view information about it
+# Pokémon Info Menu
 - Input Caught or Seen
-- See Image of Pokemon
 - See Stats, Abilities, and more

@@ -2,24 +2,24 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.table.*;
 
-public class statsView extends JFrame {
+public class Info extends JFrame {
     public JPanel selectorPanel;
-    private JButton caught, seen, select, shiny;
-    private int visualForm, baseForm;
-    private JList<String> pokeList;
-    private JLabel name, image;
-    private JTable baseStats;
-    private boolean isShiny;
-
+    public JButton caught, seen, select, shiny;
+    public int visualForm, baseForm;
+    public JList<String> pokeList;
+    public JLabel name, image;
+    public JTable baseStats;
+    public boolean isShiny;
+    
+    public Info(){}
     // New Window to Display Pokémon
-    public statsView(Pokemon pkmn) {
+    public Info(Pokemon pkmn) {
         setTitle(pkmn.name);
         setContentPane(selectorPanel);
         setSize(504, 350);
         setMinimumSize(new Dimension(300, 200));
 
         // Characteristics Table
-        isShiny = false;
         String[] columnNames = {"HP", "Atk.", "Def.", "Sp. Atk.", "Sp. Def.", "Spd."};
         baseStats.setModel(new DefaultTableModel(new String[][] {pkmn.forms.getFirst().getStats()}, columnNames){
             @Override public boolean isCellEditable(int row, int column){return false;}
@@ -30,7 +30,7 @@ public class statsView extends JFrame {
         baseStats.setPreferredScrollableViewportSize(new Dimension(450, 400));
 
         // Name and Image
-        visualForm = 0; baseForm = 0;
+        visualForm = 0; baseForm = 0; isShiny = false;
         pkmn.labels(name, image, 0, 0, false);
         pkmn.forms.getFirst().updateList(pokeList);
         setVisible(true);
@@ -50,13 +50,13 @@ public class statsView extends JFrame {
         });
         // Caught and Seen Listeners
         caught.addActionListener(_ -> {
-            pkmn.forms.get(baseForm).caughtStatus(pokeList, 2); revalidate();
+            pkmn.forms.get(baseForm).caughtStatus(pokeList, 2);
         });
         seen.addActionListener(_ -> {
-            pkmn.forms.get(baseForm).caughtStatus(pokeList, 1); revalidate();
+            pkmn.forms.get(baseForm).caughtStatus(pokeList, 1);
         });
         shiny.addActionListener(_ -> {
-            pkmn.labels(name, image, baseForm, visualForm, isShiny = !isShiny); revalidate();
+            pkmn.labels(name, image, baseForm, visualForm, isShiny = !isShiny);
         });
     }
 }
