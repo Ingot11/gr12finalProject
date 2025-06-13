@@ -3,15 +3,15 @@ import javax.swing.*;
 @SuppressWarnings("unused")
 public class mainDex extends JFrame{
     // Window Variables
-    private JPanel selectorPanel, idPanel, infoPanel;
-    private JButton caught, seen, select, shiny;
-    private JComboBox<String> region, dlc;
-    private int visualForm, baseForm;
-    private JList<String> pokeList;
-    private JLabel name, image;
-    private JTextField idInput;
-    private boolean isShiny;
-    private JLabel[] info;
+    public JPanel selectorPanel, idPanel, infoPanel;
+    public JButton caught, seen, select, shiny;
+    public JComboBox<String> region, dlc;
+    public int visualForm, baseForm;
+    public JList<String> pokeList;
+    public JLabel name, image;
+    public JTextField idInput;
+    public boolean isShiny;
+    public JLabel[] info;
 
     public static void main(String[] args){ // Call Window
         Pokemon.Dex(); // Initialize Pokédex

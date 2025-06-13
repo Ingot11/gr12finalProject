@@ -2,14 +2,8 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.table.*;
 
-public class statsView extends JFrame {
-    private JPanel selectorPanel;
-    private JButton caught, seen, select, shiny;
-    private int visualForm, baseForm;
-    private JList<String> pokeList;
-    private JLabel name, image;
+public class statsView extends mainDex{
     private JTable baseStats;
-    private boolean isShiny;
 
     // New Window to Display Pokémon
     public statsView(Pokemon pkmn) {
