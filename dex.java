@@ -81,8 +81,8 @@ public class dex extends Info{
         });
         credits.addActionListener(_ -> {
             JOptionPane.showMessageDialog(this,
-             "Developed By:\nAzeez Bazara\nZachary Nusbaum\n\nSources:\nDragonFlyCave.com\nSerebii.net\nBubapedia",
-             "Credits", -1);
+             "Developed in Java By:\nAzeez Bazara\nZachary Nusbaum\n----------------------\nSources:\nDragonFlyCave.com\nSerebii.net\nBulbapedia.Bulbagarden.net",
+             "Credits", 1, Pokemon.nationalDex[24].image("a", false));
         });
         select.addActionListener(_ -> { // Opens the Pokémon Menu
             Info x; dex y;
