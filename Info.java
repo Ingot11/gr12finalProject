@@ -48,15 +48,10 @@ public class Info extends JFrame {
             }
             pkmn.labels(name, image, baseForm, visualForm, isShiny); revalidate();
         });
+
         // Caught and Seen Listeners
-        caught.addActionListener(_ -> {
-            pkmn.forms.get(baseForm).caughtStatus(pokeList, 2);
-        });
-        seen.addActionListener(_ -> {
-            pkmn.forms.get(baseForm).caughtStatus(pokeList, 1);
-        });
-        shiny.addActionListener(_ -> {
-            pkmn.labels(name, image, baseForm, visualForm, isShiny = !isShiny);
-        });
+        caught.addActionListener(_ -> {pkmn.forms.get(baseForm).caughtStatus(pokeList, 2);});
+        seen.addActionListener(_ -> {pkmn.forms.get(baseForm).caughtStatus(pokeList, 1);});
+        shiny.addActionListener(_ -> {pkmn.labels(name, image, baseForm, visualForm, isShiny = !isShiny);});
     }
 }

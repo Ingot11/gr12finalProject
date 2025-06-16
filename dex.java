@@ -129,17 +129,11 @@ public class dex extends Info{
                 visualForm = 0;
             } pkmn.labels(name, image, baseForm, visualForm, isShiny); revalidate();
         });
-        shiny.addActionListener(_ -> {
-            pkmn.labels(name, image, baseForm, visualForm, isShiny = !isShiny);
-        });
 
         // Caught and Seen Listeners
-        caught.addActionListener(_ -> {
-            pkmn.forms.get(baseForm).caughtStatus(info, 2);
-        });
-        seen.addActionListener(_ -> {
-            pkmn.forms.get(baseForm).caughtStatus(info, 1);
-        });
+        caught.addActionListener(_ -> {pkmn.forms.get(baseForm).caughtStatus(info, 2);});
+        seen.addActionListener(_ -> {pkmn.forms.get(baseForm).caughtStatus(info, 1);});
+        shiny.addActionListener(_ -> {pkmn.labels(name, image, baseForm, visualForm, isShiny = !isShiny);});
     }
 
     public static GridBagConstraints constraint(int x, int y, int type){ // Set Constraints
