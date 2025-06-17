@@ -22,6 +22,7 @@ public class dex extends Info{
         setLayout(new GridBagLayout());
         setMinimumSize(new Dimension(650, 450));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setIconImage((new ImageIcon("logo.png")).getImage());
 
         // Id Inputter
         baseForm = 1;
