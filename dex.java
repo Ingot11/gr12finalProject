@@ -97,6 +97,7 @@ public class dex extends Info{
         setSize(700, 350);
         setLayout(new GridBagLayout());
         setMinimumSize(new Dimension(600, 300));
+        setIconImage((new ImageIcon("logo.png")).getImage());
 
         // Selectors
         visualForm = 0; baseForm = 0; isShiny = false;

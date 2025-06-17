@@ -18,6 +18,7 @@ public class Info extends JFrame {
         setContentPane(selectorPanel);
         setSize(504, 350);
         setMinimumSize(new Dimension(300, 200));
+        setIconImage((new ImageIcon("logo.png")).getImage());
 
         // Characteristics Table
         String[] columnNames = {"HP", "Atk.", "Def.", "Sp. Atk.", "Sp. Def.", "Spd."};

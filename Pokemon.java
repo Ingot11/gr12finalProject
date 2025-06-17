@@ -99,9 +99,9 @@ public class Pokemon{
         try {
             BufferedImage image = ImageIO.read(new URI("https://serebii.net/" + linkText + ".png").toURL());
             return new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
-        }catch (MalformedURLException | URISyntaxException e) {}
+        }catch (MalformedURLException | URISyntaxException | NullPointerException e) {}
         catch (IOException ex) {Logger.getLogger(Object.class.getName()).log(Level.SEVERE, null, ex);}
-        return null;
+        return new ImageIcon("logo.png");
     }
 
     // Set Name and Icon for Pokémon List
